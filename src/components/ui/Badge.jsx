@@ -5,11 +5,9 @@ export function Badge({
   size = 'sm',
 }) {
   const variants = {
-    ink: 'bg-ink-50 text-ink border border-ink-100',
-    gold: 'bg-gold-50 text-gold border border-gold-100',
-    emerald: 'bg-emerald-50 text-emerald-700 border border-emerald-100',
-    red: 'bg-red-50 text-red-700 border border-red-100',
-    slate: 'bg-slate-50 text-slate-700 border border-slate-100',
+    ink: 'bg-ink text-paper border border-ink',
+    gold: 'bg-gold text-paper border border-gold',
+    slate: 'bg-slate-50 text-slate-700 border border-slate-200',
   };
 
   const sizes = {
@@ -20,10 +18,11 @@ export function Badge({
 
   return (
     <span
-      className={`inline-flex items-center gap-1.5 rounded-full border font-medium ${variants[variant]} ${sizes[size]} ${className}`}
+      className={`inline-flex items-center gap-1.5 rounded-none border font-medium tracking-[0.1em] uppercase ${variants[variant]} ${sizes[size]} ${className}`}
     >
       {children}
     </span>
   );
 }
+
 

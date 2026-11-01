@@ -830,3 +830,4 @@ function InfoRow({ icon, label, value }) {
     </div>
   );
 }
+

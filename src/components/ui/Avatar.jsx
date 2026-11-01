@@ -1,8 +1,8 @@
 export function Avatar({ src, label = 'User', className = '', size = 'md' }) {
   const sizes = {
-    sm: 'h-8 w-8 text-sm',
-    md: 'h-10 w-10 text-xl',
-    lg: 'h-12 w-12 text-2xl',
+    sm: 'h-8 w-8 text-xs',
+    md: 'h-10 w-10 text-sm',
+    lg: 'h-12 w-12 text-base',
   };
 
   if (src) {
@@ -10,7 +10,7 @@ export function Avatar({ src, label = 'User', className = '', size = 'md' }) {
       <img
         src={src}
         alt={label}
-        className={`shrink-0 rounded-full border border-slate-200 bg-white object-cover ${sizes[size]} ${className}`}
+        className={`shrink-0 border border-slate-200 object-cover ${sizes[size]} ${className}`}
       />
     );
   }
@@ -30,4 +30,5 @@ export function Avatar({ src, label = 'User', className = '', size = 'md' }) {
     </div>
   );
 }
+
 

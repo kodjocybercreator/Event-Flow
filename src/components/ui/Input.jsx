@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { hoverScale } from './motion';
+import { hoverLift } from './motion';
 
 export function Input({
   id,
@@ -14,11 +14,11 @@ export function Input({
   ...props
 }) {
   return (
-    <div className="mb-4">
+    <div className="mb-6">
       {label && (
         <label
           htmlFor={id}
-          className="block text-sm font-semibold text-ink mb-1"
+          className="block text-xs font-bold uppercase tracking-[0.2em] text-ink mb-2"
         >
           {label}
         </label>
@@ -30,15 +30,16 @@ export function Input({
         onChange={onChange}
         placeholder={placeholder}
         required={required}
-        whileHover={hoverScale}
-        className={`w-full rounded-xl border border-slate-200 bg-surface px-4 py-3.5 text-sm outline-none transition placeholder:text-slate-400 ${
+        whileHover={hoverLift}
+        className={`w-full border-b border-ink bg-transparent px-0 py-3 text-sm font-normal outline-none transition-colors placeholder:text-slate-400 ${
           error
-            ? 'border-red-200 bg-red-50 text-red-700 focus:border-red-500 focus:ring-4 focus:ring-red-50'
-            : 'border-slate-200 text-ink hover:border-slate-300 focus:border-gold focus:ring-4 focus:ring-gold/20'
+            ? 'border-red-500 focus:border-red-500 focus:ring-0'
+            : 'border-ink focus:border-gold focus:ring-0'
         } ${className}`}
         {...props}
       />
     </div>
   );
 }
+
 

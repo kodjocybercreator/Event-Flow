@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { fadeInUp } from './motion';
+import { slideInUp } from './motion';
 
 export function MotionWrapper({ children, className = '', delay = 0 }) {
   return (
     <motion.div
       initial="hidden"
       animate="visible"
-      variants={fadeInUp}
+      variants={slideInUp}
       transition={{ delay }}
       className={className}
     >
@@ -14,4 +14,5 @@ export function MotionWrapper({ children, className = '', delay = 0 }) {
     </motion.div>
   );
 }
+
 

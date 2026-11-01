@@ -1,99 +1,99 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer, staggerItem, pageTransition } from '../components/ui/motion';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Button } from "../components/ui/Button";
+import { Card } from "../components/ui/Card";
+import { Badge } from "../components/ui/Badge";
+import { FadeIn } from "../components/ui/FadeIn";
 
 const eventTypes = [
   {
-    name: 'Weddings',
-    description: 'Venues, vendors & planning',
+    name: "Weddings",
+    description: "Venues, vendors & planning",
     image:
-      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85',
+      "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=75",
   },
   {
-    name: 'Birthdays',
-    description: 'Make the celebration special',
+    name: "Birthdays",
+    description: "Make the celebration special",
     image:
-      'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=85',
+      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=75",
   },
   {
-    name: 'Graduations',
-    description: 'Celebrate the achievement',
+    name: "Graduations",
+    description: "Celebrate the achievement",
     image:
-      'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=85',
+      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=75",
   },
   {
-    name: 'Corporate Events',
-    description: 'Professional spaces & services',
+    name: "Corporate Events",
+    description: "Professional spaces & services",
     image:
-      'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=85',
+      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=600&q=75",
   },
   {
-    name: 'Funerals',
-    description: 'Find services with care',
+    name: "Funerals",
+    description: "Find services with care",
     image:
-      'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=85',
+      "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=75",
   },
   {
-    name: 'Conferences',
-    description: 'Spaces for meaningful events',
+    name: "Conferences",
+    description: "Spaces for meaningful events",
     image:
-      'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=85',
+      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=600&q=75",
   },
 ];
 
 const services = [
   {
-    title: 'Photography',
-    description: 'Capture the moments you will want to remember.',
-    icon: '◉',
+    title: "Photography",
+    description: "Capture the moments you will want to remember.",
+    icon: "◉",
   },
   {
-    title: 'Videography',
-    description: 'Professional video coverage for your event.',
-    icon: '▶',
+    title: "Videography",
+    description: "Professional video coverage for your event.",
+    icon: "▶",
   },
   {
-    title: 'Decoration',
-    description: 'Transform your event space into something special.',
-    icon: '✦',
+    title: "Decoration",
+    description: "Transform your event space into something special.",
+    icon: "✦",
   },
   {
-    title: 'DJ & Music',
-    description: 'Sound, music and entertainment for your guests.',
-    icon: '♪',
+    title: "DJ & Music",
+    description: "Sound, music and entertainment for your guests.",
+    icon: "♪",
   },
   {
-    title: 'Event Planning',
-    description: 'Get help bringing the details together.',
-    icon: '✓',
+    title: "Event Planning",
+    description: "Get help bringing the details together.",
+    icon: "✓",
   },
   {
-    title: 'Venues',
-    description: 'Discover places that fit your event and guest count.',
-    icon: '⌂',
+    title: "Venues",
+    description: "Discover places that fit your event and guest count.",
+    icon: "⌂",
   },
 ];
 
 const benefits = [
   {
-    number: '01',
-    title: 'Discover in one place',
-    text: 'Stop searching across different pages and social platforms. Explore venues and event professionals from one marketplace.',
+    number: "01",
+    title: "Discover in one place",
+    text: "Stop searching across different pages and social platforms. Explore venues and event professionals from one marketplace.",
   },
   {
-    number: '02',
-    title: 'Compare before you book',
-    text: 'View services, locations and starting prices so you can understand your options before sending a request.',
+    number: "02",
+    title: "Compare before you book",
+    text: "View services, locations and starting prices so you can understand your options before sending a request.",
   },
   {
-    number: '03',
-    title: 'Work directly with providers',
-    text: 'Send your requirements, receive quotations and discuss the details of your event before agreeing on a price.',
+    number: "03",
+    title: "Work directly with providers",
+    text: "Send your requirements, receive quotations and discuss the details of your event before agreeing on a price.",
   },
 ];
 
@@ -104,445 +104,463 @@ export default function Home() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="min-h-screen bg-slate-50 text-slate-900"
+      className="min-h-screen bg-paper text-ink"
     >
       <Navbar />
       <main>
         {/* HERO */}
-        <section className="relative overflow-hidden bg-white">
+        <section className="relative overflow-hidden bg-paper">
           <div className="absolute inset-0">
-            <div className="absolute -right-48 -top-48 h-[600px] w-[600px] rounded-full bg-indigo-100/60 blur-[120px]" />
-            <div className="absolute -bottom-56 -left-48 h-[500px] w-[500px] rounded-full bg-amber-100/40 blur-[120px]" />
+            <div className="absolute -right-48 -top-48 h-[600px] w-[600px] rounded-full bg-gold-soft/20 blur-[120px]" />
           </div>
 
-          <div className="relative mx-auto max-w-7xl px-5 pb-24 pt-16 sm:px-6 sm:pb-28 sm:pt-20 lg:px-8 lg:pb-32 lg:pt-24">
-            <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+          <div className="relative mx-auto max-w-7xl px-6 pb-32 pt-20 sm:px-8 sm:pb-36 sm:pt-24 lg:px-12 lg:pb-40 lg:pt-28">
+            <div className="grid items-start gap-16 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
               {/* Hero copy */}
               <div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="inline-flex items-center gap-2 rounded-full border border-amber-100 bg-amber-50 px-3.5 py-2 text-xs font-bold text-amber-700 shadow-sm"
-                >
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-600 text-[10px] text-white">
-                    EF
-                  </span>
-                  Ghana's event marketplace
-                </motion.div>
+                <FadeIn delay={0.1} className="mb-6">
+                  <div className="inline-flex items-center gap-2 rounded-none border border-gold bg-gold-soft px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-none bg-gold text-[10px] text-paper">
+                      EF
+                    </span>
+                    Ghana's event marketplace
+                  </div>
+                </FadeIn>
 
-                <motion.h1
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7 }}
-                  className="mt-7 max-w-3xl text-5xl font-extrabold leading-[1.05] tracking-[-0.02em] text-slate-950 sm:text-6xl lg:text-[4.8rem]"
-                >
-                  Your event.{' '}
-                  <span className="block text-amber-600">
-                    Everything in one place.
-                  </span>
-                </motion.h1>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="mt-6 max-w-xl text-base leading-7 text-slate-600 sm:text-lg"
-                >
-                  Discover venues, photographers, decorators, DJs and other
-                  event professionals around Ghana. Find the right people,
-                  compare your options and bring your event together with
-                  EventFlow.
-                </motion.p>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.9 }}
-                  className="mt-9 flex flex-col gap-3 sm:flex-row"
-                >
-                  <Link
-                    to="/discover"
-                    className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-8 py-4 text-sm font-bold text-white shadow-lg shadow-indigo-600/25 transition duration-300 hover:-translate-y-1 hover:bg-indigo-700 hover:shadow-indigo-600/40"
+                <FadeIn delay={0.2}>
+                  <motion.h1
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="mt-8 max-w-3xl text-5xl font-bold tracking-tight text-ink sm:text-7xl lg:text-8xl leading-[1]"
                   >
-                    Explore EventFlow
-                    <span className="ml-2 transition group-hover:translate-x-1">→</span>
-                  </Link>
+                    Your event.{' '}
+                    <span className="block text-gold">
+                      Everything in one place.
+                    </span>
+                  </motion.h1>
+                </FadeIn>
 
-                  <Link
-                    to="/register"
-                    className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-8 py-4 text-sm font-bold text-slate-900 transition duration-300 hover:border-amber-300 hover:bg-slate-50 hover:text-indigo-700"
+                <FadeIn delay={0.3}>
+                  <motion.p
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.9 }}
+                    className="mt-8 max-w-xl text-lead sm:text-xl"
                   >
-                    Start planning
-                  </Link>
-                </motion.div>
+                    Discover venues, photographers, decorators, DJs and other
+                    event professionals around Ghana. Find the right people,
+                    compare your options and bring your event together with
+                    EventFlow.
+                  </motion.p>
+                </FadeIn>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1 }}
-                  className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-slate-500"
-                >
-                  <span className="flex items-center gap-2">
-                    <span className="text-emerald-500">✓</span>
-                    Verified businesses
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <span className="text-amber-500">₵</span>
-                    Secure payments
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <span className="text-indigo-500">✓</span>
-                    One place to manage bookings
-                  </span>
-                </motion.div>
+                <FadeIn delay={0.4}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="mt-10 flex flex-col gap-4 sm:flex-row"
+                  >
+                    <Link
+                      to="/discover"
+                      className="btn-primary"
+                    >
+                      Explore EventFlow
+                      <span className="ml-2">→</span>
+                    </Link>
+
+                    <Link
+                      to="/register"
+                      className="btn-outline"
+                    >
+                      Start planning
+                    </Link>
+                  </motion.div>
+                </FadeIn>
+
+                <FadeIn delay={0.5}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="mt-12 flex flex-wrap items-start gap-x-8 gap-y-4 text-sm text-slate"
+                  >
+                    <span className="flex items-center gap-2">
+                      <span className="text-gold">✓</span>
+                      Verified businesses
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <span className="text-gold">₵</span>
+                      Secure payments
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <span className="text-ink">✓</span>
+                      One place to manage bookings
+                    </span>
+                  </motion.div>
+                </FadeIn>
               </div>
 
               {/* Hero visual */}
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="relative mx-auto w-full max-w-[560px] lg:mx-0"
-              >
-                <div className="overflow-hidden rounded-[2rem] border border-white bg-white p-2 shadow-[0_25px_80px_-25px_rgba(79,70,229,0.35)]">
-                  <div className="relative h-[460px] overflow-hidden rounded-[1.6rem] bg-slate-900 sm:h-[540px]">
-                    <img
-                      src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=90"
-                      alt="Beautiful event setup"
-                      className="absolute inset-0 h-full w-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
-                    <div className="absolute left-5 right-5 top-5 flex items-center justify-between">
-                      <div className="rounded-full bg-white/95 px-3 py-2 text-xs font-bold text-slate-900 shadow-lg backdrop-blur">
-                        EventFlow
+              <FadeIn delay={0.3}>
+                <motion.div
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="relative mx-auto w-full max-w-[560px] lg:mx-0"
+                >
+                  <div className="overflow-hidden border border-slate-200 bg-slate-50 p-2 shadow-lg">
+                    <div className="relative h-[500px] overflow-hidden rounded-sm bg-charcoal sm:h-[600px]">
+                      <img
+                        src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=75"
+                        alt="Beautiful event setup"
+                        className="absolute inset-0 h-full w-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div className="absolute left-6 right-6 top-6 flex items-center justify-between">
+                        <div className="border border-ink bg-paper px-3 py-1 text-xs font-bold text-ink">
+                          EventFlow
+                        </div>
+                        <div className="border border-ink bg-paper px-3 py-1 text-xs font-bold text-ink">
+                          Ghana
+                        </div>
                       </div>
-                      <div className="rounded-full bg-white/90 px-3 py-2 text-xs font-semibold text-slate-700 shadow-lg backdrop-blur">
-                        Ghana
-                      </div>
-                    </div>
-                    <div className="absolute bottom-5 left-5 right-5">
-                      <div className="rounded-2xl border border-white/20 bg-white/10 p-5 text-white shadow-xl backdrop-blur-md">
-                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/65">
-                          Plan with confidence
-                        </p>
-                        <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
-                          Find the right people for your event.
-                        </h2>
-                        <div className="mt-5 grid grid-cols-3 gap-2">
-                          <div className="rounded-xl bg-white/10 p-3 backdrop-blur">
-                            <p className="text-lg font-bold">Venues</p>
-                            <p className="mt-0.5 text-[11px] text-white/60">
-                              Discover
-                            </p>
-                          </div>
-                          <div className="rounded-xl bg-white/10 p-3 backdrop-blur">
-                            <p className="text-lg font-bold">Vendors</p>
-                            <p className="mt-0.5 text-[11px] text-white/60">
-                              Compare
-                            </p>
-                          </div>
-                          <div className="rounded-xl bg-white/10 p-3 backdrop-blur">
-                            <p className="text-lg font-bold">Bookings</p>
-                            <p className="mt-0.5 text-[11px] text-white/60">
-                              Manage
-                            </p>
+                      <div className="absolute bottom-6 left-6 right-6">
+                        <div className="border border-gold bg-paper p-5">
+                          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">
+                            Plan with confidence
+                          </p>
+                          <h2 className="mt-2 text-2xl font-bold text-ink sm:text-3xl">
+                            Find the right people for your event.
+                          </h2>
+                          <div className="mt-5 grid grid-cols-3 gap-2">
+                            <div className="p-3 bg-gold-soft">
+                              <p className="text-lg font-bold text-ink">Venues</p>
+                              <p className="mt-0.5 text-[10px] text-gold">
+                                Discover
+                              </p>
+                            </div>
+                            <div className="p-3 bg-gold-soft">
+                              <p className="text-lg font-bold text-ink">Vendors</p>
+                              <p className="mt-0.5 text-[10px] text-gold">
+                                Compare
+                              </p>
+                            </div>
+                            <div className="p-3 bg-gold-soft">
+                              <p className="text-lg font-bold text-ink">Bookings</p>
+                              <p className="mt-0.5 text-[10px] text-gold">
+                                Manage
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Floating marketplace card */}
-                  <div className="absolute -bottom-8 -left-6 hidden rounded-2xl border border-white bg-white p-5 shadow-2xl sm:block sm:-left-10">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 text-lg text-emerald-600">
-                        ✓
-                      </div>
-                      <div>
-                        <p className="text-[10px] font-medium uppercase tracking-wide text-slate-400">
-                          Marketplace
-                        </p>
-                        <p className="mt-0.5 text-sm font-bold text-slate-900">
-                          Find. Compare. Book.
-                        </p>
+                    <div className="absolute -bottom-8 -left-6 hidden rounded-none border border-ink bg-paper p-5 shadow-lg sm:block sm:-left-10">
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-gold text-lg text-paper">
+                          ✓
+                        </div>
+                        <div>
+                          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate">
+                            Marketplace
+                          </p>
+                          <p className="mt-0.5 text-sm font-bold text-ink">
+                            Find. Compare. Book.
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="absolute -right-8 top-28 hidden rounded-2xl border border-white bg-white p-5 shadow-2xl sm:block sm:-right-12">
-                    <p className="text-[10px] font-medium uppercase tracking-wide text-slate-400">
-                      Starting from
-                    </p>
-                    <p className="mt-1 text-xl font-extrabold text-slate-950">
-                      GH₵1,500
-                    </p>
-                    <p className="text-xs text-slate-500">
-                      Example service price
-                    </p>
+                    <div className="absolute -right-8 top-28 hidden rounded-none border border-ink bg-paper p-5 shadow-lg sm:block sm:-right-12">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate">
+                        Starting from
+                      </p>
+                      <p className="mt-1 text-xl font-bold text-ink">
+                        GH₵1,500
+                      </p>
+                      <p className="text-xs text-slate">
+                        Example service price
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </FadeIn>
 
               {/* Search panel */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                className="relative z-10 mt-16 rounded-[2rem] border border-slate-200 bg-white p-4 shadow-[0_20px_60px_-25px_rgba(15,23,42,0.25)] sm:p-5 lg:mt-24"
-              >
-                <div className="mb-3 flex items-center gap-3 px-2 sm:px-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-50 font-bold text-indigo-600">
-                    ⌕
+              <FadeIn delay={0.5}>
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1 }}
+                  className="relative z-10 mt-16 border border-slate-200 bg-paper p-6 shadow-lg sm:p-8 lg:mt-24"
+                >
+                  <div className="mb-4 flex items-center gap-3 px-2 sm:px-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-gold text-lg text-paper">
+                      ⌕
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-ink">
+                        What are you looking for?
+                      </p>
+                      <p className="text-xs text-slate">
+                        Start exploring venues and event professionals.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-bold text-slate-950">
-                      What are you looking for?
-                    </p>
-                    <p className="text-xs text-slate-500">
-                      Start exploring venues and event professionals.
-                    </p>
+                  <div className="grid gap-2 lg:grid-cols-[1.5fr_1.2fr_1fr_auto]">
+                    <div className="rounded-sm border border-slate-200 bg-gold-soft px-4 py-4 transition hover:border-gold/30">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                        Service
+                      </p>
+                      <p className="mt-1 text-sm font-bold text-ink">
+                        Photographer, venue, DJ...
+                      </p>
+                    </div>
+                    <div className="rounded-sm border border-slate-200 bg-gold-soft px-4 py-4 transition hover:border-gold/30">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                        Location
+                      </p>
+                      <p className="mt-1 text-sm font-bold text-ink">
+                        Accra, Kumasi...
+                      </p>
+                    </div>
+                    <div className="rounded-sm border border-slate-200 bg-gold-soft px-4 py-4 transition hover:border-gold/30">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                        Event
+                      </p>
+                      <p className="mt-1 text-sm font-bold text-ink">
+                        Wedding, birthday...
+                      </p>
+                    </div>
+                    <Link
+                      to="/discover"
+                      className="flex min-h-[56px] items-center justify-center rounded-none bg-ink px-10 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors duration-200 hover:bg-gold hover:text-paper"
+                    >
+                      Search
+                      <span className="ml-2">→</span>
+                    </Link>
                   </div>
-                </div>
-                <div className="grid gap-2 lg:grid-cols-[1.5fr_1.2fr_1fr_auto]">
-                  <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 transition hover:border-amber-200 hover:bg-amber-50/40">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400">
-                      Service
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-slate-800">
-                      Photographer, venue, DJ...
-                    </p>
-                  </div>
-                  <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 transition hover:border-amber-200 hover:bg-amber-50/40">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400">
-                      Location
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-slate-800">
-                      Accra, Kumasi...
-                    </p>
-                  </div>
-                  <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 transition hover:border-amber-200 hover:bg-amber-50/40">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400">
-                      Event
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-slate-800">
-                      Wedding, birthday...
-                    </p>
-                  </div>
-                  <Link
-                    to="/discover"
-                    className="flex min-h-[58px] items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-amber-600 px-8 text-sm font-bold text-white transition hover:from-indigo-700 hover:to-amber-700 hover:-translate-y-0.5"
-                  >
-                    Search
-                    <span className="ml-2">→</span>
-                  </Link>
-                </div>
-              </motion.div>
+                </motion.div>
+              </FadeIn>
             </div>
           </div>
         </section>
 
         {/* EVENT TYPES */}
-        <section className="bg-white py-20 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"
-            >
-              <div className="max-w-2xl">
-                <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-amber-600">
-                  Start with your event
-                </p>
-                <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
-                  What are you planning?
-                </h2>
-                <p className="mt-4 max-w-xl text-base leading-7 text-slate-600">
-                  Whatever the occasion, discover the venues and professionals
-                  that can help you make it happen.
-                </p>
-              </div>
-              <Link
-                to="/discover"
-                className="text-sm font-bold text-indigo-600 transition hover:text-amber-600"
+        <section className="bg-paper py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+            <FadeIn>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end"
               >
-                Explore all events →
-              </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6"
-            >
-              {eventTypes.map((event) => (
+                <div className="max-w-2xl">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
+                    Start with your event
+                  </p>
+                  <h2 className="mt-4 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
+                    What are you planning?
+                  </h2>
+                  <p className="mt-6 max-w-xl text-lead sm:text-xl">
+                    Whatever the occasion, discover the venues and professionals
+                    that can help you make it happen.
+                  </p>
+                </div>
                 <Link
-                  key={event.name}
                   to="/discover"
-                  className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-amber-200 hover:shadow-xl"
+                  className="text-sm font-bold text-ink transition-colors hover:text-gold"
                 >
-                  <div className="relative h-40 overflow-hidden">
-                    <img
-                      src={event.image}
-                      alt={event.name}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 to-transparent" />
-                    <div className="absolute bottom-3 left-3 right-3">
-                      <h3 className="text-sm font-bold text-white">
-                        {event.name}
-                      </h3>
-                    </div>
-                  </div>
-                  <div className="p-5">
-                    <p className="text-xs leading-5 text-slate-500">
-                      {event.description}
-                    </p>
-                    <span className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-amber-600">
-                      Explore
-                      <span className="transition group-hover:translate-x-1">→</span>
-                    </span>
-                  </div>
+                  Explore all events →
                 </Link>
-              ))}
-            </motion.div>
+              </motion.div>
+            </FadeIn>
+
+            <FadeIn>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6"
+              >
+                {eventTypes.map((event) => (
+                  <Link
+                    key={event.name}
+                    to="/discover"
+                    className="group overflow-hidden border border-slate-200 bg-paper shadow-sm transition-colors duration-300 hover:border-ink hover:shadow-lg"
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={event.image}
+                        alt={event.name}
+                        className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
+                      <div className="absolute bottom-3 left-3 right-3">
+                        <h3 className="text-sm font-bold text-paper">
+                          {event.name}
+                        </h3>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <p className="text-xs leading-6 text-slate">
+                        {event.description}
+                      </p>
+                      <span className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-[0.1em] text-gold">
+                        Explore
+                        <span className="transition group-hover:translate-x-1">→</span>
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </motion.div>
+            </FadeIn>
           </div>
         </section>
 
         {/* MARKETPLACE INTRO */}
-        <section className="border-y border-slate-200 bg-slate-50 py-20 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
+        <section className="border-y border-slate-200 bg-gold-soft py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+            <div className="grid items-start gap-16 lg:grid-cols-2">
               <div className="relative">
-                <div className="overflow-hidden rounded-[2rem] bg-slate-900 shadow-2xl">
+                <div className="overflow-hidden border border-slate-200 bg-charcoal shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&w=1200&q=90"
+                    src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&w=800&q=75"
                     alt="Event venue setup"
                     className="h-[430px] w-full object-cover sm:h-[500px]"
+                    loading="lazy"
+                    decoding="async"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
                 </div>
-                <div className="absolute -bottom-8 right-6 rounded-2xl border border-white bg-white p-5 shadow-2xl sm:right-10">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <div className="absolute -bottom-8 right-6 rounded-none border border-paper bg-paper p-5 shadow-lg sm:right-10">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
                     Your event
                   </p>
-                  <p className="mt-1 text-sm font-bold text-slate-950">
+                  <p className="mt-1 text-sm font-bold text-ink">
                     One place. Less stress.
                   </p>
-                  <div className="mt-3 h-1.5 w-36 overflow-hidden rounded-full bg-slate-200">
-                    <div className="h-full w-3/4 rounded-full bg-indigo-600" />
+                  <div className="mt-4 h-1.5 w-36 overflow-hidden rounded-none bg-slate-200">
+                    <div className="h-full w-3/4 rounded-none bg-gold" />
                   </div>
                 </div>
               </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7 }}
-                className="space-y-8"
-              >
-                <div>
-                  <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-amber-600">
-                    More than a directory
-                  </p>
-                  <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
-                    Planning an event shouldn't mean searching everywhere.
-                  </h2>
-                  <p className="mt-5 text-base leading-7 text-slate-600">
-                    EventFlow brings the event marketplace together in one
-                    place. Instead of moving between social media pages,
-                    messages and different websites, you can discover options,
-                    review services and start a booking conversation from one
-                    platform.
-                  </p>
-                </div>
-
-                <div className="mt-4 space-y-5">
-                  {[
-                    ['01', 'Discover', 'Find venues and event professionals based on what you need.'],
-                    ['02', 'Connect', 'Send your event details and receive a quotation from the provider.'],
-                    ['03', 'Agree', 'Discuss the requirements and agree on the final service price.'],
-                  ].map(([number, title, text]) => (
-                    <motion.div
-                      key={number}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6 }}
-                      className="flex gap-4"
-                    >
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-xs font-extrabold text-white shadow-lg shadow-indigo-600/30">
-                        {number}
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-slate-950">{title}</h3>
-                        <p className="mt-1 text-sm leading-6 text-slate-500">
-                          {text}
-                        </p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-
-                <Link
-                  to="/discover"
-                  className="inline-flex items-center rounded-xl bg-gradient-to-r from-indigo-600 to-amber-600 px-7 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5"
+              <FadeIn>
+                <motion.div
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7 }}
+                  className="space-y-8"
                 >
-                  Explore the marketplace
-                  <span className="ml-2">→</span>
-                </Link>
-              </motion.div>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
+                      More than a directory
+                    </p>
+                    <h2 className="mt-4 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
+                      Planning an event shouldn't mean searching everywhere.
+                    </h2>
+                    <p className="mt-6 text-lead sm:text-xl">
+                      EventFlow brings the event marketplace together in one
+                      place. Instead of moving between social media pages,
+                      messages and different websites, you can discover options,
+                      review services and start a booking conversation from one
+                      platform.
+                    </p>
+                  </div>
+
+                  <div className="mt-6 space-y-6">
+                    {[
+                      ["01", "Discover", "Find venues and event professionals based on what you need."],
+                      ["02", "Connect", "Send your event details and receive a quotation from the provider."],
+                      ["03", "Agree", "Discuss the requirements and agree on the final service price."],
+                    ].map(([number, title, text]) => (
+                      <motion.div
+                        key={number}
+                        initial={{ opacity: 0, x: -40 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="flex gap-4"
+                      >
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-ink text-xs font-bold text-paper shadow-lg">
+                          {number}
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-ink">{title}</h3>
+                          <p className="mt-2 text-sm leading-6 text-slate">
+                            {text}
+                          </p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <Link
+                    to="/discover"
+                    className="inline-flex items-center rounded-none bg-ink px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors duration-200 hover:bg-gold hover:text-paper"
+                  >
+                    Explore the marketplace
+                    <span className="ml-2">→</span>
+                  </Link>
+                </motion.div>
+              </FadeIn>
             </div>
           </div>
         </section>
 
         {/* SERVICES */}
-        <section className="bg-white py-20 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+        <section className="bg-paper py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+            <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
               <div className="max-w-2xl">
-                <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-amber-600">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                   Explore services
                 </p>
-                <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
+                <h2 className="mt-4 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
                   Find the people behind the event.
                 </h2>
-                <p className="mt-4 text-base leading-7 text-slate-600">
+                <p className="mt-6 text-lead sm:text-xl">
                   From the first photo to the final song, discover
                   professionals who can help bring your plans together.
                 </p>
               </div>
               <Link
                 to="/discover"
-                className="text-sm font-bold text-indigo-600 transition hover:text-amber-600"
+                className="text-sm font-bold text-ink transition-colors hover:text-gold"
               >
                 View all services →
               </Link>
             </div>
 
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (
                 <Link
                   key={service.title}
                   to="/discover"
-                  className="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-amber-200 hover:shadow-xl"
+                  className="group overflow-hidden border border-slate-200 bg-paper p-8 shadow-sm transition-colors duration-300 hover:border-ink hover:shadow-lg"
                 >
                   <div className="flex items-start justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 text-lg font-bold text-indigo-600 transition group-hover:bg-amber-600 group-hover:text-white group-hover:scale-110">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-gold-soft text-lg font-bold text-gold group-hover:bg-gold group-hover:text-paper">
                       {service.icon}
                     </div>
-                    <span className="text-slate-300 transition group-hover:text-amber-500">
+                    <span className="text-slate-300 transition group-hover:text-gold">
                       ↗
                     </span>
                   </div>
-                  <h3 className="mt-7 text-lg font-bold text-slate-950">
+                  <h3 className="mt-8 text-lg font-bold text-ink">
                     {service.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-500">
+                  <p className="mt-4 text-sm leading-6 text-slate">
                     {service.description}
                   </p>
-                  <div className="mt-6 flex items-center text-sm font-bold text-indigo-600">
+                  <div className="mt-8 flex items-center text-sm font-bold text-ink">
                     Explore
                     <span className="ml-2 transition group-hover:translate-x-1">
                       →
@@ -555,41 +573,41 @@ export default function Home() {
         </section>
 
         {/* VENUE SECTION */}
-        <section className="bg-slate-950 py-20 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-            <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-              <div className="text-white">
-                <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-amber-400">
+        <section className="bg-charcoal py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+            <div className="grid items-start gap-16 lg:grid-cols-[0.9fr_1.1fr]">
+              <div className="text-paper">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                   Find your space
                 </p>
-                <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+                <h2 className="mt-4 text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl leading-[1]">
                   The right venue can change the whole event.
                 </h2>
-                <p className="mt-5 max-w-xl text-base leading-7 text-slate-400">
+                <p className="mt-6 max-w-xl text-sm leading-8 text-slate-400 sm:text-base">
                   Discover event centres, gardens, hotels, conference spaces
                   and other locations that fit the type of event you're
                   planning.
                 </p>
                 <div className="mt-8 grid grid-cols-2 gap-3">
                   {[
-                    'Event centres',
-                    'Outdoor spaces',
-                    'Hotels',
-                    'Conference spaces',
+                    "Event centres",
+                    "Outdoor spaces",
+                    "Hotels",
+                    "Conference spaces",
                   ].map((item) => (
                     <Link
                       key={item}
                       to="/venues"
-                      className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-sm font-semibold text-slate-200 transition hover:border-amber-400/40 hover:bg-white/10"
+                      className="rounded-none border border-paper bg-charcoal px-4 py-4 text-sm font-bold text-slate-300 transition hover:border-gold/40 hover:bg-gold/10"
                     >
                       {item}
-                      <span className="ml-2 text-amber-400">→</span>
+                      <span className="ml-2 text-gold">→</span>
                     </Link>
                   ))}
                 </div>
                 <Link
                   to="/venues"
-                  className="mt-8 inline-flex rounded-xl bg-white px-7 py-3.5 text-sm font-bold text-slate-950 transition hover:bg-indigo-50"
+                  className="mt-8 inline-flex rounded-none bg-paper px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-ink transition-colors hover:bg-gold hover:text-paper"
                 >
                   Explore venues
                   <span className="ml-2">→</span>
@@ -598,26 +616,30 @@ export default function Home() {
 
               <div className="relative">
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="overflow-hidden rounded-3xl">
+                  <div className="overflow-hidden rounded-sm">
                     <img
-                      src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85"
+                      src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=75"
                       alt="Event venue"
                       className="h-64 w-full object-cover sm:h-80"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
-                  <div className="mt-10 overflow-hidden rounded-3xl">
+                  <div className="mt-10 overflow-hidden rounded-sm">
                     <img
-                      src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=85"
+                      src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=600&q=75"
                       alt="Outdoor event venue"
                       className="h-64 w-full object-cover sm:h-80"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
-                <div className="absolute bottom-5 left-5 rounded-2xl border border-white/20 bg-slate-950/90 p-4 text-white shadow-xl backdrop-blur">
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                <div className="absolute bottom-6 left-6 rounded-none border border-paper bg-paper p-4 shadow-lg">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
                     EventFlow
                   </p>
-                  <p className="mt-1 text-sm font-bold">
+                  <p className="mt-1 text-sm font-bold text-ink">
                     Your event starts with the right space.
                   </p>
                 </div>
@@ -627,13 +649,13 @@ export default function Home() {
         </section>
 
         {/* WHY EVENTFLOW */}
-        <section className="bg-white py-20 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <section className="bg-paper py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="max-w-2xl">
-              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-amber-600">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                 Why EventFlow
               </p>
-              <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
+              <h2 className="mt-4 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
                 A simpler way to organise the important details.
               </h2>
             </div>
@@ -641,16 +663,16 @@ export default function Home() {
               {benefits.map((benefit) => (
                 <motion.div
                   key={benefit.number}
-                  whileHover={{ y: -5 }}
-                  className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:border-amber-200 hover:shadow-lg"
+                  whileHover={{ y: -8 }}
+                  className="overflow-hidden border border-slate-200 bg-paper p-8 shadow-sm transition-colors duration-300 hover:border-ink hover:shadow-lg"
                 >
-                  <span className="text-xs font-extrabold tracking-widest text-amber-600">
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                     {benefit.number}
                   </span>
-                  <h3 className="mt-6 text-xl font-bold text-slate-950">
+                  <h3 className="mt-6 text-lg font-bold text-ink">
                     {benefit.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-500">
+                  <p className="mt-4 text-sm leading-6 text-slate">
                     {benefit.text}
                   </p>
                 </motion.div>
@@ -660,50 +682,50 @@ export default function Home() {
         </section>
 
         {/* HOW IT WORKS */}
-        <section id="how-it-works" className="bg-slate-50 py-20 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <section id="how-it-works" className="bg-gold-soft py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-amber-600">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                 How it works
               </p>
-              <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
+              <h2 className="mt-4 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
                 From idea to agreement.
               </h2>
-              <p className="mt-4 text-base leading-7 text-slate-600">
+              <p className="mt-6 text-lead sm:text-xl">
                 EventFlow keeps the process simple, so you can focus on
                 planning your event instead of chasing providers.
               </p>
             </div>
-            <div className="relative mt-14 grid gap-6 md:grid-cols-3">
+            <div className="relative mt-16 grid gap-6 md:grid-cols-3">
               {[
                 {
-                  number: '1',
-                  title: 'Tell us what you need',
-                  text: 'Create your event and share the important details, including date, location, guests and requirements.',
+                  number: "1",
+                  title: "Tell us what you need",
+                  text: "Create your event and share the important details, including date, location, guests and requirements.",
                 },
                 {
-                  number: '2',
-                  title: 'Discover & request',
-                  text: 'Explore providers, review their services and send a booking request to the ones that fit your event.',
+                  number: "2",
+                  title: "Discover & request",
+                  text: "Explore providers, review their services and send a booking request to the ones that fit your event.",
                 },
                 {
-                  number: '3',
-                  title: 'Agree & book',
-                  text: 'Review the quotation, discuss the details and agree on the final price before your booking is confirmed.',
+                  number: "3",
+                  title: "Agree & book",
+                  text: "Review the quotation, discuss the details and agree on the final price before your booking is confirmed.",
                 },
               ].map((step) => (
                 <motion.div
                   key={step.number}
-                  whileHover={{ y: -5 }}
-                  className="relative rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:border-amber-200 hover:shadow-lg"
+                  whileHover={{ y: -8 }}
+                  className="relative overflow-hidden border border-slate-200 bg-paper p-8 shadow-sm transition-colors duration-300 hover:border-ink hover:shadow-lg"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-amber-600 text-sm font-extrabold text-white shadow-lg shadow-indigo-600/25">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-gold text-sm font-bold text-paper shadow-lg">
                     {step.number}
                   </div>
-                  <h3 className="mt-6 text-xl font-bold text-slate-950">
+                  <h3 className="mt-6 text-lg font-bold text-ink">
                     {step.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-500">
+                  <p className="mt-4 text-sm leading-6 text-slate">
                     {step.text}
                   </p>
                 </motion.div>
@@ -713,35 +735,35 @@ export default function Home() {
         </section>
 
         {/* BUSINESS SECTION */}
-        <section id="businesses" className="bg-white py-20 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-            <div className="overflow-hidden rounded-[2rem] bg-indigo-600">
+        <section id="businesses" className="bg-paper py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+            <div className="overflow-hidden border border-ink bg-charcoal">
               <div className="grid lg:grid-cols-[1fr_0.85fr]">
-                <div className="px-7 py-12 sm:px-10 sm:py-14 lg:px-14 lg:py-16">
-                  <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-indigo-200">
+                <div className="px-8 py-16 sm:px-10 sm:py-20 lg:px-14 lg:py-24">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-soft">
                     For event businesses
                   </p>
-                  <h2 className="mt-4 max-w-2xl text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                  <h2 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl leading-[1]">
                     Put your business in front of people planning their next
                     event.
                   </h2>
-                  <p className="mt-5 max-w-xl text-base leading-7 text-indigo-100">
+                  <p className="mt-6 max-w-xl text-sm leading-8 text-gold-soft sm:text-base">
                     EventFlow gives venues and event professionals a place to
                     showcase their services, receive booking requests and
                     manage conversations with organizers.
                   </p>
-                  <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                  <div className="mt-10 grid gap-3 sm:grid-cols-2">
                     {[
-                      'Showcase your services',
-                      'Reach event organizers',
-                      'Receive booking requests',
-                      'Manage your bookings',
+                      "Showcase your services",
+                      "Reach event organizers",
+                      "Receive booking requests",
+                      "Manage your bookings",
                     ].map((item) => (
                       <div
                         key={item}
-                        className="flex items-center gap-3 text-sm font-semibold text-white"
+                        className="flex items-start gap-3 text-sm font-bold text-paper"
                       >
-                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/15 text-xs">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-sm bg-paper text-xs text-gold">
                           ✓
                         </span>
                         {item}
@@ -749,18 +771,18 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-                <div className="bg-slate-900 p-6 sm:p-8 lg:p-10">
+                <div className="bg-ink p-6 sm:p-8 lg:p-10">
                   <div className="grid gap-4">
-                    <div className="rounded-2xl bg-white p-6">
+                    <div className="rounded-none bg-paper p-6">
                       <div className="flex items-start gap-4">
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-xl">
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-sm bg-paper text-xl text-ink">
                           ⌂
                         </div>
                         <div>
-                          <h3 className="font-bold text-slate-950">
+                          <h3 className="font-bold text-paper">
                             Own a venue?
                           </h3>
-                          <p className="mt-1 text-sm leading-6 text-slate-500">
+                          <p className="mt-2 text-sm leading-6 text-gold-soft">
                             Showcase your event space and connect with
                             organizers.
                           </p>
@@ -768,22 +790,22 @@ export default function Home() {
                       </div>
                       <Link
                         to="/register/venue"
-                        className="mt-5 flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-3 text-sm font-bold text-white transition hover:bg-indigo-700"
+                        className="mt-6 inline-flex items-center justify-center rounded-none bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors hover:bg-ink hover:text-paper"
                       >
                         Register your venue
                         <span className="ml-2">→</span>
                       </Link>
                     </div>
-                    <div className="rounded-2xl bg-slate-100 p-6">
+                    <div className="rounded-none border border-paper bg-ink p-6">
                       <div className="flex items-start gap-4">
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-xl">
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-sm bg-paper text-xl text-ink">
                           ✦
                         </div>
                         <div>
-                          <h3 className="font-bold text-slate-950">
+                          <h3 className="font-bold text-paper">
                             Provide event services?
                           </h3>
-                          <p className="mt-1 text-sm leading-6 text-slate-500">
+                          <p className="mt-2 text-sm leading-6 text-gold-soft">
                             Build your profile and let organizers discover
                             what you offer.
                           </p>
@@ -791,7 +813,7 @@ export default function Home() {
                       </div>
                       <Link
                         to="/register/vendor"
-                        className="mt-5 flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-900 transition hover:bg-slate-200"
+                        className="mt-6 inline-flex items-center justify-center rounded-none border border-paper bg-transparent px-6 py-4 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors hover:bg-paper hover:text-ink"
                       >
                         Join as a vendor
                         <span className="ml-2">→</span>
@@ -805,28 +827,28 @@ export default function Home() {
         </section>
 
         {/* FINAL CTA */}
-        <section className="bg-slate-50 px-5 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <section className="bg-gold-soft px-6 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-amber-600 text-sm font-extrabold text-white shadow-lg shadow-indigo-600/30">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-sm bg-gold text-xs font-bold uppercase tracking-[0.15em] text-paper shadow-lg">
               EF
             </div>
-            <h2 className="mt-6 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">
+            <h2 className="mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
               Your event starts here.
             </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+            <p className="mx-auto mt-6 max-w-2xl text-lead sm:text-xl">
               Find the places, people and services that can bring your plans
               together. Explore EventFlow and start building your event.
             </p>
-            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
                 to="/discover"
-                className="rounded-xl bg-gradient-to-r from-indigo-600 to-amber-600 px-8 py-4 text-sm font-bold text-white shadow-lg shadow-indigo-600/25 transition hover:-translate-y-0.5 hover:shadow-indigo-600/40"
+                className="btn-primary"
               >
                 Explore EventFlow →
               </Link>
               <Link
                 to="/register"
-                className="rounded-xl border border-slate-200 bg-white px-8 py-4 text-sm font-bold text-slate-900 transition hover:bg-slate-50"
+                className="btn-outline"
               >
                 Create an account
               </Link>
@@ -838,3 +860,4 @@ export default function Home() {
     </motion.div>
   );
 }
+

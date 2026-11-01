@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { hoverScale, tap } from './motion';
+import { hoverLift } from './motion';
 
 export function Button({
   children,
@@ -12,27 +12,30 @@ export function Button({
   ...props
 }) {
   const base =
-    'inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-300 disabled:opacity-60 disabled:pointer-events-none';
+    'inline-flex items-center gap-2 font-bold uppercase tracking-[0.15em] transition-colors duration-200 disabled:opacity-50 disabled:pointer-events-none';
 
   const variants = {
-    primary: 'bg-ink text-white shadow-lg shadow-ink/15 hover:bg-slate-900 hover:-translate-y-0.5 hover:shadow-gold/20',
-    gold: 'bg-gold text-white shadow-lg shadow-gold/15 hover:bg-amber-700 hover:-translate-y-0.5 hover:shadow-gold/30',
-    outline: 'border border-slate-200 bg-surface text-ink hover:border-gold hover:bg-gold-soft hover:text-gold',
-    ghost: 'text-slate hover:bg-slate-100 hover:text-gold',
+    primary:
+      'bg-ink text-paper px-8 py-4 text-xs hover:bg-gold focus:outline-none',
+    gold:
+      'bg-gold text-paper px-8 py-4 text-xs hover:bg-ink focus:outline-none',
+    outline:
+      'border border-ink bg-transparent text-ink px-8 py-4 text-xs hover:bg-ink hover:text-paper focus:outline-none',
+    ghost:
+      'text-slate hover:bg-slate-100 hover:text-ink',
   };
 
   const sizes = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-7 py-3.5 text-sm font-bold',
-    lg: 'px-8 py-4 text-base font-bold',
+    sm: 'px-6 py-3 text-[10px]',
+    md: 'px-8 py-4 text-xs',
+    lg: 'px-10 py-5 text-sm',
   };
 
   const Comp = asChild ? motion.span : motion.button;
 
   return (
     <Comp
-      whileHover={!disabled ? hoverScale : undefined}
-      whileTap={!disabled ? tap : undefined}
+      whileHover={!disabled ? hoverLift : undefined}
       disabled={disabled}
       onClick={onClick}
       className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
@@ -42,4 +45,5 @@ export function Button({
     </Comp>
   );
 }
+
 
