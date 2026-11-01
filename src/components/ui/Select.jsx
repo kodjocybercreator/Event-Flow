@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 export function Select({
   id,
   label,
@@ -7,39 +5,38 @@ export function Select({
   onChange,
   options,
   required = false,
+  error = false,
   className = '',
   ...props
 }) {
   return (
-    <div className="mb-6">
+    <div className="mb-5">
       {label && (
         <label
           htmlFor={id}
-          className="block text-xs font-bold uppercase tracking-[0.2em] text-ink mb-2"
+          className="mb-2 block text-xs font-semibold uppercase tracking-[0.15em] text-mist"
         >
           {label}
         </label>
       )}
-      <motion.select
+      <select
         id={id}
         value={value}
         onChange={onChange}
         required={required}
-        className={`w-full border-b border-ink bg-transparent px-0 py-3 text-sm font-normal outline-none transition-colors ${
+        className={`w-full rounded-xl border bg-elevated px-4 py-3.5 text-sm text-cream outline-none transition-all duration-200 focus:ring-2 ${
           error
-            ? 'border-red-500 focus:border-red-500 focus:ring-0'
-            : 'border-ink focus:border-gold focus:ring-0'
+            ? 'border-rose/50 focus:border-rose focus:ring-rose/20'
+            : 'border-line focus:border-gold focus:ring-gold/20'
         } ${className}`}
         {...props}
       >
         {options.map((opt) => (
-          <option key={opt.value} value={opt.value}>
+          <option key={opt.value} value={opt.value} className="bg-raised text-cream">
             {opt.label}
           </option>
         ))}
-      </motion.select>
+      </select>
     </div>
   );
 }
-
-

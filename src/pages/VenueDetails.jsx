@@ -743,16 +743,16 @@ export default function VenueDetails() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-surface">
         <Navbar />
 
         <main className="mx-auto flex min-h-[70vh] max-w-4xl items-center justify-center px-5">
           <div className="text-center">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm">
-              <div className="h-7 w-7 animate-spin rounded-full border-[3px] border-slate-200 border-t-indigo-600" />
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-raised shadow-sm">
+              <div className="h-7 w-7 animate-spin rounded-full border-[3px] border-line border-t-indigo-600" />
             </div>
 
-            <p className="mt-4 text-sm font-semibold text-slate-500">
+            <p className="mt-4 text-sm font-semibold text-mist">
               Loading venue...
             </p>
           </div>
@@ -769,31 +769,31 @@ export default function VenueDetails() {
 
   if (!venue) {
     return (
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-surface">
         <Navbar />
 
         <main className="mx-auto flex min-h-[70vh] max-w-4xl items-center justify-center px-5 py-12">
-          <div className="w-full rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm sm:p-12">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-indigo-50 text-3xl">
+          <div className="w-full rounded-3xl border border-line bg-raised p-8 text-center shadow-sm sm:p-12">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-gold/10 text-3xl">
               🏛️
             </div>
 
-            <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+            <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-gold">
               EventFlow Venues
             </p>
 
-            <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">
+            <h1 className="mt-3 text-3xl font-bold tracking-tight text-cream">
               Venue not found
             </h1>
 
-            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-slate-500">
+            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-mist">
               This venue may have been removed, is no longer
               available, or has not yet been approved by EventFlow.
             </p>
 
             <Link
               to="/venues"
-              className="mt-7 inline-flex items-center justify-center rounded-xl bg-indigo-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-indigo-700"
+              className="mt-7 inline-flex items-center justify-center rounded-xl bg-gold px-6 py-3 text-sm font-bold text-cream transition hover:bg-gold-dim"
             >
               ← Browse venues
             </Link>
@@ -804,7 +804,7 @@ export default function VenueDetails() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-surface text-cream">
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
@@ -815,14 +815,14 @@ export default function VenueDetails() {
         <div className="flex items-center gap-2 text-sm">
           <Link
             to="/venues"
-            className="font-semibold text-slate-500 transition hover:text-indigo-600"
+            className="font-semibold text-mist transition hover:text-gold"
           >
             Venues
           </Link>
 
-          <span className="text-slate-300">/</span>
+          <span className="text-fog">/</span>
 
-          <span className="truncate font-semibold text-slate-900">
+          <span className="truncate font-semibold text-cream">
             {venueName}
           </span>
         </div>
@@ -831,10 +831,10 @@ export default function VenueDetails() {
             VENUE HERO / GALLERY
         ====================================================== */}
 
-        <section className="mt-5 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
+        <section className="mt-5 overflow-hidden rounded-[2rem] border border-line bg-raised shadow-sm">
           {/* GALLERY HERO */}
 
-          <div className="relative h-72 overflow-hidden bg-slate-950 sm:h-96 lg:h-[500px]">
+          <div className="relative h-72 overflow-hidden bg-charcoal sm:h-96 lg:h-[500px]">
             {venueImages.length > 0 ? (
               <>
                 <button
@@ -853,7 +853,7 @@ export default function VenueDetails() {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/10" />
 
-                  <div className="absolute right-5 top-20 hidden rounded-xl bg-black/30 px-4 py-2 text-xs font-bold text-white backdrop-blur-md transition group-hover:bg-black/50 sm:block">
+                  <div className="absolute right-5 top-20 hidden rounded-xl bg-ink/30 px-4 py-2 text-xs font-bold text-cream backdrop-blur-xl transition group-hover:bg-ink/50 sm:block">
                     Click to view gallery
                   </div>
                 </button>
@@ -861,7 +861,7 @@ export default function VenueDetails() {
                 {/* Gallery count */}
 
                 {venueImages.length > 1 && (
-                  <div className="pointer-events-none absolute bottom-5 right-5 z-20 rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-xs font-bold text-white backdrop-blur-md">
+                  <div className="pointer-events-none absolute bottom-5 right-5 z-20 rounded-xl border border-white/15 bg-ink/40 px-3 py-2 text-xs font-bold text-cream backdrop-blur-xl">
                     📷 {activeImageIndex + 1} /{" "}
                     {venueImages.length}
                   </div>
@@ -872,14 +872,14 @@ export default function VenueDetails() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(99,102,241,0.5),_transparent_45%),linear-gradient(115deg,_#020617,_#1e1b4b,_#4338ca)]" />
 
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="flex h-28 w-28 items-center justify-center rounded-[2rem] border border-white/10 bg-white/10 text-6xl shadow-2xl backdrop-blur-sm sm:h-36 sm:w-36 sm:text-7xl">
+                  <div className="flex h-28 w-28 items-center justify-center rounded-[2rem] border border-line bg-raised/10 text-6xl shadow-2xl backdrop-blur-xl sm:h-36 sm:w-36 sm:text-7xl">
                     🏛️
                   </div>
                 </div>
 
-                <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full border border-white/10" />
+                <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full border border-line" />
 
-                <div className="absolute -bottom-40 -left-20 h-96 w-96 rounded-full border border-white/10" />
+                <div className="absolute -bottom-40 -left-20 h-96 w-96 rounded-full border border-line" />
               </>
             )}
 
@@ -888,7 +888,7 @@ export default function VenueDetails() {
             <div className="absolute left-5 top-5 z-30 sm:left-7 sm:top-7">
               <Link
                 to="/venues"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-black/25 px-4 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-black/40"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-ink/25 px-4 py-2.5 text-sm font-semibold text-cream backdrop-blur-xl transition hover:bg-ink/40"
               >
                 ← Venues
               </Link>
@@ -897,7 +897,7 @@ export default function VenueDetails() {
             {/* Verified */}
 
             <div className="absolute right-5 top-5 z-30 sm:right-7 sm:top-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs font-bold text-white backdrop-blur-md">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-raised/10 px-3 py-2 text-xs font-bold text-cream backdrop-blur-xl">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
                 EventFlow Verified
               </div>
@@ -907,20 +907,20 @@ export default function VenueDetails() {
 
             <div className="absolute bottom-6 left-5 right-5 z-30 sm:bottom-8 sm:left-8 sm:right-8">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-md">
+                <span className="rounded-full bg-raised/10 px-3 py-1.5 text-xs font-bold text-cream backdrop-blur-xl">
                   {venueType}
                 </span>
 
-                <span className="rounded-full bg-emerald-500/90 px-3 py-1.5 text-xs font-bold text-white">
+                <span className="rounded-full bg-emerald-500/90 px-3 py-1.5 text-xs font-bold text-cream">
                   ✓ Approved
                 </span>
               </div>
 
-              <h1 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              <h1 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-cream sm:text-4xl lg:text-5xl">
                 {venueName}
               </h1>
 
-              <p className="mt-2 flex items-center gap-2 text-sm font-medium text-white/80 sm:text-base">
+              <p className="mt-2 flex items-center gap-2 text-sm font-medium text-cream/80 sm:text-base">
                 <span>📍</span>
                 {venueLocation}
               </p>
@@ -932,7 +932,7 @@ export default function VenueDetails() {
           ==================================================== */}
 
           {venueImages.length > 1 && (
-            <div className="border-b border-slate-200 bg-white px-4 py-4 sm:px-8">
+            <div className="border-b border-line bg-raised px-4 py-4 sm:px-8">
               <div className="flex gap-3 overflow-x-auto pb-1">
                 {venueImages.map((image, index) => (
                   <button
@@ -943,7 +943,7 @@ export default function VenueDetails() {
                     }
                     className={`relative h-20 w-28 shrink-0 overflow-hidden rounded-xl border-2 transition sm:h-24 sm:w-32 ${
                       index === activeImageIndex
-                        ? "border-indigo-600 ring-2 ring-indigo-100"
+                        ? "border-gold ring-2 ring-indigo-100"
                         : "border-transparent opacity-75 hover:opacity-100"
                     }`}
                   >
@@ -954,7 +954,7 @@ export default function VenueDetails() {
                     />
 
                     {index === 0 && (
-                      <span className="absolute bottom-1 left-1 rounded-md bg-black/60 px-1.5 py-0.5 text-[9px] font-bold text-white">
+                      <span className="absolute bottom-1 left-1 rounded-md bg-ink/60 px-1.5 py-0.5 text-[9px] font-bold text-cream">
                         Cover
                       </span>
                     )}
@@ -966,7 +966,7 @@ export default function VenueDetails() {
                   onClick={() =>
                     openGallery(activeImageIndex)
                   }
-                  className="flex h-20 w-28 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-xs font-bold text-slate-600 transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700 sm:h-24 sm:w-32"
+                  className="flex h-20 w-28 shrink-0 items-center justify-center rounded-xl border border-line bg-surface text-xs font-bold text-mist transition hover:border-gold/30 hover:bg-gold/10 hover:text-gold-dim sm:h-24 sm:w-32"
                 >
                   View all
                 </button>
@@ -979,15 +979,15 @@ export default function VenueDetails() {
           <div className="p-5 sm:p-8 lg:p-10">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                   Event venue
                 </p>
 
-                <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">
+                <h2 className="mt-2 text-2xl font-bold tracking-tight text-cream sm:text-3xl">
                   A place for your next event
                 </h2>
 
-                <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500">
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-mist">
                   Explore the venue details and photo gallery below.
                   When you're ready, send a booking request and let
                   the venue owner review your event requirements.
@@ -996,18 +996,18 @@ export default function VenueDetails() {
 
               {/* PRICE */}
 
-              <div className="shrink-0 rounded-2xl border border-indigo-100 bg-indigo-50 px-5 py-4 lg:min-w-[220px]">
-                <p className="text-xs font-bold uppercase tracking-wide text-slate-500">
+              <div className="shrink-0 rounded-2xl border border-gold/20 bg-gold/10 px-5 py-4 lg:min-w-[220px]">
+                <p className="text-xs font-bold uppercase tracking-wide text-mist">
                   Starting from
                 </p>
 
-                <p className="mt-1 text-2xl font-bold text-slate-950">
+                <p className="mt-1 text-2xl font-bold text-cream">
                   {venuePrice > 0
                     ? formatPrice(venuePrice)
                     : "Contact owner"}
                 </p>
 
-                <p className="mt-1 text-xs text-slate-500">
+                <p className="mt-1 text-xs text-mist">
                   Final price confirmed after requirements review
                 </p>
               </div>
@@ -1054,23 +1054,23 @@ export default function VenueDetails() {
             {/* PHOTO GALLERY */}
 
             {venueImages.length > 0 && (
-              <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+              <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-8">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                       Venue gallery
                     </p>
 
-                    <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-slate-950">
+                    <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-cream">
                       Explore the space
                     </h2>
 
-                    <p className="mt-2 text-sm leading-6 text-slate-500">
+                    <p className="mt-2 text-sm leading-6 text-mist">
                       View photos uploaded by the venue owner.
                     </p>
                   </div>
 
-                  <span className="w-fit rounded-full bg-slate-100 px-3 py-1.5 text-xs font-bold text-slate-600">
+                  <span className="w-fit rounded-full bg-surface px-3 py-1.5 text-xs font-bold text-mist">
                     {venueImages.length} photo
                     {venueImages.length === 1 ? "" : "s"}
                   </span>
@@ -1084,7 +1084,7 @@ export default function VenueDetails() {
                       onClick={() =>
                         openGallery(index)
                       }
-                      className={`group relative overflow-hidden rounded-2xl bg-slate-100 text-left ${
+                      className={`group relative overflow-hidden rounded-2xl bg-surface text-left ${
                         index === 0
                           ? "col-span-2 aspect-[16/9] sm:col-span-2"
                           : "aspect-[4/3]"
@@ -1099,17 +1099,17 @@ export default function VenueDetails() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />
 
                       <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between opacity-0 transition group-hover:opacity-100">
-                        <span className="rounded-lg bg-black/50 px-2.5 py-1.5 text-xs font-bold text-white backdrop-blur-md">
+                        <span className="rounded-lg bg-ink/50 px-2.5 py-1.5 text-xs font-bold text-cream backdrop-blur-xl">
                           View photo
                         </span>
 
-                        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/90 text-sm text-slate-900">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-raised/90 text-sm text-cream">
                           ↗
                         </span>
                       </div>
 
                       {index === 0 && (
-                        <span className="absolute left-3 top-3 rounded-full bg-indigo-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
+                        <span className="absolute left-3 top-3 rounded-full bg-gold px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-cream">
                           Cover photo
                         </span>
                       )}
@@ -1121,36 +1121,36 @@ export default function VenueDetails() {
 
             {/* ABOUT */}
 
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-8">
               <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-lg">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-lg">
                   ✦
                 </div>
 
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                     About the venue
                   </p>
 
-                  <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-slate-950">
+                  <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-cream">
                     Venue overview
                   </h2>
                 </div>
               </div>
 
-              <p className="mt-6 text-sm leading-7 text-slate-600">
+              <p className="mt-6 text-sm leading-7 text-mist">
                 {venueDescription}
               </p>
             </section>
 
             {/* VENUE HIGHLIGHTS */}
 
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+            <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-8">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                 Venue information
               </p>
 
-              <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-slate-950">
+              <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-cream">
                 Everything you need to know
               </h2>
 
@@ -1187,18 +1187,18 @@ export default function VenueDetails() {
 
             {/* OWNER */}
 
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-8">
               <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-lg">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-surface text-lg">
                   🏢
                 </div>
 
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                     Venue provider
                   </p>
 
-                  <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-slate-950">
+                  <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-cream">
                     Venue owner
                   </h2>
                 </div>
@@ -1238,18 +1238,18 @@ export default function VenueDetails() {
             {showBookingForm ? (
               <section
                 id="booking-form"
-                className="overflow-hidden rounded-3xl border border-indigo-100 bg-indigo-50"
+                className="overflow-hidden rounded-3xl border border-gold/20 bg-gold/10"
               >
-                <div className="border-b border-indigo-100 bg-white/60 p-6 sm:p-8">
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                <div className="border-b border-gold/20 bg-raised/60 p-6 sm:p-8">
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                     Booking request
                   </p>
 
-                  <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">
+                  <h2 className="mt-2 text-2xl font-bold tracking-tight text-cream">
                     Request {venueName}
                   </h2>
 
-                  <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-500">
+                  <p className="mt-2 max-w-2xl text-sm leading-6 text-mist">
                     Tell the venue owner about your event. They can
                     review your requirements and respond with a
                     quotation.
@@ -1261,7 +1261,7 @@ export default function VenueDetails() {
                   className="p-6 sm:p-8"
                 >
                   {error && (
-                    <div className="mb-6 flex items-start gap-3 rounded-2xl border border-red-200 bg-red-50 px-4 py-4 text-sm font-medium text-red-700">
+                    <div className="mb-6 flex items-start gap-3 rounded-2xl border border-rose/20 bg-rose/10 px-4 py-4 text-sm font-medium text-rose">
                       <span>!</span>
                       <span>{error}</span>
                     </div>
@@ -1366,7 +1366,7 @@ export default function VenueDetails() {
                         type="text"
                         value={venueLocation}
                         readOnly
-                        className="form-input cursor-default bg-slate-100 text-slate-500"
+                        className="form-input cursor-default bg-surface text-mist"
                       />
                     </Field>
 
@@ -1388,7 +1388,7 @@ export default function VenueDetails() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
+                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-gold px-6 py-3.5 text-sm font-bold text-cream transition hover:bg-gold-dim disabled:cursor-not-allowed disabled:opacity-60"
                     >
                       {submitting ? (
                         <>
@@ -1410,31 +1410,31 @@ export default function VenueDetails() {
                         setShowBookingForm(false);
                         setError("");
                       }}
-                      className="rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-bold text-slate-700 transition hover:bg-slate-50 disabled:opacity-60"
+                      className="rounded-xl border border-line bg-raised px-6 py-3.5 text-sm font-bold text-mist transition hover:bg-surface disabled:opacity-60"
                     >
                       Cancel
                     </button>
                   </div>
 
-                  <p className="mt-4 text-center text-xs leading-5 text-slate-400">
+                  <p className="mt-4 text-center text-xs leading-5 text-fog">
                     Your request does not automatically confirm the
                     venue. The venue owner must review and respond.
                   </p>
                 </form>
               </section>
             ) : (
-              <section className="rounded-3xl border border-indigo-100 bg-indigo-50 p-6 sm:p-8">
+              <section className="rounded-3xl border border-gold/20 bg-gold/10 p-6 sm:p-8">
                 <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                       Interested in this venue?
                     </p>
 
-                    <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">
+                    <h2 className="mt-2 text-2xl font-bold tracking-tight text-cream">
                       Start your booking request
                     </h2>
 
-                    <p className="mt-2 max-w-xl text-sm leading-6 text-slate-600">
+                    <p className="mt-2 max-w-xl text-sm leading-6 text-mist">
                       Share your event details and let the venue
                       owner review your requirements.
                     </p>
@@ -1443,7 +1443,7 @@ export default function VenueDetails() {
                   <button
                     type="button"
                     onClick={handleRequestVenue}
-                    className="shrink-0 rounded-xl bg-indigo-600 px-6 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-indigo-700"
+                    className="shrink-0 rounded-xl bg-gold px-6 py-3.5 text-sm font-bold text-cream shadow-sm transition hover:bg-gold-dim"
                   >
                     Request this venue →
                   </button>
@@ -1459,9 +1459,9 @@ export default function VenueDetails() {
           <aside className="space-y-6">
             {/* BOOKING CARD */}
 
-            <section className="sticky top-24 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-              <div className="bg-slate-950 p-6 text-white">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-300">
+            <section className="sticky top-24 overflow-hidden rounded-3xl border border-line bg-raised shadow-sm">
+              <div className="bg-charcoal p-6 text-cream">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                   Reserve your date
                 </p>
 
@@ -1469,20 +1469,20 @@ export default function VenueDetails() {
                   {venueName}
                 </h2>
 
-                <p className="mt-2 text-sm leading-6 text-slate-300">
+                <p className="mt-2 text-sm leading-6 text-fog">
                   Send a request with your event details and receive
                   a response from the venue owner.
                 </p>
               </div>
 
               <div className="p-6">
-                <div className="flex items-end justify-between border-b border-slate-100 pb-5">
+                <div className="flex items-end justify-between border-b border-line pb-5">
                   <div>
-                    <p className="text-xs font-medium text-slate-400">
+                    <p className="text-xs font-medium text-fog">
                       Starting from
                     </p>
 
-                    <p className="mt-1 text-2xl font-bold text-slate-950">
+                    <p className="mt-1 text-2xl font-bold text-cream">
                       {venuePrice > 0
                         ? formatPrice(venuePrice)
                         : "On request"}
@@ -1497,7 +1497,7 @@ export default function VenueDetails() {
                 <button
                   type="button"
                   onClick={handleRequestVenue}
-                  className="mt-5 w-full rounded-xl bg-indigo-600 px-5 py-3.5 text-sm font-bold text-white transition hover:bg-indigo-700"
+                  className="mt-5 w-full rounded-xl bg-gold px-5 py-3.5 text-sm font-bold text-cream transition hover:bg-gold-dim"
                 >
                   Request this venue →
                 </button>
@@ -1507,8 +1507,8 @@ export default function VenueDetails() {
                   onClick={handleSaveVenue}
                   className={`mt-3 w-full rounded-xl border px-5 py-3 text-sm font-bold transition ${
                     saved
-                      ? "border-indigo-200 bg-indigo-50 text-indigo-700"
-                      : "border-slate-200 bg-white text-slate-700 hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
+                      ? "border-gold/30 bg-gold/10 text-gold"
+                      : "border-line bg-raised text-mist hover:border-gold/30 hover:bg-gold/10 hover:text-gold-dim"
                   }`}
                 >
                   {saved
@@ -1516,7 +1516,7 @@ export default function VenueDetails() {
                     : "♡ Save venue"}
                 </button>
 
-                <p className="mt-4 text-center text-xs leading-5 text-slate-400">
+                <p className="mt-4 text-center text-xs leading-5 text-fog">
                   Final pricing is confirmed after the venue reviews
                   your event requirements.
                 </p>
@@ -1525,8 +1525,8 @@ export default function VenueDetails() {
 
             {/* VENUE QUICK FACTS */}
 
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="font-bold text-slate-950">
+            <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm">
+              <h2 className="font-bold text-cream">
                 Venue details
               </h2>
 
@@ -1574,15 +1574,15 @@ export default function VenueDetails() {
             {/* TRUST */}
 
             <section className="rounded-3xl border border-emerald-100 bg-emerald-50 p-6">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-emerald-600 shadow-sm">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-raised text-emerald-600 shadow-sm">
                 ✓
               </div>
 
-              <h3 className="mt-4 font-bold text-slate-950">
+              <h3 className="mt-4 font-bold text-cream">
                 Verified by EventFlow
               </h3>
 
-              <p className="mt-2 text-sm leading-6 text-slate-600">
+              <p className="mt-2 text-sm leading-6 text-mist">
                 This venue has been approved by EventFlow and is
                 available for organizers to discover and request.
               </p>
@@ -1590,12 +1590,12 @@ export default function VenueDetails() {
 
             {/* BOOKING PROCESS */}
 
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+            <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                 How booking works
               </p>
 
-              <h2 className="mt-2 text-xl font-bold text-slate-950">
+              <h2 className="mt-2 text-xl font-bold text-cream">
                 Simple and transparent
               </h2>
 
@@ -1622,8 +1622,8 @@ export default function VenueDetails() {
 
             {/* DISCOVER MORE */}
 
-            <section className="rounded-3xl border border-slate-200 bg-slate-950 p-6 text-white">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-400">
+            <section className="rounded-3xl border border-line bg-charcoal p-6 text-cream">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                 Still exploring?
               </p>
 
@@ -1631,14 +1631,14 @@ export default function VenueDetails() {
                 Find another venue
               </h3>
 
-              <p className="mt-2 text-sm leading-6 text-slate-400">
+              <p className="mt-2 text-sm leading-6 text-fog">
                 Compare more approved venues and find a location
                 that fits your event.
               </p>
 
               <Link
                 to="/venues"
-                className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-slate-100"
+                className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-raised px-5 py-3 text-sm font-bold text-cream transition hover:bg-surface"
               >
                 Browse venues →
               </Link>
@@ -1653,7 +1653,7 @@ export default function VenueDetails() {
 
       {lightboxOpen && venueImages.length > 0 && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/95 p-3 backdrop-blur-sm sm:p-6"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/95 p-3 backdrop-blur-xl sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label={`${venueName} photo gallery`}
@@ -1664,7 +1664,7 @@ export default function VenueDetails() {
           <button
             type="button"
             onClick={closeGallery}
-            className="absolute right-4 top-4 z-[110] flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/10 text-xl text-white backdrop-blur-md transition hover:bg-white/20 sm:right-7 sm:top-7"
+            className="absolute right-4 top-4 z-[110] flex h-11 w-11 items-center justify-center rounded-full border border-line bg-raised/10 text-xl text-cream backdrop-blur-xl transition hover:bg-raised/20 sm:right-7 sm:top-7"
             aria-label="Close gallery"
           >
             ×
@@ -1672,7 +1672,7 @@ export default function VenueDetails() {
 
           {/* Counter */}
 
-          <div className="absolute left-4 top-5 z-[110] rounded-full border border-white/10 bg-white/10 px-3 py-2 text-xs font-bold text-white backdrop-blur-md sm:left-7 sm:top-7">
+          <div className="absolute left-4 top-5 z-[110] rounded-full border border-line bg-raised/10 px-3 py-2 text-xs font-bold text-cream backdrop-blur-xl sm:left-7 sm:top-7">
             {activeImageIndex + 1} /{" "}
             {venueImages.length}
           </div>
@@ -1699,7 +1699,7 @@ export default function VenueDetails() {
               <button
                 type="button"
                 onClick={showPreviousImage}
-                className="absolute left-0 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-white/10 text-2xl text-white backdrop-blur-md transition hover:bg-white/20 sm:left-4 sm:h-14 sm:w-14"
+                className="absolute left-0 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-raised/10 text-2xl text-cream backdrop-blur-xl transition hover:bg-raised/20 sm:left-4 sm:h-14 sm:w-14"
                 aria-label="Previous image"
               >
                 ‹
@@ -1712,7 +1712,7 @@ export default function VenueDetails() {
               <button
                 type="button"
                 onClick={showNextImage}
-                className="absolute right-0 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-white/10 text-2xl text-white backdrop-blur-md transition hover:bg-white/20 sm:right-4 sm:h-14 sm:w-14"
+                className="absolute right-0 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-raised/10 text-2xl text-cream backdrop-blur-xl transition hover:bg-raised/20 sm:right-4 sm:h-14 sm:w-14"
                 aria-label="Next image"
               >
                 ›
@@ -1722,7 +1722,7 @@ export default function VenueDetails() {
             {/* Bottom thumbnails */}
 
             {venueImages.length > 1 && (
-              <div className="absolute bottom-0 left-1/2 flex max-w-full -translate-x-1/2 gap-2 overflow-x-auto rounded-2xl border border-white/10 bg-black/30 p-2 backdrop-blur-md">
+              <div className="absolute bottom-0 left-1/2 flex max-w-full -translate-x-1/2 gap-2 overflow-x-auto rounded-2xl border border-line bg-ink/30 p-2 backdrop-blur-xl">
                 {venueImages.map(
                   (image, index) => (
                     <button
@@ -1791,18 +1791,18 @@ export default function VenueDetails() {
 
 function VenueInfoCard({ icon, label, value }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+    <div className="rounded-2xl border border-line bg-surface p-4">
       <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-lg shadow-sm">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-raised text-lg shadow-sm">
           {icon}
         </div>
 
         <div className="min-w-0">
-          <p className="text-[10px] font-bold uppercase tracking-wide text-slate-400">
+          <p className="text-[10px] font-bold uppercase tracking-wide text-fog">
             {label}
           </p>
 
-          <p className="mt-1 truncate text-sm font-bold text-slate-800">
+          <p className="mt-1 truncate text-sm font-bold text-cream">
             {value}
           </p>
         </div>
@@ -1817,16 +1817,16 @@ function VenueInfoCard({ icon, label, value }) {
 
 function Highlight({ icon, title, text }) {
   return (
-    <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
-      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-lg shadow-sm">
+    <div className="rounded-2xl border border-line bg-surface p-5">
+      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-raised text-lg shadow-sm">
         {icon}
       </div>
 
-      <h3 className="mt-4 text-sm font-bold text-slate-950">
+      <h3 className="mt-4 text-sm font-bold text-cream">
         {title}
       </h3>
 
-      <p className="mt-1.5 text-sm leading-6 text-slate-500">
+      <p className="mt-1.5 text-sm leading-6 text-mist">
         {text}
       </p>
     </div>
@@ -1839,17 +1839,17 @@ function Highlight({ icon, title, text }) {
 
 function OwnerInfo({ icon, label, value }) {
   return (
-    <div className="flex items-center gap-3 rounded-2xl bg-slate-50 p-4">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-sm shadow-sm">
+    <div className="flex items-center gap-3 rounded-2xl bg-surface p-4">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-raised text-sm shadow-sm">
         {icon}
       </div>
 
       <div className="min-w-0">
-        <p className="text-xs font-medium text-slate-400">
+        <p className="text-xs font-medium text-fog">
           {label}
         </p>
 
-        <p className="mt-1 break-words text-sm font-bold text-slate-800">
+        <p className="mt-1 break-words text-sm font-bold text-cream">
           {value}
         </p>
       </div>
@@ -1864,16 +1864,16 @@ function OwnerInfo({ icon, label, value }) {
 function DetailRow({ icon, label, value }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-50 text-sm">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface text-sm">
         {icon}
       </div>
 
       <div className="min-w-0">
-        <p className="text-xs font-medium text-slate-400">
+        <p className="text-xs font-medium text-fog">
           {label}
         </p>
 
-        <p className="mt-0.5 break-words text-sm font-semibold text-slate-900">
+        <p className="mt-0.5 break-words text-sm font-semibold text-cream">
           {value}
         </p>
       </div>
@@ -1888,16 +1888,16 @@ function DetailRow({ icon, label, value }) {
 function MiniStep({ number, title, text }) {
   return (
     <div className="flex gap-3">
-      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-indigo-600 text-[10px] font-bold text-white">
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gold text-[10px] font-bold text-cream">
         {number}
       </div>
 
       <div>
-        <h3 className="text-sm font-bold text-slate-950">
+        <h3 className="text-sm font-bold text-cream">
           {title}
         </h3>
 
-        <p className="mt-1 text-xs leading-5 text-slate-500">
+        <p className="mt-1 text-xs leading-5 text-mist">
           {text}
         </p>
       </div>
@@ -1918,18 +1918,18 @@ function Field({
   return (
     <div>
       <div className="flex items-center justify-between gap-3">
-        <label className="text-sm font-semibold text-slate-700">
+        <label className="text-sm font-semibold text-mist">
           {label}
 
           {required && (
-            <span className="ml-1 text-indigo-600">
+            <span className="ml-1 text-gold">
               *
             </span>
           )}
         </label>
 
         {hint && (
-          <span className="text-xs text-slate-400">
+          <span className="text-xs text-fog">
             {hint}
           </span>
         )}

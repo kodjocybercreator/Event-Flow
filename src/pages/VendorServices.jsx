@@ -496,16 +496,16 @@ export default function VendorServices() {
         <Navbar />
 
         <main className="mx-auto flex min-h-[calc(100vh-80px)] max-w-3xl items-center justify-center px-5 py-16">
-          <div className="w-full rounded-[28px] border border-gray-200 bg-white p-8 text-center shadow-sm sm:p-12">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-50 text-2xl">
+          <div className="w-full rounded-[28px] border border-line bg-raised p-8 text-center shadow-sm sm:p-12">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gold/10 text-2xl">
               🔐
             </div>
 
-            <h1 className="mt-6 text-2xl font-bold tracking-tight text-gray-950 sm:text-3xl">
+            <h1 className="mt-6 text-2xl font-bold tracking-tight text-cream sm:text-3xl">
               Vendor account required
             </h1>
 
-            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-gray-500">
+            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-mist">
               Sign in to your EventFlow vendor account
               to manage the services displayed on your
               business profile.
@@ -513,7 +513,7 @@ export default function VendorServices() {
 
             <Link
               to="/login"
-              className="mt-7 inline-flex items-center justify-center rounded-xl bg-indigo-600 px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-indigo-700"
+              className="mt-7 inline-flex items-center justify-center rounded-xl bg-gold px-6 py-3 text-sm font-bold text-cream shadow-sm transition hover:bg-gold-dim"
             >
               Sign in to EventFlow
             </Link>
@@ -528,7 +528,7 @@ export default function VendorServices() {
   ============================================================ */
 
   return (
-    <div className="min-h-screen bg-[#f7f7fb] text-gray-900">
+    <div className="min-h-screen bg-[#f7f7fb] text-cream">
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
@@ -537,16 +537,16 @@ export default function VendorServices() {
             HEADER
         ====================================================== */}
 
-        <section className="overflow-hidden rounded-[30px] bg-gray-950 shadow-sm">
+        <section className="overflow-hidden rounded-[30px] bg-ink shadow-sm">
           <div className="relative px-5 py-7 sm:px-8 sm:py-9 lg:px-10 lg:py-10">
-            <div className="pointer-events-none absolute -right-24 -top-28 h-72 w-72 rounded-full bg-indigo-600/20 blur-3xl" />
+            <div className="pointer-events-none absolute -right-24 -top-28 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
 
-            <div className="pointer-events-none absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-purple-600/10 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
 
             <div className="relative">
               <Link
                 to="/dashboard/vendor"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-gray-400 transition hover:text-white"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-fog transition hover:text-cream"
               >
                 <span>←</span>
                 Vendor Dashboard
@@ -554,16 +554,16 @@ export default function VendorServices() {
 
               <div className="mt-8 flex flex-col gap-7 lg:flex-row lg:items-end lg:justify-between">
                 <div className="max-w-2xl">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-indigo-300">
-                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
+                  <div className="inline-flex items-center gap-2 rounded-full border border-gold/50/20 bg-gold/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-gold">
+                    <span className="h-1.5 w-1.5 rounded-full bg-gold" />
                     Service Catalogue
                   </div>
 
-                  <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                  <h1 className="mt-4 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
                     Manage your services
                   </h1>
 
-                  <p className="mt-3 max-w-xl text-sm leading-6 text-gray-400 sm:text-base">
+                  <p className="mt-3 max-w-xl text-sm leading-6 text-fog sm:text-base">
                     Present your services clearly so event
                     organizers can understand what you offer,
                     view starting prices and send booking
@@ -574,7 +574,7 @@ export default function VendorServices() {
                 <button
                   type="button"
                   onClick={handleAddService}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-indigo-950/30 transition hover:bg-indigo-500 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gold px-5 py-3.5 text-sm font-bold text-cream shadow-lg shadow-charcoal/30 transition hover:bg-gold sm:w-auto"
                 >
                   <span className="text-xl leading-none">
                     +
@@ -601,9 +601,9 @@ export default function VendorServices() {
         ====================================================== */}
 
         <section className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
-          <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
+          <div className="rounded-2xl border border-line bg-raised p-4 shadow-sm sm:p-5">
             <div className="flex items-center justify-between">
-              <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
+              <p className="text-xs font-bold uppercase tracking-wider text-fog">
                 Total services
               </p>
 
@@ -612,14 +612,14 @@ export default function VendorServices() {
               </span>
             </div>
 
-            <p className="mt-3 text-2xl font-bold tracking-tight text-gray-950">
+            <p className="mt-3 text-2xl font-bold tracking-tight text-cream">
               {services.length}
             </p>
           </div>
 
-          <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
+          <div className="rounded-2xl border border-line bg-raised p-4 shadow-sm sm:p-5">
             <div className="flex items-center justify-between">
-              <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
+              <p className="text-xs font-bold uppercase tracking-wider text-fog">
                 Available
               </p>
 
@@ -631,16 +631,16 @@ export default function VendorServices() {
             </p>
           </div>
 
-          <div className="col-span-2 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:col-span-1 sm:p-5">
+          <div className="col-span-2 rounded-2xl border border-line bg-raised p-4 shadow-sm sm:col-span-1 sm:p-5">
             <div className="flex items-center justify-between">
-              <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
+              <p className="text-xs font-bold uppercase tracking-wider text-fog">
                 Unavailable
               </p>
 
-              <span className="hidden h-2 w-2 rounded-full bg-gray-400 sm:block" />
+              <span className="hidden h-2 w-2 rounded-full bg-elevated sm:block" />
             </div>
 
-            <p className="mt-3 text-2xl font-bold tracking-tight text-gray-500">
+            <p className="mt-3 text-2xl font-bold tracking-tight text-mist">
               {unavailableServices}
             </p>
           </div>
@@ -651,23 +651,23 @@ export default function VendorServices() {
         ====================================================== */}
 
         {showForm && (
-          <section className="mt-6 overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-sm">
-            <div className="border-b border-gray-100 bg-gray-50/70 px-5 py-5 sm:px-8">
+          <section className="mt-6 overflow-hidden rounded-[28px] border border-line bg-raised shadow-sm">
+            <div className="border-b border-line bg-surface/70 px-5 py-5 sm:px-8">
               <div className="flex items-start justify-between gap-5">
                 <div>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-indigo-600">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-gold">
                     {editingId !== null
                       ? "Edit service"
                       : "New service"}
                   </p>
 
-                  <h2 className="mt-1.5 text-xl font-bold tracking-tight text-gray-950 sm:text-2xl">
+                  <h2 className="mt-1.5 text-xl font-bold tracking-tight text-cream sm:text-2xl">
                     {editingId !== null
                       ? "Update your service"
                       : "Add a service"}
                   </h2>
 
-                  <p className="mt-1.5 max-w-2xl text-sm leading-6 text-gray-500">
+                  <p className="mt-1.5 max-w-2xl text-sm leading-6 text-mist">
                     Give organizers enough information to
                     understand your service before they send
                     a booking request.
@@ -678,7 +678,7 @@ export default function VendorServices() {
                   type="button"
                   onClick={resetForm}
                   aria-label="Close form"
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-500 transition hover:border-gray-300 hover:bg-gray-50 hover:text-gray-900"
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-line bg-raised text-mist transition hover:border-line-bright hover:bg-surface hover:text-cream"
                 >
                   ✕
                 </button>
@@ -694,7 +694,7 @@ export default function VendorServices() {
               <div>
                 <label
                   htmlFor="service-name"
-                  className="text-sm font-bold text-gray-800"
+                  className="text-sm font-bold text-cream"
                 >
                   Service name
                 </label>
@@ -706,10 +706,10 @@ export default function VendorServices() {
                   onChange={handleChange}
                   placeholder="e.g. Wedding Photography"
                   maxLength={80}
-                  className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                  className="mt-2 w-full rounded-xl border border-line bg-raised px-4 py-3.5 text-sm text-cream outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/200/10"
                 />
 
-                <p className="mt-1.5 text-xs text-gray-400">
+                <p className="mt-1.5 text-xs text-fog">
                   Choose a clear, professional name.
                 </p>
               </div>
@@ -719,7 +719,7 @@ export default function VendorServices() {
               <div>
                 <label
                   htmlFor="service-category"
-                  className="text-sm font-bold text-gray-800"
+                  className="text-sm font-bold text-cream"
                 >
                   Category
                 </label>
@@ -729,7 +729,7 @@ export default function VendorServices() {
                   name="category"
                   value={form.category}
                   onChange={handleChange}
-                  className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-sm text-gray-900 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                  className="mt-2 w-full rounded-xl border border-line bg-raised px-4 py-3.5 text-sm text-cream outline-none transition focus:border-gold focus:ring-4 focus:ring-gold/200/10"
                 >
                   {categories.map((category) => (
                     <option
@@ -747,7 +747,7 @@ export default function VendorServices() {
               <div>
                 <label
                   htmlFor="service-icon"
-                  className="text-sm font-bold text-gray-800"
+                  className="text-sm font-bold text-cream"
                 >
                   Service icon
                 </label>
@@ -757,7 +757,7 @@ export default function VendorServices() {
                   name="icon"
                   value={form.icon}
                   onChange={handleChange}
-                  className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-sm text-gray-900 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                  className="mt-2 w-full rounded-xl border border-line bg-raised px-4 py-3.5 text-sm text-cream outline-none transition focus:border-gold focus:ring-4 focus:ring-gold/200/10"
                 >
                   {iconOptions.map((option) => (
                     <option
@@ -775,7 +775,7 @@ export default function VendorServices() {
               <div>
                 <label
                   htmlFor="pricing-type"
-                  className="text-sm font-bold text-gray-800"
+                  className="text-sm font-bold text-cream"
                 >
                   Pricing structure
                 </label>
@@ -785,7 +785,7 @@ export default function VendorServices() {
                   name="pricingType"
                   value={form.pricingType}
                   onChange={handleChange}
-                  className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-sm text-gray-900 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                  className="mt-2 w-full rounded-xl border border-line bg-raised px-4 py-3.5 text-sm text-cream outline-none transition focus:border-gold focus:ring-4 focus:ring-gold/200/10"
                 >
                   <option value="Starting from">
                     Starting from
@@ -804,7 +804,7 @@ export default function VendorServices() {
                   </option>
                 </select>
 
-                <p className="mt-1.5 text-xs text-gray-400">
+                <p className="mt-1.5 text-xs text-fog">
                   Final pricing is agreed through the EventFlow
                   quotation process.
                 </p>
@@ -815,13 +815,13 @@ export default function VendorServices() {
               <div>
                 <label
                   htmlFor="service-price"
-                  className="text-sm font-bold text-gray-800"
+                  className="text-sm font-bold text-cream"
                 >
                   Starting price
                 </label>
 
                 <div className="relative mt-2">
-                  <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-sm font-semibold text-gray-400">
+                  <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-sm font-semibold text-fog">
                     GH₵
                   </span>
 
@@ -834,11 +834,11 @@ export default function VendorServices() {
                     min="1"
                     step="1"
                     placeholder="1,500"
-                    className="w-full rounded-xl border border-gray-200 bg-white py-3.5 pl-14 pr-4 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                    className="w-full rounded-xl border border-line bg-raised py-3.5 pl-14 pr-4 text-sm text-cream outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/200/10"
                   />
                 </div>
 
-                <p className="mt-1.5 text-xs text-gray-400">
+                <p className="mt-1.5 text-xs text-fog">
                   Displayed to organizers as a starting price,
                   not the final booking amount.
                 </p>
@@ -849,7 +849,7 @@ export default function VendorServices() {
               <div className="md:col-span-2">
                 <label
                   htmlFor="service-description"
-                  className="text-sm font-bold text-gray-800"
+                  className="text-sm font-bold text-cream"
                 >
                   Service description
                 </label>
@@ -862,16 +862,16 @@ export default function VendorServices() {
                   rows={5}
                   maxLength={800}
                   placeholder="Explain what is included, coverage, deliverables, turnaround time, equipment, or any important requirements..."
-                  className="mt-2 w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-sm leading-6 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                  className="mt-2 w-full resize-none rounded-xl border border-line bg-raised px-4 py-3.5 text-sm leading-6 text-cream outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/200/10"
                 />
 
                 <div className="mt-1.5 flex justify-between gap-4">
-                  <p className="text-xs text-gray-400">
+                  <p className="text-xs text-fog">
                     Keep your description specific and easy
                     to understand.
                   </p>
 
-                  <span className="shrink-0 text-xs text-gray-400">
+                  <span className="shrink-0 text-xs text-fog">
                     {form.description.length}/800
                   </span>
                 </div>
@@ -879,10 +879,10 @@ export default function VendorServices() {
 
               {/* ACTIONS */}
 
-              <div className="flex flex-col gap-3 border-t border-gray-100 pt-6 sm:flex-row md:col-span-2">
+              <div className="flex flex-col gap-3 border-t border-line pt-6 sm:flex-row md:col-span-2">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-6 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-indigo-700"
+                  className="inline-flex items-center justify-center rounded-xl bg-gold px-6 py-3.5 text-sm font-bold text-cream shadow-sm transition hover:bg-gold-dim"
                 >
                   {editingId !== null
                     ? "Save changes"
@@ -892,7 +892,7 @@ export default function VendorServices() {
                 <button
                   type="button"
                   onClick={resetForm}
-                  className="inline-flex items-center justify-center rounded-xl border border-gray-200 bg-white px-6 py-3.5 text-sm font-bold text-gray-700 transition hover:bg-gray-50"
+                  className="inline-flex items-center justify-center rounded-xl border border-line bg-raised px-6 py-3.5 text-sm font-bold text-mist transition hover:bg-surface"
                 >
                   Cancel
                 </button>
@@ -908,22 +908,22 @@ export default function VendorServices() {
         <section className="mt-9">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-indigo-600">
+              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-gold">
                 Your catalogue
               </p>
 
-              <h2 className="mt-1 text-2xl font-bold tracking-tight text-gray-950">
+              <h2 className="mt-1 text-2xl font-bold tracking-tight text-cream">
                 Services
               </h2>
 
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-sm text-mist">
                 These are the services organizers can view
                 on your EventFlow profile.
               </p>
             </div>
 
             <div className="relative w-full lg:w-80">
-              <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-gray-400">
+              <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-fog">
                 ⌕
               </span>
 
@@ -934,7 +934,7 @@ export default function VendorServices() {
                   setSearch(event.target.value)
                 }
                 placeholder="Search services..."
-                className="w-full rounded-xl border border-gray-200 bg-white py-3.5 pl-11 pr-4 text-sm outline-none transition placeholder:text-gray-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                className="w-full rounded-xl border border-line bg-raised py-3.5 pl-11 pr-4 text-sm outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/200/10"
               />
             </div>
           </div>
@@ -966,11 +966,11 @@ export default function VendorServices() {
             return (
               <article
                 key={service.id}
-                className="group flex flex-col overflow-hidden rounded-[26px] border border-gray-200 bg-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-indigo-100 hover:shadow-lg hover:shadow-gray-200/50"
+                className="group flex flex-col overflow-hidden rounded-[26px] border border-line bg-raised shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-gold/20 hover:shadow-lg hover:shadow-gray-200/50"
               >
                 <div className="p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-2xl ring-1 ring-indigo-100">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/10 text-2xl ring-1 ring-indigo-100">
                       {service.icon || "📦"}
                     </div>
 
@@ -978,14 +978,14 @@ export default function VendorServices() {
                       className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider ${
                         isAvailable
                           ? "bg-emerald-50 text-emerald-700"
-                          : "bg-gray-100 text-gray-500"
+                          : "bg-surface text-mist"
                       }`}
                     >
                       <span
                         className={`h-1.5 w-1.5 rounded-full ${
                           isAvailable
                             ? "bg-emerald-500"
-                            : "bg-gray-400"
+                            : "bg-elevated"
                         }`}
                       />
 
@@ -995,49 +995,49 @@ export default function VendorServices() {
                     </span>
                   </div>
 
-                  <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.14em] text-indigo-600">
+                  <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.14em] text-gold">
                     {category}
                   </p>
 
-                  <h3 className="mt-1.5 text-xl font-bold tracking-tight text-gray-950">
+                  <h3 className="mt-1.5 text-xl font-bold tracking-tight text-cream">
                     {serviceName}
                   </h3>
 
-                  <p className="mt-3 min-h-[72px] text-sm leading-6 text-gray-500">
+                  <p className="mt-3 min-h-[72px] text-sm leading-6 text-mist">
                     {service.description ||
                       "No description provided."}
                   </p>
 
-                  <div className="mt-5 rounded-2xl border border-gray-100 bg-gray-50 p-4">
+                  <div className="mt-5 rounded-2xl border border-line bg-surface p-4">
                     <div className="flex items-center justify-between gap-3">
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-fog">
                         {pricingType}
                       </p>
 
-                      <span className="text-[10px] font-semibold text-gray-400">
+                      <span className="text-[10px] font-semibold text-fog">
                         Organizer pricing
                       </span>
                     </div>
 
                     <div className="mt-1.5 flex items-baseline gap-2">
-                      <p className="text-xl font-bold tracking-tight text-gray-950">
+                      <p className="text-xl font-bold tracking-tight text-cream">
                         {formatCurrency(service.price)}
                       </p>
 
                       {pricingType === "Per hour" && (
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-fog">
                           / hour
                         </span>
                       )}
 
                       {pricingType === "Per day" && (
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-fog">
                           / day
                         </span>
                       )}
                     </div>
 
-                    <p className="mt-1 text-xs leading-5 text-gray-400">
+                    <p className="mt-1 text-xs leading-5 text-fog">
                       Final price is confirmed through a
                       quotation after the event requirements
                       are reviewed.
@@ -1047,14 +1047,14 @@ export default function VendorServices() {
 
                 {/* CARD ACTIONS */}
 
-                <div className="mt-auto border-t border-gray-100 bg-gray-50/60 p-4 sm:p-5">
+                <div className="mt-auto border-t border-line bg-surface/60 p-4 sm:p-5">
                   <div className="grid grid-cols-2 gap-2">
                     <button
                       type="button"
                       onClick={() =>
                         handleEdit(service)
                       }
-                      className="rounded-xl border border-gray-200 bg-white py-2.5 text-xs font-bold text-gray-700 transition hover:border-gray-300 hover:bg-gray-50"
+                      className="rounded-xl border border-line bg-raised py-2.5 text-xs font-bold text-mist transition hover:border-line-bright hover:bg-surface"
                     >
                       Edit service
                     </button>
@@ -1064,7 +1064,7 @@ export default function VendorServices() {
                       onClick={() =>
                         handleDelete(service.id)
                       }
-                      className="rounded-xl border border-gray-200 bg-white py-2.5 text-xs font-bold text-gray-600 transition hover:border-red-200 hover:bg-red-50 hover:text-red-600"
+                      className="rounded-xl border border-line bg-raised py-2.5 text-xs font-bold text-mist transition hover:border-rose/20 hover:bg-rose/10 hover:text-rose"
                     >
                       Delete
                     </button>
@@ -1077,8 +1077,8 @@ export default function VendorServices() {
                     }
                     className={`mt-2 w-full rounded-xl py-2.5 text-xs font-bold transition ${
                       isAvailable
-                        ? "bg-gray-950 text-white hover:bg-gray-800"
-                        : "bg-emerald-600 text-white hover:bg-emerald-700"
+                        ? "bg-ink text-cream hover:bg-raised"
+                        : "bg-emerald-600 text-cream hover:bg-emerald-700"
                     }`}
                   >
                     {isAvailable
@@ -1095,20 +1095,20 @@ export default function VendorServices() {
           ==================================================== */}
 
           {filteredServices.length === 0 && (
-            <div className="rounded-[26px] border border-dashed border-gray-300 bg-white px-6 py-14 text-center md:col-span-2 xl:col-span-3">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-100 text-2xl">
+            <div className="rounded-[26px] border border-dashed border-line-bright bg-raised px-6 py-14 text-center md:col-span-2 xl:col-span-3">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-surface text-2xl">
                 {services.length === 0
                   ? "📦"
                   : "⌕"}
               </div>
 
-              <h3 className="mt-5 text-lg font-bold text-gray-950">
+              <h3 className="mt-5 text-lg font-bold text-cream">
                 {services.length === 0
                   ? "No services added yet"
                   : "No matching services"}
               </h3>
 
-              <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-gray-500">
+              <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-mist">
                 {services.length === 0
                   ? "Start building your EventFlow catalogue by adding the services your business provides."
                   : "Try another search term or clear your search to see your services."}
@@ -1118,7 +1118,7 @@ export default function VendorServices() {
                 <button
                   type="button"
                   onClick={handleAddService}
-                  className="mt-6 inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-indigo-700"
+                  className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gold px-5 py-3 text-sm font-bold text-cream shadow-sm transition hover:bg-gold-dim"
                 >
                   <span className="text-lg leading-none">
                     +
@@ -1135,22 +1135,22 @@ export default function VendorServices() {
             BUSINESS INFORMATION
         ====================================================== */}
 
-        <section className="mt-8 overflow-hidden rounded-[26px] border border-indigo-100 bg-indigo-50">
+        <section className="mt-8 overflow-hidden rounded-[26px] border border-gold/20 bg-gold/10">
           <div className="flex flex-col gap-5 p-5 sm:flex-row sm:items-start sm:p-7">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-xl shadow-sm">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-raised text-xl shadow-sm">
               ✦
             </div>
 
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-indigo-600">
+              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-gold">
                 EventFlow pricing
               </p>
 
-              <h2 className="mt-1 text-base font-bold text-gray-950">
+              <h2 className="mt-1 text-base font-bold text-cream">
                 Keep your starting prices realistic
               </h2>
 
-              <p className="mt-2 max-w-3xl text-sm leading-6 text-gray-600">
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-mist">
                 Your listed price gives organizers an idea
                 of your pricing. It is not the final booking
                 price. After an organizer sends a request,
@@ -1170,7 +1170,7 @@ export default function VendorServices() {
         <div className="py-8 text-center">
           <Link
             to="/dashboard/vendor"
-            className="inline-flex items-center gap-2 text-sm font-bold text-indigo-600 transition hover:text-indigo-700"
+            className="inline-flex items-center gap-2 text-sm font-bold text-gold transition hover:text-gold-dim"
           >
             <span>←</span>
             Return to Vendor Dashboard

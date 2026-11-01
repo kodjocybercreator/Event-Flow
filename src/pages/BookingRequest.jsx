@@ -642,15 +642,15 @@ export default function BookingRequest() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-surface">
         <Navbar />
         <main className="flex min-h-[70vh] items-center justify-center px-4">
-          <div className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm">
-            <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-indigo-100 border-t-indigo-600" />
-            <h1 className="mt-5 text-xl font-bold text-slate-900">
+          <div className="w-full max-w-md rounded-3xl border border-line bg-raised p-8 text-center shadow-sm">
+            <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-gold/20 border-t-indigo-600" />
+            <h1 className="mt-5 text-xl font-bold text-cream">
               Preparing your booking
             </h1>
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-mist">
               Loading the provider's available services.
             </p>
           </div>
@@ -665,31 +665,31 @@ export default function BookingRequest() {
 
   if (!vendor) {
     return (
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-surface">
         <Navbar />
         <main className="mx-auto flex max-w-3xl items-center justify-center px-4 py-20">
-          <div className="w-full rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm sm:p-12">
+          <div className="w-full rounded-3xl border border-line bg-raised p-8 text-center shadow-sm sm:p-12">
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-rose-50 text-3xl">
               !
             </div>
-            <h1 className="mt-5 text-2xl font-bold text-slate-900">
+            <h1 className="mt-5 text-2xl font-bold text-cream">
               Provider not found
             </h1>
-            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-slate-500">
+            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-mist">
               We couldn't find this provider. The profile may have changed,
               or the booking link may be missing the provider ID.
             </p>
             <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
               <Link
                 to="/discover"
-                className="rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700"
+                className="rounded-xl bg-gold px-6 py-3 text-sm font-semibold text-cream transition hover:bg-gold-dim"
               >
                 Browse providers
               </Link>
               <button
                 type="button"
                 onClick={() => navigate(-1)}
-                className="rounded-xl border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                className="rounded-xl border border-line px-6 py-3 text-sm font-semibold text-mist transition hover:bg-surface"
               >
                 Go back
               </button>
@@ -707,27 +707,27 @@ export default function BookingRequest() {
   ========================================================= */
 
   return (
-    <div className="min-h-screen bg-[#f7f8fc] text-slate-900">
+    <div className="min-h-screen bg-ink text-cream">
       <Navbar />
 
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
         <div className="mb-7">
           <Link
             to={`/vendor/${vendor.id}`}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 transition hover:text-indigo-800"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-gold transition hover:text-raised"
           >
             <span aria-hidden="true">←</span>
             Back to provider profile
           </Link>
 
           <div className="mt-5">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
               EventFlow bookings
             </p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+            <h1 className="mt-2 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
               Request a booking
             </h1>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500 sm:text-base">
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-mist sm:text-base">
               Tell the provider about your event. They can review your request
               and send you a quotation before you agree on the final price.
             </p>
@@ -736,16 +736,16 @@ export default function BookingRequest() {
 
         <div className="grid gap-7 lg:grid-cols-[minmax(0,1fr)_340px]">
           {/* BOOKING FORM */}
-          <section className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
+          <section className="rounded-3xl border border-line bg-raised p-5 shadow-sm sm:p-8">
             {!vendorApproved && (
-              <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-800">
+              <div className="mb-6 rounded-2xl border border-amber/20 bg-amber/10 p-4 text-sm leading-6 text-amber-800">
                 This provider has not yet been approved by EventFlow, so a
                 booking request cannot be submitted.
               </div>
             )}
 
             {availableServices.length === 0 && vendorApproved && (
-              <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-800">
+              <div className="mb-6 rounded-2xl border border-amber/20 bg-amber/10 p-4 text-sm leading-6 text-amber-800">
                 This provider currently has no approved services available
                 for booking.
               </div>
@@ -764,17 +764,17 @@ export default function BookingRequest() {
               {/* SERVICE */}
               <div>
                 <div className="mb-4">
-                  <h2 className="text-lg font-bold text-slate-900">
+                  <h2 className="text-lg font-bold text-cream">
                     1. Choose a service
                   </h2>
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-mist">
                     Select the service you need for your event.
                   </p>
                 </div>
 
                 <label
                   htmlFor="serviceId"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
+                  className="mb-2 block text-sm font-semibold text-mist"
                 >
                   Available service <span className="text-rose-500">*</span>
                 </label>
@@ -786,7 +786,7 @@ export default function BookingRequest() {
                   onChange={handleChange}
                   required
                   disabled={!vendorApproved || availableServices.length === 0}
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 disabled:cursor-not-allowed disabled:bg-slate-100"
+                  className="w-full rounded-xl border border-line bg-raised px-4 py-3 text-sm outline-none transition focus:border-gold focus:ring-4 focus:ring-indigo-100 disabled:cursor-not-allowed disabled:bg-surface"
                 >
                   <option value="">Select a service</option>
                   {availableServices.map((service) => (
@@ -803,24 +803,24 @@ export default function BookingRequest() {
                 </select>
 
                 {selectedService && (
-                  <div className="mt-4 rounded-2xl border border-indigo-100 bg-indigo-50/70 p-4">
-                    <p className="font-semibold text-slate-900">
+                  <div className="mt-4 rounded-2xl border border-gold/20 bg-gold/10/70 p-4">
+                    <p className="font-semibold text-cream">
                       {selectedService.name ||
                         selectedService.serviceName ||
                         "Selected service"}
                     </p>
                     {selectedService.description && (
-                      <p className="mt-2 text-sm leading-6 text-slate-600">
+                      <p className="mt-2 text-sm leading-6 text-mist">
                         {selectedService.description}
                       </p>
                     )}
-                    <p className="mt-3 text-sm font-bold text-indigo-700">
+                    <p className="mt-3 text-sm font-bold text-gold">
                       {formatMoney(selectedService.price)}
-                      <span className="ml-2 font-medium text-slate-500">
+                      <span className="ml-2 font-medium text-mist">
                         {selectedService.pricingType || "Starting from"}
                       </span>
                     </p>
-                    <p className="mt-2 text-xs leading-5 text-slate-500">
+                    <p className="mt-2 text-xs leading-5 text-mist">
                       This is the listed price basis, not a final quotation.
                       The provider can quote based on your event requirements.
                     </p>
@@ -828,15 +828,15 @@ export default function BookingRequest() {
                 )}
               </div>
 
-              <div className="border-t border-slate-100" />
+              <div className="border-t border-line" />
 
               {/* EVENT DETAILS */}
               <div>
                 <div className="mb-4">
-                  <h2 className="text-lg font-bold text-slate-900">
+                  <h2 className="text-lg font-bold text-cream">
                     2. Event details
                   </h2>
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-mist">
                     Give the provider the key information about your event.
                   </p>
                 </div>
@@ -845,7 +845,7 @@ export default function BookingRequest() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="eventType"
-                      className="mb-2 block text-sm font-semibold text-slate-700"
+                      className="mb-2 block text-sm font-semibold text-mist"
                     >
                       Event type <span className="text-rose-500">*</span>
                     </label>
@@ -855,7 +855,7 @@ export default function BookingRequest() {
                       value={form.eventType}
                       onChange={handleChange}
                       required
-                      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                      className="w-full rounded-xl border border-line bg-raised px-4 py-3 text-sm outline-none transition focus:border-gold focus:ring-4 focus:ring-indigo-100"
                     >
                       <option value="">Select event type</option>
                       {EVENT_TYPES.map((type) => (
@@ -869,7 +869,7 @@ export default function BookingRequest() {
                   <div>
                     <label
                       htmlFor="eventDate"
-                      className="mb-2 block text-sm font-semibold text-slate-700"
+                      className="mb-2 block text-sm font-semibold text-mist"
                     >
                       Event date <span className="text-rose-500">*</span>
                     </label>
@@ -881,14 +881,14 @@ export default function BookingRequest() {
                       value={form.eventDate}
                       onChange={handleChange}
                       required
-                      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                      className="w-full rounded-xl border border-line bg-raised px-4 py-3 text-sm outline-none transition focus:border-gold focus:ring-4 focus:ring-indigo-100"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="eventTime"
-                      className="mb-2 block text-sm font-semibold text-slate-700"
+                      className="mb-2 block text-sm font-semibold text-mist"
                     >
                       Event time
                     </label>
@@ -898,14 +898,14 @@ export default function BookingRequest() {
                       type="time"
                       value={form.eventTime}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                      className="w-full rounded-xl border border-line bg-raised px-4 py-3 text-sm outline-none transition focus:border-gold focus:ring-4 focus:ring-indigo-100"
                     />
                   </div>
 
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="eventLocation"
-                      className="mb-2 block text-sm font-semibold text-slate-700"
+                      className="mb-2 block text-sm font-semibold text-mist"
                     >
                       Event location <span className="text-rose-500">*</span>
                     </label>
@@ -917,9 +917,9 @@ export default function BookingRequest() {
                       value={form.eventLocation}
                       onChange={handleChange}
                       required
-                      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                      className="w-full rounded-xl border border-line bg-raised px-4 py-3 text-sm outline-none transition focus:border-gold focus:ring-4 focus:ring-indigo-100"
                     />
-                    <p className="mt-2 text-xs text-slate-500">
+                    <p className="mt-2 text-xs text-mist">
                       Enter the town, city, venue or address where the event
                       will take place.
                     </p>
@@ -928,7 +928,7 @@ export default function BookingRequest() {
                   <div>
                     <label
                       htmlFor="guests"
-                      className="mb-2 block text-sm font-semibold text-slate-700"
+                      className="mb-2 block text-sm font-semibold text-mist"
                     >
                       Expected guests <span className="text-rose-500">*</span>
                     </label>
@@ -942,14 +942,14 @@ export default function BookingRequest() {
                       value={form.guests}
                       onChange={handleChange}
                       required
-                      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                      className="w-full rounded-xl border border-line bg-raised px-4 py-3 text-sm outline-none transition focus:border-gold focus:ring-4 focus:ring-indigo-100"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="budget"
-                      className="mb-2 block text-sm font-semibold text-slate-700"
+                      className="mb-2 block text-sm font-semibold text-mist"
                     >
                       Your budget (GH₵)
                     </label>
@@ -962,14 +962,14 @@ export default function BookingRequest() {
                       placeholder="Optional"
                       value={form.budget}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                      className="w-full rounded-xl border border-line bg-raised px-4 py-3 text-sm outline-none transition focus:border-gold focus:ring-4 focus:ring-indigo-100"
                     />
                   </div>
 
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="message"
-                      className="mb-2 block text-sm font-semibold text-slate-700"
+                      className="mb-2 block text-sm font-semibold text-mist"
                     >
                       Additional requirements
                     </label>
@@ -980,17 +980,17 @@ export default function BookingRequest() {
                       placeholder="Describe what you need, special requests, preferred arrangements or other useful details..."
                       value={form.message}
                       onChange={handleChange}
-                      className="w-full resize-y rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm leading-6 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                      className="w-full resize-y rounded-xl border border-line bg-raised px-4 py-3 text-sm leading-6 outline-none transition focus:border-gold focus:ring-4 focus:ring-indigo-100"
                     />
                   </div>
                 </div>
               </div>
 
-              <div className="border-t border-slate-100" />
+              <div className="border-t border-line" />
 
               {/* SUBMIT */}
               <div>
-                <p className="mb-4 text-xs leading-5 text-slate-500">
+                <p className="mb-4 text-xs leading-5 text-mist">
                   Submitting this request does not confirm a booking or charge
                   you. The provider must respond with a quotation, and the
                   final price must be agreed before payment.
@@ -1003,7 +1003,7 @@ export default function BookingRequest() {
                     !vendorApproved ||
                     availableServices.length === 0
                   }
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 py-4 text-sm font-bold text-white shadow-sm transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-gold px-6 py-4 text-sm font-bold text-cream shadow-sm transition hover:bg-gold-dim disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {submitting ? (
                     <>
@@ -1020,46 +1020,46 @@ export default function BookingRequest() {
 
           {/* PROVIDER SUMMARY */}
           <aside className="space-y-5">
-            <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-              <div className="bg-gradient-to-br from-indigo-700 to-violet-700 p-6 text-white">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-indigo-100">
+            <div className="overflow-hidden rounded-3xl border border-line bg-raised shadow-sm">
+              <div className="bg-gradient-to-br from-indigo-700 to-violet-700 p-6 text-cream">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cream">
                   Your selected provider
                 </p>
-                <div className="mt-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-3xl">
+                <div className="mt-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/20 bg-raised/15 text-3xl">
                   {vendor.icon}
                 </div>
                 <h2 className="mt-4 text-xl font-bold">{vendor.name}</h2>
-                <p className="mt-1 text-sm text-indigo-100">
+                <p className="mt-1 text-sm text-cream">
                   {vendor.specialization}
                 </p>
               </div>
 
               <div className="space-y-4 p-6">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-fog">
                     Location
                   </p>
-                  <p className="mt-1 text-sm font-medium text-slate-800">
+                  <p className="mt-1 text-sm font-medium text-cream">
                     {vendor.location}
                   </p>
                 </div>
 
                 {vendor.phone && (
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-fog">
                       Contact
                     </p>
-                    <p className="mt-1 text-sm font-medium text-slate-800">
+                    <p className="mt-1 text-sm font-medium text-cream">
                       {vendor.phone}
                     </p>
                   </div>
                 )}
 
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-fog">
                     Services available
                   </p>
-                  <p className="mt-1 text-sm font-medium text-slate-800">
+                  <p className="mt-1 text-sm font-medium text-cream">
                     {availableServices.length}{" "}
                     {availableServices.length === 1 ? "service" : "services"}
                   </p>
@@ -1067,37 +1067,37 @@ export default function BookingRequest() {
 
                 <Link
                   to={`/vendor/${vendor.id}`}
-                  className="inline-flex w-full items-center justify-center rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                  className="inline-flex w-full items-center justify-center rounded-xl border border-line px-4 py-3 text-sm font-semibold text-mist transition hover:bg-surface"
                 >
                   View provider profile
                 </Link>
               </div>
             </div>
 
-            <div className="rounded-3xl border border-indigo-100 bg-indigo-50/70 p-5">
+            <div className="rounded-3xl border border-gold/20 bg-gold/10/70 p-5">
               <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-lg shadow-sm">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-raised text-lg shadow-sm">
                   ✓
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900">
+                  <h3 className="font-bold text-cream">
                     How booking works
                   </h3>
-                  <ol className="mt-3 space-y-3 text-sm leading-6 text-slate-600">
+                  <ol className="mt-3 space-y-3 text-sm leading-6 text-mist">
                     <li>
-                      <span className="font-semibold text-indigo-700">1.</span>{" "}
+                      <span className="font-semibold text-gold">1.</span>{" "}
                       Send your event requirements.
                     </li>
                     <li>
-                      <span className="font-semibold text-indigo-700">2.</span>{" "}
+                      <span className="font-semibold text-gold">2.</span>{" "}
                       The provider reviews your request and sends a quote.
                     </li>
                     <li>
-                      <span className="font-semibold text-indigo-700">3.</span>{" "}
+                      <span className="font-semibold text-gold">3.</span>{" "}
                       You can accept, reject or counter the quotation.
                     </li>
                     <li>
-                      <span className="font-semibold text-indigo-700">4.</span>{" "}
+                      <span className="font-semibold text-gold">4.</span>{" "}
                       Payment follows after the final price is agreed.
                     </li>
                   </ol>

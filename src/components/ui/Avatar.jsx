@@ -10,7 +10,7 @@ export function Avatar({ src, label = 'User', className = '', size = 'md' }) {
       <img
         src={src}
         alt={label}
-        className={`shrink-0 border border-slate-200 object-cover ${sizes[size]} ${className}`}
+        className={`shrink-0 rounded-xl border border-line object-cover ${sizes[size]} ${className}`}
       />
     );
   }
@@ -24,11 +24,9 @@ export function Avatar({ src, label = 'User', className = '', size = 'md' }) {
 
   return (
     <div
-      className={`flex shrink-0 items-center justify-center rounded-full bg-ink text-white font-bold shadow-lg ${sizes[size]} ${className}`}
+      className={`flex shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-gold to-gold-dim text-cream font-bold ${sizes[size]} ${className}`}
     >
       {initials}
     </div>
   );
 }
-
-

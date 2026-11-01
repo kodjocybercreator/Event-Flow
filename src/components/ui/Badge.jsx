@@ -1,13 +1,16 @@
 export function Badge({
   children,
-  variant = 'ink',
+  variant = 'gold',
   className = '',
   size = 'sm',
 }) {
   const variants = {
-    ink: 'bg-ink text-paper border border-ink',
-    gold: 'bg-gold text-paper border border-gold',
-    slate: 'bg-slate-50 text-slate-700 border border-slate-200',
+    gold: 'bg-gold/15 text-gold border border-gold/25',
+    emerald: 'bg-emerald/10 text-emerald border border-emerald/20',
+    rose: 'bg-rose/10 text-rose border border-rose/20',
+    amber: 'bg-amber/10 text-amber border border-amber/20',
+    cream: 'bg-cream/10 text-cream border border-cream/15',
+    fog: 'bg-fog/10 text-fog border border-fog/20',
   };
 
   const sizes = {
@@ -18,11 +21,9 @@ export function Badge({
 
   return (
     <span
-      className={`inline-flex items-center gap-1.5 rounded-none border font-medium tracking-[0.1em] uppercase ${variants[variant]} ${sizes[size]} ${className}`}
+      className={`inline-flex items-center gap-1.5 rounded-lg font-semibold tracking-[0.08em] uppercase ${variants[variant]} ${sizes[size]} ${className}`}
     >
       {children}
     </span>
   );
 }
-
-

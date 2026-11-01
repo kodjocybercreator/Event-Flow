@@ -110,21 +110,21 @@ export default function Payment() {
 
   if (step === 'details') {
     return (
-      <div className="min-h-screen bg-[#f7f8fc] text-slate-900">
+      <div className="min-h-screen bg-ink text-cream">
         <Navbar />
         <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <Link to="/dashboard/organizer" className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 transition hover:text-amber-600">
+            <Link to="/dashboard/organizer" className="inline-flex items-center gap-2 text-sm font-semibold text-gold transition hover:text-amber">
               <span>←</span> Back to dashboard
             </Link>
             <div className="mt-6">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-amber-600">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-amber">
                 Secure payment
               </p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+              <h1 className="mt-2 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
                 Complete your payment
               </h1>
-              <p className="mt-3 max-w-xl text-sm leading-6 text-slate-500 sm:text-base">
+              <p className="mt-3 max-w-xl text-sm leading-6 text-mist sm:text-base">
                 Pay securely for your booking. EventFlow uses Paystack to
                 process payments safely.
               </p>
@@ -132,15 +132,15 @@ export default function Payment() {
           </div>
 
           {error && (
-            <div role="alert" className="mb-6 rounded-2xl border border-red-100 bg-red-50 p-4 text-sm text-red-700">
+            <div role="alert" className="mb-6 rounded-2xl border border-rose/20 bg-rose/10 p-4 text-sm text-rose">
               {error}
             </div>
           )}
 
           <Card className="p-6 sm:p-8">
             <div className="mb-6">
-              <h2 className="text-lg font-bold text-slate-950">Booking details</h2>
-              <p className="mt-1 text-sm text-slate-500">
+              <h2 className="text-lg font-bold text-cream">Booking details</h2>
+              <p className="mt-1 text-sm text-mist">
                 {booking?.vendorName || 'Event provider'} —{' '}
                 {booking?.serviceName || booking?.eventType || 'Event service'}
               </p>
@@ -148,7 +148,7 @@ export default function Payment() {
 
             <div className="space-y-6">
               <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1">
+                <label className="block text-sm font-semibold text-mist mb-1">
                   Email address
                 </label>
                 <input
@@ -156,16 +156,16 @@ export default function Payment() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                  className="w-full rounded-xl border border-line bg-raised px-4 py-3.5 text-sm outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/20"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1">
+                <label className="block text-sm font-semibold text-mist mb-1">
                   Amount (GH₵)
                 </label>
-                <div className="mt-2 flex overflow-hidden rounded-xl border border-slate-200 bg-white focus-within:border-amber-500 focus-within:ring-4 focus-within:ring-amber-50">
-                  <span className="flex items-center border-r border-slate-200 bg-slate-50 px-4 text-sm font-semibold text-slate-500">
+                <div className="mt-2 flex overflow-hidden rounded-xl border border-line bg-raised focus-within:border-amber-500 focus-within:ring-4 focus-within:ring-amber-50">
+                  <span className="flex items-center border-r border-line bg-surface px-4 text-sm font-semibold text-mist">
                     GH₵
                   </span>
                   <input
@@ -180,14 +180,14 @@ export default function Payment() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-amber-100 bg-amber-50 p-4">
+              <div className="rounded-2xl border border-amber/20 bg-amber/10 p-4">
                 <div className="flex items-start gap-3">
-                  <span className="mt-0.5 text-amber-500">ℹ️</span>
+                  <span className="mt-0.5 text-amber">ℹ️</span>
                   <div>
                     <p className="text-sm font-semibold text-amber-800">
                       Secure checkout powered by Paystack
                     </p>
-                    <p className="mt-1 text-xs text-amber-700">
+                    <p className="mt-1 text-xs text-amber">
                       Your payment is encrypted and processed securely. No card
                       details are stored on EventFlow.
                     </p>
@@ -195,10 +195,10 @@ export default function Payment() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-100">
-                <p className="text-xs text-slate-500 mb-2">
+              <div className="pt-4 border-t border-line">
+                <p className="text-xs text-mist mb-2">
                   Booking reference:{' '}
-                  <span className="font-mono text-sm font-bold text-slate-800">
+                  <span className="font-mono text-sm font-bold text-cream">
                     {bookingId || 'EF-' + Date.now().toString().slice(-8)}
                   </span>
                 </p>
@@ -217,7 +217,7 @@ export default function Payment() {
                     'Pay now'
                   )}
                 </Button>
-                <p className="mt-3 text-xs text-center text-slate-400">
+                <p className="mt-3 text-xs text-center text-fog">
                   By paying, you agree to EventFlow's Terms of Service.
                 </p>
               </div>
@@ -225,30 +225,30 @@ export default function Payment() {
           </Card>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            <Card padding="p-5" className="border-transparent bg-white shadow-sm">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-lg text-indigo-600 mb-3">
+            <Card padding="p-5" className="border-transparent bg-raised shadow-sm">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gold/10 text-lg text-gold mb-3">
                 🔒
               </div>
-              <h3 className="font-bold text-slate-950">Secure encryption</h3>
-              <p className="mt-1 text-xs text-slate-500 leading-5">
+              <h3 className="font-bold text-cream">Secure encryption</h3>
+              <p className="mt-1 text-xs text-mist leading-5">
                 All payments are encrypted with industry-standard security.
               </p>
             </Card>
-            <Card padding="p-5" className="border-transparent bg-white shadow-sm">
+            <Card padding="p-5" className="border-transparent bg-raised shadow-sm">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-lg text-emerald-600 mb-3">
                 ✓
               </div>
-              <h3 className="font-bold text-slate-950">Instant confirmation</h3>
-              <p className="mt-1 text-xs text-slate-500 leading-5">
+              <h3 className="font-bold text-cream">Instant confirmation</h3>
+              <p className="mt-1 text-xs text-mist leading-5">
                 Get immediate confirmation once your payment is successful.
               </p>
             </Card>
-            <Card padding="p-5" className="border-transparent bg-white shadow-sm">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50 text-lg text-amber-600 mb-3">
+            <Card padding="p-5" className="border-transparent bg-raised shadow-sm">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber/10 text-lg text-amber mb-3">
                 🤝
               </div>
-              <h3 className="font-bold text-slate-950">Paystack trusted</h3>
-              <p className="mt-1 text-xs text-slate-500 leading-5">
+              <h3 className="font-bold text-cream">Paystack trusted</h3>
+              <p className="mt-1 text-xs text-mist leading-5">
                 Processed by Paystack, a leading payment gateway in Ghana.
               </p>
             </Card>
@@ -260,27 +260,27 @@ export default function Payment() {
 
   if (step === 'processing') {
     return (
-      <div className="min-h-screen bg-[#f7f8fc] text-slate-900">
+      <div className="min-h-screen bg-ink text-cream">
         <Navbar />
         <main className="mx-auto flex min-h-[70vh] max-w-md items-center justify-center px-4 py-16 sm:px-6">
           <Card className="p-8 text-center">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
-              className="mx-auto h-16 w-16 rounded-full border-4 border-indigo-100 border-t-indigo-600"
+              className="mx-auto h-16 w-16 rounded-full border-4 border-gold/20 border-t-indigo-600"
             />
-            <h2 className="mt-6 text-xl font-bold text-slate-950">
+            <h2 className="mt-6 text-xl font-bold text-cream">
               Processing your payment
             </h2>
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-mist">
               Please wait while we securely process your payment through
               Paystack.
             </p>
             <div className="mt-6 flex flex-col gap-2">
-              <div className="w-full bg-slate-200 rounded-full h-2">
-                <div className="bg-gradient-to-r from-indigo-600 to-amber-600 h-2 rounded-full animate-[width_2s_ease-in-out_infinite] style-w-[70%]" />
+              <div className="w-full bg-elevated rounded-full h-2">
+                <div className="h-2 w-[70%] rounded-full bg-gradient-to-r from-gold to-amber animate-pulse" />
               </div>
-              <p className="text-xs text-slate-400">Connecting to Paystack...</p>
+              <p className="text-xs text-fog">Connecting to Paystack...</p>
             </div>
           </Card>
         </main>
@@ -290,22 +290,22 @@ export default function Payment() {
 
   if (step === 'success') {
     return (
-      <div className="min-h-screen bg-[#f7f8fc] text-slate-900">
+      <div className="min-h-screen bg-ink text-cream">
         <Navbar />
         <main className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
           <Card className="p-8 text-center">
             <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50 mb-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-xl font-bold text-white shadow-sm">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-xl font-bold text-cream shadow-sm">
                 ✓
               </div>
             </div>
-            <h2 className="text-2xl font-bold text-slate-950">Payment successful!</h2>
-            <p className="mt-3 text-sm text-slate-500">
+            <h2 className="text-2xl font-bold text-cream">Payment successful!</h2>
+            <p className="mt-3 text-sm text-mist">
               Your payment of <span className="font-bold text-emerald-600">{formatMoney(finalAmount)}</span> has been confirmed.
             </p>
             <div className="mt-6 rounded-xl border border-emerald-100 bg-emerald-50 p-4 text-left">
               <p className="text-xs font-bold uppercase tracking-wide text-emerald-700 mb-2">Transaction details</p>
-              <p className="text-sm text-slate-700">
+              <p className="text-sm text-mist">
                 <span className="font-bold">Amount:</span> {formatMoney(finalAmount)}<br />
                 <span className="font-bold">Method:</span> Paystack<br />
                 <span className="font-bold">Status:</span>
@@ -315,13 +315,13 @@ export default function Payment() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link
                 to={`/booking-success/${bookingId}`}
-                className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-indigo-700"
+                className="inline-flex items-center justify-center rounded-xl bg-gold px-7 py-3.5 text-sm font-bold text-cream transition hover:bg-gold-dim"
               >
                 View booking
               </Link>
               <Link
                 to="/dashboard/organizer"
-                className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-7 py-3.5 text-sm font-bold text-slate-700 transition hover:bg-slate-50"
+                className="inline-flex items-center justify-center rounded-xl border border-line bg-raised px-7 py-3.5 text-sm font-bold text-mist transition hover:bg-surface"
               >
                 Back to dashboard
               </Link>
@@ -334,17 +334,17 @@ export default function Payment() {
 
   // failure
   return (
-    <div className="min-h-screen bg-[#f7f8fc] text-slate-900">
+    <div className="min-h-screen bg-ink text-cream">
       <Navbar />
       <main className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
         <Card className="p-8 text-center">
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-red-50 mb-6">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-500 text-xl font-bold text-white shadow-sm">
+          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-rose/10 mb-6">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-rose/100 text-xl font-bold text-cream shadow-sm">
               !
             </div>
           </div>
-          <h2 className="text-2xl font-bold text-slate-950">Payment failed</h2>
-          <p className="mt-3 text-sm text-slate-500">
+          <h2 className="text-2xl font-bold text-cream">Payment failed</h2>
+          <p className="mt-3 text-sm text-mist">
             We were unable to process your payment. Please try again or
             contact support if the issue persists.
           </p>
@@ -354,7 +354,7 @@ export default function Payment() {
             </Button>
             <Link
               to="/dashboard/organizer"
-              className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-7 py-3.5 text-sm font-bold text-slate-700 transition hover:bg-slate-50"
+              className="inline-flex items-center justify-center rounded-xl border border-line bg-raised px-7 py-3.5 text-sm font-bold text-mist transition hover:bg-surface"
             >
               Back to dashboard
             </Link>

@@ -94,8 +94,8 @@ function getStatusDetails(status) {
       description:
         "The provider has responded to your request. Review the quotation from your dashboard.",
       className:
-        "border-indigo-200 bg-indigo-50 text-indigo-700",
-      dot: "bg-indigo-500",
+        "border-gold/30 bg-gold/10 text-gold",
+      dot: "bg-gold",
     };
   }
 
@@ -105,8 +105,8 @@ function getStatusDetails(status) {
       description:
         "Your counter offer has been sent to the provider for review.",
       className:
-        "border-amber-200 bg-amber-50 text-amber-700",
-      dot: "bg-amber-500",
+        "border-amber/20 bg-amber/10 text-amber",
+      dot: "bg-amber/100",
     };
   }
 
@@ -119,8 +119,8 @@ function getStatusDetails(status) {
       description:
         "This booking request was not accepted by the provider.",
       className:
-        "border-red-200 bg-red-50 text-red-700",
-      dot: "bg-red-500",
+        "border-rose/20 bg-rose/10 text-rose",
+      dot: "bg-rose/100",
     };
   }
 
@@ -129,8 +129,8 @@ function getStatusDetails(status) {
     description:
       "Your request has been sent. The provider will review your requirements and respond with a quotation.",
     className:
-      "border-amber-200 bg-amber-50 text-amber-700",
-    dot: "bg-amber-500",
+      "border-amber/20 bg-amber/10 text-amber",
+    dot: "bg-amber/100",
   };
 }
 
@@ -140,16 +140,16 @@ function DetailRow({
   highlight = false,
 }) {
   return (
-    <div className="flex flex-col gap-1 border-b border-slate-100 py-4 last:border-b-0 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-      <span className="text-sm text-slate-500">
+    <div className="flex flex-col gap-1 border-b border-line py-4 last:border-b-0 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+      <span className="text-sm text-mist">
         {label}
       </span>
 
       <span
         className={`break-words text-sm font-semibold sm:text-right ${
           highlight
-            ? "text-indigo-600"
-            : "text-slate-900"
+            ? "text-gold"
+            : "text-cream"
         }`}
       >
         {value || "Not provided"}
@@ -162,17 +162,17 @@ function SectionHeading({ eyebrow, title, description }) {
   return (
     <div>
       {eyebrow && (
-        <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
           {eyebrow}
         </p>
       )}
 
-      <h2 className="mt-1 text-lg font-bold tracking-tight text-slate-900">
+      <h2 className="mt-1 text-lg font-bold tracking-tight text-cream">
         {title}
       </h2>
 
       {description && (
-        <p className="mt-1 text-sm leading-6 text-slate-500">
+        <p className="mt-1 text-sm leading-6 text-mist">
           {description}
         </p>
       )}
@@ -247,22 +247,22 @@ export default function BookingSuccess() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#f7f8fc]">
+      <div className="min-h-screen bg-ink">
         <Navbar />
 
         <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="animate-pulse rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
-            <div className="mx-auto h-20 w-20 rounded-full bg-slate-200" />
+          <div className="animate-pulse rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-10">
+            <div className="mx-auto h-20 w-20 rounded-full bg-elevated" />
 
-            <div className="mx-auto mt-6 h-8 w-64 rounded bg-slate-200" />
+            <div className="mx-auto mt-6 h-8 w-64 rounded bg-elevated" />
 
-            <div className="mx-auto mt-3 h-4 w-96 max-w-full rounded bg-slate-200" />
+            <div className="mx-auto mt-3 h-4 w-96 max-w-full rounded bg-elevated" />
 
             <div className="mt-10 space-y-4">
-              <div className="h-5 rounded bg-slate-200" />
-              <div className="h-5 rounded bg-slate-200" />
-              <div className="h-5 rounded bg-slate-200" />
-              <div className="h-5 rounded bg-slate-200" />
+              <div className="h-5 rounded bg-elevated" />
+              <div className="h-5 rounded bg-elevated" />
+              <div className="h-5 rounded bg-elevated" />
+              <div className="h-5 rounded bg-elevated" />
             </div>
           </div>
         </main>
@@ -272,24 +272,24 @@ export default function BookingSuccess() {
 
   if (!booking) {
     return (
-      <div className="min-h-screen bg-[#f7f8fc] text-slate-900">
+      <div className="min-h-screen bg-ink text-cream">
         <Navbar />
 
         <main className="mx-auto flex min-h-[72vh] max-w-2xl items-center justify-center px-4 py-16 sm:px-6">
-          <div className="w-full rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm sm:p-10">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-50 text-2xl">
+          <div className="w-full rounded-3xl border border-line bg-raised p-8 text-center shadow-sm sm:p-10">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-amber/10 text-2xl">
               !
             </div>
 
-            <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-slate-400">
+            <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-fog">
               EventFlow booking
             </p>
 
-            <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+            <h1 className="mt-2 text-2xl font-bold tracking-tight text-cream sm:text-3xl">
               Booking not found
             </h1>
 
-            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-slate-500">
+            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-mist">
               We couldn't find this booking in your current
               EventFlow session. You can check your dashboard
               for your latest booking activity.
@@ -298,14 +298,14 @@ export default function BookingSuccess() {
             <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
               <Link
                 to="/dashboard/organizer"
-                className="rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700"
+                className="rounded-xl bg-gold px-6 py-3 text-sm font-semibold text-cream transition hover:bg-gold-dim"
               >
                 Go to dashboard
               </Link>
 
               <Link
                 to="/discover"
-                className="rounded-xl border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                className="rounded-xl border border-line px-6 py-3 text-sm font-semibold text-mist transition hover:bg-surface"
               >
                 Discover services
               </Link>
@@ -332,63 +332,63 @@ export default function BookingSuccess() {
     formatPrice(quotedPrice);
 
   return (
-    <div className="min-h-screen bg-[#f7f8fc] text-slate-900">
+    <div className="min-h-screen bg-ink text-cream">
       <Navbar />
 
       <main className="mx-auto max-w-4xl px-4 py-8 pb-16 sm:px-6 lg:px-8 lg:py-12">
         {/* Success header */}
-        <section className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+        <section className="overflow-hidden rounded-3xl border border-line bg-raised shadow-sm">
           <div className="relative px-6 pb-8 pt-10 text-center sm:px-10 sm:pt-12">
-            <div className="absolute inset-x-0 top-0 h-1 bg-indigo-600" />
+            <div className="absolute inset-x-0 top-0 h-1 bg-gold" />
 
             <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-xl font-bold text-white shadow-sm">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-xl font-bold text-cream shadow-sm">
                 ✓
               </div>
             </div>
 
-            <p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">
+            <p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-gold">
               Request submitted
             </p>
 
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <h1 className="mt-2 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
               Your event request is on its way
             </h1>
 
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-500 sm:text-base">
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-mist sm:text-base">
               Your request has been sent to{" "}
-              <span className="font-semibold text-slate-700">
+              <span className="font-semibold text-mist">
                 {providerName}
               </span>
               . They can review your event requirements and
               respond with a quotation.
             </p>
 
-            <div className="mx-auto mt-6 flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2">
+            <div className="mx-auto mt-6 flex w-fit items-center gap-2 rounded-full border border-line bg-surface px-4 py-2">
               <span
                 className={`h-2 w-2 rounded-full ${statusDetails.dot}`}
               />
 
-              <span className="text-xs font-semibold text-slate-700">
+              <span className="text-xs font-semibold text-mist">
                 {statusDetails.label}
               </span>
             </div>
           </div>
 
           {/* Booking ID */}
-          <div className="border-t border-slate-100 bg-slate-50/70 px-6 py-5 sm:px-10">
+          <div className="border-t border-line bg-surface/70 px-6 py-5 sm:px-10">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <p className="text-xs font-semibold uppercase tracking-wide text-fog">
                   Booking reference
                 </p>
 
-                <p className="mt-1 font-mono text-sm font-bold tracking-wide text-slate-800">
+                <p className="mt-1 font-mono text-sm font-bold tracking-wide text-cream">
                   {booking.id}
                 </p>
               </div>
 
-              <span className="text-xs text-slate-400">
+              <span className="text-xs text-fog">
                 Keep this reference for your records
               </span>
             </div>
@@ -396,16 +396,16 @@ export default function BookingSuccess() {
         </section>
 
         {!isPaid && (
-          <section className="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <section className="mt-5 rounded-2xl border border-amber/20 bg-amber/10 p-6 sm:p-8">
             <div className="flex gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-lg text-amber-600">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber/15 text-lg text-amber">
                 💳
               </div>
               <div>
-                <h3 className="font-bold text-slate-900">
+                <h3 className="font-bold text-cream">
                   Payment required
                 </h3>
-                <p className="mt-1 text-sm text-slate-600 leading-6">
+                <p className="mt-1 text-sm text-mist leading-6">
                   Your booking is not yet secured. Complete payment to confirm
                   your event with {providerName}.
                 </p>
@@ -417,7 +417,7 @@ export default function BookingSuccess() {
                 onClick={() =>
                   navigate(`/payment/${booking.id}`)
                 }
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-600 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-amber-700 transition"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber px-6 py-3 text-sm font-bold text-cream shadow-sm hover:bg-amber-700 transition"
               >
                 Pay now →
               </button>
@@ -449,7 +449,7 @@ export default function BookingSuccess() {
         {/* Main grid */}
         <div className="mt-5 grid gap-5 lg:grid-cols-[minmax(0,1fr)_300px]">
           {/* Event details */}
-          <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-8">
             <SectionHeading
               eyebrow="Your request"
               title="Event details"
@@ -502,12 +502,12 @@ export default function BookingSuccess() {
             </div>
 
             {booking.message && (
-              <div className="mt-6 rounded-2xl bg-slate-50 p-5">
-                <p className="text-xs font-bold uppercase tracking-wide text-slate-400">
+              <div className="mt-6 rounded-2xl bg-surface p-5">
+                <p className="text-xs font-bold uppercase tracking-wide text-fog">
                   Additional requirements
                 </p>
 
-                <p className="mt-2 whitespace-pre-wrap text-sm leading-6 text-slate-600">
+                <p className="mt-2 whitespace-pre-wrap text-sm leading-6 text-mist">
                   {booking.message}
                 </p>
               </div>
@@ -516,7 +516,7 @@ export default function BookingSuccess() {
 
           {/* Provider */}
           <aside className="space-y-5">
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm">
               <SectionHeading
                 eyebrow={
                   isVenue
@@ -526,19 +526,19 @@ export default function BookingSuccess() {
                 title={providerName}
               />
 
-              <div className="mt-5 flex items-center gap-3 rounded-2xl bg-slate-50 p-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-100 font-bold text-indigo-700">
+              <div className="mt-5 flex items-center gap-3 rounded-2xl bg-surface p-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold/15 font-bold text-gold">
                   {providerName
                     .charAt(0)
                     .toUpperCase()}
                 </div>
 
                 <div className="min-w-0">
-                  <p className="truncate text-sm font-semibold text-slate-900">
+                  <p className="truncate text-sm font-semibold text-cream">
                     {serviceName}
                   </p>
 
-                  <p className="mt-0.5 text-xs text-slate-500">
+                  <p className="mt-0.5 text-xs text-mist">
                     {booking.vendorType ||
                       (isVenue
                         ? "Venue"
@@ -548,28 +548,28 @@ export default function BookingSuccess() {
               </div>
 
               {formattedQuotedPrice && (
-                <div className="mt-5 rounded-2xl border border-indigo-100 bg-indigo-50 p-4">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-indigo-500">
+                <div className="mt-5 rounded-2xl border border-gold/20 bg-gold/10 p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-gold">
                     Current quotation
                   </p>
 
-                  <p className="mt-1 text-2xl font-bold text-indigo-900">
+                  <p className="mt-1 text-2xl font-bold text-charcoal">
                     {formattedQuotedPrice}
                   </p>
                 </div>
               )}
 
               {!formattedQuotedPrice && (
-                <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <div className="mt-5 rounded-2xl border border-line bg-surface p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-fog">
                     Pricing
                   </p>
 
-                  <p className="mt-1 text-sm font-semibold text-slate-800">
+                  <p className="mt-1 text-sm font-semibold text-cream">
                     Awaiting quotation
                   </p>
 
-                  <p className="mt-1 text-xs leading-5 text-slate-500">
+                  <p className="mt-1 text-xs leading-5 text-mist">
                     The provider will review your requirements
                     before sending a quotation.
                   </p>
@@ -578,7 +578,7 @@ export default function BookingSuccess() {
             </section>
 
             {/* What happens next */}
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm">
               <SectionHeading
                 eyebrow="Next steps"
                 title="What happens next?"
@@ -615,18 +615,18 @@ export default function BookingSuccess() {
         </div>
 
         {/* Important pricing note */}
-        <section className="mt-5 rounded-3xl border border-indigo-100 bg-indigo-50 p-6 sm:p-7">
+        <section className="mt-5 rounded-3xl border border-gold/20 bg-gold/10 p-6 sm:p-7">
           <div className="flex gap-4">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white font-bold text-indigo-600 shadow-sm">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-raised font-bold text-gold shadow-sm">
               ₵
             </div>
 
             <div>
-              <h2 className="text-sm font-bold text-indigo-950">
+              <h2 className="text-sm font-bold text-charcoal">
                 About pricing on EventFlow
               </h2>
 
-              <p className="mt-1 text-sm leading-6 text-indigo-900/70">
+              <p className="mt-1 text-sm leading-6 text-charcoal/70">
                 Listing prices are starting prices and should not
                 be treated as the final cost of your event. Your
                 provider reviews the requirements you submitted
@@ -641,20 +641,20 @@ export default function BookingSuccess() {
         <section className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <Link
             to="/dashboard/organizer"
-            className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700"
+            className="inline-flex items-center justify-center rounded-xl bg-gold px-6 py-3.5 text-sm font-semibold text-cream shadow-sm transition hover:bg-gold-dim"
           >
             View my dashboard
           </Link>
 
           <Link
             to="/discover"
-            className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+            className="inline-flex items-center justify-center rounded-xl border border-line bg-raised px-6 py-3.5 text-sm font-semibold text-mist transition hover:bg-surface"
           >
             Continue exploring
           </Link>
         </section>
 
-        <p className="mt-5 text-center text-xs text-slate-400">
+        <p className="mt-5 text-center text-xs text-fog">
           You can track quotations, counter offers and booking
           updates from your EventFlow dashboard.
         </p>
@@ -674,19 +674,19 @@ function Step({
       <div
         className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[11px] font-bold ${
           active
-            ? "bg-indigo-600 text-white"
-            : "bg-slate-100 text-slate-500"
+            ? "bg-gold text-cream"
+            : "bg-surface text-mist"
         }`}
       >
         {number}
       </div>
 
       <div className="min-w-0">
-        <p className="text-sm font-semibold text-slate-800">
+        <p className="text-sm font-semibold text-cream">
           {title}
         </p>
 
-        <p className="mt-1 text-xs leading-5 text-slate-500">
+        <p className="mt-1 text-xs leading-5 text-mist">
           {description}
         </p>
       </div>

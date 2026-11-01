@@ -241,25 +241,25 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f8fc] text-slate-900">
+    <div className="min-h-screen bg-ink text-cream">
       <Navbar />
 
       <main className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden px-4 py-10 sm:px-6 lg:px-8">
         {/* Background decoration */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -left-32 -top-32 h-72 w-72 rounded-full bg-indigo-100/60 blur-3xl" />
-          <div className="absolute -bottom-32 -right-32 h-80 w-80 rounded-full bg-purple-100/60 blur-3xl" />
+          <div className="absolute -left-32 -top-32 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
+          <div className="absolute -bottom-32 -right-32 h-80 w-80 rounded-full bg-gold/10 blur-3xl" />
         </div>
 
-        <div className="relative mx-auto grid w-full max-w-6xl overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_20px_70px_rgba(15,23,42,0.08)] lg:grid-cols-2">
+        <div className="relative mx-auto grid w-full max-w-6xl overflow-hidden rounded-[2rem] border border-line bg-raised shadow-2xl shadow-black/30 lg:grid-cols-2">
           {/* Left panel */}
-          <div className="hidden bg-slate-950 p-10 text-white lg:flex lg:flex-col lg:justify-between xl:p-14">
+          <div className="hidden bg-charcoal p-10 text-cream lg:flex lg:flex-col lg:justify-between xl:p-14">
             <div>
               <Link
                 to="/"
                 className="inline-flex items-center gap-3"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 text-lg font-bold">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gold text-lg font-bold">
                   E
                 </div>
 
@@ -269,7 +269,7 @@ export default function Login() {
               </Link>
 
               <div className="mt-20 max-w-md">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                   Your event marketplace
                 </p>
 
@@ -277,7 +277,7 @@ export default function Login() {
                   Bring your event together in one place.
                 </h1>
 
-                <p className="mt-6 text-base leading-7 text-slate-400">
+                <p className="mt-6 text-base leading-7 text-fog">
                   Discover trusted event vendors and venues,
                   manage your bookings and keep your event
                   planning organized with EventFlow.
@@ -314,11 +314,11 @@ export default function Login() {
                 to="/"
                 className="inline-flex items-center gap-3"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 text-lg font-bold text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gold text-lg font-bold text-cream">
                   E
                 </div>
 
-                <span className="text-lg font-bold tracking-tight text-slate-900">
+                <span className="text-lg font-bold tracking-tight text-cream">
                   EventFlow
                 </span>
               </Link>
@@ -326,15 +326,15 @@ export default function Login() {
 
             {/* Heading */}
             <div className="max-w-md">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
                 Account access
               </p>
 
-              <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-950">
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-cream">
                 Welcome back
               </h2>
 
-              <p className="mt-3 text-sm leading-6 text-slate-500">
+              <p className="mt-3 text-sm leading-6 text-mist">
                 Sign in to continue managing your EventFlow
                 activity.
               </p>
@@ -345,7 +345,7 @@ export default function Login() {
               {error && (
                 <div
                   role="alert"
-                  className="mb-5 flex gap-3 rounded-2xl border border-red-100 bg-red-50 p-4 text-sm text-red-700"
+                  className="mb-5 flex gap-3 rounded-2xl border border-rose/20 bg-rose/10 p-4 text-sm text-rose"
                 >
                   <span className="font-bold">
                     !
@@ -365,13 +365,13 @@ export default function Login() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-semibold text-slate-800"
+                    className="block text-sm font-semibold text-cream"
                   >
                     Email address
                   </label>
 
                   <div className="relative mt-2">
-                    <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+                    <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-fog">
                       @
                     </span>
 
@@ -384,7 +384,7 @@ export default function Login() {
                       placeholder="you@example.com"
                       autoComplete="email"
                       required
-                      className="w-full rounded-xl border border-slate-200 bg-white py-3.5 pl-11 pr-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                      className="w-full rounded-xl border border-line bg-raised py-3.5 pl-11 pr-4 text-sm text-cream outline-none transition placeholder:text-fog hover:border-line-bright focus:border-gold focus:ring-4 focus:ring-gold/20"
                     />
                   </div>
                 </div>
@@ -394,7 +394,7 @@ export default function Login() {
                   <div className="flex items-center justify-between">
                     <label
                       htmlFor="password"
-                      className="block text-sm font-semibold text-slate-800"
+                      className="block text-sm font-semibold text-cream"
                     >
                       Password
                     </label>
@@ -406,14 +406,14 @@ export default function Login() {
                           "Password reset will be available when EventFlow has a backend."
                         )
                       }
-                      className="text-xs font-semibold text-indigo-600 transition hover:text-indigo-700"
+                      className="text-xs font-semibold text-gold transition hover:text-gold-dim"
                     >
                       Forgot password?
                     </button>
                   </div>
 
                   <div className="relative mt-2">
-                    <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+                    <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-fog">
                       •••
                     </span>
 
@@ -430,7 +430,7 @@ export default function Login() {
                       placeholder="Enter your password"
                       autoComplete="current-password"
                       required
-                      className="w-full rounded-xl border border-slate-200 bg-white py-3.5 pl-12 pr-20 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                      className="w-full rounded-xl border border-line bg-raised py-3.5 pl-12 pr-20 text-sm text-cream outline-none transition placeholder:text-fog hover:border-line-bright focus:border-gold focus:ring-4 focus:ring-gold/20"
                     />
 
                     <button
@@ -440,7 +440,7 @@ export default function Login() {
                           (previous) => !previous
                         )
                       }
-                      className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg px-2 py-1 text-xs font-semibold text-slate-500 transition hover:bg-slate-100 hover:text-slate-800"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg px-2 py-1 text-xs font-semibold text-mist transition hover:bg-surface hover:text-cream"
                     >
                       {showPassword
                         ? "Hide"
@@ -453,10 +453,10 @@ export default function Login() {
                 <label className="flex cursor-pointer items-center gap-3 select-none">
                   <input
                     type="checkbox"
-                    className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                    className="h-4 w-4 rounded border-line-bright text-gold focus:ring-gold/200"
                   />
 
-                  <span className="text-sm text-slate-500">
+                  <span className="text-sm text-mist">
                     Keep me signed in
                   </span>
                 </label>
@@ -465,7 +465,7 @@ export default function Login() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="group flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-60"
+                  className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gold px-5 py-3.5 text-sm font-semibold text-cream shadow-sm transition hover:bg-gold-dim hover:shadow-md disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {loading ? (
                     <>
@@ -484,14 +484,14 @@ export default function Login() {
               </form>
 
               {/* Register */}
-              <div className="mt-7 border-t border-slate-100 pt-7 text-center">
-                <p className="text-sm text-slate-500">
+              <div className="mt-7 border-t border-line pt-7 text-center">
+                <p className="text-sm text-mist">
                   Don't have an EventFlow account?
                 </p>
 
                 <Link
                   to="/register"
-                  className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-indigo-600 transition hover:text-indigo-700"
+                  className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-gold transition hover:text-gold-dim"
                 >
                   Create your account
                   <span>→</span>
@@ -503,12 +503,12 @@ export default function Login() {
             <div className="mt-8 flex flex-col items-center justify-between gap-3 text-center sm:flex-row sm:text-left">
               <Link
                 to="/"
-                className="text-sm font-medium text-slate-400 transition hover:text-indigo-600"
+                className="text-sm font-medium text-fog transition hover:text-gold"
               >
                 ← Back to EventFlow
               </Link>
 
-              <span className="text-xs text-slate-400">
+              <span className="text-xs text-fog">
                 Ghana's event marketplace
               </span>
             </div>
@@ -526,16 +526,16 @@ function LoginFeature({
 }) {
   return (
     <div className="flex gap-3">
-      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-sm font-bold text-indigo-300">
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-raised/10 text-sm font-bold text-gold">
         {icon}
       </div>
 
       <div>
-        <p className="text-sm font-semibold text-white">
+        <p className="text-sm font-semibold text-cream">
           {title}
         </p>
 
-        <p className="mt-1 text-xs leading-5 text-slate-500">
+        <p className="mt-1 text-xs leading-5 text-mist">
           {description}
         </p>
       </div>

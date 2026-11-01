@@ -315,26 +315,26 @@ export default function VendorProfile() {
 
   if (!vendor) {
     return (
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-surface">
         <Navbar />
         <main className="mx-auto flex min-h-[70vh] max-w-4xl items-center justify-center px-5 py-16">
-          <div className="w-full rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm sm:p-12">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-indigo-50 text-3xl">
+          <div className="w-full rounded-3xl border border-line bg-raised p-8 text-center shadow-sm sm:p-12">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-gold/10 text-3xl">
               🔍
             </div>
-            <p className="mt-6 text-sm font-bold uppercase tracking-[0.18em] text-indigo-600">
+            <p className="mt-6 text-sm font-bold uppercase tracking-[0.18em] text-gold">
               EventFlow Marketplace
             </p>
-            <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">
+            <h1 className="mt-3 text-3xl font-bold tracking-tight text-cream">
               Vendor not found
             </h1>
-            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-slate-500">
+            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-mist">
               We could not find this vendor profile. It may have been removed
               or is no longer available.
             </p>
             <Link
               to="/discover"
-              className="mt-7 inline-flex items-center justify-center rounded-xl bg-indigo-600 px-6 py-3 text-sm font-bold text-white hover:bg-indigo-700"
+              className="mt-7 inline-flex items-center justify-center rounded-xl bg-gold px-6 py-3 text-sm font-bold text-cream hover:bg-gold-dim"
             >
               ← Back to Discover
             </Link>
@@ -346,64 +346,64 @@ export default function VendorProfile() {
 
   if (vendor.status !== "approved") {
     return (
-      <div className="min-h-screen bg-slate-50 text-slate-900">
+      <div className="min-h-screen bg-surface text-cream">
         <Navbar />
 
         <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="rounded-[2rem] border border-amber-200 bg-amber-50 p-8 sm:p-12 shadow-sm text-center">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-amber-100 mb-6">
+          <div className="rounded-[2rem] border border-amber/20 bg-amber/10 p-8 sm:p-12 shadow-sm text-center">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-amber/15 mb-6">
               <span className="text-4xl">🔒</span>
             </div>
-            <p className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-amber-600">
+            <p className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-amber">
               Profile pending approval
             </p>
-            <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">
+            <h1 className="mt-3 text-3xl font-bold tracking-tight text-cream">
               {vendor.name}
             </h1>
-            <p className="mt-2 text-sm font-semibold text-slate-600">
+            <p className="mt-2 text-sm font-semibold text-mist">
               {vendor.specialization}
             </p>
-            <p className="mt-4 max-w-md mx-auto text-sm leading-6 text-slate-500">
+            <p className="mt-4 max-w-md mx-auto text-sm leading-6 text-mist">
               This vendor has not yet been approved by EventFlow. Their profile
               picture, cover photo and portfolio gallery are hidden until an
               admin approves their application.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-4">
-              <div className="rounded-2xl border border-amber-200 bg-amber-50/50 p-6">
-                <p className="text-xs font-bold uppercase tracking-wide text-amber-700 mb-2">
+              <div className="rounded-2xl border border-amber/20 bg-amber/10/50 p-6">
+                <p className="text-xs font-bold uppercase tracking-wide text-amber mb-2">
                   Profile picture
                 </p>
                 <div className="flex h-24 w-24 items-center justify-center rounded-xl bg-amber-200 text-4xl mx-auto">
                   {vendor.icon}
                 </div>
-                <p className="mt-2 text-xs text-amber-500">
+                <p className="mt-2 text-xs text-amber">
                   Hidden until approved
                 </p>
               </div>
-              <div className="rounded-2xl border border-amber-200 bg-amber-50/50 p-6">
-                <p className="text-xs font-bold uppercase tracking-wide text-amber-700 mb-2">
+              <div className="rounded-2xl border border-amber/20 bg-amber/10/50 p-6">
+                <p className="text-xs font-bold uppercase tracking-wide text-amber mb-2">
                   Portfolio gallery
                 </p>
                 <div className="flex h-24 w-full items-center justify-center rounded-xl bg-amber-200 text-3xl">
                   📷
                 </div>
-                <p className="mt-2 text-xs text-amber-500">
+                <p className="mt-2 text-xs text-amber">
                   Hidden until approved
                 </p>
               </div>
             </div>
 
-            <p className="mt-8 text-xs text-amber-500">
+            <p className="mt-8 text-xs text-amber">
               Vendor location:{' '}
-              <span className="font-medium text-slate-700">
+              <span className="font-medium text-mist">
                 {vendor.location}
               </span>
             </p>
 
             <Link
               to="/discover"
-              className="mt-8 inline-flex items-center justify-center rounded-xl bg-indigo-600 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-indigo-700"
+              className="mt-8 inline-flex items-center justify-center rounded-xl bg-gold px-7 py-3.5 text-sm font-bold text-cream transition hover:bg-gold-dim"
             >
               ← Explore other vendors
             </Link>
@@ -414,40 +414,40 @@ export default function VendorProfile() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-surface text-cream">
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
         <div className="flex items-center gap-2 text-sm">
           <Link
             to="/discover"
-            className="font-semibold text-slate-500 hover:text-indigo-600"
+            className="font-semibold text-mist hover:text-gold"
           >
             Discover
           </Link>
-          <span className="text-slate-300">/</span>
-          <span className="truncate font-semibold text-slate-900">
+          <span className="text-fog">/</span>
+          <span className="truncate font-semibold text-cream">
             {vendor.name}
           </span>
         </div>
 
-        <section className="mt-5 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
-          <div className="relative h-48 overflow-hidden bg-slate-950 sm:h-64">
+        <section className="mt-5 overflow-hidden rounded-[2rem] border border-line bg-raised shadow-sm">
+          <div className="relative h-48 overflow-hidden bg-charcoal sm:h-64">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(99,102,241,0.5),_transparent_45%),linear-gradient(115deg,_#020617,_#1e1b4b,_#4338ca)]" />
-            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-white/10" />
-            <div className="absolute -bottom-32 -left-16 h-72 w-72 rounded-full border border-white/10" />
+            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-line" />
+            <div className="absolute -bottom-32 -left-16 h-72 w-72 rounded-full border border-line" />
 
             <div className="absolute left-5 top-5 sm:left-7 sm:top-7">
               <Link
                 to="/discover"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white backdrop-blur-md hover:bg-white/15"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-raised/10 px-4 py-2.5 text-sm font-semibold text-cream backdrop-blur-xl hover:bg-raised/15"
               >
                 ← Discover
               </Link>
             </div>
 
             <div className="absolute right-5 top-5 sm:right-7 sm:top-7">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs font-bold text-white backdrop-blur-md">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-raised/10 px-3 py-2 text-xs font-bold text-cream backdrop-blur-xl">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
                 EventFlow Verified
               </span>
@@ -463,7 +463,7 @@ export default function VendorProfile() {
 
                 <div className="pb-1">
                   <div className="flex flex-wrap items-center gap-2.5">
-                    <h1 className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl lg:text-4xl">
+                    <h1 className="text-2xl font-bold tracking-tight text-cream sm:text-3xl lg:text-4xl">
                       {vendor.name}
                     </h1>
                     <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-700">
@@ -471,11 +471,11 @@ export default function VendorProfile() {
                     </span>
                   </div>
 
-                  <p className="mt-2 text-sm font-semibold text-slate-600">
+                  <p className="mt-2 text-sm font-semibold text-mist">
                     {vendor.specialization}
                   </p>
 
-                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500">
+                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-mist">
                     <span>📍 {vendor.location}</span>
                     <span>📋 {availableServices.length} available services</span>
                   </div>
@@ -488,8 +488,8 @@ export default function VendorProfile() {
                   onClick={handleSaveProfile}
                   className={`inline-flex items-center justify-center gap-2 rounded-xl border px-5 py-3 text-sm font-bold ${
                     saved
-                      ? "border-indigo-200 bg-indigo-50 text-indigo-700"
-                      : "border-slate-300 bg-white text-slate-800 hover:border-indigo-300 hover:bg-indigo-50"
+                      ? "border-gold/30 bg-gold/10 text-gold"
+                      : "border-line-bright bg-raised text-cream hover:border-gold/40 hover:bg-gold/10"
                   }`}
                 >
                   <span className="text-base">{saved ? "♥" : "♡"}</span>
@@ -499,14 +499,14 @@ export default function VendorProfile() {
                 <button
                   type="button"
                   onClick={() => handleBookingRequest()}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-indigo-700"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-6 py-3 text-sm font-bold text-cream shadow-sm hover:bg-gold-dim"
                 >
                   Request booking →
                 </button>
               </div>
             </div>
 
-            <div className="mt-8 grid grid-cols-2 divide-x divide-y divide-slate-100 border-t border-slate-100 pt-6 sm:grid-cols-4 sm:divide-y-0">
+            <div className="mt-8 grid grid-cols-2 divide-x divide-y divide-slate-100 border-t border-line pt-6 sm:grid-cols-4 sm:divide-y-0">
               <ProfileStat value="New" label="Rating" icon="★" />
               <ProfileStat value="0" label="Events completed" icon="✓" />
               <ProfileStat value={availableServices.length} label="Services" icon="◈" />
@@ -517,21 +517,21 @@ export default function VendorProfile() {
 
         <section className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(320px,0.8fr)]">
           <div className="min-w-0 space-y-8">
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-8">
               <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-lg text-indigo-600">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-lg text-gold">
                   ✦
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                     About this vendor
                   </p>
-                  <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-slate-950">
+                  <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-cream">
                     Professional event services
                   </h2>
                 </div>
               </div>
-              <p className="mt-6 whitespace-pre-line text-sm leading-7 text-slate-600">
+              <p className="mt-6 whitespace-pre-line text-sm leading-7 text-mist">
                 {vendor.bio}
               </p>
             </section>
@@ -539,31 +539,31 @@ export default function VendorProfile() {
             <section>
               <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                     Services
                   </p>
-                  <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">
+                  <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-cream sm:text-3xl">
                     What they offer
                   </h2>
-                  <p className="mt-2 text-sm text-slate-500">
+                  <p className="mt-2 text-sm text-mist">
                     Choose a service and send a booking request with your event requirements.
                   </p>
                 </div>
-                <span className="text-sm font-semibold text-slate-500">
+                <span className="text-sm font-semibold text-mist">
                   {availableServices.length} available
                 </span>
               </div>
 
               <div className="mt-6 space-y-4">
                 {availableServices.length === 0 && (
-                  <div className="rounded-3xl border border-dashed border-slate-300 bg-white p-10 text-center">
-                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-100 text-2xl">
+                  <div className="rounded-3xl border border-dashed border-line-bright bg-raised p-10 text-center">
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-surface text-2xl">
                       📦
                     </div>
-                    <h3 className="mt-4 font-bold text-slate-950">
+                    <h3 className="mt-4 font-bold text-cream">
                       Services coming soon
                     </h3>
-                    <p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-slate-500">
+                    <p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-mist">
                       This vendor has no approved, available services to display yet.
                     </p>
                   </div>
@@ -577,12 +577,12 @@ export default function VendorProfile() {
                   return (
                     <article
                       key={service.id}
-                      className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-indigo-200 hover:shadow-lg"
+                      className="group overflow-hidden rounded-3xl border border-line bg-raised shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-gold/30 hover:shadow-lg"
                     >
                       <div className="p-5 sm:p-6">
                         <div className="flex flex-col gap-5 sm:flex-row">
                           {image ? (
-                            <div className="h-24 w-full shrink-0 overflow-hidden rounded-2xl bg-slate-100 sm:w-28">
+                            <div className="h-24 w-full shrink-0 overflow-hidden rounded-2xl bg-surface sm:w-28">
                               <img
                                 src={image}
                                 alt={serviceName}
@@ -591,7 +591,7 @@ export default function VendorProfile() {
                               />
                             </div>
                           ) : (
-                            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-indigo-50 text-3xl sm:h-24 sm:w-24">
+                            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gold/10 text-3xl sm:h-24 sm:w-24">
                               {service.icon || "📦"}
                             </div>
                           )}
@@ -599,35 +599,35 @@ export default function VendorProfile() {
                           <div className="min-w-0 flex-1">
                             <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                               <div className="min-w-0">
-                                <span className="inline-flex rounded-full bg-indigo-50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-indigo-700">
+                                <span className="inline-flex rounded-full bg-gold/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-gold">
                                   {service.category || service.serviceCategory || "Event service"}
                                 </span>
-                                <h3 className="mt-2 text-lg font-bold text-slate-950 sm:text-xl">
+                                <h3 className="mt-2 text-lg font-bold text-cream sm:text-xl">
                                   {serviceName}
                                 </h3>
                               </div>
 
                               <div className="shrink-0 sm:text-right">
-                                <p className="text-xs font-medium text-slate-400">
+                                <p className="text-xs font-medium text-fog">
                                   {service.pricingType || "Starting from"}
                                 </p>
-                                <p className="mt-0.5 text-lg font-bold text-slate-950">
+                                <p className="mt-0.5 text-lg font-bold text-cream">
                                   {formatPrice(service.price)}
                                 </p>
                               </div>
                             </div>
 
-                            <p className="mt-3 whitespace-pre-line text-sm leading-6 text-slate-500">
+                            <p className="mt-3 whitespace-pre-line text-sm leading-6 text-mist">
                               {service.description ||
                                 "Professional service tailored to your event requirements."}
                             </p>
 
-                            <div className="mt-5 flex flex-col gap-3 border-t border-slate-100 pt-4 sm:flex-row sm:items-center sm:justify-between">
+                            <div className="mt-5 flex flex-col gap-3 border-t border-line pt-4 sm:flex-row sm:items-center sm:justify-between">
                               <div className="flex items-center gap-2">
                                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-50 text-xs text-emerald-600">
                                   ✓
                                 </span>
-                                <span className="text-xs font-semibold text-slate-600">
+                                <span className="text-xs font-semibold text-mist">
                                   Available for booking
                                 </span>
                               </div>
@@ -635,7 +635,7 @@ export default function VendorProfile() {
                               <button
                                 type="button"
                                 onClick={() => handleBookingRequest(service.id)}
-                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-indigo-700 sm:w-auto"
+                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gold px-4 py-2.5 text-sm font-bold text-cream hover:bg-gold-dim sm:w-auto"
                               >
                                 Request this service →
                               </button>
@@ -650,16 +650,16 @@ export default function VendorProfile() {
             </section>
 
             {startingPrice !== null && (
-              <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+              <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-8">
                 <div className="flex items-start gap-4">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 font-bold text-emerald-600">
                     GH₵
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-950">
+                    <h3 className="font-bold text-cream">
                       Listed services start from {formatPrice(startingPrice)}
                     </h3>
-                    <p className="mt-1 text-sm leading-6 text-slate-500">
+                    <p className="mt-1 text-sm leading-6 text-mist">
                       Listed prices are guides, not final quotations. The final price
                       is agreed with the vendor through EventFlow before payment.
                     </p>
@@ -668,20 +668,20 @@ export default function VendorProfile() {
               </section>
             )}
 
-            <section className="overflow-hidden rounded-3xl border border-indigo-100 bg-indigo-50">
+            <section className="overflow-hidden rounded-3xl border border-gold/20 bg-gold/10">
               <div className="p-6 sm:p-8">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-xl shadow-sm">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-raised text-xl shadow-sm">
                     ✓
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                       Simple booking process
                     </p>
-                    <h2 className="mt-1.5 text-xl font-bold text-slate-950">
+                    <h2 className="mt-1.5 text-xl font-bold text-cream">
                       Plan with confidence
                     </h2>
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                    <p className="mt-2 text-sm leading-6 text-mist">
                       Send your requirements, review the quotation, and agree on
                       the final price before moving to payment.
                     </p>
@@ -698,15 +698,15 @@ export default function VendorProfile() {
           </div>
 
           <aside className="space-y-6">
-            <section className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm lg:sticky lg:top-24">
-              <div className="bg-slate-950 p-6 text-white">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-300">
+            <section className="overflow-hidden rounded-3xl border border-line bg-raised shadow-sm lg:sticky lg:top-24">
+              <div className="bg-charcoal p-6 text-cream">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                   Work with this vendor
                 </p>
                 <h2 className="mt-2 text-2xl font-bold">
                   Ready to plan your event?
                 </h2>
-                <p className="mt-2 text-sm leading-6 text-slate-300">
+                <p className="mt-2 text-sm leading-6 text-fog">
                   Send your event details and let the vendor prepare a quotation.
                 </p>
               </div>
@@ -714,18 +714,18 @@ export default function VendorProfile() {
                 <button
                   type="button"
                   onClick={() => handleBookingRequest()}
-                  className="w-full rounded-xl bg-indigo-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-indigo-700"
+                  className="w-full rounded-xl bg-gold px-5 py-3.5 text-sm font-bold text-cream hover:bg-gold-dim"
                 >
                   Request a booking →
                 </button>
-                <p className="mt-3 text-center text-xs leading-5 text-slate-400">
+                <p className="mt-3 text-center text-xs leading-5 text-fog">
                   No final price is locked until both sides agree.
                 </p>
               </div>
             </section>
 
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="text-lg font-bold text-slate-950">Vendor information</h2>
+            <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm">
+              <h2 className="text-lg font-bold text-cream">Vendor information</h2>
               <div className="mt-5 space-y-4">
                 <ContactRow icon="📍" label="Location" value={vendor.location} />
                 <ContactRow icon="✉" label="Email" value={vendor.email} />
@@ -734,17 +734,17 @@ export default function VendorProfile() {
             </section>
 
             <section className="rounded-3xl border border-emerald-100 bg-emerald-50 p-6">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-emerald-600 shadow-sm">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-raised text-emerald-600 shadow-sm">
                 ✓
               </div>
-              <h3 className="mt-4 font-bold text-slate-950">Verified by EventFlow</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
+              <h3 className="mt-4 font-bold text-cream">Verified by EventFlow</h3>
+              <p className="mt-2 text-sm leading-6 text-mist">
                 This vendor has been approved by EventFlow and is available for public discovery.
               </p>
             </section>
 
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="font-bold text-slate-950">Business information</h2>
+            <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm">
+              <h2 className="font-bold text-cream">Business information</h2>
               <div className="mt-5 space-y-4">
                 <InfoRow label="Location" value={vendor.location} icon="📍" />
                 <InfoRow label="Specialization" value={vendor.specialization} icon={vendor.icon} />
@@ -753,17 +753,17 @@ export default function VendorProfile() {
               </div>
             </section>
 
-            <section className="rounded-3xl border border-slate-800 bg-slate-950 p-6 text-white">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-400">
+            <section className="rounded-3xl border border-line bg-charcoal p-6 text-cream">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                 For event professionals
               </p>
               <h3 className="mt-3 text-xl font-bold">Manage your EventFlow business.</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-400">
+              <p className="mt-2 text-sm leading-6 text-fog">
                 Manage services, review booking requests, and keep your business information up to date.
               </p>
               <Link
                 to="/dashboard/vendor"
-                className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950 hover:bg-slate-100"
+                className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-raised px-5 py-3 text-sm font-bold text-cream hover:bg-surface"
               >
                 Open vendor dashboard →
               </Link>
@@ -778,23 +778,23 @@ export default function VendorProfile() {
 function ProfileStat({ value, label, icon }) {
   return (
     <div className="px-3 py-4 text-center">
-      <div className="text-sm font-bold text-indigo-600">{icon}</div>
-      <p className="mt-1.5 text-lg font-bold text-slate-950">{value}</p>
-      <p className="mt-1 text-xs font-medium text-slate-500">{label}</p>
+      <div className="text-sm font-bold text-gold">{icon}</div>
+      <p className="mt-1.5 text-lg font-bold text-cream">{value}</p>
+      <p className="mt-1 text-xs font-medium text-mist">{label}</p>
     </div>
   );
 }
 
 function ProcessStep({ number, title, text }) {
   return (
-    <div className="rounded-2xl border border-indigo-100 bg-white/80 p-4">
+    <div className="rounded-2xl border border-gold/20 bg-raised/80 p-4">
       <div className="flex items-center gap-3">
-        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-[11px] font-bold text-white">
+        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gold text-[11px] font-bold text-cream">
           {number}
         </span>
-        <h3 className="text-sm font-bold text-slate-950">{title}</h3>
+        <h3 className="text-sm font-bold text-cream">{title}</h3>
       </div>
-      <p className="mt-3 text-xs leading-5 text-slate-500">{text}</p>
+      <p className="mt-3 text-xs leading-5 text-mist">{text}</p>
     </div>
   );
 }
@@ -802,12 +802,12 @@ function ProcessStep({ number, title, text }) {
 function ContactRow({ icon, label, value }) {
   return (
     <div className="flex items-start gap-3">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-50 text-sm">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface text-sm">
         {icon}
       </div>
       <div className="min-w-0">
-        <p className="text-xs font-medium text-slate-400">{label}</p>
-        <p className="mt-0.5 break-words text-sm font-semibold text-slate-800">
+        <p className="text-xs font-medium text-fog">{label}</p>
+        <p className="mt-0.5 break-words text-sm font-semibold text-cream">
           {value}
         </p>
       </div>
@@ -818,12 +818,12 @@ function ContactRow({ icon, label, value }) {
 function InfoRow({ icon, label, value }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-50 text-sm">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface text-sm">
         {icon}
       </div>
       <div className="min-w-0">
-        <p className="text-xs font-medium text-slate-400">{label}</p>
-        <p className="break-words text-sm font-semibold text-slate-900">
+        <p className="text-xs font-medium text-fog">{label}</p>
+        <p className="break-words text-sm font-semibold text-cream">
           {value}
         </p>
       </div>

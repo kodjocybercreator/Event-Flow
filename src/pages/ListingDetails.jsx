@@ -245,16 +245,16 @@ function ListingDetails() {
 
   if (!listing) {
     return (
-      <div className="min-h-screen bg-[#f7f7fb] text-gray-900">
+      <div className="min-h-screen bg-[#f7f7fb] text-cream">
         <Navbar />
 
         <main className="mx-auto flex min-h-[70vh] max-w-7xl items-center justify-center px-5 py-16 sm:px-6 lg:px-8">
           <div className="max-w-md text-center">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-indigo-50">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-gold/10">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
-                className="h-9 w-9 text-indigo-500"
+                className="h-9 w-9 text-gold"
                 stroke="currentColor"
                 strokeWidth="1.7"
               >
@@ -263,15 +263,15 @@ function ListingDetails() {
               </svg>
             </div>
 
-            <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+            <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-gold">
               EventFlow
             </p>
 
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-950">
+            <h1 className="mt-2 text-3xl font-bold tracking-tight text-cream">
               Listing not found
             </h1>
 
-            <p className="mt-3 text-sm leading-6 text-gray-500">
+            <p className="mt-3 text-sm leading-6 text-mist">
               We couldn't find the venue or event professional
               you're looking for. It may have been removed or is
               no longer available.
@@ -279,7 +279,7 @@ function ListingDetails() {
 
             <Link
               to="/discover"
-              className="mt-7 inline-flex items-center rounded-xl bg-gray-950 px-6 py-3 text-sm font-bold text-white transition hover:bg-indigo-600"
+              className="mt-7 inline-flex items-center rounded-xl bg-ink px-6 py-3 text-sm font-bold text-cream transition hover:bg-gold"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -400,18 +400,18 @@ function ListingDetails() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f7fb] text-gray-900">
+    <div className="min-h-screen bg-[#f7f7fb] text-cream">
       <Navbar />
 
       <main>
         {/* =====================================================
             TOP / HERO
         ====================================================== */}
-        <section className="border-b border-gray-200 bg-white">
+        <section className="border-b border-line bg-raised">
           <div className="mx-auto max-w-7xl px-5 pb-10 pt-6 sm:px-6 lg:px-8 lg:pb-12">
             <Link
               to="/discover"
-              className="inline-flex items-center rounded-xl px-2 py-2 text-sm font-semibold text-gray-500 transition hover:bg-gray-100 hover:text-indigo-600"
+              className="inline-flex items-center rounded-xl px-2 py-2 text-sm font-semibold text-mist transition hover:bg-surface hover:text-gold"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -427,19 +427,19 @@ function ListingDetails() {
               Back to Discover
             </Link>
 
-            <div className="mt-5 overflow-hidden rounded-[2rem] border border-gray-200 bg-white shadow-sm">
+            <div className="mt-5 overflow-hidden rounded-[2rem] border border-line bg-raised shadow-sm">
               {/* COVER */}
               <div className="relative flex h-64 items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-100 via-purple-50 to-white sm:h-80 lg:h-96">
-                <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-indigo-300/20 blur-3xl" />
-                <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-purple-300/20 blur-3xl" />
+                <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-gold/30/20 blur-3xl" />
+                <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-gold/30/20 blur-3xl" />
 
-                <div className="relative flex h-28 w-28 items-center justify-center rounded-[2rem] bg-white/80 text-7xl shadow-xl backdrop-blur sm:h-36 sm:w-36 sm:text-8xl">
+                <div className="relative flex h-28 w-28 items-center justify-center rounded-[2rem] bg-raised/80 text-7xl shadow-xl backdrop-blur sm:h-36 sm:w-36 sm:text-8xl">
                   {listing.icon}
                 </div>
 
                 {listing.verified && (
-                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/90 px-3.5 py-2 text-xs font-bold text-emerald-700 shadow-lg backdrop-blur">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-[10px] text-white">
+                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-line-bright bg-raised/90 px-3.5 py-2 text-xs font-bold text-emerald-700 shadow-lg backdrop-blur">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-[10px] text-cream">
                       ✓
                     </span>
 
@@ -447,7 +447,7 @@ function ListingDetails() {
                   </div>
                 )}
 
-                <div className="absolute bottom-5 right-5 rounded-full bg-gray-950/85 px-3.5 py-2 text-xs font-semibold text-white backdrop-blur">
+                <div className="absolute bottom-5 right-5 rounded-full bg-ink/85 px-3.5 py-2 text-xs font-semibold text-cream backdrop-blur">
                   {listing.type}
                 </div>
               </div>
@@ -456,20 +456,20 @@ function ListingDetails() {
               <div className="p-6 sm:p-8 lg:p-10">
                 <div className="flex flex-col gap-7 lg:flex-row lg:items-end lg:justify-between">
                   <div className="min-w-0">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
                       {listing.type}
                     </p>
 
-                    <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl lg:text-5xl">
+                    <h1 className="mt-2 text-3xl font-bold tracking-tight text-cream sm:text-4xl lg:text-5xl">
                       {listing.name}
                     </h1>
 
-                    <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-gray-500">
+                    <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-mist">
                       <span className="inline-flex items-center gap-1.5">
                         <svg
                           viewBox="0 0 24 24"
                           fill="none"
-                          className="h-4 w-4 text-gray-400"
+                          className="h-4 w-4 text-fog"
                           stroke="currentColor"
                           strokeWidth="1.8"
                         >
@@ -482,11 +482,11 @@ function ListingDetails() {
 
                       {listing.rating && (
                         <span className="inline-flex items-center gap-1.5">
-                          <span className="text-amber-500">
+                          <span className="text-amber">
                             ★
                           </span>
 
-                          <strong className="text-gray-900">
+                          <strong className="text-cream">
                             {listing.rating}
                           </strong>
 
@@ -502,7 +502,7 @@ function ListingDetails() {
                         <svg
                           viewBox="0 0 24 24"
                           fill="none"
-                          className="h-4 w-4 text-gray-400"
+                          className="h-4 w-4 text-fog"
                           stroke="currentColor"
                           strokeWidth="1.8"
                         >
@@ -522,8 +522,8 @@ function ListingDetails() {
                       onClick={handleSave}
                       className={`inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-bold transition ${
                         saved
-                          ? "border-indigo-200 bg-indigo-50 text-indigo-700"
-                          : "border-gray-200 bg-white text-gray-700 hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
+                          ? "border-gold/30 bg-gold/10 text-gold"
+                          : "border-line bg-raised text-mist hover:border-gold/30 hover:bg-gold/10 hover:text-gold-dim"
                       }`}
                     >
                       <svg
@@ -542,7 +542,7 @@ function ListingDetails() {
                     <button
                       type="button"
                       onClick={handleBooking}
-                      className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-indigo-700 active:scale-[0.98]"
+                      className="inline-flex items-center justify-center rounded-xl bg-gold px-6 py-3 text-sm font-bold text-cream shadow-sm transition hover:bg-gold-dim active:scale-[0.98]"
                     >
                       Request Booking
 
@@ -574,27 +574,27 @@ function ListingDetails() {
             ================================================== */}
             <div className="space-y-7">
               {/* ABOUT */}
-              <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+              <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
                   About this listing
                 </p>
 
-                <h2 className="mt-2 text-2xl font-bold tracking-tight text-gray-950">
+                <h2 className="mt-2 text-2xl font-bold tracking-tight text-cream">
                   About {listing.name}
                 </h2>
 
-                <p className="mt-4 text-sm leading-7 text-gray-600">
+                <p className="mt-4 text-sm leading-7 text-mist">
                   {listing.description}
                 </p>
               </section>
 
               {/* FEATURES */}
-              <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+              <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
                   Features & services
                 </p>
 
-                <h2 className="mt-2 text-2xl font-bold tracking-tight text-gray-950">
+                <h2 className="mt-2 text-2xl font-bold tracking-tight text-cream">
                   What this listing offers
                 </h2>
 
@@ -602,13 +602,13 @@ function ListingDetails() {
                   {listing.features.map((feature) => (
                     <div
                       key={feature}
-                      className="flex items-center gap-3 rounded-2xl border border-gray-100 bg-gray-50 p-4 transition hover:border-indigo-100 hover:bg-indigo-50/40"
+                      className="flex items-center gap-3 rounded-2xl border border-line bg-surface p-4 transition hover:border-gold/20 hover:bg-gold/10/40"
                     >
                       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-sm font-bold text-emerald-600">
                         ✓
                       </div>
 
-                      <span className="text-sm font-semibold text-gray-700">
+                      <span className="text-sm font-semibold text-mist">
                         {feature}
                       </span>
                     </div>
@@ -617,41 +617,41 @@ function ListingDetails() {
               </section>
 
               {/* RATINGS / REVIEWS */}
-              <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+              <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-8">
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
                       Customer feedback
                     </p>
 
-                    <h2 className="mt-2 text-2xl font-bold tracking-tight text-gray-950">
+                    <h2 className="mt-2 text-2xl font-bold tracking-tight text-cream">
                       Ratings & reviews
                     </h2>
                   </div>
 
                   {listing.rating ? (
-                    <div className="rounded-2xl bg-amber-50 px-5 py-4 text-center">
-                      <p className="text-2xl font-bold text-gray-950">
+                    <div className="rounded-2xl bg-amber/10 px-5 py-4 text-center">
+                      <p className="text-2xl font-bold text-cream">
                         {listing.rating}
                       </p>
 
-                      <div className="mt-1 text-sm tracking-wide text-amber-500">
+                      <div className="mt-1 text-sm tracking-wide text-amber">
                         ★★★★★
                       </div>
 
                       {listing.reviews ? (
-                        <p className="mt-1 text-xs text-gray-500">
+                        <p className="mt-1 text-xs text-mist">
                           Based on {listing.reviews} reviews
                         </p>
                       ) : null}
                     </div>
                   ) : (
-                    <div className="rounded-2xl bg-gray-50 px-5 py-4 text-center">
-                      <p className="text-sm font-bold text-gray-700">
+                    <div className="rounded-2xl bg-surface px-5 py-4 text-center">
+                      <p className="text-sm font-bold text-mist">
                         No ratings yet
                       </p>
 
-                      <p className="mt-1 text-xs text-gray-400">
+                      <p className="mt-1 text-xs text-fog">
                         Reviews will appear here as they are
                         collected.
                       </p>
@@ -659,8 +659,8 @@ function ListingDetails() {
                   )}
                 </div>
 
-                <div className="mt-6 rounded-2xl border border-dashed border-gray-200 bg-gray-50 p-6">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-indigo-600 shadow-sm">
+                <div className="mt-6 rounded-2xl border border-dashed border-line bg-surface p-6">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-raised text-gold shadow-sm">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -672,11 +672,11 @@ function ListingDetails() {
                     </svg>
                   </div>
 
-                  <h3 className="mt-4 text-sm font-bold text-gray-900">
+                  <h3 className="mt-4 text-sm font-bold text-cream">
                     Reviews will appear here
                   </h3>
 
-                  <p className="mt-2 max-w-xl text-sm leading-6 text-gray-500">
+                  <p className="mt-2 max-w-xl text-sm leading-6 text-mist">
                     EventFlow will display verified customer
                     feedback here as completed bookings generate
                     reviews.
@@ -690,16 +690,16 @@ function ListingDetails() {
             ================================================== */}
             <aside className="space-y-6">
               {/* PRICE CARD */}
-              <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-gray-400">
+              <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-fog">
                   Starting price
                 </p>
 
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-950">
+                <p className="mt-2 text-3xl font-bold tracking-tight text-cream">
                   GH₵{formattedPrice}
                 </p>
 
-                <p className="mt-2 text-sm leading-6 text-gray-500">
+                <p className="mt-2 text-sm leading-6 text-mist">
                   This is an indicative starting price. Your final
                   price is confirmed after the provider reviews
                   your event requirements.
@@ -708,7 +708,7 @@ function ListingDetails() {
                 <button
                   type="button"
                   onClick={handleBooking}
-                  className="mt-6 flex w-full items-center justify-center rounded-xl bg-indigo-600 py-3.5 text-sm font-bold text-white transition hover:bg-indigo-700"
+                  className="mt-6 flex w-full items-center justify-center rounded-xl bg-gold py-3.5 text-sm font-bold text-cream transition hover:bg-gold-dim"
                 >
                   Request Booking
 
@@ -726,17 +726,17 @@ function ListingDetails() {
               </section>
 
               {/* LOCATION */}
-              <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+              <section className="rounded-3xl border border-line bg-raised p-6 shadow-sm">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                   Location
                 </p>
 
-                <h2 className="mt-2 text-xl font-bold text-gray-950">
+                <h2 className="mt-2 text-xl font-bold text-cream">
                   Where you'll find them
                 </h2>
 
                 <div className="mt-5 flex items-start gap-3">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-gold">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -750,11 +750,11 @@ function ListingDetails() {
                   </div>
 
                   <div>
-                    <p className="font-bold text-gray-900">
+                    <p className="font-bold text-cream">
                       {listing.location}
                     </p>
 
-                    <p className="mt-1 text-xs leading-5 text-gray-500">
+                    <p className="mt-1 text-xs leading-5 text-mist">
                       Location details can be confirmed with the
                       provider before booking.
                     </p>
@@ -763,11 +763,11 @@ function ListingDetails() {
 
                 <div className="mt-5 flex h-36 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-50 via-purple-50 to-gray-50">
                   <div className="text-center">
-                    <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm">
+                    <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-raised shadow-sm">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
-                        className="h-6 w-6 text-indigo-500"
+                        className="h-6 w-6 text-gold"
                         stroke="currentColor"
                         strokeWidth="1.6"
                       >
@@ -776,7 +776,7 @@ function ListingDetails() {
                       </svg>
                     </div>
 
-                    <p className="mt-3 text-xs font-semibold text-gray-500">
+                    <p className="mt-3 text-xs font-semibold text-mist">
                       Map integration coming soon
                     </p>
                   </div>
@@ -784,12 +784,12 @@ function ListingDetails() {
               </section>
 
               {/* TRUST */}
-              <section className="rounded-3xl border border-indigo-100 bg-indigo-50 p-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm">
+              <section className="rounded-3xl border border-gold/20 bg-gold/10 p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-raised shadow-sm">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
-                    className="h-6 w-6 text-indigo-600"
+                    className="h-6 w-6 text-gold"
                     stroke="currentColor"
                     strokeWidth="1.7"
                   >
@@ -798,11 +798,11 @@ function ListingDetails() {
                   </svg>
                 </div>
 
-                <h3 className="mt-4 font-bold text-gray-950">
+                <h3 className="mt-4 font-bold text-cream">
                   EventFlow verified
                 </h3>
 
-                <p className="mt-2 text-sm leading-6 text-gray-600">
+                <p className="mt-2 text-sm leading-6 text-mist">
                   This listing has been approved for display on
                   EventFlow. Organizers can review the provider's
                   information before sending a booking request.
@@ -811,12 +811,12 @@ function ListingDetails() {
 
               {/* VENDOR PROFILE */}
               {isVendor && listing.vendorId && (
-                <section className="overflow-hidden rounded-3xl bg-gray-950 p-6 text-white">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10">
+                <section className="overflow-hidden rounded-3xl bg-ink p-6 text-cream">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-raised/10">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
-                      className="h-5 w-5 text-indigo-300"
+                      className="h-5 w-5 text-gold"
                       stroke="currentColor"
                       strokeWidth="1.7"
                     >
@@ -825,7 +825,7 @@ function ListingDetails() {
                     </svg>
                   </div>
 
-                  <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-indigo-400">
+                  <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-gold">
                     Vendor profile
                   </p>
 
@@ -833,14 +833,14 @@ function ListingDetails() {
                     Explore {listing.name}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-6 text-gray-400">
+                  <p className="mt-2 text-sm leading-6 text-fog">
                     View the provider's profile and available
                     services before sending your booking request.
                   </p>
 
                   <Link
                     to={`/vendor/${listing.vendorId}`}
-                    className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-bold text-gray-950 transition hover:bg-indigo-50"
+                    className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-raised px-5 py-3 text-sm font-bold text-cream transition hover:bg-gold/10"
                   >
                     View Vendor Profile
 
@@ -863,12 +863,12 @@ function ListingDetails() {
           {/* ===================================================
               BOTTOM CTA
           ==================================================== */}
-          <section className="relative mt-10 overflow-hidden rounded-3xl bg-gray-950 p-7 text-white sm:p-10">
-            <div className="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-indigo-600/20 blur-3xl" />
+          <section className="relative mt-10 overflow-hidden rounded-3xl bg-ink p-7 text-cream sm:p-10">
+            <div className="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
 
             <div className="relative flex flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-400">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
                   Ready to plan?
                 </p>
 
@@ -876,7 +876,7 @@ function ListingDetails() {
                   Interested in {listing.name}?
                 </h2>
 
-                <p className="mt-3 max-w-2xl text-sm leading-6 text-gray-400">
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-fog">
                   Send your event requirements and start the
                   conversation with the provider. Pricing can be
                   discussed before an agreement is reached.
@@ -886,7 +886,7 @@ function ListingDetails() {
               <button
                 type="button"
                 onClick={handleBooking}
-                className="inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-gray-950 transition hover:bg-indigo-50"
+                className="inline-flex shrink-0 items-center justify-center rounded-xl bg-raised px-6 py-3.5 text-sm font-bold text-cream transition hover:bg-gold/10"
               >
                 Request Booking
 

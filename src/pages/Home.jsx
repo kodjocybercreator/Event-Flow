@@ -104,14 +104,14 @@ export default function Home() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="min-h-screen bg-paper text-ink"
+      className="min-h-screen bg-paper text-cream"
     >
       <Navbar />
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden bg-paper">
           <div className="absolute inset-0">
-            <div className="absolute -right-48 -top-48 h-[600px] w-[600px] rounded-full bg-gold-soft/20 blur-[120px]" />
+            <div className="absolute -right-48 -top-48 h-[600px] w-[600px] rounded-full bg-gold/10 blur-[120px]" />
           </div>
 
           <div className="relative mx-auto max-w-7xl px-6 pb-32 pt-20 sm:px-8 sm:pb-36 sm:pt-24 lg:px-12 lg:pb-40 lg:pt-28">
@@ -119,8 +119,8 @@ export default function Home() {
               {/* Hero copy */}
               <div>
                 <FadeIn delay={0.1} className="mb-6">
-                  <div className="inline-flex items-center gap-2 rounded-none border border-gold bg-gold-soft px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-none bg-gold text-[10px] text-paper">
+                  <div className="inline-flex items-center gap-2 rounded-xl border border-gold bg-gold/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-xl bg-gold text-[10px] text-cream">
                       EF
                     </span>
                     Ghana's event marketplace
@@ -132,7 +132,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="mt-8 max-w-3xl text-5xl font-bold tracking-tight text-ink sm:text-7xl lg:text-8xl leading-[1]"
+                    className="mt-8 max-w-3xl text-5xl font-bold tracking-tight text-cream sm:text-7xl lg:text-8xl leading-[1]"
                   >
                     Your event.{' '}
                     <span className="block text-gold">
@@ -195,7 +195,7 @@ export default function Home() {
                       Secure payments
                     </span>
                     <span className="flex items-center gap-2">
-                      <span className="text-ink">✓</span>
+                      <span className="text-cream">✓</span>
                       One place to manage bookings
                     </span>
                   </motion.div>
@@ -210,8 +210,8 @@ export default function Home() {
                   transition={{ duration: 0.8 }}
                   className="relative mx-auto w-full max-w-[560px] lg:mx-0"
                 >
-                  <div className="overflow-hidden border border-slate-200 bg-slate-50 p-2 shadow-lg">
-                    <div className="relative h-[500px] overflow-hidden rounded-sm bg-charcoal sm:h-[600px]">
+                  <div className="overflow-hidden border border-line bg-surface p-2 shadow-lg">
+                    <div className="relative h-[500px] overflow-hidden rounded-lg bg-charcoal sm:h-[600px]">
                       <img
                         src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=75"
                         alt="Beautiful event setup"
@@ -220,10 +220,10 @@ export default function Home() {
                         decoding="async"
                       />
                       <div className="absolute left-6 right-6 top-6 flex items-center justify-between">
-                        <div className="border border-ink bg-paper px-3 py-1 text-xs font-bold text-ink">
+                        <div className="border border-line bg-paper px-3 py-1 text-xs font-bold text-cream">
                           EventFlow
                         </div>
-                        <div className="border border-ink bg-paper px-3 py-1 text-xs font-bold text-ink">
+                        <div className="border border-line bg-paper px-3 py-1 text-xs font-bold text-cream">
                           Ghana
                         </div>
                       </div>
@@ -232,24 +232,24 @@ export default function Home() {
                           <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">
                             Plan with confidence
                           </p>
-                          <h2 className="mt-2 text-2xl font-bold text-ink sm:text-3xl">
+                          <h2 className="mt-2 text-2xl font-bold text-cream sm:text-3xl">
                             Find the right people for your event.
                           </h2>
                           <div className="mt-5 grid grid-cols-3 gap-2">
-                            <div className="p-3 bg-gold-soft">
-                              <p className="text-lg font-bold text-ink">Venues</p>
+                            <div className="p-3 bg-gold/10">
+                              <p className="text-lg font-bold text-cream">Venues</p>
                               <p className="mt-0.5 text-[10px] text-gold">
                                 Discover
                               </p>
                             </div>
-                            <div className="p-3 bg-gold-soft">
-                              <p className="text-lg font-bold text-ink">Vendors</p>
+                            <div className="p-3 bg-gold/10">
+                              <p className="text-lg font-bold text-cream">Vendors</p>
                               <p className="mt-0.5 text-[10px] text-gold">
                                 Compare
                               </p>
                             </div>
-                            <div className="p-3 bg-gold-soft">
-                              <p className="text-lg font-bold text-ink">Bookings</p>
+                            <div className="p-3 bg-gold/10">
+                              <p className="text-lg font-bold text-cream">Bookings</p>
                               <p className="mt-0.5 text-[10px] text-gold">
                                 Manage
                               </p>
@@ -259,27 +259,27 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <div className="absolute -bottom-8 -left-6 hidden rounded-none border border-ink bg-paper p-5 shadow-lg sm:block sm:-left-10">
+                    <div className="absolute -bottom-8 -left-6 hidden rounded-xl border border-line bg-paper p-5 shadow-lg sm:block sm:-left-10">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-gold text-lg text-paper">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold text-lg text-cream">
                           ✓
                         </div>
                         <div>
                           <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate">
                             Marketplace
                           </p>
-                          <p className="mt-0.5 text-sm font-bold text-ink">
+                          <p className="mt-0.5 text-sm font-bold text-cream">
                             Find. Compare. Book.
                           </p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="absolute -right-8 top-28 hidden rounded-none border border-ink bg-paper p-5 shadow-lg sm:block sm:-right-12">
+                    <div className="absolute -right-8 top-28 hidden rounded-xl border border-line bg-paper p-5 shadow-lg sm:block sm:-right-12">
                       <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate">
                         Starting from
                       </p>
-                      <p className="mt-1 text-xl font-bold text-ink">
+                      <p className="mt-1 text-xl font-bold text-cream">
                         GH₵1,500
                       </p>
                       <p className="text-xs text-slate">
@@ -296,14 +296,14 @@ export default function Home() {
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1 }}
-                  className="relative z-10 mt-16 border border-slate-200 bg-paper p-6 shadow-lg sm:p-8 lg:mt-24"
+                  className="relative z-10 mt-16 border border-line bg-paper p-6 shadow-lg sm:p-8 lg:mt-24"
                 >
                   <div className="mb-4 flex items-center gap-3 px-2 sm:px-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-gold text-lg text-paper">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold text-lg text-cream">
                       ⌕
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-ink">
+                      <p className="text-sm font-bold text-cream">
                         What are you looking for?
                       </p>
                       <p className="text-xs text-slate">
@@ -312,33 +312,33 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="grid gap-2 lg:grid-cols-[1.5fr_1.2fr_1fr_auto]">
-                    <div className="rounded-sm border border-slate-200 bg-gold-soft px-4 py-4 transition hover:border-gold/30">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                    <div className="rounded-lg border border-line bg-gold/10 px-4 py-4 transition hover:border-gold/30">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-fog">
                         Service
                       </p>
-                      <p className="mt-1 text-sm font-bold text-ink">
+                      <p className="mt-1 text-sm font-bold text-cream">
                         Photographer, venue, DJ...
                       </p>
                     </div>
-                    <div className="rounded-sm border border-slate-200 bg-gold-soft px-4 py-4 transition hover:border-gold/30">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                    <div className="rounded-lg border border-line bg-gold/10 px-4 py-4 transition hover:border-gold/30">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-fog">
                         Location
                       </p>
-                      <p className="mt-1 text-sm font-bold text-ink">
+                      <p className="mt-1 text-sm font-bold text-cream">
                         Accra, Kumasi...
                       </p>
                     </div>
-                    <div className="rounded-sm border border-slate-200 bg-gold-soft px-4 py-4 transition hover:border-gold/30">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                    <div className="rounded-lg border border-line bg-gold/10 px-4 py-4 transition hover:border-gold/30">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-fog">
                         Event
                       </p>
-                      <p className="mt-1 text-sm font-bold text-ink">
+                      <p className="mt-1 text-sm font-bold text-cream">
                         Wedding, birthday...
                       </p>
                     </div>
                     <Link
                       to="/discover"
-                      className="flex min-h-[56px] items-center justify-center rounded-none bg-ink px-10 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors duration-200 hover:bg-gold hover:text-paper"
+                      className="flex min-h-[56px] items-center justify-center rounded-xl bg-ink px-10 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors duration-200 hover:bg-gold hover:text-cream"
                     >
                       Search
                       <span className="ml-2">→</span>
@@ -364,7 +364,7 @@ export default function Home() {
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                     Start with your event
                   </p>
-                  <h2 className="mt-4 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
+                  <h2 className="mt-4 text-4xl font-bold tracking-tight text-cream sm:text-5xl lg:text-6xl leading-[1]">
                     What are you planning?
                   </h2>
                   <p className="mt-6 max-w-xl text-lead sm:text-xl">
@@ -374,7 +374,7 @@ export default function Home() {
                 </div>
                 <Link
                   to="/discover"
-                  className="text-sm font-bold text-ink transition-colors hover:text-gold"
+                  className="text-sm font-bold text-cream transition-colors hover:text-gold"
                 >
                   Explore all events →
                 </Link>
@@ -392,7 +392,7 @@ export default function Home() {
                   <Link
                     key={event.name}
                     to="/discover"
-                    className="group overflow-hidden border border-slate-200 bg-paper shadow-sm transition-colors duration-300 hover:border-ink hover:shadow-lg"
+                    className="group overflow-hidden border border-line bg-paper shadow-sm transition-colors duration-300 hover:border-line hover:shadow-lg"
                   >
                     <div className="relative h-48 overflow-hidden">
                       <img
@@ -404,7 +404,7 @@ export default function Home() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
                       <div className="absolute bottom-3 left-3 right-3">
-                        <h3 className="text-sm font-bold text-paper">
+                        <h3 className="text-sm font-bold text-cream">
                           {event.name}
                         </h3>
                       </div>
@@ -426,11 +426,11 @@ export default function Home() {
         </section>
 
         {/* MARKETPLACE INTRO */}
-        <section className="border-y border-slate-200 bg-gold-soft py-24 sm:py-32">
+        <section className="border-y border-line bg-gold/10 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="grid items-start gap-16 lg:grid-cols-2">
               <div className="relative">
-                <div className="overflow-hidden border border-slate-200 bg-charcoal shadow-2xl">
+                <div className="overflow-hidden border border-line bg-charcoal shadow-2xl">
                   <img
                     src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&w=800&q=75"
                     alt="Event venue setup"
@@ -440,15 +440,15 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
                 </div>
-                <div className="absolute -bottom-8 right-6 rounded-none border border-paper bg-paper p-5 shadow-lg sm:right-10">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                <div className="absolute -bottom-8 right-6 rounded-xl border border-line-bright bg-paper p-5 shadow-lg sm:right-10">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-fog">
                     Your event
                   </p>
-                  <p className="mt-1 text-sm font-bold text-ink">
+                  <p className="mt-1 text-sm font-bold text-cream">
                     One place. Less stress.
                   </p>
-                  <div className="mt-4 h-1.5 w-36 overflow-hidden rounded-none bg-slate-200">
-                    <div className="h-full w-3/4 rounded-none bg-gold" />
+                  <div className="mt-4 h-1.5 w-36 overflow-hidden rounded-xl bg-elevated">
+                    <div className="h-full w-3/4 rounded-xl bg-gold" />
                   </div>
                 </div>
               </div>
@@ -464,7 +464,7 @@ export default function Home() {
                     <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                       More than a directory
                     </p>
-                    <h2 className="mt-4 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
+                    <h2 className="mt-4 text-4xl font-bold tracking-tight text-cream sm:text-5xl lg:text-6xl leading-[1]">
                       Planning an event shouldn't mean searching everywhere.
                     </h2>
                     <p className="mt-6 text-lead sm:text-xl">
@@ -489,11 +489,11 @@ export default function Home() {
                         transition={{ duration: 0.6 }}
                         className="flex gap-4"
                       >
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-ink text-xs font-bold text-paper shadow-lg">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ink text-xs font-bold text-cream shadow-lg">
                           {number}
                         </div>
                         <div>
-                          <h3 className="font-bold text-ink">{title}</h3>
+                          <h3 className="font-bold text-cream">{title}</h3>
                           <p className="mt-2 text-sm leading-6 text-slate">
                             {text}
                           </p>
@@ -504,7 +504,7 @@ export default function Home() {
 
                   <Link
                     to="/discover"
-                    className="inline-flex items-center rounded-none bg-ink px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors duration-200 hover:bg-gold hover:text-paper"
+                    className="inline-flex items-center rounded-xl bg-ink px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors duration-200 hover:bg-gold hover:text-cream"
                   >
                     Explore the marketplace
                     <span className="ml-2">→</span>
@@ -523,7 +523,7 @@ export default function Home() {
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                   Explore services
                 </p>
-                <h2 className="mt-4 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
+                <h2 className="mt-4 text-4xl font-bold tracking-tight text-cream sm:text-5xl lg:text-6xl leading-[1]">
                   Find the people behind the event.
                 </h2>
                 <p className="mt-6 text-lead sm:text-xl">
@@ -533,7 +533,7 @@ export default function Home() {
               </div>
               <Link
                 to="/discover"
-                className="text-sm font-bold text-ink transition-colors hover:text-gold"
+                className="text-sm font-bold text-cream transition-colors hover:text-gold"
               >
                 View all services →
               </Link>
@@ -544,23 +544,23 @@ export default function Home() {
                 <Link
                   key={service.title}
                   to="/discover"
-                  className="group overflow-hidden border border-slate-200 bg-paper p-8 shadow-sm transition-colors duration-300 hover:border-ink hover:shadow-lg"
+                  className="group overflow-hidden border border-line bg-paper p-8 shadow-sm transition-colors duration-300 hover:border-line hover:shadow-lg"
                 >
                   <div className="flex items-start justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-gold-soft text-lg font-bold text-gold group-hover:bg-gold group-hover:text-paper">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10 text-lg font-bold text-gold group-hover:bg-gold group-hover:text-cream">
                       {service.icon}
                     </div>
-                    <span className="text-slate-300 transition group-hover:text-gold">
+                    <span className="text-fog transition group-hover:text-gold">
                       ↗
                     </span>
                   </div>
-                  <h3 className="mt-8 text-lg font-bold text-ink">
+                  <h3 className="mt-8 text-lg font-bold text-cream">
                     {service.title}
                   </h3>
                   <p className="mt-4 text-sm leading-6 text-slate">
                     {service.description}
                   </p>
-                  <div className="mt-8 flex items-center text-sm font-bold text-ink">
+                  <div className="mt-8 flex items-center text-sm font-bold text-cream">
                     Explore
                     <span className="ml-2 transition group-hover:translate-x-1">
                       →
@@ -576,14 +576,14 @@ export default function Home() {
         <section className="bg-charcoal py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="grid items-start gap-16 lg:grid-cols-[0.9fr_1.1fr]">
-              <div className="text-paper">
+              <div className="text-cream">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                   Find your space
                 </p>
-                <h2 className="mt-4 text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl leading-[1]">
+                <h2 className="mt-4 text-4xl font-bold tracking-tight text-cream sm:text-5xl lg:text-6xl leading-[1]">
                   The right venue can change the whole event.
                 </h2>
-                <p className="mt-6 max-w-xl text-sm leading-8 text-slate-400 sm:text-base">
+                <p className="mt-6 max-w-xl text-sm leading-8 text-fog sm:text-base">
                   Discover event centres, gardens, hotels, conference spaces
                   and other locations that fit the type of event you're
                   planning.
@@ -598,7 +598,7 @@ export default function Home() {
                     <Link
                       key={item}
                       to="/venues"
-                      className="rounded-none border border-paper bg-charcoal px-4 py-4 text-sm font-bold text-slate-300 transition hover:border-gold/40 hover:bg-gold/10"
+                      className="rounded-xl border border-line-bright bg-charcoal px-4 py-4 text-sm font-bold text-fog transition hover:border-gold/40 hover:bg-gold/10"
                     >
                       {item}
                       <span className="ml-2 text-gold">→</span>
@@ -607,7 +607,7 @@ export default function Home() {
                 </div>
                 <Link
                   to="/venues"
-                  className="mt-8 inline-flex rounded-none bg-paper px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-ink transition-colors hover:bg-gold hover:text-paper"
+                  className="mt-8 inline-flex rounded-xl bg-paper px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors hover:bg-gold hover:text-cream"
                 >
                   Explore venues
                   <span className="ml-2">→</span>
@@ -616,7 +616,7 @@ export default function Home() {
 
               <div className="relative">
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="overflow-hidden rounded-sm">
+                  <div className="overflow-hidden rounded-lg">
                     <img
                       src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=75"
                       alt="Event venue"
@@ -625,7 +625,7 @@ export default function Home() {
                       decoding="async"
                     />
                   </div>
-                  <div className="mt-10 overflow-hidden rounded-sm">
+                  <div className="mt-10 overflow-hidden rounded-lg">
                     <img
                       src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=600&q=75"
                       alt="Outdoor event venue"
@@ -635,11 +635,11 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className="absolute bottom-6 left-6 rounded-none border border-paper bg-paper p-4 shadow-lg">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                <div className="absolute bottom-6 left-6 rounded-xl border border-line-bright bg-paper p-4 shadow-lg">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-fog">
                     EventFlow
                   </p>
-                  <p className="mt-1 text-sm font-bold text-ink">
+                  <p className="mt-1 text-sm font-bold text-cream">
                     Your event starts with the right space.
                   </p>
                 </div>
@@ -655,7 +655,7 @@ export default function Home() {
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                 Why EventFlow
               </p>
-              <h2 className="mt-4 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
+              <h2 className="mt-4 text-4xl font-bold tracking-tight text-cream sm:text-5xl lg:text-6xl leading-[1]">
                 A simpler way to organise the important details.
               </h2>
             </div>
@@ -664,12 +664,12 @@ export default function Home() {
                 <motion.div
                   key={benefit.number}
                   whileHover={{ y: -8 }}
-                  className="overflow-hidden border border-slate-200 bg-paper p-8 shadow-sm transition-colors duration-300 hover:border-ink hover:shadow-lg"
+                  className="overflow-hidden border border-line bg-paper p-8 shadow-sm transition-colors duration-300 hover:border-line hover:shadow-lg"
                 >
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                     {benefit.number}
                   </span>
-                  <h3 className="mt-6 text-lg font-bold text-ink">
+                  <h3 className="mt-6 text-lg font-bold text-cream">
                     {benefit.title}
                   </h3>
                   <p className="mt-4 text-sm leading-6 text-slate">
@@ -682,13 +682,13 @@ export default function Home() {
         </section>
 
         {/* HOW IT WORKS */}
-        <section id="how-it-works" className="bg-gold-soft py-24 sm:py-32">
+        <section id="how-it-works" className="bg-gold/10 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                 How it works
               </p>
-              <h2 className="mt-4 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
+              <h2 className="mt-4 text-4xl font-bold tracking-tight text-cream sm:text-5xl lg:text-6xl leading-[1]">
                 From idea to agreement.
               </h2>
               <p className="mt-6 text-lead sm:text-xl">
@@ -717,12 +717,12 @@ export default function Home() {
                 <motion.div
                   key={step.number}
                   whileHover={{ y: -8 }}
-                  className="relative overflow-hidden border border-slate-200 bg-paper p-8 shadow-sm transition-colors duration-300 hover:border-ink hover:shadow-lg"
+                  className="relative overflow-hidden border border-line bg-paper p-8 shadow-sm transition-colors duration-300 hover:border-line hover:shadow-lg"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-gold text-sm font-bold text-paper shadow-lg">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold text-sm font-bold text-cream shadow-lg">
                     {step.number}
                   </div>
-                  <h3 className="mt-6 text-lg font-bold text-ink">
+                  <h3 className="mt-6 text-lg font-bold text-cream">
                     {step.title}
                   </h3>
                   <p className="mt-4 text-sm leading-6 text-slate">
@@ -737,17 +737,17 @@ export default function Home() {
         {/* BUSINESS SECTION */}
         <section id="businesses" className="bg-paper py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-            <div className="overflow-hidden border border-ink bg-charcoal">
+            <div className="overflow-hidden border border-line bg-charcoal">
               <div className="grid lg:grid-cols-[1fr_0.85fr]">
                 <div className="px-8 py-16 sm:px-10 sm:py-20 lg:px-14 lg:py-24">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-soft">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                     For event businesses
                   </p>
-                  <h2 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl leading-[1]">
+                  <h2 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight text-cream sm:text-5xl lg:text-6xl leading-[1]">
                     Put your business in front of people planning their next
                     event.
                   </h2>
-                  <p className="mt-6 max-w-xl text-sm leading-8 text-gold-soft sm:text-base">
+                  <p className="mt-6 max-w-xl text-sm leading-8 text-gold sm:text-base">
                     EventFlow gives venues and event professionals a place to
                     showcase their services, receive booking requests and
                     manage conversations with organizers.
@@ -761,9 +761,9 @@ export default function Home() {
                     ].map((item) => (
                       <div
                         key={item}
-                        className="flex items-start gap-3 text-sm font-bold text-paper"
+                        className="flex items-start gap-3 text-sm font-bold text-cream"
                       >
-                        <span className="flex h-6 w-6 items-center justify-center rounded-sm bg-paper text-xs text-gold">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-paper text-xs text-gold">
                           ✓
                         </span>
                         {item}
@@ -773,16 +773,16 @@ export default function Home() {
                 </div>
                 <div className="bg-ink p-6 sm:p-8 lg:p-10">
                   <div className="grid gap-4">
-                    <div className="rounded-none bg-paper p-6">
+                    <div className="rounded-xl bg-paper p-6">
                       <div className="flex items-start gap-4">
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-sm bg-paper text-xl text-ink">
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-paper text-xl text-cream">
                           ⌂
                         </div>
                         <div>
-                          <h3 className="font-bold text-paper">
+                          <h3 className="font-bold text-cream">
                             Own a venue?
                           </h3>
-                          <p className="mt-2 text-sm leading-6 text-gold-soft">
+                          <p className="mt-2 text-sm leading-6 text-gold">
                             Showcase your event space and connect with
                             organizers.
                           </p>
@@ -790,22 +790,22 @@ export default function Home() {
                       </div>
                       <Link
                         to="/register/venue"
-                        className="mt-6 inline-flex items-center justify-center rounded-none bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors hover:bg-ink hover:text-paper"
+                        className="mt-6 inline-flex items-center justify-center rounded-xl bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors hover:bg-ink hover:text-cream"
                       >
                         Register your venue
                         <span className="ml-2">→</span>
                       </Link>
                     </div>
-                    <div className="rounded-none border border-paper bg-ink p-6">
+                    <div className="rounded-xl border border-line-bright bg-ink p-6">
                       <div className="flex items-start gap-4">
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-sm bg-paper text-xl text-ink">
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-paper text-xl text-cream">
                           ✦
                         </div>
                         <div>
-                          <h3 className="font-bold text-paper">
+                          <h3 className="font-bold text-cream">
                             Provide event services?
                           </h3>
-                          <p className="mt-2 text-sm leading-6 text-gold-soft">
+                          <p className="mt-2 text-sm leading-6 text-gold">
                             Build your profile and let organizers discover
                             what you offer.
                           </p>
@@ -813,7 +813,7 @@ export default function Home() {
                       </div>
                       <Link
                         to="/register/vendor"
-                        className="mt-6 inline-flex items-center justify-center rounded-none border border-paper bg-transparent px-6 py-4 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors hover:bg-paper hover:text-ink"
+                        className="mt-6 inline-flex items-center justify-center rounded-xl border border-line-bright bg-transparent px-6 py-4 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors hover:bg-paper hover:text-cream"
                       >
                         Join as a vendor
                         <span className="ml-2">→</span>
@@ -827,12 +827,12 @@ export default function Home() {
         </section>
 
         {/* FINAL CTA */}
-        <section className="bg-gold-soft px-6 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+        <section className="bg-gold/10 px-6 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-sm bg-gold text-xs font-bold uppercase tracking-[0.15em] text-paper shadow-lg">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-lg bg-gold text-xs font-bold uppercase tracking-[0.15em] text-cream shadow-lg">
               EF
             </div>
-            <h2 className="mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]">
+            <h2 className="mt-6 text-4xl font-bold tracking-tight text-cream sm:text-5xl lg:text-6xl leading-[1]">
               Your event starts here.
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lead sm:text-xl">

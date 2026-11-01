@@ -112,37 +112,37 @@ export default function CreateEvent() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-surface">
       <Navbar />
 
       <main className="mx-auto max-w-3xl px-5 py-10">
         <div className="mb-8">
-          <p className="text-sm font-bold uppercase tracking-wider text-indigo-600">
+          <p className="text-sm font-bold uppercase tracking-wider text-gold">
             EventFlow
           </p>
 
-          <h1 className="mt-2 text-3xl font-extrabold text-gray-950">
+          <h1 className="mt-2 text-3xl font-extrabold text-cream">
             Create an event
           </h1>
 
-          <p className="mt-2 text-sm text-gray-500">
+          <p className="mt-2 text-sm text-mist">
             Add the event you are planning and manage its vendors
             and venue from your dashboard.
           </p>
         </div>
 
         {error && (
-          <div className="mb-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
+          <div className="mb-5 rounded-xl border border-rose/20 bg-rose/10 px-4 py-3 text-sm font-semibold text-rose">
             {error}
           </div>
         )}
 
         <form
           onSubmit={handleSubmit}
-          className="space-y-6 rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8"
+          className="space-y-6 rounded-3xl border border-line bg-raised p-6 shadow-sm sm:p-8"
         >
           <div>
-            <label className="text-sm font-bold text-gray-700">
+            <label className="text-sm font-bold text-mist">
               Event name
             </label>
 
@@ -151,13 +151,13 @@ export default function CreateEvent() {
               value={form.name}
               onChange={handleChange}
               placeholder="e.g. Saviour & Ama Wedding"
-              className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-indigo-500"
+              className="mt-2 w-full rounded-xl border border-line-bright px-4 py-3 outline-none focus:border-gold"
             />
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
-              <label className="text-sm font-bold text-gray-700">
+              <label className="text-sm font-bold text-mist">
                 Event type
               </label>
 
@@ -165,7 +165,7 @@ export default function CreateEvent() {
                 name="type"
                 value={form.type}
                 onChange={handleChange}
-                className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none focus:border-indigo-500"
+                className="mt-2 w-full rounded-xl border border-line-bright bg-raised px-4 py-3 outline-none focus:border-gold"
               >
                 <option>Wedding</option>
                 <option>Engagement</option>
@@ -181,7 +181,7 @@ export default function CreateEvent() {
             </div>
 
             <div>
-              <label className="text-sm font-bold text-gray-700">
+              <label className="text-sm font-bold text-mist">
                 Number of guests
               </label>
 
@@ -192,14 +192,14 @@ export default function CreateEvent() {
                 value={form.guestCount}
                 onChange={handleChange}
                 placeholder="e.g. 250"
-                className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-indigo-500"
+                className="mt-2 w-full rounded-xl border border-line-bright px-4 py-3 outline-none focus:border-gold"
               />
             </div>
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
-              <label className="text-sm font-bold text-gray-700">
+              <label className="text-sm font-bold text-mist">
                 Event date
               </label>
 
@@ -208,12 +208,12 @@ export default function CreateEvent() {
                 name="date"
                 value={form.date}
                 onChange={handleChange}
-                className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-indigo-500"
+                className="mt-2 w-full rounded-xl border border-line-bright px-4 py-3 outline-none focus:border-gold"
               />
             </div>
 
             <div>
-              <label className="text-sm font-bold text-gray-700">
+              <label className="text-sm font-bold text-mist">
                 Event time
               </label>
 
@@ -222,13 +222,13 @@ export default function CreateEvent() {
                 name="time"
                 value={form.time}
                 onChange={handleChange}
-                className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-indigo-500"
+                className="mt-2 w-full rounded-xl border border-line-bright px-4 py-3 outline-none focus:border-gold"
               />
             </div>
           </div>
 
           <div>
-            <label className="text-sm font-bold text-gray-700">
+            <label className="text-sm font-bold text-mist">
               Location
             </label>
 
@@ -237,12 +237,12 @@ export default function CreateEvent() {
               value={form.location}
               onChange={handleChange}
               placeholder="e.g. Kumasi, Ashanti Region"
-              className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-indigo-500"
+              className="mt-2 w-full rounded-xl border border-line-bright px-4 py-3 outline-none focus:border-gold"
             />
           </div>
 
           <div>
-            <label className="text-sm font-bold text-gray-700">
+            <label className="text-sm font-bold text-mist">
               Description
             </label>
 
@@ -252,22 +252,22 @@ export default function CreateEvent() {
               onChange={handleChange}
               rows="5"
               placeholder="Tell us about your event..."
-              className="mt-2 w-full resize-none rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-indigo-500"
+              className="mt-2 w-full resize-none rounded-xl border border-line-bright px-4 py-3 outline-none focus:border-gold"
             />
           </div>
 
-          <div className="flex flex-col-reverse gap-3 border-t border-gray-100 pt-6 sm:flex-row sm:justify-end">
+          <div className="flex flex-col-reverse gap-3 border-t border-line pt-6 sm:flex-row sm:justify-end">
             <button
               type="button"
               onClick={() => navigate("/dashboard/organizer")}
-              className="rounded-xl border border-gray-300 px-6 py-3 text-sm font-bold text-gray-700 hover:bg-gray-50"
+              className="rounded-xl border border-line-bright px-6 py-3 text-sm font-bold text-mist hover:bg-surface"
             >
               Cancel
             </button>
 
             <button
               type="submit"
-              className="rounded-xl bg-indigo-600 px-6 py-3 text-sm font-bold text-white hover:bg-indigo-700"
+              className="rounded-xl bg-gold px-6 py-3 text-sm font-bold text-cream hover:bg-gold-dim"
             >
               Create Event
             </button>

@@ -371,21 +371,21 @@ export default function Discover() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="min-h-screen bg-paper text-ink"
+      className="min-h-screen bg-paper text-cream"
     >
       <Navbar />
       <main>
         {/* HERO / SEARCH */}
-        <section className="relative overflow-hidden border-b border-slate-200 bg-paper">
+        <section className="relative overflow-hidden border-b border-line bg-paper">
           <div className="absolute inset-0">
-            <div className="absolute -right-48 -top-48 h-[600px] w-[600px] rounded-full bg-gold-soft/20 blur-[120px]" />
+            <div className="absolute -right-48 -top-48 h-[600px] w-[600px] rounded-full bg-gold/10 blur-[120px]" />
           </div>
 
           <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-16 sm:px-8 sm:pb-28 sm:pt-20 lg:px-12 lg:pb-32 lg:pt-24">
             <div>
               <div className="max-w-3xl">
-                <div className="inline-flex items-center gap-2 rounded-none border border-gold bg-gold-soft px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold">
-                  <span className="h-1.5 w-1.5 rounded-none bg-gold" />
+                <div className="inline-flex items-center gap-2 rounded-xl border border-gold bg-gold/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold">
+                  <span className="h-1.5 w-1.5 rounded-xl bg-gold" />
                   EVENTFLOW MARKETPLACE
                 </div>
 
@@ -393,7 +393,7 @@ export default function Discover() {
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7 }}
-                  className="mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl leading-[1]"
+                  className="mt-6 text-4xl font-bold tracking-tight text-cream sm:text-5xl lg:text-6xl leading-[1]"
                 >
                   Find the people and places{' '}
                   <span className="block text-gold">
@@ -418,11 +418,11 @@ export default function Discover() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9 }}
-                className="relative mt-10 rounded-none border border-slate-200 bg-paper p-6 shadow-lg sm:p-8"
+                className="relative mt-10 rounded-xl border border-line bg-paper p-6 shadow-lg sm:p-8"
               >
                 <div className="grid gap-2 lg:grid-cols-[1.5fr_1fr_auto]">
-                  <div className="flex min-h-[68px] items-center gap-3 rounded-none bg-gold-soft px-4 transition hover:border-gold/30 focus-within:bg-paper focus-within:ring-2 focus-within:ring-gold/20">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-none bg-paper text-slate-500 shadow-sm">
+                  <div className="flex min-h-[68px] items-center gap-3 rounded-xl bg-gold/10 px-4 transition hover:border-gold/30 focus-within:bg-paper focus-within:ring-2 focus-within:ring-gold/20">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-paper text-mist shadow-sm">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -435,7 +435,7 @@ export default function Discover() {
                       </svg>
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-fog">
                         What are you looking for?
                       </p>
                       <input
@@ -443,13 +443,13 @@ export default function Discover() {
                         value={search}
                         onChange={(event) => setSearch(event.target.value)}
                         placeholder="Venue, photographer, DJ..."
-                        className="mt-2 w-full bg-transparent text-sm font-bold text-ink outline-none placeholder:text-slate-400"
+                        className="mt-2 w-full bg-transparent text-sm font-bold text-cream outline-none placeholder:text-fog"
                       />
                     </div>
                   </div>
 
-                  <div className="flex min-h-[68px] items-center gap-3 rounded-none bg-gold-soft px-4 transition hover:border-gold/30 focus-within:bg-paper focus-within:ring-2 focus-within:ring-gold/20">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-none bg-paper text-slate-500 shadow-sm">
+                  <div className="flex min-h-[68px] items-center gap-3 rounded-xl bg-gold/10 px-4 transition hover:border-gold/30 focus-within:bg-paper focus-within:ring-2 focus-within:ring-gold/20">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-paper text-mist shadow-sm">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -462,7 +462,7 @@ export default function Discover() {
                       </svg>
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-fog">
                         Location
                       </p>
                       <input
@@ -470,7 +470,7 @@ export default function Discover() {
                         value={location}
                         onChange={(event) => setLocation(event.target.value)}
                         placeholder="Accra, Kumasi..."
-                        className="mt-2 w-full bg-transparent text-sm font-bold text-ink outline-none placeholder:text-slate-400"
+                        className="mt-2 w-full bg-transparent text-sm font-bold text-cream outline-none placeholder:text-fog"
                       />
                     </div>
                   </div>
@@ -482,7 +482,7 @@ export default function Discover() {
                         .getElementById("discover-results")
                         ?.scrollIntoView({ behavior: "smooth", block: "start" });
                     }}
-                    className="flex min-h-[68px] items-center justify-center rounded-none bg-ink px-8 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors duration-200 hover:bg-gold hover:text-paper"
+                    className="flex min-h-[68px] items-center justify-center rounded-xl bg-ink px-8 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors duration-200 hover:bg-gold hover:text-cream"
                   >
                     Search
                   </button>
@@ -490,7 +490,7 @@ export default function Discover() {
 
                 {/* QUICK CATEGORY LINKS */}
                 <div className="mt-8 flex flex-wrap items-start gap-2">
-                  <span className="mr-1 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                  <span className="mr-1 text-xs font-bold uppercase tracking-[0.2em] text-fog">
                     Popular:
                   </span>
                   {[
@@ -508,7 +508,7 @@ export default function Discover() {
                           .getElementById("discover-results")
                           ?.scrollIntoView({ behavior: "smooth", block: "start" });
                       }}
-                      className="rounded-none border border-slate-200 bg-paper px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-slate-600 transition-colors hover:border-gold hover:bg-gold-soft hover:text-gold"
+                      className="rounded-xl border border-line bg-paper px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-mist transition-colors hover:border-gold hover:bg-gold/10 hover:text-gold"
                     >
                       {category}
                     </button>
@@ -531,11 +531,11 @@ export default function Discover() {
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                   Explore
                 </p>
-                <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                <h2 className="mt-2 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
                   Browse by service
                 </h2>
               </div>
-              <span className="hidden text-sm text-slate-500 sm:block">
+              <span className="hidden text-sm text-mist sm:block">
                 {listings.length} approved listings
               </span>
             </div>
@@ -548,17 +548,17 @@ export default function Discover() {
                     key={category}
                     type="button"
                     onClick={() => setActiveCategory(category)}
-                    className={`rounded-none border p-4 text-left transition-colors duration-200 ${
+                    className={`rounded-xl border p-4 text-left transition-colors duration-200 ${
                       active
-                        ? "border-gold bg-gold text-paper shadow-lg shadow-gold/20"
-                        : "border-slate-200 bg-paper text-ink hover:border-gold/30 hover:shadow-sm"
+                        ? "border-gold bg-gold text-cream shadow-lg shadow-gold/20"
+                        : "border-line bg-paper text-cream hover:border-gold/30 hover:shadow-sm"
                     }`}
                   >
                     <div
-                      className={`flex h-10 w-10 items-center justify-center rounded-none text-lg transition-colors duration-200 ${
+                      className={`flex h-10 w-10 items-center justify-center rounded-xl text-lg transition-colors duration-200 ${
                         active
-                          ? "bg-paper/15"
-                          : "bg-gold-soft group-hover:bg-gold-soft"
+                          ? "bg-cream/15"
+                          : "bg-gold/10 group-hover:bg-gold/10"
                       }`}
                     >
                       {category === "All" ? "✦" : categoryIcons[category]}
@@ -570,7 +570,7 @@ export default function Discover() {
                       className={`mt-1 text-[11px] ${
                         active
                           ? "text-gold"
-                          : "text-slate-400"
+                          : "text-fog"
                       }`}
                     >
                       {categoryCounts[category] || 0}{" "}
@@ -585,18 +585,18 @@ export default function Discover() {
           </div>
 
           {/* TOOLBAR */}
-          <div className="mt-12 border-b border-slate-200 pb-6">
+          <div className="mt-12 border-b border-line pb-6">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                   Marketplace
                 </p>
-                <h2 className="mt-2 text-3xl font-bold text-ink">
+                <h2 className="mt-2 text-3xl font-bold text-cream">
                   {activeCategory === "All"
                     ? "All event services"
                     : activeCategory}
                 </h2>
-                <p className="mt-2 text-sm text-slate-500">
+                <p className="mt-2 text-sm text-mist">
                   {filteredListings.length}{" "}
                   {filteredListings.length === 1
                     ? "option"
@@ -611,7 +611,7 @@ export default function Discover() {
                   <button
                     type="button"
                     onClick={clearFilters}
-                    className="rounded-none border border-slate-200 bg-paper px-4 py-2.5 text-sm font-bold uppercase tracking-[0.1em] text-slate-600 transition-colors hover:border-gold hover:text-ink"
+                    className="rounded-xl border border-line bg-paper px-4 py-2.5 text-sm font-bold uppercase tracking-[0.1em] text-mist transition-colors hover:border-gold hover:text-cream"
                   >
                     Clear filters
                   </button>
@@ -619,7 +619,7 @@ export default function Discover() {
                 <select
                   value={sortBy}
                   onChange={(event) => setSortBy(event.target.value)}
-                  className="rounded-none border border-slate-200 bg-paper px-4 py-2.5 text-sm font-bold uppercase tracking-[0.1em] text-slate-700 outline-none transition-colors focus:border-gold focus:ring-0"
+                  className="rounded-xl border border-line bg-paper px-4 py-2.5 text-sm font-bold uppercase tracking-[0.1em] text-mist outline-none transition-colors focus:border-gold focus:ring-0"
                 >
                   <option value="recommended">
                     Sort: Recommended
@@ -643,7 +643,7 @@ export default function Discover() {
             <button
               type="button"
               onClick={() => setShowMobileFilters((value) => !value)}
-              className="mt-6 flex w-full items-center justify-between rounded-none border border-slate-200 bg-paper px-4 py-3 text-sm font-bold text-slate-700 lg:hidden"
+              className="mt-6 flex w-full items-center justify-between rounded-xl border border-line bg-paper px-4 py-3 text-sm font-bold text-mist lg:hidden"
             >
               <span className="flex items-center gap-2">
                 <svg
@@ -657,7 +657,7 @@ export default function Discover() {
                 </svg>
                 Filters
                 {activeFilterCount > 0 && (
-                  <span className="rounded-none bg-gold px-2 py-0.5 text-[10px] text-paper">
+                  <span className="rounded-xl bg-gold px-2 py-0.5 text-[10px] text-cream">
                     {activeFilterCount}
                   </span>
                 )}
@@ -668,9 +668,9 @@ export default function Discover() {
             </button>
 
             {showMobileFilters && (
-              <div className="mt-4 grid gap-4 rounded-none border border-slate-200 bg-paper p-4 lg:hidden">
+              <div className="mt-4 grid gap-4 rounded-xl border border-line bg-paper p-4 lg:hidden">
                 <div>
-                  <label className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                  <label className="text-xs font-bold uppercase tracking-[0.2em] text-fog">
                     Search
                   </label>
                   <input
@@ -678,11 +678,11 @@ export default function Discover() {
                     value={search}
                     onChange={(event) => setSearch(event.target.value)}
                     placeholder="Search services..."
-                    className="mt-2 w-full rounded-none border border-slate-200 px-4 py-3 text-sm outline-none focus:border-gold focus:ring-0"
+                    className="mt-2 w-full rounded-xl border border-line px-4 py-3 text-sm outline-none focus:border-gold focus:ring-0"
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                  <label className="text-xs font-bold uppercase tracking-[0.2em] text-fog">
                     Location
                   </label>
                   <input
@@ -690,7 +690,7 @@ export default function Discover() {
                     value={location}
                     onChange={(event) => setLocation(event.target.value)}
                     placeholder="Accra, Kumasi..."
-                    className="mt-2 w-full rounded-none border border-slate-200 px-4 py-3 text-sm outline-none focus:border-gold focus:ring-0"
+                    className="mt-2 w-full rounded-xl border border-line px-4 py-3 text-sm outline-none focus:border-gold focus:ring-0"
                   />
                 </div>
               </div>
@@ -705,7 +705,7 @@ export default function Discover() {
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.3 }}
               role="status"
-              className="mt-6 rounded-none border border-gold bg-gold-soft px-4 py-3 text-sm text-gold"
+              className="mt-6 rounded-xl border border-gold bg-gold/10 px-4 py-3 text-sm text-gold"
             >
               <span>{saveMessage}</span>
               {!organizerEmail && (
@@ -719,7 +719,7 @@ export default function Discover() {
               <button
                 type="button"
                 onClick={() => setSaveMessage("")}
-                className="font-bold text-gold hover:text-ink"
+                className="font-bold text-gold hover:text-cream"
                 aria-label="Dismiss message"
               >
                 ×
@@ -729,14 +729,14 @@ export default function Discover() {
 
           {/* LISTINGS */}
           {filteredListings.length === 0 ? (
-            <div className="mt-10 rounded-none border border-slate-200 bg-paper px-8 py-20 text-center shadow-sm">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-none bg-slate-100">
+            <div className="mt-10 rounded-xl border border-line bg-paper px-8 py-20 text-center shadow-sm">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-xl bg-surface">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.8"
-                  className="h-7 w-7 text-slate-500"
+                  className="h-7 w-7 text-mist"
                 >
                   <circle cx="11" cy="11" r="6.5" />
                   <path d="m16 16 5 5" />
@@ -744,17 +744,17 @@ export default function Discover() {
                   <path d="M13.5 8.5 8.5 13.5" />
                 </svg>
               </div>
-              <h3 className="mt-6 text-xl font-bold text-ink">
+              <h3 className="mt-6 text-xl font-bold text-cream">
                 We couldn't find a match
               </h3>
-              <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-slate-500">
+              <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-mist">
                 Try changing your search, choosing another
                 category, or searching a different location.
               </p>
               <button
                 type="button"
                 onClick={clearFilters}
-                className="mt-6 rounded-none bg-ink px-6 py-3 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors hover:bg-gold hover:text-paper"
+                className="mt-6 rounded-xl bg-ink px-6 py-3 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors hover:bg-gold hover:text-cream"
               >
                 Clear all filters
               </button>
@@ -779,10 +779,10 @@ export default function Discover() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: Math.random() * 0.2 }}
                     whileHover={{ y: -8 }}
-                    className="group overflow-hidden border border-slate-200 bg-paper shadow-sm transition-colors duration-300 hover:border-ink hover:shadow-lg"
+                    className="group overflow-hidden border border-line bg-paper shadow-sm transition-colors duration-300 hover:border-line hover:shadow-lg"
                   >
                     {/* IMAGE */}
-                    <div className="relative h-64 overflow-hidden bg-slate-100">
+                    <div className="relative h-64 overflow-hidden bg-surface">
                       {listing.image ? (
                         <img
                           src={listing.image}
@@ -792,8 +792,8 @@ export default function Discover() {
                           decoding="async"
                         />
                       ) : (
-                        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-ink-50 via-paper to-gold-50">
-                          <div className="flex h-20 w-20 items-center justify-center rounded-sm bg-paper text-4xl shadow-sm">
+                        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-surface via-raised to-gold/10">
+                          <div className="flex h-20 w-20 items-center justify-center rounded-lg bg-paper text-4xl shadow-sm">
                             {listing.icon}
                           </div>
                         </div>
@@ -801,7 +801,7 @@ export default function Discover() {
 
                       {/* IMAGE OVERLAY */}
                       <div className="absolute inset-x-0 top-0 flex items-center justify-between p-4">
-                        <span className="rounded-none bg-paper/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-700 shadow-sm">
+                        <span className="rounded-xl bg-raised/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-mist shadow-sm">
                           {listing.type}
                         </span>
                         <button
@@ -817,10 +817,10 @@ export default function Discover() {
                               ? "Remove from saved items"
                               : "Save item"
                           }
-                          className={`flex h-10 w-10 items-center justify-center rounded-none border backdrop-blur transition-colors duration-200 ${
+                          className={`flex h-10 w-10 items-center justify-center rounded-xl border backdrop-blur transition-colors duration-200 ${
                             saved
-                              ? "border-gold-200 bg-gold-50 text-gold-600"
-                              : "border-white/70 bg-paper/95 text-slate-600 hover:border-gold/30 hover:bg-gold-50 hover:text-gold-600"
+                              ? "border-gold/30 bg-gold-50 text-gold-600"
+                              : "border-line-bright bg-raised/95 text-mist hover:border-gold/30 hover:bg-gold-50 hover:text-gold-600"
                           }`}
                         >
                           <svg
@@ -837,8 +837,8 @@ export default function Discover() {
 
                       {/* APPROVED BADGE */}
                       {listing.verified && (
-                        <div className="absolute bottom-4 left-4 flex items-center gap-1.5 rounded-none bg-ink text-paper px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em]">
-                          <span className="flex h-4 w-4 items-center justify-center rounded-sm bg-gold text-[9px]">
+                        <div className="absolute bottom-4 left-4 flex items-center gap-1.5 rounded-xl bg-ink text-cream px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em]">
+                          <span className="flex h-4 w-4 items-center justify-center rounded-lg bg-gold text-[9px]">
                             ✓
                           </span>
                           EventFlow approved
@@ -850,7 +850,7 @@ export default function Discover() {
                     <div className="p-6">
                       <div className="flex items-start justify-between gap-4">
                         <div className="min-w-0">
-                          <h3 className="truncate text-lg font-bold text-ink">
+                          <h3 className="truncate text-lg font-bold text-cream">
                             {listing.name}
                           </h3>
                           {listing.serviceName && (
@@ -860,14 +860,14 @@ export default function Discover() {
                           )}
                         </div>
                         {listing.rating > 0 && (
-                          <div className="flex shrink-0 items-center gap-1 rounded-none bg-gold-soft px-2 py-1 text-xs font-bold text-gold">
+                          <div className="flex shrink-0 items-center gap-1 rounded-xl bg-gold/10 px-2 py-1 text-xs font-bold text-gold">
                             <span>★</span>
                             {listing.rating.toFixed(1)}
                           </div>
                         )}
                       </div>
 
-                      <div className="mt-4 flex items-center gap-2 text-sm text-slate-500">
+                      <div className="mt-4 flex items-center gap-2 text-sm text-mist">
                         <svg
                           viewBox="0 0 24 24"
                           fill="none"
@@ -885,33 +885,33 @@ export default function Discover() {
 
                       {listing.rating > 0 &&
                         listing.reviews > 0 && (
-                            <p className="mt-2 text-xs text-slate-400">
+                            <p className="mt-2 text-xs text-fog">
                               {listing.reviews.toLocaleString()} {' '}
                               {listing.reviews === 1 ? "review" : "reviews"}
                             </p>
                           )}
 
-                        <p className="mt-6 line-clamp-2 min-h-[40px] text-sm leading-6 text-slate-500">
+                        <p className="mt-6 line-clamp-2 min-h-[40px] text-sm leading-6 text-mist">
                           {listing.description}
                         </p>
 
-                        <div className="mt-8 flex items-end justify-between border-t border-slate-100 pt-4">
+                        <div className="mt-8 flex items-end justify-between border-t border-line pt-4">
                           <div>
-                            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-fog">
                               Starting from
                             </p>
-                            <p className="mt-1 text-base font-bold text-ink">
+                            <p className="mt-1 text-base font-bold text-cream">
                               {listing.price > 0
                                 ? `GH₵${listing.price.toLocaleString()}`
                                 : "Price on request"}
                             </p>
-                            <p className="mt-1 max-w-[170px] truncate text-xs text-slate-400">
+                            <p className="mt-1 max-w-[170px] truncate text-xs text-fog">
                               {listing.capacity}
                             </p>
                           </div>
                           <Link
                             to={profileLink}
-                            className="inline-flex items-center gap-2 rounded-none bg-ink px-6 py-3 text-xs font-bold uppercase tracking-[0.1em] text-paper transition-colors hover:bg-gold hover:text-paper"
+                            className="inline-flex items-center gap-2 rounded-xl bg-ink px-6 py-3 text-xs font-bold uppercase tracking-[0.1em] text-cream transition-colors hover:bg-gold hover:text-cream"
                           >
                             View
                             <svg
@@ -936,31 +936,31 @@ export default function Discover() {
           {/* TRUST SECTION */}
           <div className="mt-16 grid gap-4 sm:grid-cols-3">
             <Card padding="p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-gold-soft text-lg font-bold text-gold mb-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10 text-lg font-bold text-gold mb-4">
                 ✓
               </div>
-              <h3 className="font-bold text-ink">Approved businesses</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-500">
+              <h3 className="font-bold text-cream">Approved businesses</h3>
+              <p className="mt-2 text-sm leading-6 text-mist">
                 Listings shown on EventFlow are reviewed before they become
                 available in the marketplace.
               </p>
             </Card>
             <Card padding="p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-ink-50 text-ink-600 mb-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-surface text-cream-600 mb-4">
                 ↔
               </div>
-              <h3 className="font-bold text-ink">Compare your options</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-500">
+              <h3 className="font-bold text-cream">Compare your options</h3>
+              <p className="mt-2 text-sm leading-6 text-mist">
                 Explore different services, locations and starting prices
                 before contacting a provider.
               </p>
             </Card>
             <Card padding="p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-purple-50 text-purple-600 mb-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10 text-gold mb-4">
                 ♡
               </div>
-              <h3 className="font-bold text-ink">Save what you like</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-500">
+              <h3 className="font-bold text-cream">Save what you like</h3>
+              <p className="mt-2 text-sm leading-6 text-mist">
                 Keep your favourite venues and services together while you
                 plan your event.
               </p>
@@ -968,43 +968,43 @@ export default function Discover() {
           </div>
 
           {/* MAP / LOCATION AREA */}
-          <div className="mt-16 overflow-hidden rounded-none border border-slate-200 bg-paper shadow-lg">
+          <div className="mt-16 overflow-hidden rounded-xl border border-line bg-paper shadow-lg">
             <div className="grid lg:grid-cols-[1fr_1.1fr]">
               <div className="p-8 sm:p-10 lg:p-12">
-                <span className="inline-flex rounded-none bg-ink-50 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-gold">
+                <span className="inline-flex rounded-xl bg-surface px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-gold">
                   Coming to EventFlow
                 </span>
-                <h2 className="mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                <h2 className="mt-4 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
                   Discover what is around you.
                 </h2>
-                <p className="mt-6 text-sm leading-8 text-slate-500 sm:text-base">
+                <p className="mt-6 text-sm leading-8 text-mist sm:text-base">
                   EventFlow is being built to make it easier to discover
                   event businesses near your chosen location. Soon you will
                   be able to explore nearby options, compare distances and
                   plan your event with a clearer view of what is around you.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
-                  <div className="rounded-none bg-gold-soft px-4 py-3">
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Search</p>
-                    <p className="mt-1 text-sm font-bold text-ink">
+                  <div className="rounded-xl bg-gold/10 px-4 py-3">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-fog">Search</p>
+                    <p className="mt-1 text-sm font-bold text-cream">
                       By location
                     </p>
                   </div>
-                  <div className="rounded-none bg-gold-soft px-4 py-3">
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Explore</p>
-                    <p className="mt-1 text-sm font-bold text-ink">
+                  <div className="rounded-xl bg-gold/10 px-4 py-3">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-fog">Explore</p>
+                    <p className="mt-1 text-sm font-bold text-cream">
                       Nearby options
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="relative min-h-[300px] overflow-hidden bg-gradient-to-br from-ink-100 via-paper to-gold-100">
+              <div className="relative min-h-[300px] overflow-hidden bg-gradient-to-br from-surface via-raised to-gold/15">
                 <div className="absolute inset-0 opacity-40">
-                  <div className="absolute left-[18%] top-[25%] h-24 w-24 rounded-none border border-ink-300" />
-                  <div className="absolute right-[18%] top-[40%] h-32 w-32 rounded-none border border-gold-300" />
-                  <div className="absolute bottom-[10%] left-[40%] h-20 w-20 rounded-none border border-ink-200" />
+                  <div className="absolute left-[18%] top-[25%] h-24 w-24 rounded-xl border border-line-300" />
+                  <div className="absolute right-[18%] top-[40%] h-32 w-32 rounded-xl border border-gold/30" />
+                  <div className="absolute bottom-[10%] left-[40%] h-20 w-20 rounded-xl border border-line-200" />
                 </div>
-                <div className="absolute left-[25%] top-[30%] flex h-12 w-12 items-center justify-center rounded-sm bg-ink text-paper shadow-lg shadow-ink-300">
+                <div className="absolute left-[25%] top-[30%] flex h-12 w-12 items-center justify-center rounded-lg bg-ink text-cream shadow-lg shadow-black/20">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -1016,17 +1016,17 @@ export default function Discover() {
                     <circle cx="12" cy="10" r="2.5" />
                   </svg>
                 </div>
-                <div className="absolute right-[24%] top-[48%] flex h-11 w-11 items-center justify-center rounded-sm bg-ink-950 text-paper shadow-lg">
+                <div className="absolute right-[24%] top-[48%] flex h-11 w-11 items-center justify-center rounded-lg bg-ink text-cream shadow-lg">
                   <span className="text-lg">🏛️</span>
                 </div>
-                <div className="absolute bottom-[23%] left-[45%] flex h-11 w-11 items-center justify-center rounded-sm bg-paper text-xl shadow-lg">
+                <div className="absolute bottom-[23%] left-[45%] flex h-11 w-11 items-center justify-center rounded-lg bg-paper text-xl shadow-lg">
                   📸
                 </div>
-                <div className="absolute bottom-6 left-6 rounded-none border border-paper/70 bg-paper/90 px-4 py-3 shadow-lg backdrop-blur">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                <div className="absolute bottom-6 left-6 rounded-xl border border-line-bright/70 bg-raised/90 px-4 py-3 shadow-lg backdrop-blur">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-fog">
                     EventFlow
                   </p>
-                  <p className="mt-1 text-sm font-bold text-ink">
+                  <p className="mt-1 text-sm font-bold text-cream">
                     Local discovery
                   </p>
                 </div>
@@ -1035,24 +1035,24 @@ export default function Discover() {
           </div>
 
           {/* BUSINESS CTA */}
-          <div className="relative mt-16 overflow-hidden rounded-none bg-ink-950 px-8 py-10 text-paper sm:px-10 sm:py-12 lg:px-12 lg:py-16">
-            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-none bg-gold/20 blur-[120px]" />
+          <div className="relative mt-16 overflow-hidden rounded-xl bg-ink px-8 py-10 text-cream sm:px-10 sm:py-12 lg:px-12 lg:py-16">
+            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-xl bg-gold/20 blur-[120px]" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div className="max-w-2xl">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-soft">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
                   For event businesses
                 </p>
-                <h2 className="mt-4 text-3xl font-bold tracking-tight text-paper sm:text-4xl">
+                <h2 className="mt-4 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
                   Put your business where event organisers are already looking.
                 </h2>
-                <p className="mt-6 text-sm leading-8 text-slate-300 sm:text-base">
+                <p className="mt-6 text-sm leading-8 text-fog sm:text-base">
                   Showcase your work, receive enquiries and manage bookings
                   through a professional EventFlow profile.
                 </p>
               </div>
               <Link
                 to="/register"
-                className="inline-flex items-center justify-center gap-2 rounded-none bg-paper px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-ink transition-colors hover:bg-gold hover:text-paper"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-paper px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors hover:bg-gold hover:text-cream"
               >
                 Register your business
                 <svg

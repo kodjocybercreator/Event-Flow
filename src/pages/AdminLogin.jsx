@@ -243,7 +243,7 @@ function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-charcoal">
       <div className="grid min-h-screen lg:grid-cols-2">
         {/* Brand panel */}
         <div className="relative hidden overflow-hidden bg-[#4f39f6] lg:flex">
@@ -252,31 +252,31 @@ function AdminLogin() {
           <div className="relative flex w-full flex-col justify-between p-12 xl:p-16">
             <div>
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-xl font-black text-[#4f39f6] shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-raised text-xl font-black text-[#4f39f6] shadow-lg">
                   E
                 </div>
 
                 <div>
-                  <p className="text-lg font-bold text-white">
+                  <p className="text-lg font-bold text-cream">
                     EventFlow
                   </p>
 
-                  <p className="text-xs text-white/70">
+                  <p className="text-xs text-cream/70">
                     Administration Console
                   </p>
                 </div>
               </div>
 
               <div className="mt-24 max-w-xl">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cream/70">
                   Secure Operations
                 </p>
 
-                <h1 className="mt-4 text-5xl font-black leading-tight text-white">
+                <h1 className="mt-4 text-5xl font-black leading-tight text-cream">
                   Manage your event marketplace with confidence.
                 </h1>
 
-                <p className="mt-6 max-w-lg text-lg leading-8 text-white/75">
+                <p className="mt-6 max-w-lg text-lg leading-8 text-cream/75">
                   Review providers, monitor bookings, track transactions,
                   respond to platform activity and maintain operational
                   oversight from one secure workspace.
@@ -292,12 +292,12 @@ function AdminLogin() {
               ].map(([number, label]) => (
                 <div
                   key={number}
-                  className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur"
+                  className="rounded-2xl border border-white/15 bg-raised/10 p-4 backdrop-blur"
                 >
-                  <p className="text-xs font-bold text-white/50">
+                  <p className="text-xs font-bold text-cream/50">
                     {number}
                   </p>
-                  <p className="mt-2 text-sm font-semibold text-white">
+                  <p className="mt-2 text-sm font-semibold text-cream">
                     {label}
                   </p>
                 </div>
@@ -307,29 +307,29 @@ function AdminLogin() {
         </div>
 
         {/* Login panel */}
-        <div className="flex items-center justify-center bg-slate-50 px-5 py-10 sm:px-8">
+        <div className="flex items-center justify-center bg-surface px-5 py-10 sm:px-8">
           <div className="w-full max-w-md">
             <div className="mb-8 lg:hidden">
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#4f39f6] text-xl font-black text-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#4f39f6] text-xl font-black text-cream">
                   E
                 </div>
 
                 <div>
-                  <p className="font-bold text-slate-900">
+                  <p className="font-bold text-cream">
                     EventFlow
                   </p>
 
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-mist">
                     Administration Console
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-xl shadow-slate-200/60 sm:p-9">
+            <div className="rounded-[2rem] border border-line bg-raised p-7 shadow-xl shadow-slate-200/60 sm:p-9">
               <div className="mb-8">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-2xl">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/10 text-2xl">
                   🔐
                 </div>
 
@@ -337,23 +337,23 @@ function AdminLogin() {
                   Restricted Access
                 </p>
 
-                <h2 className="mt-2 text-3xl font-black text-slate-900">
+                <h2 className="mt-2 text-3xl font-black text-cream">
                   Admin sign in
                 </h2>
 
-                <p className="mt-2 text-sm leading-6 text-slate-500">
+                <p className="mt-2 text-sm leading-6 text-mist">
                   Authorized EventFlow administrators only.
                 </p>
               </div>
 
               {error && (
-                <div className="mb-5 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-6 text-red-700">
+                <div className="mb-5 rounded-2xl border border-rose/20 bg-rose/10 px-4 py-3 text-sm leading-6 text-rose">
                   {error}
                 </div>
               )}
 
               {notice && (
-                <div className="mb-5 rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-700">
+                <div className="mb-5 rounded-2xl border border-emerald/20 bg-emerald/10 px-4 py-3 text-sm text-emerald">
                   {notice}
                 </div>
               )}
@@ -363,7 +363,7 @@ function AdminLogin() {
                 className="space-y-5"
               >
                 <div>
-                  <label className="mb-2 block text-sm font-bold text-slate-700">
+                  <label className="mb-2 block text-sm font-bold text-mist">
                     Administrator email
                   </label>
 
@@ -374,13 +374,13 @@ function AdminLogin() {
                     placeholder="admin@eventflow.com"
                     autoComplete="username"
                     disabled={isLocked || loading}
-                    className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#4f39f6] focus:ring-4 focus:ring-indigo-100 disabled:cursor-not-allowed disabled:bg-slate-100"
+                    className="w-full rounded-2xl border border-line-bright bg-raised px-4 py-3.5 text-sm text-cream outline-none transition placeholder:text-fog focus:border-[#4f39f6] focus:ring-4 focus:ring-indigo-100 disabled:cursor-not-allowed disabled:bg-surface"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-sm font-bold text-slate-700">
+                  <label className="mb-2 block text-sm font-bold text-mist">
                     Password
                   </label>
 
@@ -394,7 +394,7 @@ function AdminLogin() {
                       placeholder="Enter your password"
                       autoComplete="current-password"
                       disabled={isLocked || loading}
-                      className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 pr-20 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#4f39f6] focus:ring-4 focus:ring-indigo-100 disabled:cursor-not-allowed disabled:bg-slate-100"
+                      className="w-full rounded-2xl border border-line-bright bg-raised px-4 py-3.5 pr-20 text-sm text-cream outline-none transition placeholder:text-fog focus:border-[#4f39f6] focus:ring-4 focus:ring-indigo-100 disabled:cursor-not-allowed disabled:bg-surface"
                       required
                     />
 
@@ -404,7 +404,7 @@ function AdminLogin() {
                         setShowPassword((value) => !value)
                       }
                       disabled={isLocked || loading}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg px-2 py-1 text-xs font-bold text-slate-500 hover:bg-slate-100"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg px-2 py-1 text-xs font-bold text-mist hover:bg-surface"
                     >
                       {showPassword ? "Hide" : "Show"}
                     </button>
@@ -414,7 +414,7 @@ function AdminLogin() {
                 <button
                   type="submit"
                   disabled={isLocked || loading}
-                  className="w-full rounded-2xl bg-[#4f39f6] px-5 py-3.5 font-bold text-white shadow-lg shadow-indigo-200 transition hover:bg-[#4330dc] disabled:cursor-not-allowed disabled:opacity-50"
+                  className="w-full rounded-2xl bg-[#4f39f6] px-5 py-3.5 font-bold text-cream shadow-lg shadow-indigo-200 transition hover:bg-[#4330dc] disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {loading
                     ? "Verifying access..."
@@ -424,23 +424,23 @@ function AdminLogin() {
                 </button>
               </form>
 
-              <div className="mt-7 flex items-start gap-3 rounded-2xl bg-slate-50 p-4">
+              <div className="mt-7 flex items-start gap-3 rounded-2xl bg-surface p-4">
                 <span className="text-lg">🛡️</span>
 
                 <div>
-                  <p className="text-xs font-bold text-slate-700">
+                  <p className="text-xs font-bold text-mist">
                     Protected administration area
                   </p>
 
-                  <p className="mt-1 text-xs leading-5 text-slate-500">
+                  <p className="mt-1 text-xs leading-5 text-mist">
                     Failed login attempts are monitored and repeated
                     failures temporarily lock the admin sign-in.
                   </p>
                 </div>
               </div>
 
-              <div className="mt-5 border-t border-slate-100 pt-5 text-center">
-                <p className="text-xs text-slate-400">
+              <div className="mt-5 border-t border-line pt-5 text-center">
+                <p className="text-xs text-fog">
                   EventFlow Administration · Authorized personnel only
                 </p>
               </div>

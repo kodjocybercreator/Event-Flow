@@ -1149,7 +1149,7 @@ export default function VenueDashboard() {
       return "bg-rose-50 text-rose-700 ring-rose-200";
     }
 
-    return "bg-amber-50 text-amber-700 ring-amber-200";
+    return "bg-amber/10 text-amber ring-amber-200";
   }
 
   /* ============================================================
@@ -1171,20 +1171,20 @@ export default function VenueDashboard() {
     return (
       <article
         key={String(getId(booking) ?? booking.bookingId)}
-        className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+        className="overflow-hidden rounded-2xl border border-line bg-raised shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
       >
-        <div className="border-b border-slate-100 p-5">
+        <div className="border-b border-line p-5">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="min-w-0">
               <p className="text-xs font-semibold uppercase tracking-wider text-violet-600">
                 {booking.eventType || "Event booking"}
               </p>
 
-              <h3 className="mt-1 break-words text-lg font-bold text-slate-900">
+              <h3 className="mt-1 break-words text-lg font-bold text-cream">
                 {booking.eventName || "Untitled event"}
               </h3>
 
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-mist">
                 Organizer: {booking.organizerName || "Organizer"}
               </p>
             </div>
@@ -1199,16 +1199,16 @@ export default function VenueDashboard() {
           </div>
 
           <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <div className="rounded-xl bg-slate-50 p-3">
-              <p className="text-xs text-slate-500">Event date</p>
-              <p className="mt-1 text-sm font-semibold text-slate-800">
+            <div className="rounded-xl bg-surface p-3">
+              <p className="text-xs text-mist">Event date</p>
+              <p className="mt-1 text-sm font-semibold text-cream">
                 {formatDate(booking.eventDate || booking.date)}
               </p>
             </div>
 
-            <div className="rounded-xl bg-slate-50 p-3">
-              <p className="text-xs text-slate-500">Event location</p>
-              <p className="mt-1 break-words text-sm font-semibold text-slate-800">
+            <div className="rounded-xl bg-surface p-3">
+              <p className="text-xs text-mist">Event location</p>
+              <p className="mt-1 break-words text-sm font-semibold text-cream">
                 {booking.eventLocation ||
                   booking.location ||
                   "Not specified"}
@@ -1220,7 +1220,7 @@ export default function VenueDashboard() {
         <div className="space-y-3 p-5">
           {venueCounter && (
             <div className="flex items-center justify-between gap-3">
-              <span className="text-sm text-slate-500">
+              <span className="text-sm text-mist">
                 Your quotation
               </span>
               <span className="font-bold text-violet-700">
@@ -1231,10 +1231,10 @@ export default function VenueDashboard() {
 
           {organizerCounter && (
             <div className="flex items-center justify-between gap-3">
-              <span className="text-sm text-slate-500">
+              <span className="text-sm text-mist">
                 Organizer's counter-offer
               </span>
-              <span className="font-bold text-indigo-700">
+              <span className="font-bold text-gold">
                 {formatPrice(organizerCounter)}
               </span>
             </div>
@@ -1266,7 +1266,7 @@ export default function VenueDashboard() {
                 setShowDetailsModal(true);
                 setFeedback("");
               }}
-              className="rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+              className="rounded-xl border border-line px-4 py-2.5 text-sm font-semibold text-mist transition hover:bg-surface"
             >
               View details
             </button>
@@ -1276,7 +1276,7 @@ export default function VenueDashboard() {
                 <button
                   type="button"
                   onClick={() => acceptOrganizerCounter(booking)}
-                  className="rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-700"
+                  className="rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-cream transition hover:bg-emerald-700"
                 >
                   Accept offer
                 </button>
@@ -1284,7 +1284,7 @@ export default function VenueDashboard() {
                 <button
                   type="button"
                   onClick={() => openQuoteModal(booking, "another")}
-                  className="rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-700"
+                  className="rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-semibold text-cream transition hover:bg-violet-700"
                 >
                   Counter again
                 </button>
@@ -1296,7 +1296,7 @@ export default function VenueDashboard() {
                 <button
                   type="button"
                   onClick={() => openQuoteModal(booking, "send")}
-                  className="rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-700"
+                  className="rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-semibold text-cream transition hover:bg-violet-700"
                 >
                   Send quotation
                 </button>
@@ -1323,7 +1323,7 @@ export default function VenueDashboard() {
   const activeVenue = ownedVenues[0];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-surface text-cream">
       <Navbar />
 
       <div className="mx-auto max-w-7xl px-4 pb-12 pt-8 sm:px-6 lg:px-8">
@@ -1334,11 +1334,11 @@ export default function VenueDashboard() {
               Venue partner portal
             </div>
 
-            <h1 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
+            <h1 className="text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
               Venue Dashboard
             </h1>
 
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-500 sm:text-base">
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-mist sm:text-base">
               Manage venue enquiries, respond to booking requests,
               negotiate prices, and keep track of your bookings.
             </p>
@@ -1347,7 +1347,7 @@ export default function VenueDashboard() {
           <div className="flex flex-wrap gap-3">
             <Link
               to="/venue-registration"
-              className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-100"
+              className="inline-flex items-center justify-center rounded-xl border border-line bg-raised px-4 py-3 text-sm font-semibold text-mist shadow-sm transition hover:bg-surface"
             >
               Manage venue
             </Link>
@@ -1355,7 +1355,7 @@ export default function VenueDashboard() {
             <button
               type="button"
               onClick={handleLogout}
-              className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-600 transition hover:border-rose-200 hover:bg-rose-50 hover:text-rose-700"
+              className="rounded-xl border border-line bg-raised px-4 py-3 text-sm font-semibold text-mist transition hover:border-rose-200 hover:bg-rose-50 hover:text-rose-700"
             >
               Sign out
             </button>
@@ -1380,7 +1380,7 @@ export default function VenueDashboard() {
           </div>
         )}
 
-        <div className="mb-8 overflow-hidden rounded-3xl bg-gradient-to-r from-violet-800 via-violet-700 to-indigo-700 p-6 text-white shadow-lg sm:p-8">
+        <div className="mb-8 overflow-hidden rounded-3xl bg-gradient-to-r from-violet-800 via-violet-700 to-indigo-700 p-6 text-cream shadow-lg sm:p-8">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
             <div>
               <p className="text-sm font-medium text-violet-200">
@@ -1400,7 +1400,7 @@ export default function VenueDashboard() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-sm">
+            <div className="rounded-2xl border border-white/20 bg-raised/10 p-5 backdrop-blur-xl">
               <p className="text-sm text-violet-100">Your venues</p>
               <p className="mt-2 text-3xl font-extrabold">
                 {ownedVenues.length}
@@ -1413,9 +1413,9 @@ export default function VenueDashboard() {
         </div>
 
         <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-line bg-raised p-5 shadow-sm">
             <div className="flex items-center justify-between gap-3">
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-sm font-medium text-mist">
                 Total enquiries
               </p>
               <span className="rounded-xl bg-violet-100 p-2 text-lg">
@@ -1425,31 +1425,31 @@ export default function VenueDashboard() {
             <p className="mt-4 text-3xl font-extrabold">
               {venueBookings.length}
             </p>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-mist">
               Requests received
             </p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-line bg-raised p-5 shadow-sm">
             <div className="flex items-center justify-between gap-3">
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-sm font-medium text-mist">
                 Awaiting response
               </p>
-              <span className="rounded-xl bg-amber-100 p-2 text-lg">
+              <span className="rounded-xl bg-amber/15 p-2 text-lg">
                 ◷
               </span>
             </div>
             <p className="mt-4 text-3xl font-extrabold">
               {pendingBookings.length}
             </p>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-mist">
               New booking requests
             </p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-line bg-raised p-5 shadow-sm">
             <div className="flex items-center justify-between gap-3">
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-sm font-medium text-mist">
                 Confirmed bookings
               </p>
               <span className="rounded-xl bg-emerald-100 p-2 text-lg">
@@ -1459,30 +1459,30 @@ export default function VenueDashboard() {
             <p className="mt-4 text-3xl font-extrabold">
               {acceptedBookings.length}
             </p>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-mist">
               Agreed with organizers
             </p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-line bg-raised p-5 shadow-sm">
             <div className="flex items-center justify-between gap-3">
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-sm font-medium text-mist">
                 Outstanding balance
               </p>
-              <span className="rounded-xl bg-indigo-100 p-2 text-lg">
+              <span className="rounded-xl bg-gold/15 p-2 text-lg">
                 GH₵
               </span>
             </div>
             <p className="mt-4 break-words text-2xl font-extrabold">
               {formatPrice(totalOutstanding)}
             </p>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-mist">
               Based on recorded booking balances
             </p>
           </div>
         </div>
 
-        <div className="mb-6 flex flex-wrap gap-2 border-b border-slate-200 pb-3">
+        <div className="mb-6 flex flex-wrap gap-2 border-b border-line pb-3">
           {[
             { id: "overview", label: "Overview" },
             { id: "bookings", label: "Bookings" },
@@ -1496,15 +1496,15 @@ export default function VenueDashboard() {
               onClick={() => setActiveTab(tab.id)}
               className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition ${
                 activeTab === tab.id
-                  ? "bg-violet-700 text-white shadow-sm"
-                  : "text-slate-600 hover:bg-white hover:text-violet-700"
+                  ? "bg-violet-700 text-cream shadow-sm"
+                  : "text-mist hover:bg-raised hover:text-violet-700"
               }`}
             >
               {tab.label}
 
               {tab.id === "counteroffers" &&
                 counterOfferBookings.length > 0 && (
-                  <span className="ml-2 rounded-full bg-white/20 px-2 py-0.5 text-xs">
+                  <span className="ml-2 rounded-full bg-raised/20 px-2 py-0.5 text-xs">
                     {counterOfferBookings.length}
                   </span>
                 )}
@@ -1525,13 +1525,13 @@ export default function VenueDashboard() {
         {activeTab === "overview" && (
           <div className="space-y-8">
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-2">
+              <div className="rounded-2xl border border-line bg-raised p-6 shadow-sm lg:col-span-2">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
-                    <h2 className="text-xl font-bold text-slate-900">
+                    <h2 className="text-xl font-bold text-cream">
                       Recent booking activity
                     </h2>
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-mist">
                       Keep track of your latest venue enquiries.
                     </p>
                   </div>
@@ -1547,12 +1547,12 @@ export default function VenueDashboard() {
 
                 <div className="mt-6 space-y-4">
                   {venueBookings.length === 0 ? (
-                    <div className="rounded-xl border border-dashed border-slate-300 px-5 py-10 text-center">
+                    <div className="rounded-xl border border-dashed border-line-bright px-5 py-10 text-center">
                       <div className="text-3xl">📅</div>
-                      <h3 className="mt-3 font-semibold text-slate-800">
+                      <h3 className="mt-3 font-semibold text-cream">
                         No bookings yet
                       </h3>
-                      <p className="mx-auto mt-2 max-w-sm text-sm text-slate-500">
+                      <p className="mx-auto mt-2 max-w-sm text-sm text-mist">
                         Booking requests for your registered venues
                         will appear here.
                       </p>
@@ -1571,12 +1571,12 @@ export default function VenueDashboard() {
               </div>
 
               <div className="space-y-6">
-                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                  <h2 className="text-lg font-bold text-slate-900">
+                <div className="rounded-2xl border border-line bg-raised p-6 shadow-sm">
+                  <h2 className="text-lg font-bold text-cream">
                     Negotiation summary
                   </h2>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-mist">
                     Bookings that need your attention.
                   </p>
 
@@ -1587,13 +1587,13 @@ export default function VenueDashboard() {
                         setActiveTab("bookings");
                         setStatusFilter("pending");
                       }}
-                      className="flex w-full items-center justify-between rounded-xl bg-amber-50 p-4 text-left transition hover:bg-amber-100"
+                      className="flex w-full items-center justify-between rounded-xl bg-amber/10 p-4 text-left transition hover:bg-amber/15"
                     >
                       <div>
                         <p className="text-sm font-semibold text-amber-900">
                           New requests
                         </p>
-                        <p className="mt-1 text-xs text-amber-700">
+                        <p className="mt-1 text-xs text-amber">
                           Awaiting your quotation
                         </p>
                       </div>
@@ -1639,23 +1639,23 @@ export default function VenueDashboard() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                  <h2 className="text-lg font-bold text-slate-900">
+                <div className="rounded-2xl border border-line bg-raised p-6 shadow-sm">
+                  <h2 className="text-lg font-bold text-cream">
                     Financial overview
                   </h2>
 
                   <div className="mt-5 space-y-4">
                     <div>
-                      <p className="text-sm text-slate-500">
+                      <p className="text-sm text-mist">
                         Total agreed booking value
                       </p>
-                      <p className="mt-1 text-2xl font-extrabold text-slate-900">
+                      <p className="mt-1 text-2xl font-extrabold text-cream">
                         {formatPrice(totalRevenue)}
                       </p>
                     </div>
 
-                    <div className="border-t border-slate-100 pt-4">
-                      <p className="text-sm text-slate-500">
+                    <div className="border-t border-line pt-4">
+                      <p className="text-sm text-mist">
                         Payments recorded
                       </p>
                       <p className="mt-1 text-xl font-bold text-emerald-700">
@@ -1663,17 +1663,17 @@ export default function VenueDashboard() {
                       </p>
                     </div>
 
-                    <div className="border-t border-slate-100 pt-4">
-                      <p className="text-sm text-slate-500">
+                    <div className="border-t border-line pt-4">
+                      <p className="text-sm text-mist">
                         Outstanding balance
                       </p>
-                      <p className="mt-1 text-xl font-bold text-amber-700">
+                      <p className="mt-1 text-xl font-bold text-amber">
                         {formatPrice(totalOutstanding)}
                       </p>
                     </div>
                   </div>
 
-                  <p className="mt-4 text-xs leading-5 text-slate-400">
+                  <p className="mt-4 text-xs leading-5 text-fog">
                     These figures reflect the booking and payment
                     records saved in this browser.
                   </p>
@@ -1688,13 +1688,13 @@ export default function VenueDashboard() {
         ===================================================== */}
 
         {activeTab === "bookings" && (
-          <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <section className="rounded-2xl border border-line bg-raised p-5 shadow-sm sm:p-6">
             <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
               <div>
-                <h2 className="text-xl font-bold text-slate-900">
+                <h2 className="text-xl font-bold text-cream">
                   Venue bookings
                 </h2>
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-mist">
                   Review enquiries and manage your quotations.
                 </p>
               </div>
@@ -1705,7 +1705,7 @@ export default function VenueDashboard() {
                   refreshBookings();
                   setFeedback("");
                 }}
-                className="rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                className="rounded-xl border border-line px-4 py-2.5 text-sm font-semibold text-mist hover:bg-surface"
               >
                 ↻ Refresh bookings
               </button>
@@ -1717,13 +1717,13 @@ export default function VenueDashboard() {
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
                 placeholder="Search event or organizer..."
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-100"
+                className="w-full rounded-xl border border-line bg-raised px-4 py-3 text-sm outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-100"
               />
 
               <select
                 value={statusFilter}
                 onChange={(event) => setStatusFilter(event.target.value)}
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-100"
+                className="w-full rounded-xl border border-line bg-raised px-4 py-3 text-sm outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-100"
               >
                 <option value="all">All booking statuses</option>
                 <option value="pending">Awaiting quotation</option>
@@ -1738,12 +1738,12 @@ export default function VenueDashboard() {
 
             <div className="mt-6">
               {filteredBookings.length === 0 ? (
-                <div className="rounded-2xl border border-dashed border-slate-300 px-5 py-12 text-center">
+                <div className="rounded-2xl border border-dashed border-line-bright px-5 py-12 text-center">
                   <div className="text-4xl">🔎</div>
-                  <h3 className="mt-3 text-lg font-bold text-slate-800">
+                  <h3 className="mt-3 text-lg font-bold text-cream">
                     No matching bookings
                   </h3>
-                  <p className="mt-2 text-sm text-slate-500">
+                  <p className="mt-2 text-sm text-mist">
                     Try a different search term or status filter.
                   </p>
 
@@ -1753,7 +1753,7 @@ export default function VenueDashboard() {
                       setSearchTerm("");
                       setStatusFilter("all");
                     }}
-                    className="mt-4 rounded-xl bg-violet-700 px-4 py-2.5 text-sm font-semibold text-white hover:bg-violet-800"
+                    className="mt-4 rounded-xl bg-violet-700 px-4 py-2.5 text-sm font-semibold text-cream hover:bg-violet-800"
                   >
                     Clear filters
                   </button>
@@ -1776,22 +1776,22 @@ export default function VenueDashboard() {
         {activeTab === "counteroffers" && (
           <section>
             <div className="mb-6">
-              <h2 className="text-xl font-bold text-slate-900">
+              <h2 className="text-xl font-bold text-cream">
                 Organizer counter-offers
               </h2>
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-mist">
                 Review the organizer's proposed price and decide
                 whether to accept or negotiate further.
               </p>
             </div>
 
             {counterOfferBookings.length === 0 ? (
-              <div className="rounded-2xl border border-dashed border-slate-300 bg-white px-5 py-14 text-center">
+              <div className="rounded-2xl border border-dashed border-line-bright bg-raised px-5 py-14 text-center">
                 <div className="text-4xl">🤝</div>
-                <h3 className="mt-3 text-lg font-bold text-slate-800">
+                <h3 className="mt-3 text-lg font-bold text-cream">
                   No counter-offers to review
                 </h3>
-                <p className="mx-auto mt-2 max-w-md text-sm text-slate-500">
+                <p className="mx-auto mt-2 max-w-md text-sm text-mist">
                   When an organizer responds to your quotation with
                   another price, the counter-offer will appear here.
                 </p>
@@ -1801,29 +1801,29 @@ export default function VenueDashboard() {
                 {counterOfferBookings.map((booking) => (
                   <div
                     key={String(getId(booking) ?? booking.bookingId)}
-                    className="overflow-hidden rounded-2xl border border-violet-200 bg-white shadow-sm"
+                    className="overflow-hidden rounded-2xl border border-violet-200 bg-raised shadow-sm"
                   >
                     <div className="border-b border-violet-100 bg-violet-50 p-5">
                       <span className="inline-flex rounded-full bg-violet-100 px-3 py-1 text-xs font-bold text-violet-800">
                         Action required
                       </span>
 
-                      <h3 className="mt-3 text-xl font-bold text-slate-900">
+                      <h3 className="mt-3 text-xl font-bold text-cream">
                         {booking.eventName || "Event booking"}
                       </h3>
 
-                      <p className="mt-1 text-sm text-slate-600">
+                      <p className="mt-1 text-sm text-mist">
                         {booking.organizerName || "Organizer"}
                       </p>
                     </div>
 
                     <div className="space-y-4 p-5">
                       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                        <div className="rounded-xl bg-slate-50 p-4">
-                          <p className="text-xs text-slate-500">
+                        <div className="rounded-xl bg-surface p-4">
+                          <p className="text-xs text-mist">
                             Your last quotation
                           </p>
-                          <p className="mt-2 text-xl font-bold text-slate-800">
+                          <p className="mt-2 text-xl font-bold text-cream">
                             {formatPrice(getVenueCounterPrice(booking))}
                           </p>
                         </div>
@@ -1838,7 +1838,7 @@ export default function VenueDashboard() {
                         </div>
                       </div>
 
-                      <div className="space-y-1 text-sm text-slate-600">
+                      <div className="space-y-1 text-sm text-mist">
                         <p>
                           <span className="font-semibold">Event date:</span>{" "}
                           {formatDate(booking.eventDate || booking.date)}
@@ -1861,11 +1861,11 @@ export default function VenueDashboard() {
                         </p>
                       </div>
 
-                      <div className="flex flex-wrap gap-2 border-t border-slate-100 pt-4">
+                      <div className="flex flex-wrap gap-2 border-t border-line pt-4">
                         <button
                           type="button"
                           onClick={() => acceptOrganizerCounter(booking)}
-                          className="rounded-xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-emerald-700"
+                          className="rounded-xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-cream transition hover:bg-emerald-700"
                         >
                           Accept offer
                         </button>
@@ -1873,7 +1873,7 @@ export default function VenueDashboard() {
                         <button
                           type="button"
                           onClick={() => openQuoteModal(booking, "another")}
-                          className="rounded-xl bg-violet-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-violet-800"
+                          className="rounded-xl bg-violet-700 px-4 py-3 text-sm font-semibold text-cream transition hover:bg-violet-800"
                         >
                           Send counter-offer
                         </button>
@@ -1902,36 +1902,36 @@ export default function VenueDashboard() {
           <section>
             <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
               <div>
-                <h2 className="text-xl font-bold text-slate-900">
+                <h2 className="text-xl font-bold text-cream">
                   My registered venues
                 </h2>
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-mist">
                   Review the venues associated with your account.
                 </p>
               </div>
 
               <Link
                 to="/venue-registration"
-                className="inline-flex items-center justify-center rounded-xl bg-violet-700 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-violet-800"
+                className="inline-flex items-center justify-center rounded-xl bg-violet-700 px-5 py-3 text-sm font-semibold text-cream shadow-sm transition hover:bg-violet-800"
               >
                 + Register a venue
               </Link>
             </div>
 
             {ownedVenues.length === 0 ? (
-              <div className="rounded-2xl border border-dashed border-slate-300 bg-white px-5 py-14 text-center">
+              <div className="rounded-2xl border border-dashed border-line-bright bg-raised px-5 py-14 text-center">
                 <div className="text-4xl">🏛️</div>
-                <h3 className="mt-3 text-lg font-bold text-slate-800">
+                <h3 className="mt-3 text-lg font-bold text-cream">
                   No registered venues found
                 </h3>
-                <p className="mx-auto mt-2 max-w-md text-sm text-slate-500">
+                <p className="mx-auto mt-2 max-w-md text-sm text-mist">
                   Register your venue to manage its listing and receive
                   enquiries through EventFlow.
                 </p>
 
                 <Link
                   to="/venue-registration"
-                  className="mt-5 inline-flex rounded-xl bg-violet-700 px-5 py-3 text-sm font-semibold text-white hover:bg-violet-800"
+                  className="mt-5 inline-flex rounded-xl bg-violet-700 px-5 py-3 text-sm font-semibold text-cream hover:bg-violet-800"
                 >
                   Register your venue
                 </Link>
@@ -1946,7 +1946,7 @@ export default function VenueDashboard() {
                   return (
                     <article
                       key={String(venueId ?? venue.name)}
-                      className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+                      className="overflow-hidden rounded-2xl border border-line bg-raised shadow-sm"
                     >
                       {image ? (
                         <img
@@ -1962,7 +1962,7 @@ export default function VenueDashboard() {
 
                       <div className="p-5">
                         <div className="flex flex-wrap items-start justify-between gap-2">
-                          <h3 className="text-lg font-bold text-slate-900">
+                          <h3 className="text-lg font-bold text-cream">
                             {venue.name ||
                               venue.businessName ||
                               "Unnamed venue"}
@@ -1974,18 +1974,18 @@ export default function VenueDashboard() {
                                 ? "bg-emerald-50 text-emerald-700"
                                 : status === "rejected"
                                   ? "bg-rose-50 text-rose-700"
-                                  : "bg-amber-50 text-amber-700"
+                                  : "bg-amber/10 text-amber"
                             }`}
                           >
                             {status.replaceAll("_", " ")}
                           </span>
                         </div>
 
-                        <p className="mt-2 text-sm text-slate-500">
+                        <p className="mt-2 text-sm text-mist">
                           📍 {venue.location || "Location not provided"}
                         </p>
 
-                        <p className="mt-1 text-sm text-slate-500">
+                        <p className="mt-1 text-sm text-mist">
                           Capacity: {venue.capacity || "Not specified"}
                         </p>
 
@@ -1993,19 +1993,19 @@ export default function VenueDashboard() {
                           {formatPrice(venue.price)}
                         </p>
 
-                        <p className="mt-1 text-xs text-slate-400">
+                        <p className="mt-1 text-xs text-fog">
                           {venue.pricingType || "Starting from"}
                         </p>
 
                         {venue.description && (
-                          <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">
+                          <p className="mt-3 line-clamp-3 text-sm leading-6 text-mist">
                             {venue.description}
                           </p>
                         )}
 
                         {Array.isArray(venue.images) &&
                           venue.images.length > 0 && (
-                            <p className="mt-3 text-xs text-slate-500">
+                            <p className="mt-3 text-xs text-mist">
                               {venue.images.length} gallery image
                               {venue.images.length === 1 ? "" : "s"}
                             </p>
@@ -2024,13 +2024,13 @@ export default function VenueDashboard() {
         ===================================================== */}
 
         {activeTab === "notifications" && (
-          <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <section className="rounded-2xl border border-line bg-raised p-5 shadow-sm sm:p-6">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <h2 className="text-xl font-bold text-slate-900">
+                <h2 className="text-xl font-bold text-cream">
                   Notifications
                 </h2>
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-mist">
                   Stay informed about activity on your account.
                 </p>
               </div>
@@ -2042,12 +2042,12 @@ export default function VenueDashboard() {
 
             <div className="mt-6 space-y-3">
               {notifications.length === 0 ? (
-                <div className="rounded-xl border border-dashed border-slate-300 px-5 py-10 text-center">
+                <div className="rounded-xl border border-dashed border-line-bright px-5 py-10 text-center">
                   <div className="text-3xl">🔔</div>
-                  <h3 className="mt-3 font-semibold text-slate-800">
+                  <h3 className="mt-3 font-semibold text-cream">
                     You're all caught up
                   </h3>
-                  <p className="mt-2 text-sm text-slate-500">
+                  <p className="mt-2 text-sm text-mist">
                     New booking and account notifications will appear here.
                   </p>
                 </div>
@@ -2057,7 +2057,7 @@ export default function VenueDashboard() {
                     key={String(notification.id)}
                     className={`flex flex-col justify-between gap-3 rounded-xl border p-4 sm:flex-row sm:items-start ${
                       notification.read
-                        ? "border-slate-200 bg-white"
+                        ? "border-line bg-raised"
                         : "border-violet-200 bg-violet-50/60"
                     }`}
                   >
@@ -2071,11 +2071,11 @@ export default function VenueDashboard() {
                       </span>
 
                       <div>
-                        <p className="text-sm leading-6 text-slate-800">
+                        <p className="text-sm leading-6 text-cream">
                           {notification.message || "You have a new notification."}
                         </p>
 
-                        <p className="mt-1 text-xs text-slate-400">
+                        <p className="mt-1 text-xs text-fog">
                           {formatDateTime(
                             notification.createdAt ||
                               notification.timestamp
@@ -2115,7 +2115,7 @@ export default function VenueDashboard() {
 
       {showQuoteModal && selectedBooking && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-slate-950/60 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-charcoal/60 p-4"
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) {
               setShowQuoteModal(false);
@@ -2126,9 +2126,9 @@ export default function VenueDashboard() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="venue-quote-title"
-            className="my-auto w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl"
+            className="my-auto w-full max-w-lg overflow-hidden rounded-2xl bg-raised shadow-2xl"
           >
-            <div className="bg-gradient-to-r from-violet-800 to-indigo-700 px-6 py-5 text-white">
+            <div className="bg-gradient-to-r from-violet-800 to-indigo-700 px-6 py-5 text-cream">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-violet-200">
@@ -2152,7 +2152,7 @@ export default function VenueDashboard() {
                 <button
                   type="button"
                   onClick={() => setShowQuoteModal(false)}
-                  className="rounded-lg px-2 py-1 text-2xl leading-none text-white/80 hover:bg-white/10 hover:text-white"
+                  className="rounded-lg px-2 py-1 text-2xl leading-none text-cream/80 hover:bg-raised/10 hover:text-cream"
                   aria-label="Close quotation modal"
                 >
                   ×
@@ -2161,18 +2161,18 @@ export default function VenueDashboard() {
             </div>
 
             <form onSubmit={submitVenueQuote} className="space-y-5 p-6">
-              <div className="rounded-xl bg-slate-50 p-4">
-                <p className="text-sm text-slate-500">
+              <div className="rounded-xl bg-surface p-4">
+                <p className="text-sm text-mist">
                   Organizer
                 </p>
-                <p className="mt-1 font-semibold text-slate-900">
+                <p className="mt-1 font-semibold text-cream">
                   {selectedBooking.organizerName || "Organizer"}
                 </p>
 
-                <p className="mt-3 text-sm text-slate-500">
+                <p className="mt-3 text-sm text-mist">
                   Event date
                 </p>
-                <p className="mt-1 font-semibold text-slate-900">
+                <p className="mt-1 font-semibold text-cream">
                   {formatDate(
                     selectedBooking.eventDate ||
                       selectedBooking.date
@@ -2181,7 +2181,7 @@ export default function VenueDashboard() {
 
                 {getOrganizerCounterPrice(selectedBooking) && (
                   <>
-                    <p className="mt-3 text-sm text-slate-500">
+                    <p className="mt-3 text-sm text-mist">
                       Organizer's current offer
                     </p>
                     <p className="mt-1 font-bold text-violet-700">
@@ -2196,7 +2196,7 @@ export default function VenueDashboard() {
               <div>
                 <label
                   htmlFor="venueQuotePrice"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
+                  className="mb-2 block text-sm font-semibold text-mist"
                 >
                   {priceMode === "another"
                     ? "Your new proposed price (GH₵)"
@@ -2212,10 +2212,10 @@ export default function VenueDashboard() {
                   value={quotePrice}
                   onChange={(event) => setQuotePrice(event.target.value)}
                   placeholder="e.g. 2500"
-                  className="w-full rounded-xl border border-slate-200 px-4 py-3 text-lg font-semibold outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-100"
+                  className="w-full rounded-xl border border-line px-4 py-3 text-lg font-semibold outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-100"
                 />
 
-                <p className="mt-2 text-xs text-slate-500">
+                <p className="mt-2 text-xs text-mist">
                   Enter the price you are proposing for this booking.
                   The price becomes agreed only when the organizer
                   accepts it.
@@ -2225,7 +2225,7 @@ export default function VenueDashboard() {
               <div>
                 <label
                   htmlFor="venueQuoteNote"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
+                  className="mb-2 block text-sm font-semibold text-mist"
                 >
                   Message to organizer (optional)
                 </label>
@@ -2236,12 +2236,12 @@ export default function VenueDashboard() {
                   value={quoteNote}
                   onChange={(event) => setQuoteNote(event.target.value)}
                   placeholder="Add any details about your quotation..."
-                  className="w-full resize-y rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-100"
+                  className="w-full resize-y rounded-xl border border-line px-4 py-3 text-sm outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-100"
                 />
               </div>
 
               {feedback && (
-                <p className="rounded-xl bg-amber-50 p-3 text-sm text-amber-800">
+                <p className="rounded-xl bg-amber/10 p-3 text-sm text-amber-800">
                   {feedback}
                 </p>
               )}
@@ -2250,7 +2250,7 @@ export default function VenueDashboard() {
                 <button
                   type="button"
                   onClick={() => setShowQuoteModal(false)}
-                  className="flex-1 rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                  className="flex-1 rounded-xl border border-line px-4 py-3 text-sm font-semibold text-mist hover:bg-surface"
                 >
                   Cancel
                 </button>
@@ -2258,7 +2258,7 @@ export default function VenueDashboard() {
                 <button
                   type="submit"
                   disabled={saving}
-                  className="flex-1 rounded-xl bg-violet-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-violet-800 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="flex-1 rounded-xl bg-violet-700 px-4 py-3 text-sm font-semibold text-cream transition hover:bg-violet-800 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {saving
                     ? "Sending..."
@@ -2278,7 +2278,7 @@ export default function VenueDashboard() {
 
       {showDetailsModal && selectedBooking && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-slate-950/60 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-charcoal/60 p-4"
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) {
               setShowDetailsModal(false);
@@ -2289,9 +2289,9 @@ export default function VenueDashboard() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="venue-booking-details-title"
-            className="my-auto max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white shadow-2xl"
+            className="my-auto max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-raised shadow-2xl"
           >
-            <div className="sticky top-0 flex items-start justify-between gap-4 border-b border-slate-100 bg-white px-6 py-5">
+            <div className="sticky top-0 flex items-start justify-between gap-4 border-b border-line bg-raised px-6 py-5">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-violet-700">
                   Booking details
@@ -2299,12 +2299,12 @@ export default function VenueDashboard() {
 
                 <h2
                   id="venue-booking-details-title"
-                  className="mt-1 text-xl font-bold text-slate-900"
+                  className="mt-1 text-xl font-bold text-cream"
                 >
                   {selectedBooking.eventName || "Event booking"}
                 </h2>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-mist">
                   {selectedBooking.organizerName || "Organizer"}
                 </p>
               </div>
@@ -2312,7 +2312,7 @@ export default function VenueDashboard() {
               <button
                 type="button"
                 onClick={() => setShowDetailsModal(false)}
-                className="rounded-lg px-2 py-1 text-2xl text-slate-400 hover:bg-slate-100 hover:text-slate-800"
+                className="rounded-lg px-2 py-1 text-2xl text-fog hover:bg-surface hover:text-cream"
                 aria-label="Close booking details"
               >
                 ×
@@ -2329,7 +2329,7 @@ export default function VenueDashboard() {
                   {getStatusLabel(selectedBooking)}
                 </span>
 
-                <span className="text-xs text-slate-400">
+                <span className="text-xs text-fog">
                   Booking ID:{" "}
                   {String(
                     getId(selectedBooking) ??
@@ -2383,35 +2383,35 @@ export default function VenueDashboard() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-xl border border-slate-100 bg-slate-50 p-4"
+                    className="rounded-xl border border-line bg-surface p-4"
                   >
-                    <p className="text-xs font-medium text-slate-500">
+                    <p className="text-xs font-medium text-mist">
                       {item.label}
                     </p>
-                    <p className="mt-2 break-words text-sm font-semibold text-slate-900">
+                    <p className="mt-2 break-words text-sm font-semibold text-cream">
                       {item.value || "Not provided"}
                     </p>
                   </div>
                 ))}
               </div>
 
-              <div className="rounded-xl border border-slate-200 p-5">
-                <h3 className="font-bold text-slate-900">
+              <div className="rounded-xl border border-line p-5">
+                <h3 className="font-bold text-cream">
                   Price negotiation
                 </h3>
 
                 <div className="mt-4 space-y-3">
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-mist">
                       Starting price
                     </span>
-                    <span className="font-semibold text-slate-800">
+                    <span className="font-semibold text-cream">
                       {formatPrice(getStartingPrice(selectedBooking))}
                     </span>
                   </div>
 
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-mist">
                       Your quotation
                     </span>
                     <span className="font-semibold text-violet-700">
@@ -2420,18 +2420,18 @@ export default function VenueDashboard() {
                   </div>
 
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-mist">
                       Organizer's counter-offer
                     </span>
-                    <span className="font-semibold text-indigo-700">
+                    <span className="font-semibold text-gold">
                       {formatPrice(
                         getOrganizerCounterPrice(selectedBooking)
                       )}
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between gap-3 border-t border-slate-100 pt-3">
-                    <span className="text-sm font-semibold text-slate-700">
+                  <div className="flex items-center justify-between gap-3 border-t border-line pt-3">
+                    <span className="text-sm font-semibold text-mist">
                       Agreed price
                     </span>
                     <span className="text-lg font-extrabold text-emerald-700">
@@ -2458,17 +2458,17 @@ export default function VenueDashboard() {
                 )}
               </div>
 
-              <div className="rounded-xl border border-slate-200 p-5">
-                <h3 className="font-bold text-slate-900">
+              <div className="rounded-xl border border-line p-5">
+                <h3 className="font-bold text-cream">
                   Payment summary
                 </h3>
 
                 <div className="mt-4 space-y-3">
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-mist">
                       Payment status
                     </span>
-                    <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+                    <span className="rounded-full bg-surface px-3 py-1 text-xs font-semibold text-mist">
                       {String(
                         selectedBooking.paymentStatus || "unpaid"
                       ).replaceAll("_", " ")}
@@ -2476,19 +2476,19 @@ export default function VenueDashboard() {
                   </div>
 
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-mist">
                       Amount paid
                     </span>
-                    <span className="font-semibold text-slate-800">
+                    <span className="font-semibold text-cream">
                       {formatPrice(getAmountPaid(selectedBooking))}
                     </span>
                   </div>
 
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-mist">
                       Remaining balance
                     </span>
-                    <span className="font-semibold text-slate-800">
+                    <span className="font-semibold text-cream">
                       {formatPrice(
                         getRemainingBalance(selectedBooking)
                       )}
@@ -2514,14 +2514,14 @@ export default function VenueDashboard() {
                         onClick={() =>
                           recordPayment(selectedBooking, "full")
                         }
-                        className="rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700"
+                        className="rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-cream hover:bg-emerald-700"
                       >
                         Record full payment
                       </button>
                     </div>
                   )}
 
-                <p className="mt-4 text-xs leading-5 text-slate-400">
+                <p className="mt-4 text-xs leading-5 text-fog">
                   These controls update the local booking record only.
                   They do not collect money or verify a real transaction.
                 </p>
@@ -2538,7 +2538,7 @@ export default function VenueDashboard() {
                     onClick={() =>
                       acceptOrganizerCounter(selectedBooking)
                     }
-                    className="rounded-xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-white hover:bg-emerald-700"
+                    className="rounded-xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-cream hover:bg-emerald-700"
                   >
                     Accept counter-offer
                   </button>
@@ -2549,7 +2549,7 @@ export default function VenueDashboard() {
                       setShowDetailsModal(false);
                       openQuoteModal(selectedBooking, "another");
                     }}
-                    className="rounded-xl bg-violet-700 px-4 py-3 text-sm font-semibold text-white hover:bg-violet-800"
+                    className="rounded-xl bg-violet-700 px-4 py-3 text-sm font-semibold text-cream hover:bg-violet-800"
                   >
                     Make another offer
                   </button>
@@ -2567,11 +2567,11 @@ export default function VenueDashboard() {
               )}
             </div>
 
-            <div className="sticky bottom-0 border-t border-slate-100 bg-white px-6 py-4">
+            <div className="sticky bottom-0 border-t border-line bg-raised px-6 py-4">
               <button
                 type="button"
                 onClick={() => setShowDetailsModal(false)}
-                className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                className="w-full rounded-xl border border-line px-4 py-3 text-sm font-semibold text-mist hover:bg-surface"
               >
                 Close details
               </button>

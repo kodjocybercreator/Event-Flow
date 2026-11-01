@@ -28,21 +28,21 @@ export default function PaymentSuccess() {
   const formatted = formatMoney(paidAmount);
 
   return (
-    <div className="min-h-screen bg-[#f7f8fc] text-slate-900">
+    <div className="min-h-screen bg-ink text-cream">
       <Navbar />
       <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <Link to="/dashboard/organizer" className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 transition hover:text-amber-600">
+          <Link to="/dashboard/organizer" className="inline-flex items-center gap-2 text-sm font-semibold text-gold transition hover:text-amber">
             <span>←</span> Back to dashboard
           </Link>
           <div className="mt-6">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-600">
               Payment confirmed
             </p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+            <h1 className="mt-2 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
               Payment successful
             </h1>
-            <p className="mt-3 max-w-xl text-sm leading-6 text-slate-500 sm:text-base">
+            <p className="mt-3 max-w-xl text-sm leading-6 text-mist sm:text-base">
               Your booking payment has been confirmed. The provider has been
               notified and your event is secured.
             </p>
@@ -52,14 +52,14 @@ export default function PaymentSuccess() {
         <Card className="p-6 sm:p-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h2 className="text-lg font-bold text-slate-950">Booking summary</h2>
-              <p className="mt-1 text-sm text-slate-500">
+              <h2 className="text-lg font-bold text-cream">Booking summary</h2>
+              <p className="mt-1 text-sm text-mist">
                 {booking?.vendorName || 'Event provider'} —{' '}
                 {booking?.serviceName || booking?.eventType || 'Event service'}
               </p>
             </div>
             <div className="text-right sm:text-left">
-              <p className="text-xs text-slate-400">Amount paid</p>
+              <p className="text-xs text-fog">Amount paid</p>
               <p className="text-xl font-bold text-emerald-600">
                 {formatted || 'GH₵0'}
               </p>
@@ -67,14 +67,14 @@ export default function PaymentSuccess() {
           </div>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            <div className="rounded-2xl border border-slate-200 bg-white p-4">
-              <p className="text-xs font-bold uppercase tracking-wide text-slate-400">Booking reference</p>
-              <p className="mt-1 font-mono text-sm font-bold text-slate-800">
+            <div className="rounded-2xl border border-line bg-raised p-4">
+              <p className="text-xs font-bold uppercase tracking-wide text-fog">Booking reference</p>
+              <p className="mt-1 font-mono text-sm font-bold text-cream">
                 {booking?.id || '—'}
               </p>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-4">
-              <p className="text-xs font-bold uppercase tracking-wide text-slate-400">Payment status</p>
+            <div className="rounded-2xl border border-line bg-raised p-4">
+              <p className="text-xs font-bold uppercase tracking-wide text-fog">Payment status</p>
               <p className="mt-1 flex items-center gap-1 text-sm font-bold text-emerald-600">
                 <span className="h-2 w-2 rounded-full bg-emerald-500" /> Paid
               </p>
@@ -82,10 +82,10 @@ export default function PaymentSuccess() {
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-            <Link to="/dashboard/organizer" className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-indigo-700">
+            <Link to="/dashboard/organizer" className="inline-flex items-center justify-center rounded-xl bg-gold px-7 py-3.5 text-sm font-bold text-cream transition hover:bg-gold-dim">
               View my dashboard
             </Link>
-            <Link to="/discover" className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-7 py-3.5 text-sm font-bold text-slate-700 transition hover:bg-slate-50">
+            <Link to="/discover" className="inline-flex items-center justify-center rounded-xl border border-line bg-raised px-7 py-3.5 text-sm font-bold text-mist transition hover:bg-surface">
               Continue exploring
             </Link>
           </div>

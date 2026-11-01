@@ -343,7 +343,7 @@ function statusClasses(booking) {
     status === "cancelled" ||
     status === "quotation_rejected"
   ) {
-    return "bg-red-50 text-red-700 border-red-200";
+    return "bg-rose/10 text-rose border-rose/20";
   }
 
   if (
@@ -351,14 +351,14 @@ function statusClasses(booking) {
     status === "counter_offer" ||
     status === "countered"
   ) {
-    return "bg-amber-50 text-amber-700 border-amber-200";
+    return "bg-amber/10 text-amber border-amber/20";
   }
 
   if (status === "vendor_counter") {
     return "bg-violet-50 text-violet-700 border-violet-200";
   }
 
-  return "bg-indigo-50 text-indigo-700 border-indigo-200";
+  return "bg-gold/10 text-gold border-gold/30";
 }
 
 function paymentLabel(booking) {
@@ -383,10 +383,10 @@ function paymentClasses(booking) {
   }
 
   if (status === "deposit_paid") {
-    return "bg-blue-50 text-blue-700 border-blue-200";
+    return "bg-gold/10 text-gold border-blue-200";
   }
 
-  return "bg-gray-100 text-gray-600 border-gray-200";
+  return "bg-surface text-mist border-line";
 }
 
 function getBookingVendorEmail(booking) {
@@ -841,28 +841,28 @@ function StatCard({
 }) {
   const accentClasses = {
     indigo:
-      "bg-indigo-50 text-indigo-600",
+      "bg-gold/10 text-gold",
     emerald:
       "bg-emerald-50 text-emerald-600",
     amber:
-      "bg-amber-50 text-amber-600",
+      "bg-amber/10 text-amber",
     violet:
       "bg-violet-50 text-violet-600",
   };
 
   return (
-    <div className="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md">
+    <div className="group rounded-2xl border border-line bg-raised p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-line-bright hover:shadow-md">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
+          <p className="text-xs font-semibold uppercase tracking-wide text-fog">
             {label}
           </p>
 
-          <p className="mt-2 text-2xl font-bold tracking-tight text-gray-950">
+          <p className="mt-2 text-2xl font-bold tracking-tight text-cream">
             {value}
           </p>
 
-          <p className="mt-1 text-xs leading-5 text-gray-400">
+          <p className="mt-1 text-xs leading-5 text-fog">
             {description}
           </p>
         </div>
@@ -884,12 +884,12 @@ function DetailItem({
   value,
 }) {
   return (
-    <div className="rounded-xl border border-gray-100 bg-gray-50/70 p-3.5">
-      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-gray-400">
+    <div className="rounded-xl border border-line bg-surface/70 p-3.5">
+      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-fog">
         {label}
       </p>
 
-      <p className="mt-1.5 break-words text-sm font-semibold text-gray-800">
+      <p className="mt-1.5 break-words text-sm font-semibold text-cream">
         {value || "—"}
       </p>
     </div>
@@ -1675,26 +1675,26 @@ export default function VendorBookings() {
 
   if (!user) {
     return (
-      <div className="min-h-screen bg-[#f7f8fc]">
+      <div className="min-h-screen bg-ink">
         <Navbar />
 
         <main className="mx-auto max-w-3xl px-5 py-20 text-center">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-50 text-2xl">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gold/10 text-2xl">
             🔐
           </div>
 
-          <h1 className="mt-5 text-3xl font-bold tracking-tight text-gray-950">
+          <h1 className="mt-5 text-3xl font-bold tracking-tight text-cream">
             Vendor account required
           </h1>
 
-          <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-gray-500">
+          <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-mist">
             Please sign in to access your
             booking workspace.
           </p>
 
           <Link
             to="/login"
-            className="mt-7 inline-flex rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700"
+            className="mt-7 inline-flex rounded-xl bg-gold px-6 py-3 text-sm font-semibold text-cream shadow-sm transition hover:bg-gold-dim"
           >
             Sign in
           </Link>
@@ -1704,27 +1704,27 @@ export default function VendorBookings() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f7f8fc] text-gray-900">
+    <div className="min-h-screen bg-ink text-cream">
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
 
         {/* PAGE HEADER */}
 
-        <section className="relative overflow-hidden rounded-3xl bg-gray-950 px-5 py-7 text-white shadow-sm sm:px-7 sm:py-8">
-          <div className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-indigo-600/20 blur-3xl" />
+        <section className="relative overflow-hidden rounded-3xl bg-ink px-5 py-7 text-cream shadow-sm sm:px-7 sm:py-8">
+          <div className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-gold/20 blur-3xl" />
 
           <div className="absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-violet-600/10 blur-3xl" />
 
           <div className="relative flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold text-indigo-200">
+                <span className="rounded-full border border-line bg-raised/10 px-3 py-1 text-xs font-semibold text-mist">
                   Vendor workspace
                 </span>
 
                 {unreadNotifications > 0 && (
-                  <span className="rounded-full bg-indigo-500 px-3 py-1 text-xs font-semibold text-white">
+                  <span className="rounded-full bg-gold px-3 py-1 text-xs font-semibold text-cream">
                     {unreadNotifications} new
                   </span>
                 )}
@@ -1734,7 +1734,7 @@ export default function VendorBookings() {
                 Booking management
               </h1>
 
-              <p className="mt-3 max-w-xl text-sm leading-6 text-gray-300 sm:text-base">
+              <p className="mt-3 max-w-xl text-sm leading-6 text-mist sm:text-base">
                 Manage organizer requests, quotations,
                 negotiations, confirmed bookings and
                 payment activity from one professional
@@ -1744,7 +1744,7 @@ export default function VendorBookings() {
 
             <Link
               to="/dashboard/vendor"
-              className="inline-flex w-fit items-center rounded-xl border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/15"
+              className="inline-flex w-fit items-center rounded-xl border border-white/15 bg-raised/10 px-4 py-2.5 text-sm font-semibold text-cream transition hover:bg-raised/15"
             >
               ← Dashboard
             </Link>
@@ -1789,15 +1789,15 @@ export default function VendorBookings() {
 
         {/* SEARCH / FILTER */}
 
-        <section className="mt-6 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+        <section className="mt-6 rounded-2xl border border-line bg-raised p-4 shadow-sm">
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <h2 className="text-sm font-bold text-gray-950">
+                <h2 className="text-sm font-bold text-cream">
                   Your bookings
                 </h2>
 
-                <p className="mt-1 text-xs text-gray-400">
+                <p className="mt-1 text-xs text-fog">
                   {filteredBookings.length}{" "}
                   {filteredBookings.length === 1
                     ? "booking"
@@ -1807,7 +1807,7 @@ export default function VendorBookings() {
               </div>
 
               <div className="relative w-full sm:max-w-sm">
-                <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">
+                <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-fog">
                   ⌕
                 </span>
 
@@ -1820,7 +1820,7 @@ export default function VendorBookings() {
                     )
                   }
                   placeholder="Search bookings..."
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-2.5 pl-9 pr-4 text-sm outline-none transition focus:border-indigo-400 focus:bg-white focus:ring-4 focus:ring-indigo-50"
+                  className="w-full rounded-xl border border-line bg-surface py-2.5 pl-9 pr-4 text-sm outline-none transition focus:border-gold/50 focus:bg-raised focus:ring-4 focus:ring-gold/20"
                 />
               </div>
             </div>
@@ -1886,8 +1886,8 @@ export default function VendorBookings() {
                     }
                     className={`inline-flex shrink-0 items-center gap-2 rounded-xl px-3.5 py-2 text-sm font-semibold transition ${
                       activeTab === value
-                        ? "bg-gray-950 text-white shadow-sm"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                        ? "bg-ink text-cream shadow-sm"
+                        : "bg-surface text-mist hover:bg-elevated"
                     }`}
                   >
                     {label}
@@ -1895,8 +1895,8 @@ export default function VendorBookings() {
                     <span
                       className={`rounded-full px-1.5 py-0.5 text-[10px] ${
                         activeTab === value
-                          ? "bg-white/15 text-white"
-                          : "bg-white text-gray-500"
+                          ? "bg-raised/15 text-cream"
+                          : "bg-raised text-mist"
                       }`}
                     >
                       {count}
@@ -1916,16 +1916,16 @@ export default function VendorBookings() {
 
           <section className="min-w-0 space-y-4">
             {filteredBookings.length === 0 ? (
-              <div className="rounded-2xl border border-dashed border-gray-300 bg-white px-6 py-16 text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-100 text-2xl">
+              <div className="rounded-2xl border border-dashed border-line-bright bg-raised px-6 py-16 text-center">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-surface text-2xl">
                   📋
                 </div>
 
-                <h2 className="mt-5 text-lg font-bold text-gray-950">
+                <h2 className="mt-5 text-lg font-bold text-cream">
                   No bookings found
                 </h2>
 
-                <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-gray-500">
+                <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-mist">
                   {search
                     ? "Try a different search term or clear the current search."
                     : "Booking requests from organizers will appear here when they select one of your services."}
@@ -1937,7 +1937,7 @@ export default function VendorBookings() {
                     onClick={() =>
                       setSearch("")
                     }
-                    className="mt-5 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700"
+                    className="mt-5 rounded-xl bg-gold px-5 py-2.5 text-sm font-semibold text-cream hover:bg-gold-dim"
                   >
                     Clear search
                   </button>
@@ -2009,12 +2009,12 @@ export default function VendorBookings() {
                       key={
                         booking.id
                       }
-                      className={`overflow-hidden rounded-2xl border bg-white shadow-sm transition ${
+                      className={`overflow-hidden rounded-2xl border bg-raised shadow-sm transition ${
                         waitingOnCounter
-                          ? "border-amber-200"
+                          ? "border-amber/20"
                           : locked
                           ? "border-emerald-200"
-                          : "border-gray-200"
+                          : "border-line"
                       }`}
                     >
                       {/* CARD TOP */}
@@ -2040,20 +2040,20 @@ export default function VendorBookings() {
                               )}
                             </div>
 
-                            <h2 className="mt-3 truncate text-xl font-bold tracking-tight text-gray-950 sm:text-2xl">
+                            <h2 className="mt-3 truncate text-xl font-bold tracking-tight text-cream sm:text-2xl">
                               {getEventName(
                                 booking
                               )}
                             </h2>
 
-                            <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-500">
+                            <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-mist">
                               <span>
                                 {getServiceName(
                                   booking
                                 )}
                               </span>
 
-                              <span className="text-gray-300">
+                              <span className="text-mist">
                                 •
                               </span>
 
@@ -2066,15 +2066,15 @@ export default function VendorBookings() {
                           </div>
 
                           <div className="shrink-0 sm:text-right">
-                            <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-gray-400">
+                            <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-fog">
                               Booking reference
                             </p>
 
-                            <p className="mt-1 font-mono text-xs font-semibold text-gray-700">
+                            <p className="mt-1 font-mono text-xs font-semibold text-mist">
                               {booking.id}
                             </p>
 
-                            <p className="mt-1 text-[11px] text-gray-400">
+                            <p className="mt-1 text-[11px] text-fog">
                               {formatDate(
                                 booking.createdAt
                               )}
@@ -2117,14 +2117,14 @@ export default function VendorBookings() {
 
                         {/* FINANCIAL SUMMARY */}
 
-                        <div className="mt-5 overflow-hidden rounded-2xl border border-gray-200">
+                        <div className="mt-5 overflow-hidden rounded-2xl border border-line">
                           <div className="grid divide-y divide-gray-200 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
                             <div className="p-4">
-                              <p className="text-[11px] font-bold uppercase tracking-wide text-gray-400">
+                              <p className="text-[11px] font-bold uppercase tracking-wide text-fog">
                                 Starting price
                               </p>
 
-                              <p className="mt-1.5 text-lg font-bold text-gray-950">
+                              <p className="mt-1.5 text-lg font-bold text-cream">
                                 {money(
                                   getBasePrice(
                                     booking
@@ -2132,17 +2132,17 @@ export default function VendorBookings() {
                                 )}
                               </p>
 
-                              <p className="mt-1 text-xs text-gray-400">
+                              <p className="mt-1 text-xs text-fog">
                                 Starting from
                               </p>
                             </div>
 
                             <div className="p-4">
-                              <p className="text-[11px] font-bold uppercase tracking-wide text-gray-400">
+                              <p className="text-[11px] font-bold uppercase tracking-wide text-fog">
                                 Current offer
                               </p>
 
-                              <p className="mt-1.5 text-lg font-bold text-indigo-600">
+                              <p className="mt-1.5 text-lg font-bold text-gold">
                                 {locked
                                   ? money(
                                       agreed
@@ -2162,7 +2162,7 @@ export default function VendorBookings() {
                                   : "Not quoted"}
                               </p>
 
-                              <p className="mt-1 text-xs text-gray-400">
+                              <p className="mt-1 text-xs text-fog">
                                 {locked
                                   ? "Agreed amount"
                                   : "Current negotiation"}
@@ -2170,7 +2170,7 @@ export default function VendorBookings() {
                             </div>
 
                             <div className="p-4">
-                              <p className="text-[11px] font-bold uppercase tracking-wide text-gray-400">
+                              <p className="text-[11px] font-bold uppercase tracking-wide text-fog">
                                 Payment
                               </p>
 
@@ -2185,7 +2185,7 @@ export default function VendorBookings() {
                               </span>
 
                               {locked && (
-                                <p className="mt-1 text-xs text-gray-400">
+                                <p className="mt-1 text-xs text-fog">
                                   Balance:{" "}
                                   {money(
                                     balance
@@ -2199,9 +2199,9 @@ export default function VendorBookings() {
                         {/* ORGANIZER COUNTER */}
 
                         {waitingOnCounter && (
-                          <div className="mt-5 overflow-hidden rounded-2xl border border-amber-200 bg-amber-50">
-                            <div className="border-b border-amber-200 px-4 py-3">
-                              <p className="text-xs font-bold uppercase tracking-[0.1em] text-amber-700">
+                          <div className="mt-5 overflow-hidden rounded-2xl border border-amber/20 bg-amber/10">
+                            <div className="border-b border-amber/20 px-4 py-3">
+                              <p className="text-xs font-bold uppercase tracking-[0.1em] text-amber">
                                 Action required
                               </p>
                             </div>
@@ -2209,17 +2209,17 @@ export default function VendorBookings() {
                             <div className="p-4">
                               <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                                 <div>
-                                  <p className="text-sm font-semibold text-gray-700">
+                                  <p className="text-sm font-semibold text-mist">
                                     Organizer's counter-offer
                                   </p>
 
-                                  <p className="mt-1 text-2xl font-bold tracking-tight text-gray-950">
+                                  <p className="mt-1 text-2xl font-bold tracking-tight text-cream">
                                     {money(
                                       organizerCounter
                                     )}
                                   </p>
 
-                                  <p className="mt-1 max-w-lg text-sm leading-5 text-gray-500">
+                                  <p className="mt-1 max-w-lg text-sm leading-5 text-mist">
                                     {getOrganizerName(
                                       booking
                                     )}{" "}
@@ -2244,7 +2244,7 @@ export default function VendorBookings() {
                                         booking
                                       )
                                     }
-                                    className="rounded-xl bg-gray-950 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="rounded-xl bg-ink px-4 py-2.5 text-sm font-semibold text-cream transition hover:bg-raised disabled:cursor-not-allowed disabled:opacity-50"
                                   >
                                     Accept
                                   </button>
@@ -2265,7 +2265,7 @@ export default function VendorBookings() {
                                         ""
                                       );
                                     }}
-                                    className="rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-700 transition hover:border-indigo-300 hover:text-indigo-600 disabled:opacity-50"
+                                    className="rounded-xl border border-line-bright bg-raised px-4 py-2.5 text-sm font-semibold text-mist transition hover:border-gold/40 hover:text-gold disabled:opacity-50"
                                   >
                                     Counter
                                   </button>
@@ -2283,7 +2283,7 @@ export default function VendorBookings() {
                                         booking
                                       )
                                     }
-                                    className="rounded-xl border border-red-200 bg-white px-4 py-2.5 text-sm font-semibold text-red-600 transition hover:bg-red-50 disabled:opacity-50"
+                                    className="rounded-xl border border-rose/20 bg-raised px-4 py-2.5 text-sm font-semibold text-rose transition hover:bg-rose/10 disabled:opacity-50"
                                   >
                                     Decline
                                   </button>
@@ -2309,13 +2309,13 @@ export default function VendorBookings() {
                                   </p>
                                 </div>
 
-                                <p className="mt-2 text-2xl font-bold tracking-tight text-gray-950">
+                                <p className="mt-2 text-2xl font-bold tracking-tight text-cream">
                                   {money(
                                     agreed
                                   )}
                                 </p>
 
-                                <p className="mt-1 text-sm leading-5 text-gray-600">
+                                <p className="mt-1 text-sm leading-5 text-mist">
                                   The agreed price is
                                   locked. Payment
                                   activity is shown
@@ -2324,8 +2324,8 @@ export default function VendorBookings() {
                               </div>
 
                               <div className="grid grid-cols-2 gap-3 lg:min-w-[280px]">
-                                <div className="rounded-xl border border-emerald-100 bg-white p-3.5">
-                                  <p className="text-xs text-gray-400">
+                                <div className="rounded-xl border border-emerald-100 bg-raised p-3.5">
+                                  <p className="text-xs text-fog">
                                     Received
                                   </p>
 
@@ -2336,12 +2336,12 @@ export default function VendorBookings() {
                                   </p>
                                 </div>
 
-                                <div className="rounded-xl border border-emerald-100 bg-white p-3.5">
-                                  <p className="text-xs text-gray-400">
+                                <div className="rounded-xl border border-emerald-100 bg-raised p-3.5">
+                                  <p className="text-xs text-fog">
                                     Balance
                                   </p>
 
-                                  <p className="mt-1 font-bold text-gray-950">
+                                  <p className="mt-1 font-bold text-cream">
                                     {money(
                                       balance
                                     )}
@@ -2367,7 +2367,7 @@ export default function VendorBookings() {
                                     ""
                                   );
                                 }}
-                                className="inline-flex items-center rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700"
+                                className="inline-flex items-center rounded-xl bg-gold px-4 py-2.5 text-sm font-semibold text-cream shadow-sm transition hover:bg-gold-dim"
                               >
                                 Send quotation
                                 <span className="ml-2">
@@ -2388,7 +2388,7 @@ export default function VendorBookings() {
                                     booking
                                   )
                                 }
-                                className="rounded-xl border border-red-200 bg-white px-4 py-2.5 text-sm font-semibold text-red-600 transition hover:bg-red-50 disabled:opacity-50"
+                                className="rounded-xl border border-rose/20 bg-raised px-4 py-2.5 text-sm font-semibold text-rose transition hover:bg-rose/10 disabled:opacity-50"
                               >
                                 Decline
                               </button>
@@ -2407,14 +2407,14 @@ export default function VendorBookings() {
                                   ""
                                 );
                               }}
-                              className="rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-700 transition hover:border-indigo-300 hover:text-indigo-600"
+                              className="rounded-xl border border-line-bright bg-raised px-4 py-2.5 text-sm font-semibold text-mist transition hover:border-gold/40 hover:text-gold"
                             >
                               Adjust quotation
                             </button>
                           )}
 
                           {locked && (
-                            <span className="inline-flex items-center gap-2 rounded-xl bg-gray-100 px-4 py-2.5 text-sm font-semibold text-gray-500">
+                            <span className="inline-flex items-center gap-2 rounded-xl bg-surface px-4 py-2.5 text-sm font-semibold text-mist">
                               <span>🔒</span>
                               Agreement locked
                             </span>
@@ -2429,7 +2429,7 @@ export default function VendorBookings() {
                                   : booking.id
                               )
                             }
-                            className="rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm font-semibold text-gray-600 transition hover:border-gray-300 hover:text-gray-950"
+                            className="rounded-xl border border-line bg-raised px-4 py-2.5 text-sm font-semibold text-mist transition hover:border-line-bright hover:text-cream"
                           >
                             {expanded
                               ? "Hide details"
@@ -2440,18 +2440,18 @@ export default function VendorBookings() {
                         {/* EXPANDED DETAILS */}
 
                         {expanded && (
-                          <div className="mt-6 border-t border-gray-200 pt-6">
+                          <div className="mt-6 border-t border-line pt-6">
                             <div className="grid gap-6 lg:grid-cols-2">
 
                               {/* EVENT INFORMATION */}
 
                               <div>
                                 <div className="flex items-center gap-2">
-                                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-sm text-indigo-600">
+                                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gold/10 text-sm text-gold">
                                     📅
                                   </div>
 
-                                  <h3 className="text-sm font-bold text-gray-950">
+                                  <h3 className="text-sm font-bold text-cream">
                                     Event information
                                   </h3>
                                 </div>
@@ -2511,13 +2511,13 @@ export default function VendorBookings() {
                                     👤
                                   </div>
 
-                                  <h3 className="text-sm font-bold text-gray-950">
+                                  <h3 className="text-sm font-bold text-cream">
                                     Organizer
                                   </h3>
                                 </div>
 
-                                <div className="mt-4 rounded-2xl border border-gray-200 bg-gray-50 p-4">
-                                  <p className="font-semibold text-gray-950">
+                                <div className="mt-4 rounded-2xl border border-line bg-surface p-4">
+                                  <p className="font-semibold text-cream">
                                     {getOrganizerName(
                                       booking
                                     )}
@@ -2526,7 +2526,7 @@ export default function VendorBookings() {
                                   {getOrganizerEmail(
                                     booking
                                   ) && (
-                                    <p className="mt-1 break-all text-sm text-gray-500">
+                                    <p className="mt-1 break-all text-sm text-mist">
                                       {getOrganizerEmail(
                                         booking
                                       )}
@@ -2534,7 +2534,7 @@ export default function VendorBookings() {
                                   )}
 
                                   {booking.organizerPhone && (
-                                    <p className="mt-1 text-sm text-gray-500">
+                                    <p className="mt-1 text-sm text-mist">
                                       {booking.organizerPhone}
                                     </p>
                                   )}
@@ -2542,11 +2542,11 @@ export default function VendorBookings() {
 
                                 {booking.message && (
                                   <div className="mt-4">
-                                    <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-gray-400">
+                                    <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-fog">
                                       Organizer message
                                     </p>
 
-                                    <p className="mt-2 rounded-2xl border border-gray-200 bg-white p-4 text-sm leading-6 text-gray-600">
+                                    <p className="mt-2 rounded-2xl border border-line bg-raised p-4 text-sm leading-6 text-mist">
                                       {booking.message}
                                     </p>
                                   </div>
@@ -2558,16 +2558,16 @@ export default function VendorBookings() {
 
                             <div className="mt-7">
                               <div className="flex items-center gap-2">
-                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-100 text-sm text-gray-600">
+                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface text-sm text-mist">
                                   ₵
                                 </div>
 
                                 <div>
-                                  <h3 className="text-sm font-bold text-gray-950">
+                                  <h3 className="text-sm font-bold text-cream">
                                     Negotiation history
                                   </h3>
 
-                                  <p className="text-xs text-gray-400">
+                                  <p className="text-xs text-fog">
                                     Price discussion for
                                     this booking
                                   </p>
@@ -2575,20 +2575,20 @@ export default function VendorBookings() {
                               </div>
 
                               <div className="mt-4 grid gap-3 md:grid-cols-2">
-                                <div className="rounded-2xl border border-gray-200 bg-white p-4">
+                                <div className="rounded-2xl border border-line bg-raised p-4">
                                   <div className="flex items-center justify-between gap-4">
                                     <div>
-                                      <p className="text-sm font-semibold text-gray-900">
+                                      <p className="text-sm font-semibold text-cream">
                                         Starting price
                                       </p>
 
-                                      <p className="mt-1 text-xs text-gray-400">
+                                      <p className="mt-1 text-xs text-fog">
                                         Original service
                                         listing price
                                       </p>
                                     </div>
 
-                                    <p className="font-bold text-gray-900">
+                                    <p className="font-bold text-cream">
                                       {money(
                                         getBasePrice(
                                           booking
@@ -2599,19 +2599,19 @@ export default function VendorBookings() {
                                 </div>
 
                                 {vendorQuote > 0 && (
-                                  <div className="rounded-2xl border border-indigo-100 bg-indigo-50/50 p-4">
+                                  <div className="rounded-2xl border border-gold/20 bg-gold/10/50 p-4">
                                     <div className="flex items-center justify-between gap-4">
                                       <div>
-                                        <p className="text-sm font-semibold text-indigo-900">
+                                        <p className="text-sm font-semibold text-charcoal">
                                           Your quotation
                                         </p>
 
-                                        <p className="mt-1 text-xs text-indigo-500">
+                                        <p className="mt-1 text-xs text-gold">
                                           Sent to organizer
                                         </p>
                                       </div>
 
-                                      <p className="font-bold text-indigo-700">
+                                      <p className="font-bold text-gold">
                                         {money(
                                           vendorQuote
                                         )}
@@ -2621,20 +2621,20 @@ export default function VendorBookings() {
                                 )}
 
                                 {organizerCounter > 0 && (
-                                  <div className="rounded-2xl border border-amber-100 bg-amber-50/60 p-4">
+                                  <div className="rounded-2xl border border-amber/20 bg-amber/10/60 p-4">
                                     <div className="flex items-center justify-between gap-4">
                                       <div>
                                         <p className="text-sm font-semibold text-amber-900">
                                           Organizer counter
                                         </p>
 
-                                        <p className="mt-1 text-xs text-amber-600">
+                                        <p className="mt-1 text-xs text-amber">
                                           Organizer's proposed
                                           amount
                                         </p>
                                       </div>
 
-                                      <p className="font-bold text-amber-700">
+                                      <p className="font-bold text-amber">
                                         {money(
                                           organizerCounter
                                         )}
@@ -2689,10 +2689,10 @@ export default function VendorBookings() {
                               </div>
                             </div>
 
-                            <div className="mt-6 rounded-xl bg-gray-50 px-4 py-3">
-                              <p className="text-xs text-gray-400">
+                            <div className="mt-6 rounded-xl bg-surface px-4 py-3">
+                              <p className="text-xs text-fog">
                                 Last updated{" "}
-                                <span className="font-medium text-gray-500">
+                                <span className="font-medium text-mist">
                                   {formatDateTime(
                                     booking.updatedAt ||
                                       booking.createdAt
@@ -2716,21 +2716,21 @@ export default function VendorBookings() {
 
             {/* NOTIFICATIONS */}
 
-            <section className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
-              <div className="flex items-center justify-between border-b border-gray-100 p-5">
+            <section className="overflow-hidden rounded-2xl border border-line bg-raised shadow-sm">
+              <div className="flex items-center justify-between border-b border-line p-5">
                 <div>
-                  <h2 className="font-bold text-gray-950">
+                  <h2 className="font-bold text-cream">
                     Notifications
                   </h2>
 
-                  <p className="mt-1 text-xs text-gray-400">
+                  <p className="mt-1 text-xs text-fog">
                     Recent booking activity
                   </p>
                 </div>
 
                 {unreadNotifications >
                   0 && (
-                  <span className="rounded-full bg-indigo-600 px-2.5 py-1 text-xs font-bold text-white">
+                  <span className="rounded-full bg-gold px-2.5 py-1 text-xs font-bold text-cream">
                     {unreadNotifications}
                   </span>
                 )}
@@ -2740,15 +2740,15 @@ export default function VendorBookings() {
                 {notifications.length ===
                 0 ? (
                   <div className="p-6 text-center">
-                    <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-gray-100">
+                    <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-surface">
                       🔔
                     </div>
 
-                    <p className="mt-3 text-sm font-semibold text-gray-700">
+                    <p className="mt-3 text-sm font-semibold text-mist">
                       No notifications yet
                     </p>
 
-                    <p className="mt-1 text-xs leading-5 text-gray-400">
+                    <p className="mt-1 text-xs leading-5 text-fog">
                       Updates about your bookings
                       will appear here.
                     </p>
@@ -2778,35 +2778,35 @@ export default function VendorBookings() {
                               );
                             }
                           }}
-                          className={`w-full border-b border-gray-100 p-4 text-left transition hover:bg-gray-50 ${
+                          className={`w-full border-b border-line p-4 text-left transition hover:bg-surface ${
                             notification.read
-                              ? "bg-white"
-                              : "bg-indigo-50/40"
+                              ? "bg-raised"
+                              : "bg-gold/10/40"
                           }`}
                         >
                           <div className="flex gap-3">
                             <div
                               className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${
                                 notification.read
-                                  ? "bg-gray-200"
-                                  : "bg-indigo-600"
+                                  ? "bg-elevated"
+                                  : "bg-gold"
                               }`}
                             />
 
                             <div className="min-w-0">
-                              <p className="text-sm font-semibold text-gray-900">
+                              <p className="text-sm font-semibold text-cream">
                                 {
                                   notification.title
                                 }
                               </p>
 
-                              <p className="mt-1 text-xs leading-5 text-gray-500">
+                              <p className="mt-1 text-xs leading-5 text-mist">
                                 {
                                   notification.message
                                 }
                               </p>
 
-                              <p className="mt-2 text-[10px] text-gray-400">
+                              <p className="mt-2 text-[10px] text-fog">
                                 {formatDateTime(
                                   notification.createdAt
                                 )}
@@ -2821,13 +2821,13 @@ export default function VendorBookings() {
 
               {notifications.length >
                 0 && (
-                <div className="border-t border-gray-100 p-4">
+                <div className="border-t border-line p-4">
                   <button
                     type="button"
                     onClick={
                       markAllNotificationsRead
                     }
-                    className="text-sm font-semibold text-indigo-600 transition hover:text-indigo-700"
+                    className="text-sm font-semibold text-gold transition hover:text-gold-dim"
                   >
                     Mark all as read
                   </button>
@@ -2837,18 +2837,18 @@ export default function VendorBookings() {
 
             {/* PAYMENT SUMMARY */}
 
-            <section className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+            <section className="rounded-2xl border border-line bg-raised p-5 shadow-sm">
               <div className="flex items-center gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
                   ₵
                 </div>
 
                 <div>
-                  <h2 className="font-bold text-gray-950">
+                  <h2 className="font-bold text-cream">
                     Payment activity
                   </h2>
 
-                  <p className="mt-0.5 text-xs text-gray-400">
+                  <p className="mt-0.5 text-xs text-fog">
                     Booking payment overview
                   </p>
                 </div>
@@ -2856,7 +2856,7 @@ export default function VendorBookings() {
 
               <div className="mt-5 space-y-4">
                 <div className="flex items-center justify-between gap-4">
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-mist">
                     Received
                   </span>
 
@@ -2868,11 +2868,11 @@ export default function VendorBookings() {
                 </div>
 
                 <div className="flex items-center justify-between gap-4">
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-mist">
                     Outstanding
                   </span>
 
-                  <span className="font-bold text-gray-950">
+                  <span className="font-bold text-cream">
                     {money(
                       stats.outstanding
                     )}
@@ -2880,17 +2880,17 @@ export default function VendorBookings() {
                 </div>
 
                 <div className="flex items-center justify-between gap-4">
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-mist">
                     Fully paid
                   </span>
 
-                  <span className="font-bold text-gray-950">
+                  <span className="font-bold text-cream">
                     {stats.paid}
                   </span>
                 </div>
 
-                <div className="border-t border-gray-100 pt-4">
-                  <p className="text-[11px] leading-5 text-gray-400">
+                <div className="border-t border-line pt-4">
+                  <p className="text-[11px] leading-5 text-fog">
                     Payment amounts shown here are
                     based on recorded organizer payment
                     activity. EventFlow's current payment
@@ -2903,13 +2903,13 @@ export default function VendorBookings() {
 
             {/* QUICK ACTIONS */}
 
-            <section className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+            <section className="rounded-2xl border border-line bg-raised p-5 shadow-sm">
               <div>
-                <h2 className="font-bold text-gray-950">
+                <h2 className="font-bold text-cream">
                   Quick actions
                 </h2>
 
-                <p className="mt-1 text-xs text-gray-400">
+                <p className="mt-1 text-xs text-fog">
                   Manage your vendor workspace
                 </p>
               </div>
@@ -2917,7 +2917,7 @@ export default function VendorBookings() {
               <div className="mt-4 space-y-2">
                 <Link
                   to="/dashboard/vendor"
-                  className="flex items-center justify-between rounded-xl bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-indigo-50 hover:text-indigo-700"
+                  className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 text-sm font-semibold text-mist transition hover:bg-gold/10 hover:text-gold-dim"
                 >
                   <span>
                     Vendor dashboard
@@ -2928,7 +2928,7 @@ export default function VendorBookings() {
 
                 <Link
                   to="/dashboard/vendor/services"
-                  className="flex items-center justify-between rounded-xl bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-indigo-50 hover:text-indigo-700"
+                  className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 text-sm font-semibold text-mist transition hover:bg-gold/10 hover:text-gold-dim"
                 >
                   <span>
                     Manage services
@@ -2939,7 +2939,7 @@ export default function VendorBookings() {
 
                 <Link
                   to="/vendor/profile"
-                  className="flex items-center justify-between rounded-xl bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-indigo-50 hover:text-indigo-700"
+                  className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 text-sm font-semibold text-mist transition hover:bg-gold/10 hover:text-gold-dim"
                 >
                   <span>
                     View profile
@@ -2957,23 +2957,23 @@ export default function VendorBookings() {
       {/* QUOTATION MODAL */}
 
       {quoteModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-950/60 px-4 py-6 backdrop-blur-sm">
-          <div className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl sm:p-7">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 px-4 py-6 backdrop-blur-xl">
+          <div className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-3xl bg-raised p-6 shadow-2xl sm:p-7">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gold/10 text-gold">
                   ₵
                 </div>
 
-                <p className="mt-4 text-xs font-bold uppercase tracking-[0.12em] text-indigo-600">
+                <p className="mt-4 text-xs font-bold uppercase tracking-[0.12em] text-gold">
                   New quotation
                 </p>
 
-                <h2 className="mt-1 text-2xl font-bold tracking-tight text-gray-950">
+                <h2 className="mt-1 text-2xl font-bold tracking-tight text-cream">
                   Send your price
                 </h2>
 
-                <p className="mt-2 text-sm leading-6 text-gray-500">
+                <p className="mt-2 text-sm leading-6 text-mist">
                   Set the amount you are prepared to
                   charge for this specific event.
                 </p>
@@ -2984,27 +2984,27 @@ export default function VendorBookings() {
                 onClick={() =>
                   setQuoteModal(null)
                 }
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-xl text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-xl text-fog transition hover:bg-surface hover:text-mist"
                 aria-label="Close quotation modal"
               >
                 ×
               </button>
             </div>
 
-            <div className="mt-6 rounded-2xl border border-gray-200 bg-gray-50 p-4">
-              <p className="font-semibold text-gray-950">
+            <div className="mt-6 rounded-2xl border border-line bg-surface p-4">
+              <p className="font-semibold text-cream">
                 {getEventName(
                   quoteModal
                 )}
               </p>
 
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-sm text-mist">
                 {getServiceName(
                   quoteModal
                 )}
               </p>
 
-              <p className="mt-2 text-xs text-gray-400">
+              <p className="mt-2 text-xs text-fog">
                 Organizer:{" "}
                 {getOrganizerName(
                   quoteModal
@@ -3013,17 +3013,17 @@ export default function VendorBookings() {
             </div>
 
             <label className="mt-6 block">
-              <span className="text-sm font-semibold text-gray-700">
+              <span className="text-sm font-semibold text-mist">
                 Quotation amount
               </span>
 
-              <span className="mt-1 block text-xs text-gray-400">
+              <span className="mt-1 block text-xs text-fog">
                 This becomes your proposed price for
                 this booking.
               </span>
 
-              <div className="mt-3 flex items-center rounded-2xl border border-gray-200 bg-white transition focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-50">
-                <span className="pl-4 text-sm font-bold text-gray-400">
+              <div className="mt-3 flex items-center rounded-2xl border border-line bg-raised transition focus-within:border-gold/50 focus-within:ring-4 focus-within:ring-indigo-50">
+                <span className="pl-4 text-sm font-bold text-fog">
                   GH₵
                 </span>
 
@@ -3049,7 +3049,7 @@ export default function VendorBookings() {
                 onClick={() =>
                   setQuoteModal(null)
                 }
-                className="flex-1 rounded-xl border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-600 transition hover:bg-gray-50"
+                className="flex-1 rounded-xl border border-line px-4 py-3 text-sm font-semibold text-mist transition hover:bg-surface"
               >
                 Cancel
               </button>
@@ -3067,7 +3067,7 @@ export default function VendorBookings() {
                     quoteModal
                   )
                 }
-                className="flex-1 rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex-1 rounded-xl bg-gold px-4 py-3 text-sm font-semibold text-cream shadow-sm transition hover:bg-gold-dim disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Send quotation
               </button>
@@ -3079,8 +3079,8 @@ export default function VendorBookings() {
       {/* COUNTER MODAL */}
 
       {counterModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-950/60 px-4 py-6 backdrop-blur-sm">
-          <div className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl sm:p-7">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 px-4 py-6 backdrop-blur-xl">
+          <div className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-3xl bg-raised p-6 shadow-2xl sm:p-7">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-50 text-violet-600">
@@ -3091,11 +3091,11 @@ export default function VendorBookings() {
                   Counter-offer
                 </p>
 
-                <h2 className="mt-1 text-2xl font-bold tracking-tight text-gray-950">
+                <h2 className="mt-1 text-2xl font-bold tracking-tight text-cream">
                   Propose another amount
                 </h2>
 
-                <p className="mt-2 text-sm leading-6 text-gray-500">
+                <p className="mt-2 text-sm leading-6 text-mist">
                   Send a revised amount to the
                   organizer. The booking remains under
                   negotiation until both sides agree.
@@ -3107,17 +3107,17 @@ export default function VendorBookings() {
                 onClick={() =>
                   setCounterModal(null)
                 }
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-xl text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-xl text-fog transition hover:bg-surface hover:text-mist"
                 aria-label="Close counter-offer modal"
               >
                 ×
               </button>
             </div>
 
-            <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-4">
+            <div className="mt-6 rounded-2xl border border-amber/20 bg-amber/10 p-4">
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wide text-amber-700">
+                  <p className="text-xs font-bold uppercase tracking-wide text-amber">
                     Current organizer offer
                   </p>
 
@@ -3142,17 +3142,17 @@ export default function VendorBookings() {
             </div>
 
             <label className="mt-6 block">
-              <span className="text-sm font-semibold text-gray-700">
+              <span className="text-sm font-semibold text-mist">
                 Your counter-offer
               </span>
 
-              <span className="mt-1 block text-xs text-gray-400">
+              <span className="mt-1 block text-xs text-fog">
                 Propose the amount you would like to
                 receive.
               </span>
 
-              <div className="mt-3 flex items-center rounded-2xl border border-gray-200 bg-white transition focus-within:border-violet-400 focus-within:ring-4 focus-within:ring-violet-50">
-                <span className="pl-4 text-sm font-bold text-gray-400">
+              <div className="mt-3 flex items-center rounded-2xl border border-line bg-raised transition focus-within:border-violet-400 focus-within:ring-4 focus-within:ring-violet-50">
+                <span className="pl-4 text-sm font-bold text-fog">
                   GH₵
                 </span>
 
@@ -3178,7 +3178,7 @@ export default function VendorBookings() {
                 onClick={() =>
                   setCounterModal(null)
                 }
-                className="flex-1 rounded-xl border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-600 transition hover:bg-gray-50"
+                className="flex-1 rounded-xl border border-line px-4 py-3 text-sm font-semibold text-mist transition hover:bg-surface"
               >
                 Cancel
               </button>
@@ -3196,7 +3196,7 @@ export default function VendorBookings() {
                     counterModal
                   )
                 }
-                className="flex-1 rounded-xl bg-gray-950 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex-1 rounded-xl bg-ink px-4 py-3 text-sm font-semibold text-cream shadow-sm transition hover:bg-raised disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Send counter
               </button>

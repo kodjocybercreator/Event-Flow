@@ -99,10 +99,10 @@ function getStatusClasses(status) {
       "suspended",
     ].includes(normalized)
   ) {
-    return "bg-red-50 text-red-700 border border-red-200";
+    return "bg-rose/10 text-rose border border-rose/20";
   }
 
-  return "bg-amber-50 text-amber-700 border border-amber-200";
+  return "bg-amber/10 text-amber border border-amber/20";
 }
 
 function getProviderName(booking) {
@@ -1108,11 +1108,11 @@ export default function AdminDashboard() {
 
   if (!admin) {
     return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center text-white">
+      <div className="min-h-screen bg-charcoal flex items-center justify-center text-cream">
         <div className="text-center">
           <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-2 border-white/20 border-t-white" />
 
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-fog">
             Loading EventFlow Admin Console...
           </p>
         </div>
@@ -1121,13 +1121,13 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-100 text-slate-900">
+    <div className="min-h-screen bg-surface text-cream">
       {mobileMenuOpen && (
         <button
           type="button"
           aria-label="Close menu"
           onClick={() => setMobileMenuOpen(false)}
-          className="fixed inset-0 z-30 bg-slate-950/50 lg:hidden"
+          className="fixed inset-0 z-30 bg-charcoal/50 lg:hidden"
         />
       )}
 
@@ -1164,13 +1164,13 @@ export default function AdminDashboard() {
       )}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-40 flex w-[280px] flex-col bg-slate-950 text-white shadow-2xl transition-transform duration-300 ${
+        className={`fixed inset-y-0 left-0 z-40 flex w-[280px] flex-col bg-charcoal text-cream shadow-2xl transition-transform duration-300 ${
           mobileMenuOpen
             ? "translate-x-0"
             : "-translate-x-full lg:translate-x-0"
         }`}
       >
-        <div className="flex h-20 items-center border-b border-white/10 px-6">
+        <div className="flex h-20 items-center border-b border-line px-6">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-lg font-bold shadow-lg">
               EF
@@ -1181,7 +1181,7 @@ export default function AdminDashboard() {
                 EventFlow
               </p>
 
-              <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">
+              <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-fog">
                 Admin Console
               </p>
             </div>
@@ -1189,7 +1189,7 @@ export default function AdminDashboard() {
         </div>
 
         <div className="px-4 py-5">
-          <div className="mb-3 px-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+          <div className="mb-3 px-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-mist">
             Management
           </div>
 
@@ -1207,11 +1207,11 @@ export default function AdminDashboard() {
                 }}
                 className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-sm font-medium transition ${
                   activeSection === item.id
-                    ? "bg-white text-slate-950 shadow-lg"
-                    : "text-slate-300 hover:bg-white/10 hover:text-white"
+                    ? "bg-raised text-cream shadow-lg"
+                    : "text-fog hover:bg-raised/10 hover:text-cream"
                 }`}
               >
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-black/10 text-base">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-ink/10 text-base">
                   {item.icon}
                 </span>
 
@@ -1224,8 +1224,8 @@ export default function AdminDashboard() {
                     <span
                       className={`rounded-full px-2 py-0.5 text-[10px] font-bold ${
                         activeSection === item.id
-                          ? "bg-slate-100 text-slate-700"
-                          : "bg-white/10 text-slate-300"
+                          ? "bg-surface text-mist"
+                          : "bg-raised/10 text-fog"
                       }`}
                     >
                       {item.count > 99
@@ -1238,13 +1238,13 @@ export default function AdminDashboard() {
           </nav>
         </div>
 
-        <div className="mt-auto border-t border-white/10 p-4">
-          <div className="mb-3 rounded-2xl bg-white/5 p-4">
-            <p className="text-xs text-slate-500">
+        <div className="mt-auto border-t border-line p-4">
+          <div className="mb-3 rounded-2xl bg-raised/5 p-4">
+            <p className="text-xs text-mist">
               Signed in as
             </p>
 
-            <p className="mt-1 truncate text-sm font-semibold text-white">
+            <p className="mt-1 truncate text-sm font-semibold text-cream">
               {admin.email || "Administrator"}
             </p>
 
@@ -1256,7 +1256,7 @@ export default function AdminDashboard() {
           <button
             type="button"
             onClick={logout}
-            className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium text-slate-300 transition hover:bg-red-500/10 hover:text-red-300"
+            className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium text-fog transition hover:bg-rose/100/10 hover:text-rose"
           >
             <span>↪</span>
             Sign out
@@ -1265,7 +1265,7 @@ export default function AdminDashboard() {
       </aside>
 
       <div className="lg:pl-[280px]">
-        <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
+        <header className="sticky top-0 z-20 border-b border-line bg-raised/95 backdrop-blur">
           <div className="flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3">
               <button
@@ -1273,17 +1273,17 @@ export default function AdminDashboard() {
                 onClick={() =>
                   setMobileMenuOpen(!mobileMenuOpen)
                 }
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 lg:hidden"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-raised text-mist lg:hidden"
               >
                 ☰
               </button>
 
               <div>
-                <p className="text-xs font-medium text-slate-400">
+                <p className="text-xs font-medium text-fog">
                   EventFlow Administration
                 </p>
 
-                <h1 className="text-xl font-bold tracking-tight text-slate-950">
+                <h1 className="text-xl font-bold tracking-tight text-cream">
                   {sectionTitles[activeSection]}
                 </h1>
               </div>
@@ -1295,12 +1295,12 @@ export default function AdminDashboard() {
                 onClick={() =>
                   setNotificationOpen(!notificationOpen)
                 }
-                className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-lg shadow-sm transition hover:bg-slate-50"
+                className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-raised text-lg shadow-sm transition hover:bg-surface"
               >
                 🔔
 
                 {unreadNotifications.length > 0 && (
-                  <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-indigo-600 px-1 text-[10px] font-bold text-white">
+                  <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-gold px-1 text-[10px] font-bold text-cream">
                     {unreadNotifications.length > 9
                       ? "9+"
                       : unreadNotifications.length}
@@ -1309,14 +1309,14 @@ export default function AdminDashboard() {
               </button>
 
               {notificationOpen && (
-                <div className="absolute right-0 mt-3 w-[360px] max-w-[calc(100vw-2rem)] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
-                  <div className="flex items-center justify-between border-b border-slate-100 px-4 py-4">
+                <div className="absolute right-0 mt-3 w-[360px] max-w-[calc(100vw-2rem)] overflow-hidden rounded-2xl border border-line bg-raised shadow-2xl">
+                  <div className="flex items-center justify-between border-b border-line px-4 py-4">
                     <div>
-                      <p className="font-bold text-slate-950">
+                      <p className="font-bold text-cream">
                         Notifications
                       </p>
 
-                      <p className="text-xs text-slate-500">
+                      <p className="text-xs text-mist">
                         Platform activity
                       </p>
                     </div>
@@ -1325,7 +1325,7 @@ export default function AdminDashboard() {
                       <button
                         type="button"
                         onClick={markAllNotificationsRead}
-                        className="text-xs font-semibold text-indigo-600 hover:text-indigo-700"
+                        className="text-xs font-semibold text-gold hover:text-gold-dim"
                       >
                         Mark all read
                       </button>
@@ -1337,11 +1337,11 @@ export default function AdminDashboard() {
                       <div className="px-5 py-10 text-center">
                         <div className="text-3xl">🔔</div>
 
-                        <p className="mt-3 text-sm font-semibold text-slate-700">
+                        <p className="mt-3 text-sm font-semibold text-mist">
                           No notifications
                         </p>
 
-                        <p className="mt-1 text-xs text-slate-400">
+                        <p className="mt-1 text-xs text-fog">
                           New platform activity will appear here.
                         </p>
                       </div>
@@ -1356,10 +1356,10 @@ export default function AdminDashboard() {
                               item.linkSection || "overview"
                             );
                           }}
-                          className={`block w-full border-b border-slate-100 px-4 py-4 text-left transition hover:bg-slate-50 ${
+                          className={`block w-full border-b border-line px-4 py-4 text-left transition hover:bg-surface ${
                             item.read
-                              ? "bg-white"
-                              : "bg-indigo-50/50"
+                              ? "bg-raised"
+                              : "bg-gold/10/50"
                           }`}
                         >
                           <div className="flex gap-3">
@@ -1367,11 +1367,11 @@ export default function AdminDashboard() {
                               className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm ${
                                 item.severity ===
                                 "warning"
-                                  ? "bg-amber-100 text-amber-700"
+                                  ? "bg-amber/15 text-amber"
                                   : item.severity ===
                                     "success"
                                   ? "bg-emerald-100 text-emerald-700"
-                                  : "bg-indigo-100 text-indigo-700"
+                                  : "bg-gold/15 text-gold"
                               }`}
                             >
                               {item.severity ===
@@ -1385,20 +1385,20 @@ export default function AdminDashboard() {
 
                             <div className="min-w-0 flex-1">
                               <div className="flex items-start justify-between gap-3">
-                                <p className="text-sm font-semibold text-slate-800">
+                                <p className="text-sm font-semibold text-cream">
                                   {item.title}
                                 </p>
 
                                 {!item.read && (
-                                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-indigo-600" />
+                                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-gold" />
                                 )}
                               </div>
 
-                              <p className="mt-1 text-xs leading-5 text-slate-500">
+                              <p className="mt-1 text-xs leading-5 text-mist">
                                 {item.message}
                               </p>
 
-                              <p className="mt-2 text-[10px] text-slate-400">
+                              <p className="mt-2 text-[10px] text-fog">
                                 {formatDateTime(
                                   item.createdAt
                                 )}
@@ -1421,10 +1421,10 @@ export default function AdminDashboard() {
           ========================== */}
           {activeSection === "overview" && (
             <div className="space-y-6">
-              <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-800 p-6 text-white shadow-xl sm:p-8">
+              <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-800 p-6 text-cream shadow-xl sm:p-8">
                 <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                   <div>
-                    <p className="text-sm font-medium text-indigo-200">
+                    <p className="text-sm font-medium text-mist">
                       EventFlow Platform
                     </p>
 
@@ -1432,15 +1432,15 @@ export default function AdminDashboard() {
                       Good day, Administrator.
                     </h2>
 
-                    <p className="mt-3 max-w-2xl text-sm leading-6 text-indigo-100 sm:text-base">
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-cream sm:text-base">
                       Manage providers, bookings, users,
                       transactions and platform activity from
                       one central console.
                     </p>
                   </div>
 
-                  <div className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur">
-                    <p className="text-xs text-indigo-200">
+                  <div className="rounded-2xl border border-white/15 bg-raised/10 p-5 backdrop-blur">
+                    <p className="text-xs text-mist">
                       Session
                     </p>
 
@@ -1448,7 +1448,7 @@ export default function AdminDashboard() {
                       {admin.email}
                     </p>
 
-                    <p className="mt-2 text-xs text-indigo-200">
+                    <p className="mt-2 text-xs text-mist">
                       Last activity
                     </p>
 
@@ -1495,14 +1495,14 @@ export default function AdminDashboard() {
               </section>
 
               <section className="grid gap-6 xl:grid-cols-3">
-                <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm xl:col-span-2">
+                <div className="rounded-3xl border border-line bg-raised p-6 shadow-sm xl:col-span-2">
                   <div className="flex items-center justify-between gap-4">
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-400">
+                      <p className="text-xs font-semibold uppercase tracking-[0.15em] text-fog">
                         Financial overview
                       </p>
 
-                      <h3 className="mt-1 text-xl font-bold text-slate-950">
+                      <h3 className="mt-1 text-xl font-bold text-cream">
                         Platform activity
                       </h3>
                     </div>
@@ -1512,7 +1512,7 @@ export default function AdminDashboard() {
                       onClick={() =>
                         navigateToSection("transactions")
                       }
-                      className="text-sm font-semibold text-indigo-600 hover:text-indigo-700"
+                      className="text-sm font-semibold text-gold hover:text-gold-dim"
                     >
                       View transactions →
                     </button>
@@ -1536,8 +1536,8 @@ export default function AdminDashboard() {
                   </div>
                 </div>
 
-                <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-400">
+                <div className="rounded-3xl border border-line bg-raised p-6 shadow-sm">
+                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-fog">
                     Attention required
                   </p>
 
@@ -1569,14 +1569,14 @@ export default function AdminDashboard() {
                 </div>
               </section>
 
-              <section className="rounded-3xl border border-slate-200 bg-white shadow-sm">
-                <div className="flex items-center justify-between border-b border-slate-100 px-6 py-5">
+              <section className="rounded-3xl border border-line bg-raised shadow-sm">
+                <div className="flex items-center justify-between border-b border-line px-6 py-5">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-400">
+                    <p className="text-xs font-semibold uppercase tracking-[0.15em] text-fog">
                       Activity
                     </p>
 
-                    <h3 className="mt-1 text-xl font-bold text-slate-950">
+                    <h3 className="mt-1 text-xl font-bold text-cream">
                       Recent bookings
                     </h3>
                   </div>
@@ -1586,7 +1586,7 @@ export default function AdminDashboard() {
                     onClick={() =>
                       navigateToSection("bookings")
                     }
-                    className="text-sm font-semibold text-indigo-600"
+                    className="text-sm font-semibold text-gold"
                   >
                     View all →
                   </button>
@@ -1610,17 +1610,17 @@ export default function AdminDashboard() {
                         className="flex flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between"
                       >
                         <div className="flex min-w-0 items-center gap-4">
-                          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+                          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-gold">
                             ▣
                           </div>
 
                           <div className="min-w-0">
-                            <p className="truncate font-semibold text-slate-800">
+                            <p className="truncate font-semibold text-cream">
                               {booking.eventName ||
                                 "Untitled event"}
                             </p>
 
-                            <p className="mt-1 truncate text-xs text-slate-500">
+                            <p className="mt-1 truncate text-xs text-mist">
                               {getProviderName(booking)} ·{" "}
                               {formatDate(
                                 booking.eventDate ||
@@ -1632,13 +1632,13 @@ export default function AdminDashboard() {
 
                         <div className="flex items-center gap-4">
                           <div className="text-right">
-                            <p className="text-sm font-bold text-slate-800">
+                            <p className="text-sm font-bold text-cream">
                               {formatMoney(
                                 getBookingAmount(booking)
                               )}
                             </p>
 
-                            <p className="mt-1 text-xs text-slate-400">
+                            <p className="mt-1 text-xs text-fog">
                               {formatDateTime(
                                 booking.createdAt
                               )}
@@ -1673,21 +1673,21 @@ export default function AdminDashboard() {
               />
 
               {/* VENUES */}
-              <section className="rounded-3xl border border-slate-200 bg-white shadow-sm">
-                <div className="border-b border-slate-100 px-6 py-5">
+              <section className="rounded-3xl border border-line bg-raised shadow-sm">
+                <div className="border-b border-line px-6 py-5">
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                      <h3 className="text-lg font-bold text-slate-950">
+                      <h3 className="text-lg font-bold text-cream">
                         Venue registrations
                       </h3>
 
-                      <p className="mt-1 text-sm text-slate-500">
+                      <p className="mt-1 text-sm text-mist">
                         Verify venue information and uploaded
                         gallery images.
                       </p>
                     </div>
 
-                    <span className="w-fit rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-700">
+                    <span className="w-fit rounded-full bg-amber/10 px-3 py-1 text-xs font-bold text-amber">
                       {pendingVenues.length} pending
                     </span>
                   </div>
@@ -1731,7 +1731,7 @@ export default function AdminDashboard() {
                                 disabled={
                                   images.length === 0
                                 }
-                                className="group relative h-24 w-32 shrink-0 overflow-hidden rounded-2xl bg-slate-100 text-left disabled:cursor-default"
+                                className="group relative h-24 w-32 shrink-0 overflow-hidden rounded-2xl bg-surface text-left disabled:cursor-default"
                               >
                                 {venue.coverImage ||
                                 venue.image ||
@@ -1753,14 +1753,14 @@ export default function AdminDashboard() {
 
                                     {images.length >
                                       0 && (
-                                      <span className="absolute inset-x-2 bottom-2 rounded-lg bg-slate-950/70 px-2 py-1 text-center text-[10px] font-bold text-white backdrop-blur">
+                                      <span className="absolute inset-x-2 bottom-2 rounded-lg bg-charcoal/70 px-2 py-1 text-center text-[10px] font-bold text-cream backdrop-blur">
                                         View gallery ·{" "}
                                         {images.length}
                                       </span>
                                     )}
                                   </>
                                 ) : (
-                                  <div className="flex h-full w-full items-center justify-center text-2xl text-slate-300">
+                                  <div className="flex h-full w-full items-center justify-center text-2xl text-fog">
                                     ⌂
                                   </div>
                                 )}
@@ -1768,7 +1768,7 @@ export default function AdminDashboard() {
 
                               <div className="min-w-0">
                                 <div className="flex flex-wrap items-center gap-2">
-                                  <h4 className="font-bold text-slate-950">
+                                  <h4 className="font-bold text-cream">
                                     {getVenueName(
                                       venue
                                     )}
@@ -1784,7 +1784,7 @@ export default function AdminDashboard() {
                                   </span>
                                 </div>
 
-                                <p className="mt-1 text-sm text-slate-500">
+                                <p className="mt-1 text-sm text-mist">
                                   {venue.venueType ||
                                     "Event venue"}{" "}
                                   ·{" "}
@@ -1792,7 +1792,7 @@ export default function AdminDashboard() {
                                     "Location not provided"}
                                 </p>
 
-                                <p className="mt-2 text-xs text-slate-400">
+                                <p className="mt-2 text-xs text-fog">
                                   Submitted{" "}
                                   {formatDate(
                                     venue.createdAt
@@ -1840,13 +1840,13 @@ export default function AdminDashboard() {
                             </div>
                           </div>
 
-                          <div className="mt-5 flex flex-col gap-3 border-t border-slate-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                          <div className="mt-5 flex flex-col gap-3 border-t border-line pt-5 sm:flex-row sm:items-center sm:justify-between">
                             <div>
-                              <p className="text-xs text-slate-400">
+                              <p className="text-xs text-fog">
                                 Contact
                               </p>
 
-                              <p className="mt-1 text-sm font-medium text-slate-700">
+                              <p className="mt-1 text-sm font-medium text-mist">
                                 {venue.email ||
                                   venue.ownerEmail ||
                                   "No email"}
@@ -1869,7 +1869,7 @@ export default function AdminDashboard() {
                                       "approved"
                                     )
                                   }
-                                  className="rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-bold text-white transition hover:bg-emerald-700"
+                                  className="rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-bold text-cream transition hover:bg-emerald-700"
                                 >
                                   Approve
                                 </button>
@@ -1887,7 +1887,7 @@ export default function AdminDashboard() {
                                       "rejected"
                                     )
                                   }
-                                  className="rounded-xl bg-red-50 px-4 py-2.5 text-xs font-bold text-red-700 transition hover:bg-red-100"
+                                  className="rounded-xl bg-rose/10 px-4 py-2.5 text-xs font-bold text-rose transition hover:bg-rose/15"
                                 >
                                   Reject
                                 </button>
@@ -1898,7 +1898,7 @@ export default function AdminDashboard() {
                                 onClick={() =>
                                   deleteVenue(venue.id)
                                 }
-                                className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-600 transition hover:border-red-200 hover:bg-red-50 hover:text-red-700"
+                                className="rounded-xl border border-line bg-raised px-4 py-2.5 text-xs font-bold text-mist transition hover:border-rose/20 hover:bg-rose/10 hover:text-rose"
                               >
                                 Delete
                               </button>
@@ -1912,22 +1912,22 @@ export default function AdminDashboard() {
               </section>
 
               {/* VENDORS */}
-              <section className="rounded-3xl border border-slate-200 bg-white shadow-sm">
-                <div className="border-b border-slate-100 px-6 py-5">
+              <section className="rounded-3xl border border-line bg-raised shadow-sm">
+                <div className="border-b border-line px-6 py-5">
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                      <h3 className="text-lg font-bold text-slate-950">
+                      <h3 className="text-lg font-bold text-cream">
                         Vendor registrations
                       </h3>
 
-                      <p className="mt-1 text-sm text-slate-500">
+                      <p className="mt-1 text-sm text-mist">
                         Review vendor information and portfolio
                         photos before activating their marketplace
                         profile.
                       </p>
                     </div>
 
-                    <span className="w-fit rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-700">
+                    <span className="w-fit rounded-full bg-amber/10 px-3 py-1 text-xs font-bold text-amber">
                       {pendingVendors.length} pending
                     </span>
                   </div>
@@ -1966,7 +1966,7 @@ export default function AdminDashboard() {
                           <div className="flex flex-col gap-6 xl:flex-row">
                             {/* Vendor identity */}
                             <div className="flex min-w-0 flex-1 items-start gap-4">
-                              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-indigo-50 font-bold text-indigo-600">
+                              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold/10 font-bold text-gold">
                                 {(
                                   vendor.firstName ||
                                   vendor.businessName ||
@@ -1979,7 +1979,7 @@ export default function AdminDashboard() {
 
                               <div className="min-w-0">
                                 <div className="flex flex-wrap items-center gap-2">
-                                  <h4 className="font-bold text-slate-950">
+                                  <h4 className="font-bold text-cream">
                                     {vendorName}
                                   </h4>
 
@@ -1993,13 +1993,13 @@ export default function AdminDashboard() {
                                   </span>
                                 </div>
 
-                                <p className="mt-1 text-sm text-slate-500">
+                                <p className="mt-1 text-sm text-mist">
                                   {vendor.email ||
                                     "No email"}
                                 </p>
 
                                 {vendor.phone && (
-                                  <p className="mt-1 text-sm text-slate-500">
+                                  <p className="mt-1 text-sm text-mist">
                                     {vendor.phone}
                                   </p>
                                 )}
@@ -2007,9 +2007,9 @@ export default function AdminDashboard() {
                                 {vendor.businessName &&
                                   vendor.businessName !==
                                     vendorName && (
-                                    <p className="mt-2 text-xs text-slate-400">
+                                    <p className="mt-2 text-xs text-fog">
                                       Business:{" "}
-                                      <span className="font-medium text-slate-600">
+                                      <span className="font-medium text-mist">
                                         {
                                           vendor.businessName
                                         }
@@ -2017,7 +2017,7 @@ export default function AdminDashboard() {
                                     </p>
                                   )}
 
-                                <p className="mt-2 text-xs text-slate-400">
+                                <p className="mt-2 text-xs text-fog">
                                   Registered{" "}
                                   {formatDate(
                                     vendor.createdAt
@@ -2030,11 +2030,11 @@ export default function AdminDashboard() {
                             <div className="w-full xl:max-w-[500px]">
                               <div className="mb-3 flex items-center justify-between gap-3">
                                 <div>
-                                  <p className="text-xs font-bold uppercase tracking-[0.12em] text-slate-400">
+                                  <p className="text-xs font-bold uppercase tracking-[0.12em] text-fog">
                                     Portfolio
                                   </p>
 
-                                  <p className="mt-1 text-xs text-slate-500">
+                                  <p className="mt-1 text-xs text-mist">
                                     {vendorImages.length} photo
                                     {vendorImages.length ===
                                     1
@@ -2053,7 +2053,7 @@ export default function AdminDashboard() {
                                         vendor
                                       )
                                     }
-                                    className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-bold text-indigo-600 transition hover:border-indigo-200 hover:bg-indigo-50"
+                                    className="rounded-xl border border-line bg-raised px-3 py-2 text-xs font-bold text-gold transition hover:border-gold/30 hover:bg-gold/10"
                                   >
                                     View all
                                   </button>
@@ -2062,17 +2062,17 @@ export default function AdminDashboard() {
 
                               {vendorImages.length ===
                               0 ? (
-                                <div className="flex min-h-[110px] items-center justify-center rounded-2xl border border-dashed border-slate-200 bg-slate-50 px-5 text-center">
+                                <div className="flex min-h-[110px] items-center justify-center rounded-2xl border border-dashed border-line bg-surface px-5 text-center">
                                   <div>
-                                    <div className="text-2xl text-slate-300">
+                                    <div className="text-2xl text-fog">
                                       ▧
                                     </div>
 
-                                    <p className="mt-2 text-xs font-semibold text-slate-500">
+                                    <p className="mt-2 text-xs font-semibold text-mist">
                                       No portfolio photos
                                     </p>
 
-                                    <p className="mt-1 text-[11px] text-slate-400">
+                                    <p className="mt-1 text-[11px] text-fog">
                                       This vendor has not uploaded
                                       photos.
                                     </p>
@@ -2104,7 +2104,7 @@ export default function AdminDashboard() {
                                                 index
                                               );
                                             }}
-                                            className="group relative aspect-square overflow-hidden rounded-xl bg-slate-100"
+                                            className="group relative aspect-square overflow-hidden rounded-xl bg-surface"
                                           >
                                             {src ? (
                                               <img
@@ -2116,7 +2116,7 @@ export default function AdminDashboard() {
                                                 className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                                               />
                                             ) : (
-                                              <div className="flex h-full w-full items-center justify-center text-xs text-slate-400">
+                                              <div className="flex h-full w-full items-center justify-center text-xs text-fog">
                                                 Image
                                               </div>
                                             )}
@@ -2125,8 +2125,8 @@ export default function AdminDashboard() {
                                               3 &&
                                               vendorImages.length >
                                                 4 && (
-                                                <div className="absolute inset-0 flex items-center justify-center bg-slate-950/60">
-                                                  <span className="text-sm font-bold text-white">
+                                                <div className="absolute inset-0 flex items-center justify-center bg-charcoal/60">
+                                                  <span className="text-sm font-bold text-cream">
                                                     +
                                                     {vendorImages.length -
                                                       4}
@@ -2134,7 +2134,7 @@ export default function AdminDashboard() {
                                                 </div>
                                               )}
 
-                                            <div className="absolute inset-0 bg-slate-950/0 transition group-hover:bg-slate-950/20" />
+                                            <div className="absolute inset-0 bg-charcoal/0 transition group-hover:bg-charcoal/20" />
                                           </button>
                                         );
                                       }
@@ -2145,7 +2145,7 @@ export default function AdminDashboard() {
                           </div>
 
                           {/* Vendor review information */}
-                          <div className="mt-6 grid gap-4 border-t border-slate-100 pt-5 sm:grid-cols-2 lg:grid-cols-4">
+                          <div className="mt-6 grid gap-4 border-t border-line pt-5 sm:grid-cols-2 lg:grid-cols-4">
                             <InfoItem
                               label="Account type"
                               value="Service provider"
@@ -2181,13 +2181,13 @@ export default function AdminDashboard() {
                           </div>
 
                           {/* Vendor actions */}
-                          <div className="mt-5 flex flex-col gap-3 border-t border-slate-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                          <div className="mt-5 flex flex-col gap-3 border-t border-line pt-5 sm:flex-row sm:items-center sm:justify-between">
                             <div>
-                              <p className="text-xs text-slate-400">
+                              <p className="text-xs text-fog">
                                 Approval control
                               </p>
 
-                              <p className="mt-1 text-sm text-slate-600">
+                              <p className="mt-1 text-sm text-mist">
                                 Review the vendor's profile and
                                 portfolio before making the account
                                 publicly available.
@@ -2204,7 +2204,7 @@ export default function AdminDashboard() {
                                       vendor
                                     )
                                   }
-                                  className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
+                                  className="rounded-xl border border-line bg-raised px-4 py-2.5 text-xs font-bold text-mist transition hover:border-gold/30 hover:bg-gold/10 hover:text-gold-dim"
                                 >
                                   Review photos
                                 </button>
@@ -2219,7 +2219,7 @@ export default function AdminDashboard() {
                                       "approved"
                                     )
                                   }
-                                  className="rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-bold text-white transition hover:bg-emerald-700"
+                                  className="rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-bold text-cream transition hover:bg-emerald-700"
                                 >
                                   Approve
                                 </button>
@@ -2234,7 +2234,7 @@ export default function AdminDashboard() {
                                       "rejected"
                                     )
                                   }
-                                  className="rounded-xl bg-red-50 px-4 py-2.5 text-xs font-bold text-red-700 transition hover:bg-red-100"
+                                  className="rounded-xl bg-rose/10 px-4 py-2.5 text-xs font-bold text-rose transition hover:bg-rose/15"
                                 >
                                   Reject
                                 </button>
@@ -2291,21 +2291,21 @@ export default function AdminDashboard() {
                 />
               </section>
 
-              <section className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-                <div className="flex flex-col gap-4 border-b border-slate-100 p-5 sm:p-6 lg:flex-row lg:items-center lg:justify-between">
+              <section className="overflow-hidden rounded-3xl border border-line bg-raised shadow-sm">
+                <div className="flex flex-col gap-4 border-b border-line p-5 sm:p-6 lg:flex-row lg:items-center lg:justify-between">
                   <div>
-                    <h3 className="text-lg font-bold text-slate-950">
+                    <h3 className="text-lg font-bold text-cream">
                       Transaction records
                     </h3>
 
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-mist">
                       Payment activity linked to EventFlow
                       bookings.
                     </p>
                   </div>
 
                   <div className="relative w-full lg:w-80">
-                    <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+                    <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-fog">
                       ⌕
                     </span>
 
@@ -2315,7 +2315,7 @@ export default function AdminDashboard() {
                         setSearchTerm(event.target.value)
                       }
                       placeholder="Search transactions..."
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-9 pr-4 text-sm outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/10"
+                      className="w-full rounded-xl border border-line bg-surface py-3 pl-9 pr-4 text-sm outline-none transition focus:border-gold focus:bg-raised focus:ring-4 focus:ring-gold/200/10"
                     />
                   </div>
                 </div>
@@ -2334,7 +2334,7 @@ export default function AdminDashboard() {
                   <div className="overflow-x-auto">
                     <table className="w-full min-w-[900px]">
                       <thead>
-                        <tr className="border-b border-slate-100 bg-slate-50/70 text-left text-[10px] font-bold uppercase tracking-[0.12em] text-slate-400">
+                        <tr className="border-b border-line bg-surface/70 text-left text-[10px] font-bold uppercase tracking-[0.12em] text-fog">
                           <th className="px-6 py-4">
                             Transaction
                           </th>
@@ -2370,16 +2370,16 @@ export default function AdminDashboard() {
                           (transaction) => (
                             <tr
                               key={`${transaction.transactionId}-${transaction.id}`}
-                              className="transition hover:bg-slate-50"
+                              className="transition hover:bg-surface"
                             >
                               <td className="px-6 py-4">
-                                <p className="font-mono text-xs font-semibold text-slate-700">
+                                <p className="font-mono text-xs font-semibold text-mist">
                                   {
                                     transaction.transactionId
                                   }
                                 </p>
 
-                                <p className="mt-1 text-[10px] text-slate-400">
+                                <p className="mt-1 text-[10px] text-fog">
                                   {formatDateTime(
                                     transaction.paymentCompletedAt ||
                                       transaction.updatedAt ||
@@ -2389,25 +2389,25 @@ export default function AdminDashboard() {
                               </td>
 
                               <td className="px-6 py-4">
-                                <p className="font-semibold text-slate-800">
+                                <p className="font-semibold text-cream">
                                   {transaction.eventName ||
                                     "Event booking"}
                                 </p>
 
-                                <p className="mt-1 text-xs text-slate-400">
+                                <p className="mt-1 text-xs text-fog">
                                   {transaction.id ||
                                     transaction.bookingId ||
                                     "—"}
                                 </p>
                               </td>
 
-                              <td className="px-6 py-4 text-sm text-slate-600">
+                              <td className="px-6 py-4 text-sm text-mist">
                                 {getProviderName(
                                   transaction
                                 )}
                               </td>
 
-                              <td className="px-6 py-4 text-sm font-semibold text-slate-800">
+                              <td className="px-6 py-4 text-sm font-semibold text-cream">
                                 {formatMoney(
                                   transaction.totalAmount
                                 )}
@@ -2419,7 +2419,7 @@ export default function AdminDashboard() {
                                 )}
                               </td>
 
-                              <td className="px-6 py-4 text-sm font-semibold text-slate-700">
+                              <td className="px-6 py-4 text-sm font-semibold text-mist">
                                 {formatMoney(
                                   transaction.remainingAmount
                                 )}
@@ -2458,7 +2458,7 @@ export default function AdminDashboard() {
                 description="Monitor organizer requests, provider agreements and booking status across EventFlow."
               />
 
-              <section className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+              <section className="overflow-hidden rounded-3xl border border-line bg-raised shadow-sm">
                 {bookings.length === 0 ? (
                   <EmptyState
                     icon="▣"
@@ -2469,7 +2469,7 @@ export default function AdminDashboard() {
                   <div className="overflow-x-auto">
                     <table className="w-full min-w-[1000px]">
                       <thead>
-                        <tr className="border-b border-slate-100 bg-slate-50/70 text-left text-[10px] font-bold uppercase tracking-[0.12em] text-slate-400">
+                        <tr className="border-b border-line bg-surface/70 text-left text-[10px] font-bold uppercase tracking-[0.12em] text-fog">
                           <th className="px-6 py-4">
                             Event
                           </th>
@@ -2504,29 +2504,29 @@ export default function AdminDashboard() {
                               booking.bookingId ||
                               Math.random()
                             }
-                            className="transition hover:bg-slate-50"
+                            className="transition hover:bg-surface"
                           >
                             <td className="px-6 py-5">
-                              <p className="font-semibold text-slate-800">
+                              <p className="font-semibold text-cream">
                                 {booking.eventName ||
                                   "Untitled event"}
                               </p>
 
-                              <p className="mt-1 text-xs text-slate-400">
+                              <p className="mt-1 text-xs text-fog">
                                 {booking.eventType ||
                                   "Event"}
                               </p>
                             </td>
 
                             <td className="px-6 py-5">
-                              <p className="text-sm font-medium text-slate-700">
+                              <p className="text-sm font-medium text-mist">
                                 {booking.organizerName ||
                                   booking.organizerEmail ||
                                   "Organizer"}
                               </p>
 
                               {booking.organizerEmail && (
-                                <p className="mt-1 text-xs text-slate-400">
+                                <p className="mt-1 text-xs text-fog">
                                   {
                                     booking.organizerEmail
                                   }
@@ -2534,11 +2534,11 @@ export default function AdminDashboard() {
                               )}
                             </td>
 
-                            <td className="px-6 py-5 text-sm text-slate-600">
+                            <td className="px-6 py-5 text-sm text-mist">
                               {getProviderName(booking)}
                             </td>
 
-                            <td className="px-6 py-5 text-sm text-slate-600">
+                            <td className="px-6 py-5 text-sm text-mist">
                               {formatDate(
                                 booking.eventDate ||
                                   booking.date
@@ -2546,7 +2546,7 @@ export default function AdminDashboard() {
                             </td>
 
                             <td className="px-6 py-5">
-                              <p className="text-sm font-bold text-slate-800">
+                              <p className="text-sm font-bold text-cream">
                                 {formatMoney(
                                   getBookingAmount(
                                     booking
@@ -2554,7 +2554,7 @@ export default function AdminDashboard() {
                                 )}
                               </p>
 
-                              <p className="mt-1 text-xs text-slate-400">
+                              <p className="mt-1 text-xs text-fog">
                                 Paid{" "}
                                 {formatMoney(
                                   getAmountPaid(
@@ -2625,7 +2625,7 @@ export default function AdminDashboard() {
                 />
               </section>
 
-              <section className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+              <section className="overflow-hidden rounded-3xl border border-line bg-raised shadow-sm">
                 {accounts.length === 0 ? (
                   <EmptyState
                     icon="◎"
@@ -2636,7 +2636,7 @@ export default function AdminDashboard() {
                   <div className="overflow-x-auto">
                     <table className="w-full min-w-[900px]">
                       <thead>
-                        <tr className="border-b border-slate-100 bg-slate-50/70 text-left text-[10px] font-bold uppercase tracking-[0.12em] text-slate-400">
+                        <tr className="border-b border-line bg-surface/70 text-left text-[10px] font-bold uppercase tracking-[0.12em] text-fog">
                           <th className="px-6 py-4">
                             Account
                           </th>
@@ -2663,11 +2663,11 @@ export default function AdminDashboard() {
                         {accounts.map((account) => (
                           <tr
                             key={account.id}
-                            className="transition hover:bg-slate-50"
+                            className="transition hover:bg-surface"
                           >
                             <td className="px-6 py-5">
                               <div className="flex items-center gap-3">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-sm font-bold text-slate-600">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface text-sm font-bold text-mist">
                                   {getAccountName(
                                     account
                                   )
@@ -2676,7 +2676,7 @@ export default function AdminDashboard() {
                                 </div>
 
                                 <div>
-                                  <p className="font-semibold text-slate-800">
+                                  <p className="font-semibold text-cream">
                                     {getAccountName(
                                       account
                                     )}
@@ -2685,12 +2685,12 @@ export default function AdminDashboard() {
                               </div>
                             </td>
 
-                            <td className="px-6 py-5 text-sm text-slate-600">
+                            <td className="px-6 py-5 text-sm text-mist">
                               {account.email || "—"}
                             </td>
 
                             <td className="px-6 py-5">
-                              <span className="rounded-full bg-slate-100 px-3 py-1 text-[10px] font-bold uppercase text-slate-600">
+                              <span className="rounded-full bg-surface px-3 py-1 text-[10px] font-bold uppercase text-mist">
                                 {account.accountType ||
                                   "Unknown"}
                               </span>
@@ -2708,7 +2708,7 @@ export default function AdminDashboard() {
                               </span>
                             </td>
 
-                            <td className="px-6 py-5 text-sm text-slate-500">
+                            <td className="px-6 py-5 text-sm text-mist">
                               {formatDate(
                                 account.createdAt
                               )}
@@ -2770,13 +2770,13 @@ export default function AdminDashboard() {
                 />
               </section>
 
-              <section className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-                <div className="border-b border-slate-100 px-6 py-5">
-                  <h3 className="text-lg font-bold text-slate-950">
+              <section className="overflow-hidden rounded-3xl border border-line bg-raised shadow-sm">
+                <div className="border-b border-line px-6 py-5">
+                  <h3 className="text-lg font-bold text-cream">
                     Audit log
                   </h3>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-mist">
                     Administrative actions and important system
                     events.
                   </p>
@@ -2801,8 +2801,8 @@ export default function AdminDashboard() {
                               log.severity ===
                                 "critical" ||
                               log.severity === "high"
-                                ? "bg-red-50 text-red-600"
-                                : "bg-slate-100 text-slate-600"
+                                ? "bg-rose/10 text-rose"
+                                : "bg-surface text-mist"
                             }`}
                           >
                             {log.severity ===
@@ -2814,7 +2814,7 @@ export default function AdminDashboard() {
 
                           <div>
                             <div className="flex flex-wrap items-center gap-2">
-                              <p className="font-semibold text-slate-800">
+                              <p className="font-semibold text-cream">
                                 {log.type ||
                                   "System event"}
                               </p>
@@ -2829,11 +2829,11 @@ export default function AdminDashboard() {
                               </span>
                             </div>
 
-                            <p className="mt-1 text-sm leading-6 text-slate-500">
+                            <p className="mt-1 text-sm leading-6 text-mist">
                               {log.description}
                             </p>
 
-                            <p className="mt-2 text-[10px] text-slate-400">
+                            <p className="mt-2 text-[10px] text-fog">
                               {log.adminEmail || "System"} ·{" "}
                               {formatDateTime(
                                 log.createdAt
@@ -2847,9 +2847,9 @@ export default function AdminDashboard() {
                 )}
               </section>
 
-              <section className="rounded-3xl border border-amber-200 bg-amber-50 p-6">
+              <section className="rounded-3xl border border-amber/20 bg-amber/10 p-6">
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-700">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber/15 text-amber">
                     !
                   </div>
 
@@ -2895,19 +2895,19 @@ function VendorGalleryModal({
   const vendorName = getAccountName(vendor);
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/90 p-4 backdrop-blur-sm">
-      <div className="flex max-h-[95vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-slate-950 shadow-2xl">
-        <div className="flex items-center justify-between border-b border-white/10 px-5 py-4 sm:px-6">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/90 p-4 backdrop-blur-xl">
+      <div className="flex max-h-[95vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-charcoal shadow-2xl">
+        <div className="flex items-center justify-between border-b border-line px-5 py-4 sm:px-6">
           <div className="min-w-0">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-indigo-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
               Vendor portfolio review
             </p>
 
-            <h3 className="mt-1 truncate text-lg font-bold text-white">
+            <h3 className="mt-1 truncate text-lg font-bold text-cream">
               {vendorName}
             </h3>
 
-            <p className="mt-1 text-xs text-slate-400">
+            <p className="mt-1 text-xs text-fog">
               Photo {currentIndex + 1} of {images.length}
             </p>
           </div>
@@ -2915,13 +2915,13 @@ function VendorGalleryModal({
           <button
             type="button"
             onClick={onClose}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-lg text-white transition hover:bg-white/10"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-line bg-raised/5 text-lg text-cream transition hover:bg-raised/10"
           >
             ×
           </button>
         </div>
 
-        <div className="relative flex min-h-0 flex-1 items-center justify-center bg-slate-950 p-4 sm:p-8">
+        <div className="relative flex min-h-0 flex-1 items-center justify-center bg-charcoal p-4 sm:p-8">
           {currentImage ? (
             <img
               src={currentImage}
@@ -2929,7 +2929,7 @@ function VendorGalleryModal({
               className="max-h-[65vh] max-w-full rounded-2xl object-contain shadow-2xl"
             />
           ) : (
-            <div className="text-sm text-slate-400">
+            <div className="text-sm text-fog">
               Image could not be displayed.
             </div>
           )}
@@ -2940,7 +2940,7 @@ function VendorGalleryModal({
                 type="button"
                 onClick={onPrevious}
                 aria-label="Previous photo"
-                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-slate-950/70 text-xl text-white shadow-lg backdrop-blur transition hover:bg-slate-800"
+                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-charcoal/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
               >
                 ‹
               </button>
@@ -2949,7 +2949,7 @@ function VendorGalleryModal({
                 type="button"
                 onClick={onNext}
                 aria-label="Next photo"
-                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-slate-950/70 text-xl text-white shadow-lg backdrop-blur transition hover:bg-slate-800"
+                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-charcoal/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
               >
                 ›
               </button>
@@ -2957,7 +2957,7 @@ function VendorGalleryModal({
           )}
         </div>
 
-        <div className="border-t border-white/10 bg-slate-950 px-4 py-4 sm:px-6">
+        <div className="border-t border-line bg-charcoal px-4 py-4 sm:px-6">
           <div className="flex gap-2 overflow-x-auto pb-1">
             {images.map((image, index) => {
               const src = getImageSource(image);
@@ -2969,7 +2969,7 @@ function VendorGalleryModal({
                   onClick={() => onSelect(index)}
                   className={`h-16 w-20 shrink-0 overflow-hidden rounded-xl border-2 transition ${
                     index === currentIndex
-                      ? "border-indigo-400"
+                      ? "border-gold/50"
                       : "border-transparent opacity-60 hover:opacity-100"
                   }`}
                 >
@@ -2980,7 +2980,7 @@ function VendorGalleryModal({
                       className="h-full w-full object-cover"
                     />
                   ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-slate-800 text-[10px] text-slate-400">
+                    <div className="flex h-full w-full items-center justify-center bg-raised text-[10px] text-fog">
                       Image
                     </div>
                   )}
@@ -3010,19 +3010,19 @@ function VenueGalleryModal({
   const venueName = getVenueName(venue);
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/90 p-4 backdrop-blur-sm">
-      <div className="flex max-h-[95vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-slate-950 shadow-2xl">
-        <div className="flex items-center justify-between border-b border-white/10 px-5 py-4 sm:px-6">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/90 p-4 backdrop-blur-xl">
+      <div className="flex max-h-[95vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-charcoal shadow-2xl">
+        <div className="flex items-center justify-between border-b border-line px-5 py-4 sm:px-6">
           <div className="min-w-0">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-indigo-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
               Venue gallery review
             </p>
 
-            <h3 className="mt-1 truncate text-lg font-bold text-white">
+            <h3 className="mt-1 truncate text-lg font-bold text-cream">
               {venueName}
             </h3>
 
-            <p className="mt-1 text-xs text-slate-400">
+            <p className="mt-1 text-xs text-fog">
               Photo {currentIndex + 1} of {images.length}
             </p>
           </div>
@@ -3030,13 +3030,13 @@ function VenueGalleryModal({
           <button
             type="button"
             onClick={onClose}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-lg text-white transition hover:bg-white/10"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-line bg-raised/5 text-lg text-cream transition hover:bg-raised/10"
           >
             ×
           </button>
         </div>
 
-        <div className="relative flex min-h-0 flex-1 items-center justify-center bg-slate-950 p-4 sm:p-8">
+        <div className="relative flex min-h-0 flex-1 items-center justify-center bg-charcoal p-4 sm:p-8">
           {currentImage ? (
             <img
               src={currentImage}
@@ -3044,7 +3044,7 @@ function VenueGalleryModal({
               className="max-h-[65vh] max-w-full rounded-2xl object-contain shadow-2xl"
             />
           ) : (
-            <div className="text-sm text-slate-400">
+            <div className="text-sm text-fog">
               Image could not be displayed.
             </div>
           )}
@@ -3055,7 +3055,7 @@ function VenueGalleryModal({
                 type="button"
                 onClick={onPrevious}
                 aria-label="Previous photo"
-                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-slate-950/70 text-xl text-white shadow-lg backdrop-blur transition hover:bg-slate-800"
+                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-charcoal/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
               >
                 ‹
               </button>
@@ -3064,7 +3064,7 @@ function VenueGalleryModal({
                 type="button"
                 onClick={onNext}
                 aria-label="Next photo"
-                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-slate-950/70 text-xl text-white shadow-lg backdrop-blur transition hover:bg-slate-800"
+                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-charcoal/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
               >
                 ›
               </button>
@@ -3072,7 +3072,7 @@ function VenueGalleryModal({
           )}
         </div>
 
-        <div className="border-t border-white/10 bg-slate-950 px-4 py-4 sm:px-6">
+        <div className="border-t border-line bg-charcoal px-4 py-4 sm:px-6">
           <div className="flex gap-2 overflow-x-auto pb-1">
             {images.map((image, index) => {
               const src = getImageSource(image);
@@ -3084,7 +3084,7 @@ function VenueGalleryModal({
                   onClick={() => onSelect(index)}
                   className={`h-16 w-20 shrink-0 overflow-hidden rounded-xl border-2 transition ${
                     index === currentIndex
-                      ? "border-indigo-400"
+                      ? "border-gold/50"
                       : "border-transparent opacity-60 hover:opacity-100"
                   }`}
                 >
@@ -3095,7 +3095,7 @@ function VenueGalleryModal({
                       className="h-full w-full object-cover"
                     />
                   ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-slate-800 text-[10px] text-slate-400">
+                    <div className="flex h-full w-full items-center justify-center bg-raised text-[10px] text-fog">
                       Image
                     </div>
                   )}
@@ -3112,15 +3112,15 @@ function VenueGalleryModal({
 function PageHeader({ eyebrow, title, description }) {
   return (
     <section>
-      <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+      <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
         {eyebrow}
       </p>
 
-      <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-950">
+      <h2 className="mt-2 text-3xl font-bold tracking-tight text-cream">
         {title}
       </h2>
 
-      <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-500 sm:text-base">
+      <p className="mt-2 max-w-3xl text-sm leading-6 text-mist sm:text-base">
         {description}
       </p>
     </section>
@@ -3129,23 +3129,23 @@ function PageHeader({ eyebrow, title, description }) {
 
 function StatCard({ label, value, detail, icon }) {
   return (
-    <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="rounded-3xl border border-line bg-raised p-5 shadow-sm">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-400">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-fog">
             {label}
           </p>
 
-          <p className="mt-3 text-2xl font-bold tracking-tight text-slate-950">
+          <p className="mt-3 text-2xl font-bold tracking-tight text-cream">
             {value}
           </p>
 
-          <p className="mt-1 truncate text-xs text-slate-400">
+          <p className="mt-1 truncate text-xs text-fog">
             {detail}
           </p>
         </div>
 
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-50 font-bold text-indigo-600">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold/10 font-bold text-gold">
           {icon}
         </div>
       </div>
@@ -3155,12 +3155,12 @@ function StatCard({ label, value, detail, icon }) {
 
 function FinancialCard({ label, value }) {
   return (
-    <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
-      <p className="text-xs font-medium text-slate-400">
+    <div className="rounded-2xl border border-line bg-surface p-5">
+      <p className="text-xs font-medium text-fog">
         {label}
       </p>
 
-      <p className="mt-2 text-xl font-bold text-slate-950">
+      <p className="mt-2 text-xl font-bold text-cream">
         {value}
       </p>
     </div>
@@ -3172,17 +3172,17 @@ function AttentionCard({ label, count, onClick }) {
     <button
       type="button"
       onClick={onClick}
-      className="flex w-full items-center gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-4 text-left transition hover:border-indigo-200 hover:bg-indigo-50"
+      className="flex w-full items-center gap-3 rounded-2xl border border-line bg-surface p-4 text-left transition hover:border-gold/30 hover:bg-gold/10"
     >
-      <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white text-sm font-bold text-indigo-600 shadow-sm">
+      <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-raised text-sm font-bold text-gold shadow-sm">
         {count}
       </div>
 
-      <span className="flex-1 text-sm font-semibold text-slate-700">
+      <span className="flex-1 text-sm font-semibold text-mist">
         {label}
       </span>
 
-      <span className="text-slate-400">→</span>
+      <span className="text-fog">→</span>
     </button>
   );
 }
@@ -3190,11 +3190,11 @@ function AttentionCard({ label, count, onClick }) {
 function InfoItem({ label, value }) {
   return (
     <div>
-      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-slate-400">
+      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-fog">
         {label}
       </p>
 
-      <p className="mt-1 truncate text-sm font-semibold text-slate-700">
+      <p className="mt-1 truncate text-sm font-semibold text-mist">
         {value}
       </p>
     </div>
@@ -3204,15 +3204,15 @@ function InfoItem({ label, value }) {
 function EmptyState({ icon, title, text }) {
   return (
     <div className="px-6 py-14 text-center">
-      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-100 text-xl text-slate-400">
+      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-surface text-xl text-fog">
         {icon}
       </div>
 
-      <h3 className="mt-4 font-bold text-slate-800">
+      <h3 className="mt-4 font-bold text-cream">
         {title}
       </h3>
 
-      <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-slate-500">
+      <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-mist">
         {text}
       </p>
     </div>

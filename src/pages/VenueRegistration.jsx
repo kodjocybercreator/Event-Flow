@@ -574,19 +574,19 @@ export default function VenueRegistration() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-surface">
         <Navbar />
 
         <main className="mx-auto flex min-h-[80vh] max-w-3xl items-center justify-center px-4 py-12 sm:px-6 sm:py-16">
-          <div className="w-full overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
-            <div className="bg-gradient-to-br from-indigo-700 via-indigo-600 to-violet-600 px-6 py-10 text-center text-white sm:px-10">
-              <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-white/15 ring-8 ring-white/10">
+          <div className="w-full overflow-hidden rounded-3xl border border-line bg-raised shadow-xl">
+            <div className="bg-gradient-to-br from-indigo-700 via-indigo-600 to-violet-600 px-6 py-10 text-center text-cream sm:px-10">
+              <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-raised/15 ring-8 ring-white/10">
                 <span className="text-4xl">
                   ✓
                 </span>
               </div>
 
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-100">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cream">
                 EventFlow Venues
               </p>
 
@@ -594,7 +594,7 @@ export default function VenueRegistration() {
                 Venue Submitted
               </h1>
 
-              <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-indigo-100 sm:text-base">
+              <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-cream sm:text-base">
                 Your venue profile and gallery
                 have been submitted successfully.
                 Our team will review the
@@ -604,9 +604,9 @@ export default function VenueRegistration() {
             </div>
 
             <div className="p-6 sm:p-10">
-              <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5">
+              <div className="rounded-2xl border border-amber/20 bg-amber/10 p-5">
                 <div className="flex items-start gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber">
                     ⏳
                   </div>
 
@@ -624,12 +624,12 @@ export default function VenueRegistration() {
                 </div>
               </div>
 
-              <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
-                <p className="text-sm font-semibold text-slate-900">
+              <div className="mt-6 rounded-2xl border border-line bg-surface p-5">
+                <p className="text-sm font-semibold text-cream">
                   Your venue gallery
                 </p>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-mist">
                   {galleryImages.length} photo
                   {galleryImages.length === 1
                     ? ""
@@ -642,7 +642,7 @@ export default function VenueRegistration() {
                     .map((image, index) => (
                       <div
                         key={image.id}
-                        className="relative aspect-square overflow-hidden rounded-xl bg-slate-200"
+                        className="relative aspect-square overflow-hidden rounded-xl bg-elevated"
                       >
                         <img
                           src={image.dataUrl}
@@ -653,7 +653,7 @@ export default function VenueRegistration() {
                         />
 
                         {index === 0 && (
-                          <span className="absolute bottom-2 left-2 rounded-full bg-slate-900/80 px-2 py-1 text-[10px] font-semibold text-white">
+                          <span className="absolute bottom-2 left-2 rounded-full bg-charcoal/80 px-2 py-1 text-[10px] font-semibold text-cream">
                             Cover
                           </span>
                         )}
@@ -665,14 +665,14 @@ export default function VenueRegistration() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
                 <Link
                   to="/dashboard/venue"
-                  className="rounded-xl bg-indigo-600 px-6 py-3 text-center font-semibold text-white transition hover:bg-indigo-700"
+                  className="rounded-xl bg-gold px-6 py-3 text-center font-semibold text-cream transition hover:bg-gold-dim"
                 >
                   Go to Venue Dashboard
                 </Link>
 
                 <Link
                   to="/"
-                  className="rounded-xl border border-slate-300 px-6 py-3 text-center font-semibold text-slate-700 transition hover:bg-slate-50"
+                  className="rounded-xl border border-line-bright px-6 py-3 text-center font-semibold text-mist transition hover:bg-surface"
                 >
                   Back to Home
                 </Link>
@@ -685,37 +685,37 @@ export default function VenueRegistration() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-surface">
       <Navbar />
 
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
         <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
+          <div className="flex flex-wrap items-center gap-2 text-sm text-mist">
             <Link
               to="/dashboard/venue"
-              className="transition hover:text-indigo-600"
+              className="transition hover:text-gold"
             >
               Venue Dashboard
             </Link>
 
             <span>/</span>
 
-            <span className="font-medium text-slate-700">
+            <span className="font-medium text-mist">
               Register Venue
             </span>
           </div>
 
           <div className="mt-5 max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-indigo-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-indigo-700">
-              <span className="h-1.5 w-1.5 rounded-full bg-indigo-600" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/10 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-gold">
+              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               EventFlow Venues
             </div>
 
-            <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+            <h1 className="mt-4 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
               Register your venue
             </h1>
 
-            <p className="mt-3 text-base leading-7 text-slate-600">
+            <p className="mt-3 text-base leading-7 text-mist">
               Create a professional venue profile
               so event organizers can discover your
               space, review your facilities, and send
@@ -725,7 +725,7 @@ export default function VenueRegistration() {
         </div>
 
         {error && (
-          <div className="mb-6 flex items-start gap-3 rounded-2xl border border-red-200 bg-red-50 px-5 py-4 text-sm font-medium text-red-700">
+          <div className="mb-6 flex items-start gap-3 rounded-2xl border border-rose/20 bg-rose/10 px-5 py-4 text-sm font-medium text-rose">
             <span className="mt-0.5">!</span>
             <span>{error}</span>
           </div>
@@ -733,21 +733,21 @@ export default function VenueRegistration() {
 
         <form onSubmit={handleSubmit}>
           <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
-            <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+            <div className="overflow-hidden rounded-3xl border border-line bg-raised shadow-sm">
               {/* VENUE INFORMATION */}
 
               <section className="p-5 sm:p-8">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-indigo-50 text-xl">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gold/10 text-xl">
                     🏢
                   </div>
 
                   <div>
-                    <h2 className="text-xl font-bold text-slate-950">
+                    <h2 className="text-xl font-bold text-cream">
                       Venue information
                     </h2>
 
-                    <p className="mt-1 text-sm leading-6 text-slate-500">
+                    <p className="mt-1 text-sm leading-6 text-mist">
                       Give organizers the essential
                       details about your venue.
                     </p>
@@ -756,7 +756,7 @@ export default function VenueRegistration() {
 
                 <div className="mt-7 grid gap-5 md:grid-cols-2">
                   <div className="md:col-span-2">
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-mist">
                       Venue / Business Name *
                     </label>
 
@@ -768,12 +768,12 @@ export default function VenueRegistration() {
                       }
                       onChange={handleChange}
                       placeholder="e.g. Royal Gardens Event Centre"
-                      className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                      className="w-full rounded-xl border border-line-bright bg-raised px-4 py-3.5 text-sm text-cream outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/20"
                     />
                   </div>
 
                   <div>
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-mist">
                       Venue Type *
                     </label>
 
@@ -783,7 +783,7 @@ export default function VenueRegistration() {
                         formData.venueType
                       }
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                      className="w-full rounded-xl border border-line-bright bg-raised px-4 py-3.5 text-sm text-cream outline-none transition focus:border-gold focus:ring-4 focus:ring-gold/20"
                     >
                       <option value="">
                         Select venue type
@@ -836,7 +836,7 @@ export default function VenueRegistration() {
                   </div>
 
                   <div>
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-mist">
                       Location *
                     </label>
 
@@ -848,12 +848,12 @@ export default function VenueRegistration() {
                       }
                       onChange={handleChange}
                       placeholder="e.g. Kumasi, Ashanti Region"
-                      className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                      className="w-full rounded-xl border border-line-bright bg-raised px-4 py-3.5 text-sm text-cream outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/20"
                     />
                   </div>
 
                   <div>
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-mist">
                       Maximum Capacity *
                     </label>
 
@@ -866,12 +866,12 @@ export default function VenueRegistration() {
                       }
                       onChange={handleChange}
                       placeholder="e.g. 500"
-                      className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                      className="w-full rounded-xl border border-line-bright bg-raised px-4 py-3.5 text-sm text-cream outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/20"
                     />
                   </div>
 
                   <div>
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-mist">
                       Starting Price (GH₵) *
                     </label>
 
@@ -882,10 +882,10 @@ export default function VenueRegistration() {
                       value={formData.price}
                       onChange={handleChange}
                       placeholder="e.g. 5000"
-                      className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                      className="w-full rounded-xl border border-line-bright bg-raised px-4 py-3.5 text-sm text-cream outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/20"
                     />
 
-                    <p className="mt-2 text-xs text-slate-500">
+                    <p className="mt-2 text-xs text-mist">
                       This is a starting price. The
                       final price can be agreed after
                       reviewing the organizer's
@@ -897,18 +897,18 @@ export default function VenueRegistration() {
 
               {/* GALLERY */}
 
-              <section className="border-t border-slate-200 p-5 sm:p-8">
+              <section className="border-t border-line p-5 sm:p-8">
                 <div className="flex items-start gap-4">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-violet-50 text-xl">
                     🖼️
                   </div>
 
                   <div>
-                    <h2 className="text-xl font-bold text-slate-950">
+                    <h2 className="text-xl font-bold text-cream">
                       Venue gallery
                     </h2>
 
-                    <p className="mt-1 text-sm leading-6 text-slate-500">
+                    <p className="mt-1 text-sm leading-6 text-mist">
                       Upload clear photos of your
                       venue so organizers can see the
                       space before making an enquiry.
@@ -938,15 +938,15 @@ export default function VenueRegistration() {
                         MAX_GALLERY_IMAGES ||
                       isProcessingImages
                     }
-                    className="group flex w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 px-5 py-10 text-center transition hover:border-indigo-400 hover:bg-indigo-50/40 disabled:cursor-not-allowed disabled:opacity-60"
+                    className="group flex w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-line-bright bg-surface px-5 py-10 text-center transition hover:border-gold/50 hover:bg-gold/10/40 disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-raised text-2xl shadow-sm">
                       {isProcessingImages
                         ? "⏳"
                         : "📷"}
                     </span>
 
-                    <span className="mt-4 text-sm font-bold text-slate-900">
+                    <span className="mt-4 text-sm font-bold text-cream">
                       {isProcessingImages
                         ? "Optimizing photos..."
                         : galleryImages.length >=
@@ -955,19 +955,19 @@ export default function VenueRegistration() {
                         : "Add venue photos"}
                     </span>
 
-                    <span className="mt-1 text-xs text-slate-500">
+                    <span className="mt-1 text-xs text-mist">
                       JPG, PNG or WEBP · Up to{" "}
                       {MAX_GALLERY_IMAGES} photos
                     </span>
 
-                    <span className="mt-1 text-xs text-slate-400">
+                    <span className="mt-1 text-xs text-fog">
                       Photos are automatically
                       resized and compressed
                     </span>
                   </button>
 
                   {imageError && (
-                    <div className="mt-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+                    <div className="mt-3 rounded-xl border border-amber/20 bg-amber/10 px-4 py-3 text-sm text-amber-800">
                       {imageError}
                     </div>
                   )}
@@ -976,17 +976,17 @@ export default function VenueRegistration() {
                     <div className="mt-6">
                       <div className="mb-3 flex items-center justify-between gap-3">
                         <div>
-                          <p className="text-sm font-bold text-slate-900">
+                          <p className="text-sm font-bold text-cream">
                             Uploaded photos
                           </p>
 
-                          <p className="text-xs text-slate-500">
+                          <p className="text-xs text-mist">
                             The first photo is used
                             as your venue cover.
                           </p>
                         </div>
 
-                        <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">
+                        <span className="rounded-full bg-surface px-3 py-1 text-xs font-bold text-mist">
                           {
                             galleryImages.length
                           }
@@ -1007,7 +1007,7 @@ export default function VenueRegistration() {
                               key={
                                 image.id
                               }
-                              className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-200"
+                              className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-elevated"
                             >
                               <img
                                 src={
@@ -1024,7 +1024,7 @@ export default function VenueRegistration() {
 
                               {index ===
                                 0 && (
-                                <span className="absolute left-2 top-2 rounded-full bg-indigo-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
+                                <span className="absolute left-2 top-2 rounded-full bg-gold px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-cream">
                                   Cover photo
                                 </span>
                               )}
@@ -1039,7 +1039,7 @@ export default function VenueRegistration() {
                                         image.id
                                       )
                                     }
-                                    className="flex-1 rounded-lg bg-white/95 px-2 py-2 text-[10px] font-bold text-slate-800 shadow-sm"
+                                    className="flex-1 rounded-lg bg-raised/95 px-2 py-2 text-[10px] font-bold text-cream shadow-sm"
                                   >
                                     Set Cover
                                   </button>
@@ -1052,7 +1052,7 @@ export default function VenueRegistration() {
                                       image.id
                                     )
                                   }
-                                  className="rounded-lg bg-red-600 px-3 py-2 text-[10px] font-bold text-white shadow-sm"
+                                  className="rounded-lg bg-rose px-3 py-2 text-[10px] font-bold text-cream shadow-sm"
                                 >
                                   Remove
                                 </button>
@@ -1065,7 +1065,7 @@ export default function VenueRegistration() {
                   )}
                 </div>
 
-                <div className="mt-5 rounded-xl bg-indigo-50 px-4 py-3 text-xs leading-5 text-indigo-800">
+                <div className="mt-5 rounded-xl bg-gold/10 px-4 py-3 text-xs leading-5 text-raised">
                   <strong>
                     Photo tip:
                   </strong>{" "}
@@ -1079,18 +1079,18 @@ export default function VenueRegistration() {
 
               {/* OWNER INFORMATION */}
 
-              <section className="border-t border-slate-200 p-5 sm:p-8">
+              <section className="border-t border-line p-5 sm:p-8">
                 <div className="flex items-start gap-4">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-xl">
                     👤
                   </div>
 
                   <div>
-                    <h2 className="text-xl font-bold text-slate-950">
+                    <h2 className="text-xl font-bold text-cream">
                       Owner / contact information
                     </h2>
 
-                    <p className="mt-1 text-sm leading-6 text-slate-500">
+                    <p className="mt-1 text-sm leading-6 text-mist">
                       These details help EventFlow
                       and organizers contact you about
                       enquiries and bookings.
@@ -1100,7 +1100,7 @@ export default function VenueRegistration() {
 
                 <div className="mt-6 grid gap-5 md:grid-cols-2">
                   <div>
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-mist">
                       Owner Name *
                     </label>
 
@@ -1112,12 +1112,12 @@ export default function VenueRegistration() {
                       }
                       onChange={handleChange}
                       placeholder="Full name"
-                      className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                      className="w-full rounded-xl border border-line-bright bg-raised px-4 py-3.5 text-sm text-cream outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/20"
                     />
                   </div>
 
                   <div>
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-mist">
                       Email *
                     </label>
 
@@ -1129,12 +1129,12 @@ export default function VenueRegistration() {
                       }
                       onChange={handleChange}
                       placeholder="venue@example.com"
-                      className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                      className="w-full rounded-xl border border-line-bright bg-raised px-4 py-3.5 text-sm text-cream outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/20"
                     />
                   </div>
 
                   <div className="md:col-span-2">
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-mist">
                       Phone Number *
                     </label>
 
@@ -1146,7 +1146,7 @@ export default function VenueRegistration() {
                       }
                       onChange={handleChange}
                       placeholder="e.g. 024 123 4567"
-                      className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                      className="w-full rounded-xl border border-line-bright bg-raised px-4 py-3.5 text-sm text-cream outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/20"
                     />
                   </div>
                 </div>
@@ -1154,8 +1154,8 @@ export default function VenueRegistration() {
 
               {/* DESCRIPTION */}
 
-              <section className="border-t border-slate-200 p-5 sm:p-8">
-                <label className="mb-2 block text-sm font-semibold text-slate-700">
+              <section className="border-t border-line p-5 sm:p-8">
+                <label className="mb-2 block text-sm font-semibold text-mist">
                   Venue Description
                 </label>
 
@@ -1167,10 +1167,10 @@ export default function VenueRegistration() {
                   onChange={handleChange}
                   rows="6"
                   placeholder="Describe your venue, facilities, parking, seating arrangements, decoration options, accessibility, catering options, and anything else organizers should know."
-                  className="w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-sm leading-6 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                  className="w-full resize-none rounded-xl border border-line-bright bg-raised px-4 py-3.5 text-sm leading-6 text-cream outline-none transition placeholder:text-fog focus:border-gold focus:ring-4 focus:ring-gold/20"
                 />
 
-                <p className="mt-2 text-xs text-slate-500">
+                <p className="mt-2 text-xs text-mist">
                   A clear description helps organizers
                   understand what your venue offers.
                 </p>
@@ -1178,21 +1178,21 @@ export default function VenueRegistration() {
 
               {/* APPROVAL */}
 
-              <section className="border-t border-slate-200 p-5 sm:p-8">
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+              <section className="border-t border-line p-5 sm:p-8">
+                <div className="rounded-2xl border border-line bg-surface p-5">
                   <div className="flex items-start gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-100 text-indigo-700">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/15 text-gold">
                       ✓
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-slate-900">
+                      <h3 className="font-bold text-cream">
                         What happens after registration?
                       </h3>
 
-                      <div className="mt-3 space-y-3 text-sm text-slate-600">
+                      <div className="mt-3 space-y-3 text-sm text-mist">
                         <div className="flex gap-3">
-                          <span className="font-bold text-indigo-600">
+                          <span className="font-bold text-gold">
                             01
                           </span>
 
@@ -1205,7 +1205,7 @@ export default function VenueRegistration() {
                         </div>
 
                         <div className="flex gap-3">
-                          <span className="font-bold text-indigo-600">
+                          <span className="font-bold text-gold">
                             02
                           </span>
 
@@ -1218,7 +1218,7 @@ export default function VenueRegistration() {
                         </div>
 
                         <div className="flex gap-3">
-                          <span className="font-bold text-indigo-600">
+                          <span className="font-bold text-gold">
                             03
                           </span>
 
@@ -1232,7 +1232,7 @@ export default function VenueRegistration() {
                         </div>
 
                         <div className="flex gap-3">
-                          <span className="font-bold text-indigo-600">
+                          <span className="font-bold text-gold">
                             04
                           </span>
 
@@ -1252,11 +1252,11 @@ export default function VenueRegistration() {
 
               {/* BUTTONS */}
 
-              <div className="border-t border-slate-200 bg-slate-50/70 p-5 sm:p-8">
+              <div className="border-t border-line bg-surface/70 p-5 sm:p-8">
                 <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
                   <Link
                     to="/dashboard/venue"
-                    className="rounded-xl border border-slate-300 bg-white px-6 py-3 text-center text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                    className="rounded-xl border border-line-bright bg-raised px-6 py-3 text-center text-sm font-semibold text-mist transition hover:bg-surface"
                   >
                     Cancel
                   </Link>
@@ -1267,7 +1267,7 @@ export default function VenueRegistration() {
                       isSubmitting ||
                       isProcessingImages
                     }
-                    className="rounded-xl bg-indigo-600 px-6 py-3 text-center text-sm font-bold text-white shadow-sm transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
+                    className="rounded-xl bg-gold px-6 py-3 text-center text-sm font-bold text-cream shadow-sm transition hover:bg-gold-dim disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {isProcessingImages
                       ? "Processing photos..."
@@ -1282,8 +1282,8 @@ export default function VenueRegistration() {
             {/* SIDEBAR */}
 
             <aside className="space-y-5">
-              <div className="rounded-3xl border border-indigo-100 bg-gradient-to-br from-indigo-700 to-violet-700 p-6 text-white shadow-sm">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 text-xl">
+              <div className="rounded-3xl border border-gold/20 bg-gradient-to-br from-indigo-700 to-violet-700 p-6 text-cream shadow-sm">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-raised/15 text-xl">
                   ✨
                 </div>
 
@@ -1291,7 +1291,7 @@ export default function VenueRegistration() {
                   Build a strong venue profile
                 </h2>
 
-                <p className="mt-2 text-sm leading-6 text-indigo-100">
+                <p className="mt-2 text-sm leading-6 text-cream">
                   Good photos and accurate
                   information help organizers
                   understand your venue before they
@@ -1331,8 +1331,8 @@ export default function VenueRegistration() {
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              <div className="rounded-3xl border border-line bg-raised p-6 shadow-sm">
+                <p className="text-xs font-bold uppercase tracking-wider text-fog">
                   Registration checklist
                 </p>
 
@@ -1393,12 +1393,12 @@ export default function VenueRegistration() {
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                <p className="text-sm font-bold text-slate-900">
+              <div className="rounded-3xl border border-line bg-raised p-6 shadow-sm">
+                <p className="text-sm font-bold text-cream">
                   Need to update your venue later?
                 </p>
 
-                <p className="mt-2 text-sm leading-6 text-slate-500">
+                <p className="mt-2 text-sm leading-6 text-mist">
                   Your venue dashboard will be the
                   central place to manage your profile,
                   services, booking requests and
@@ -1420,7 +1420,7 @@ function ChecklistItem({ done, label }) {
         className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
           done
             ? "bg-emerald-100 text-emerald-700"
-            : "bg-slate-100 text-slate-400"
+            : "bg-surface text-fog"
         }`}
       >
         {done ? "✓" : "•"}
@@ -1429,8 +1429,8 @@ function ChecklistItem({ done, label }) {
       <span
         className={`text-sm ${
           done
-            ? "font-semibold text-slate-800"
-            : "text-slate-500"
+            ? "font-semibold text-cream"
+            : "text-mist"
         }`}
       >
         {label}

@@ -101,17 +101,17 @@ export default function AdminAnalytics() {
   [bookings]);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-surface text-cream">
       <Navbar />
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
         <div className="mb-8">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-amber-600">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-amber">
             Platform analytics
           </p>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
             Analytics
           </h1>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500 sm:text-base">
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-mist sm:text-base">
             Overview of platform activity, bookings and payments.
           </p>
         </div>
@@ -127,40 +127,40 @@ export default function AdminAnalytics() {
           <Card className="lg:col-span-2 p-6 sm:p-8">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h2 className="text-lg font-bold text-slate-950">Recent transactions</h2>
-                <p className="text-sm text-slate-500">Latest payment activity on the platform.</p>
+                <h2 className="text-lg font-bold text-cream">Recent transactions</h2>
+                <p className="text-sm text-mist">Latest payment activity on the platform.</p>
               </div>
               <Button to="/admin" variant="outline" size="sm" asChild className="px-4">
                 View all
               </Button>
             </div>
             {recentTransactions.length === 0 ? (
-              <div className="h-64 flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50">
+              <div className="h-64 flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-line bg-surface">
                 <Skeleton.circle className="mb-3" />
-                <p className="text-sm text-slate-500">No transactions yet</p>
+                <p className="text-sm text-mist">No transactions yet</p>
               </div>
             ) : (
               <div className="divide-y divide-slate-100">
                 {recentTransactions.map((tx) => (
                   <div key={tx.id || tx.bookingId || Math.random()} className="flex items-center justify-between gap-4 px-4 py-4">
                     <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-gold">
                         ▣
                       </div>
                       <div className="min-w-0">
-                        <p className="text-sm font-semibold text-slate-900 truncate">
+                        <p className="text-sm font-semibold text-cream truncate">
                           {getProviderName(tx)}
                         </p>
-                        <p className="mt-0.5 text-xs text-slate-500 truncate">
+                        <p className="mt-0.5 text-xs text-mist truncate">
                           {tx.eventName || tx.serviceName || 'Event booking'}
                         </p>
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="text-sm font-bold text-slate-900">
+                      <p className="text-sm font-bold text-cream">
                         {formatMoney(getAmountPaid(tx))}
                       </p>
-                      <p className="mt-0.5 text-xs text-slate-400">
+                      <p className="mt-0.5 text-xs text-fog">
                         {formatDate(tx.paymentCompletedAt || tx.updatedAt || tx.createdAt)}
                       </p>
                       <Badge
@@ -177,34 +177,34 @@ export default function AdminAnalytics() {
           </Card>
 
           <Card p="p-6 sm:p-8">
-            <h2 className="text-lg font-bold text-slate-950 mb-6">Platform status</h2>
+            <h2 className="text-lg font-bold text-cream mb-6">Platform status</h2>
             <div className="space-y-5">
               <div>
                 <div className="flex justify-between mb-1">
-                  <span className="text-sm text-slate-500">Paid bookings</span>
-                  <span className="text-sm font-bold text-slate-900">{completedPayments}</span>
+                  <span className="text-sm text-mist">Paid bookings</span>
+                  <span className="text-sm font-bold text-cream">{completedPayments}</span>
                 </div>
-                <div className="w-full bg-slate-200 rounded-full h-2">
+                <div className="w-full bg-elevated rounded-full h-2">
                   <div className="bg-emerald-500 h-2 rounded-full" style={{ width: bookings.length ? Math.round((completedPayments / bookings.length) * 100) : 0 }} />
                 </div>
               </div>
               <div>
                 <div className="flex justify-between mb-1">
-                  <span className="text-sm text-slate-500">Pending payments</span>
-                  <span className="text-sm font-bold text-slate-900">{pendingPayments}</span>
+                  <span className="text-sm text-mist">Pending payments</span>
+                  <span className="text-sm font-bold text-cream">{pendingPayments}</span>
                 </div>
-                <div className="w-full bg-slate-200 rounded-full h-2">
-                  <div className="bg-amber-500 h-2 rounded-full" style={{ width: bookings.length ? Math.round((pendingPayments / bookings.length) * 100) : 0 }} />
+                <div className="w-full bg-elevated rounded-full h-2">
+                  <div className="bg-amber/100 h-2 rounded-full" style={{ width: bookings.length ? Math.round((pendingPayments / bookings.length) * 100) : 0 }} />
                 </div>
               </div>
-              <div className="pt-4 border-t border-slate-100">
+              <div className="pt-4 border-t border-line">
                 <div className="flex justify-between mb-1">
-                  <span className="text-sm font-semibold text-slate-900">Collection rate</span>
-                  <span className="text-sm font-bold text-slate-900">
+                  <span className="text-sm font-semibold text-cream">Collection rate</span>
+                  <span className="text-sm font-bold text-cream">
                     {bookings.length ? Math.round((completedPayments / bookings.length) * 100) : 0}%
                   </span>
                 </div>
-                <p className="mt-1 text-xs text-slate-400">
+                <p className="mt-1 text-xs text-fog">
                   Share of bookings fully paid.
                 </p>
               </div>
@@ -212,11 +212,11 @@ export default function AdminAnalytics() {
           </Card>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">
+        <div className="rounded-2xl border border-line bg-raised p-6 shadow-sm">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-fog mb-4">
             About this data
           </h3>
-          <p className="text-sm text-slate-500 leading-6">
+          <p className="text-sm text-mist leading-6">
             This is a demo mockup. All data is stored in your browser's
             localStorage and resets when cleared. Payment processing is
             simulated — no real money is transferred. Connect a real backend

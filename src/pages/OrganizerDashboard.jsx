@@ -459,18 +459,18 @@ function getPaymentStatusText(status) {
 function getPaymentStatusClasses(status) {
   const styles = {
     unpaid:
-      "border-amber-200 bg-amber-50 text-amber-700",
+      "border-amber/20 bg-amber/10 text-amber",
     deposit_paid:
-      "border-blue-200 bg-blue-50 text-blue-700",
+      "border-blue-200 bg-gold/10 text-gold",
     partially_paid:
-      "border-blue-200 bg-blue-50 text-blue-700",
+      "border-blue-200 bg-gold/10 text-gold",
     paid:
       "border-emerald-200 bg-emerald-50 text-emerald-700",
   };
 
   return (
     styles[status] ||
-    "border-gray-200 bg-gray-100 text-gray-600"
+    "border-line bg-surface text-mist"
   );
 }
 
@@ -529,60 +529,60 @@ function getStatusText(status, providerType = "vendor") {
 function getStatusClasses(status) {
   const styles = {
     pending:
-      "border-amber-200 bg-amber-50 text-amber-700",
+      "border-amber/20 bg-amber/10 text-amber",
 
     quotation_sent:
-      "border-indigo-200 bg-indigo-50 text-indigo-700",
+      "border-gold/30 bg-gold/10 text-gold",
 
     quotation_received:
-      "border-indigo-200 bg-indigo-50 text-indigo-700",
+      "border-gold/30 bg-gold/10 text-gold",
 
     quoted:
-      "border-indigo-200 bg-indigo-50 text-indigo-700",
+      "border-gold/30 bg-gold/10 text-gold",
 
     sent:
-      "border-indigo-200 bg-indigo-50 text-indigo-700",
+      "border-gold/30 bg-gold/10 text-gold",
 
     vendor_counter:
-      "border-blue-200 bg-blue-50 text-blue-700",
+      "border-blue-200 bg-gold/10 text-gold",
 
     vendor_countered:
-      "border-blue-200 bg-blue-50 text-blue-700",
+      "border-blue-200 bg-gold/10 text-gold",
 
     venue_counter:
-      "border-blue-200 bg-blue-50 text-blue-700",
+      "border-blue-200 bg-gold/10 text-gold",
 
     venue_countered:
-      "border-blue-200 bg-blue-50 text-blue-700",
+      "border-blue-200 bg-gold/10 text-gold",
 
     organizer_counter:
-      "border-purple-200 bg-purple-50 text-purple-700",
+      "border-gold/30 bg-gold/10 text-gold",
 
     counter_sent:
-      "border-purple-200 bg-purple-50 text-purple-700",
+      "border-gold/30 bg-gold/10 text-gold",
 
     quotation_rejected:
-      "border-red-200 bg-red-50 text-red-700",
+      "border-rose/20 bg-rose/10 text-rose",
 
     accepted:
       "border-emerald-200 bg-emerald-50 text-emerald-700",
 
     rejected:
-      "border-red-200 bg-red-50 text-red-700",
+      "border-rose/20 bg-rose/10 text-rose",
 
     declined:
-      "border-red-200 bg-red-50 text-red-700",
+      "border-rose/20 bg-rose/10 text-rose",
 
     cancelled:
-      "border-gray-200 bg-gray-100 text-gray-600",
+      "border-line bg-surface text-mist",
 
     canceled:
-      "border-gray-200 bg-gray-100 text-gray-600",
+      "border-line bg-surface text-mist",
   };
 
   return (
     styles[status] ||
-    "border-gray-200 bg-gray-100 text-gray-600"
+    "border-line bg-surface text-mist"
   );
 }
 
@@ -2082,7 +2082,7 @@ export default function OrganizerDashboard() {
     "Organizer";
 
   return (
-    <div className="eventflow-organizer-theme min-h-screen bg-[#080b18] text-slate-100">
+    <div className="eventflow-organizer-theme min-h-screen bg-[#080b18] text-mist">
       <style>{`
         .eventflow-organizer-theme {
           color-scheme: light;
@@ -2091,38 +2091,38 @@ export default function OrganizerDashboard() {
           min-height: 100vh;
         }
         .eventflow-organizer-theme main { max-width: 1480px; }
-        .eventflow-organizer-theme .bg-white { background-color: #ffffff !important; }
-        .eventflow-organizer-theme .bg-white\/70 { background-color: rgba(255,255,255,.92) !important; }
-        .eventflow-organizer-theme .bg-gray-50,
-        .eventflow-organizer-theme .bg-gray-50\/70,
-        .eventflow-organizer-theme .bg-gray-50\/80 { background-color: #f8f9fc !important; }
-        .eventflow-organizer-theme .bg-gray-100 { background-color: #f0f1f7 !important; }
-        .eventflow-organizer-theme .bg-gray-200 { background-color: #e6e8f0 !important; }
-        .eventflow-organizer-theme .border-gray-100 { border-color: #eceef4 !important; }
-        .eventflow-organizer-theme .border-gray-200 { border-color: #e4e6ef !important; }
-        .eventflow-organizer-theme .border-gray-300 { border-color: #d9dce8 !important; }
+        .eventflow-organizer-theme .bg-raised { background-color: #ffffff !important; }
+        .eventflow-organizer-theme .bg-raised\/70 { background-color: rgba(255,255,255,.92) !important; }
+        .eventflow-organizer-theme .bg-surface,
+        .eventflow-organizer-theme .bg-surface\/70,
+        .eventflow-organizer-theme .bg-surface\/80 { background-color: #f8f9fc !important; }
+        .eventflow-organizer-theme .bg-surface { background-color: #f0f1f7 !important; }
+        .eventflow-organizer-theme .bg-elevated { background-color: #e6e8f0 !important; }
+        .eventflow-organizer-theme .border-line { border-color: #eceef4 !important; }
+        .eventflow-organizer-theme .border-line { border-color: #e4e6ef !important; }
+        .eventflow-organizer-theme .border-line-bright { border-color: #d9dce8 !important; }
         .eventflow-organizer-theme .border-dashed { border-color: #d6d8e6 !important; }
         .eventflow-organizer-theme .border-t,
         .eventflow-organizer-theme .border-b { border-color: #eceef4 !important; }
-        .eventflow-organizer-theme .text-gray-950,
-        .eventflow-organizer-theme .text-gray-900,
-        .eventflow-organizer-theme .text-gray-800 { color: #20243a !important; }
-        .eventflow-organizer-theme .text-gray-700 { color: #41465e !important; }
-        .eventflow-organizer-theme .text-gray-600 { color: #62677d !important; }
-        .eventflow-organizer-theme .text-gray-500 { color: #85899b !important; }
-        .eventflow-organizer-theme .text-gray-400 { color: #a0a4b3 !important; }
-        .eventflow-organizer-theme .bg-gray-950 { background-color: #4f46a5 !important; }
-        .eventflow-organizer-theme .hover\:bg-gray-800:hover { background-color: #40388f !important; }
-        .eventflow-organizer-theme .bg-purple-50,
-        .eventflow-organizer-theme .bg-purple-100,
-        .eventflow-organizer-theme .bg-purple-100\/50 { background-color: #f2efff !important; }
-        .eventflow-organizer-theme .border-purple-100 { border-color: #e7e0ff !important; }
-        .eventflow-organizer-theme .border-purple-200 { border-color: #d8ccff !important; }
-        .eventflow-organizer-theme .text-purple-700 { color: #5b4ab5 !important; }
-        .eventflow-organizer-theme .hover\:bg-purple-50:hover { background-color: #f2efff !important; }
-        .eventflow-organizer-theme .bg-indigo-50,
-        .eventflow-organizer-theme .bg-blue-50 { background-color: #eef2ff !important; }
-        .eventflow-organizer-theme .border-indigo-100,
+        .eventflow-organizer-theme .text-cream,
+        .eventflow-organizer-theme .text-cream,
+        .eventflow-organizer-theme .text-cream { color: #20243a !important; }
+        .eventflow-organizer-theme .text-mist { color: #41465e !important; }
+        .eventflow-organizer-theme .text-mist { color: #62677d !important; }
+        .eventflow-organizer-theme .text-mist { color: #85899b !important; }
+        .eventflow-organizer-theme .text-fog { color: #a0a4b3 !important; }
+        .eventflow-organizer-theme .bg-ink { background-color: #4f46a5 !important; }
+        .eventflow-organizer-theme .hover\:bg-raised:hover { background-color: #40388f !important; }
+        .eventflow-organizer-theme .bg-gold/10,
+        .eventflow-organizer-theme .bg-gold/15,
+        .eventflow-organizer-theme .bg-gold/15\/50 { background-color: #f2efff !important; }
+        .eventflow-organizer-theme .border-gold/20 { border-color: #e7e0ff !important; }
+        .eventflow-organizer-theme .border-gold/30 { border-color: #d8ccff !important; }
+        .eventflow-organizer-theme .text-gold { color: #5b4ab5 !important; }
+        .eventflow-organizer-theme .hover\:bg-gold/10:hover { background-color: #f2efff !important; }
+        .eventflow-organizer-theme .bg-gold/10,
+        .eventflow-organizer-theme .bg-gold/10 { background-color: #eef2ff !important; }
+        .eventflow-organizer-theme .border-gold/20,
         .eventflow-organizer-theme .border-blue-200 { border-color: #dce3ff !important; }
         .eventflow-organizer-theme input,
         .eventflow-organizer-theme select,
@@ -2143,21 +2143,21 @@ export default function OrganizerDashboard() {
         .eventflow-organizer-theme .shadow-sm { box-shadow: 0 2px 8px rgba(34,39,72,.04) !important; }
         .eventflow-organizer-theme .hover\:shadow-md:hover { box-shadow: 0 10px 24px rgba(34,39,72,.08) !important; }
         .eventflow-organizer-theme .bg-emerald-50,
-        .eventflow-organizer-theme .bg-green-50 { background-color: #eaf8f1 !important; }
-        .eventflow-organizer-theme .bg-red-50 { background-color: #fff0f0 !important; }
+        .eventflow-organizer-theme .bg-emerald/10 { background-color: #eaf8f1 !important; }
+        .eventflow-organizer-theme .bg-rose/10 { background-color: #fff0f0 !important; }
         .eventflow-organizer-theme .bg-yellow-50,
-        .eventflow-organizer-theme .bg-amber-50 { background-color: #fff7e5 !important; }
+        .eventflow-organizer-theme .bg-amber/10 { background-color: #fff7e5 !important; }
         .eventflow-organizer-theme .border-emerald-200,
-        .eventflow-organizer-theme .border-green-200 { border-color: #bcebd5 !important; }
-        .eventflow-organizer-theme .border-red-200 { border-color: #ffd0d0 !important; }
+        .eventflow-organizer-theme .border-emerald/20 { border-color: #bcebd5 !important; }
+        .eventflow-organizer-theme .border-rose/20 { border-color: #ffd0d0 !important; }
         .eventflow-organizer-theme .border-yellow-200,
-        .eventflow-organizer-theme .border-amber-200 { border-color: #f6df9d !important; }
+        .eventflow-organizer-theme .border-amber/20 { border-color: #f6df9d !important; }
         .eventflow-organizer-theme .text-emerald-700,
-        .eventflow-organizer-theme .text-green-700 { color: #087b53 !important; }
-        .eventflow-organizer-theme .text-red-600,
-        .eventflow-organizer-theme .text-red-700 { color: #c83245 !important; }
-        .eventflow-organizer-theme .text-blue-700,
-        .eventflow-organizer-theme .text-indigo-700 { color: #4f46a5 !important; }
+        .eventflow-organizer-theme .text-emerald { color: #087b53 !important; }
+        .eventflow-organizer-theme .text-rose,
+        .eventflow-organizer-theme .text-rose { color: #c83245 !important; }
+        .eventflow-organizer-theme .text-gold,
+        .eventflow-organizer-theme .text-gold { color: #4f46a5 !important; }
         .eventflow-organizer-theme .eventflow-hero {
           border: 1px solid #e6e1fb !important;
           background: #fff !important;
@@ -2170,7 +2170,7 @@ export default function OrganizerDashboard() {
         }
         .eventflow-organizer-theme .eventflow-hero h1 { letter-spacing: -.035em; color: #24213c !important; }
         .eventflow-organizer-theme .eventflow-hero a:first-child,
-        .eventflow-organizer-theme .eventflow-hero a.bg-gray-950 {
+        .eventflow-organizer-theme .eventflow-hero a.bg-ink {
           border: 1px solid #5144a5 !important;
           background: #5144a5 !important;
           box-shadow: 0 3px 8px rgba(81,68,165,.14);
@@ -2218,26 +2218,26 @@ export default function OrganizerDashboard() {
             HERO
         ================================================= */}
 
-        <section className="eventflow-hero overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">
+        <section className="eventflow-hero overflow-hidden rounded-3xl border border-line bg-raised shadow-sm">
 
           <div className="relative px-6 py-8 sm:px-8 lg:px-10 lg:py-10">
 
-            <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-purple-100/50 blur-3xl" />
+            <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-gold/15/50 blur-3xl" />
 
             <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
 
               <div className="max-w-3xl">
 
-                <div className="inline-flex items-center gap-2 rounded-full border border-purple-100 bg-purple-50 px-3 py-1.5 text-xs font-bold text-purple-700">
-                  <span className="h-1.5 w-1.5 rounded-full bg-purple-600" />
+                <div className="inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/10 px-3 py-1.5 text-xs font-bold text-gold">
+                  <span className="h-1.5 w-1.5 rounded-full bg-gold" />
                   Organizer workspace
                 </div>
 
-                <h1 className="mt-5 text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl lg:text-5xl">
+                <h1 className="mt-5 text-3xl font-bold tracking-tight text-cream sm:text-4xl lg:text-5xl">
                   Welcome back, {organizerName}
                 </h1>
 
-                <p className="mt-4 max-w-2xl text-sm leading-7 text-gray-500 sm:text-base">
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-mist sm:text-base">
                   Plan your events, manage provider
                   quotations, negotiate pricing and
                   keep your confirmed bookings in one
@@ -2250,14 +2250,14 @@ export default function OrganizerDashboard() {
 
                 <Link
                   to="/discover"
-                  className="inline-flex items-center justify-center rounded-xl bg-gray-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-gray-800"
+                  className="inline-flex items-center justify-center rounded-xl bg-ink px-5 py-3 text-sm font-bold text-cream transition hover:bg-raised"
                 >
                   Discover providers
                 </Link>
 
                 <Link
                   to="/dashboard/organizer/events/create"
-                  className="inline-flex items-center justify-center rounded-xl border border-gray-200 bg-white px-5 py-3 text-sm font-bold text-gray-700 transition hover:border-purple-200 hover:bg-purple-50 hover:text-purple-700"
+                  className="inline-flex items-center justify-center rounded-xl border border-line bg-raised px-5 py-3 text-sm font-bold text-mist transition hover:border-gold/30 hover:bg-gold/10 hover:text-gold"
                 >
                   Create event
                 </Link>
@@ -2268,7 +2268,7 @@ export default function OrganizerDashboard() {
 
           </div>
 
-          <div className="grid border-t border-gray-100 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid border-t border-line sm:grid-cols-2 lg:grid-cols-4">
 
             <HeroMetric
               label="Events"
@@ -2298,23 +2298,23 @@ export default function OrganizerDashboard() {
             ORGANIZER NOTIFICATIONS
         ================================================= */}
 
-        <section className="eventflow-notifications mt-6 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">
-          <div className="flex flex-col justify-between gap-3 border-b border-gray-100 px-5 py-5 sm:flex-row sm:items-center sm:px-7">
+        <section className="eventflow-notifications mt-6 overflow-hidden rounded-3xl border border-line bg-raised shadow-sm">
+          <div className="flex flex-col justify-between gap-3 border-b border-line px-5 py-5 sm:flex-row sm:items-center sm:px-7">
             <div className="flex items-center gap-3">
-              <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-50 text-xl text-purple-700">
+              <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gold/10 text-xl text-gold">
                 ♢
                 {notifications.some((item) => !item.read) && (
-                  <span className="absolute -right-1 -top-1 h-3 w-3 rounded-full border-2 border-white bg-red-500" />
+                  <span className="absolute -right-1 -top-1 h-3 w-3 rounded-full border-2 border-white bg-rose/100" />
                 )}
               </div>
               <div>
                 <div className="flex flex-wrap items-center gap-2">
-                  <h2 className="text-lg font-bold text-gray-950">Notifications</h2>
-                  <span className="rounded-full bg-purple-50 px-2.5 py-1 text-[11px] font-extrabold text-purple-700">
+                  <h2 className="text-lg font-bold text-cream">Notifications</h2>
+                  <span className="rounded-full bg-gold/10 px-2.5 py-1 text-[11px] font-extrabold text-gold">
                     {notifications.filter((item) => !item.read).length} unread
                   </span>
                 </div>
-                <p className="mt-1 text-sm text-gray-500">Updates about your bookings, quotations and payments.</p>
+                <p className="mt-1 text-sm text-mist">Updates about your bookings, quotations and payments.</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -2322,7 +2322,7 @@ export default function OrganizerDashboard() {
                 <button
                   type="button"
                   onClick={() => setShowAllNotifications((value) => !value)}
-                  className="rounded-xl border border-gray-200 px-3 py-2 text-xs font-bold text-gray-600 transition hover:bg-gray-50"
+                  className="rounded-xl border border-line px-3 py-2 text-xs font-bold text-mist transition hover:bg-surface"
                 >
                   {showAllNotifications ? "Show less" : "View all"}
                 </button>
@@ -2331,7 +2331,7 @@ export default function OrganizerDashboard() {
                 <button
                   type="button"
                   onClick={markAllNotificationsRead}
-                  className="rounded-xl bg-purple-600 px-3 py-2 text-xs font-bold text-white transition hover:bg-purple-700"
+                  className="rounded-xl bg-gold px-3 py-2 text-xs font-bold text-cream transition hover:bg-gold"
                 >
                   Mark all read
                 </button>
@@ -2341,9 +2341,9 @@ export default function OrganizerDashboard() {
 
           {notifications.length === 0 ? (
             <div className="px-6 py-8 text-center">
-              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-2xl bg-gray-50 text-lg">✓</div>
-              <p className="mt-3 text-sm font-bold text-gray-800">You're all caught up</p>
-              <p className="mt-1 text-xs text-gray-500">New provider responses and booking updates will appear here.</p>
+              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-2xl bg-surface text-lg">✓</div>
+              <p className="mt-3 text-sm font-bold text-cream">You're all caught up</p>
+              <p className="mt-1 text-xs text-mist">New provider responses and booking updates will appear here.</p>
             </div>
           ) : (
             <div className="divide-y divide-gray-100">
@@ -2352,19 +2352,19 @@ export default function OrganizerDashboard() {
                   type="button"
                   key={notification.id || `${notification.createdAt || "notice"}-${index}`}
                   onClick={() => openNotification(notification)}
-                  className={`flex w-full items-start gap-3 px-5 py-4 text-left transition hover:bg-gray-50 sm:px-7 ${notification.read ? "bg-white" : "bg-purple-50/50"}`}
+                  className={`flex w-full items-start gap-3 px-5 py-4 text-left transition hover:bg-surface sm:px-7 ${notification.read ? "bg-raised" : "bg-gold/10/50"}`}
                 >
-                  <span className={`mt-1 h-2.5 w-2.5 shrink-0 rounded-full ${notification.read ? "bg-gray-300" : "bg-purple-600"}`} />
+                  <span className={`mt-1 h-2.5 w-2.5 shrink-0 rounded-full ${notification.read ? "bg-elevated" : "bg-gold"}`} />
                   <span className="min-w-0 flex-1">
-                    <span className="block text-sm font-semibold leading-6 text-gray-800">
+                    <span className="block text-sm font-semibold leading-6 text-cream">
                       {notification.message || notification.title || "Your booking has been updated."}
                     </span>
-                    <span className="mt-1 block text-xs text-gray-400">
+                    <span className="mt-1 block text-xs text-fog">
                       {notification.createdAt ? new Date(notification.createdAt).toLocaleString("en-GH") : "Recent update"}
                       {notification.bookingId ? ` · Booking ${notification.bookingId}` : ""}
                     </span>
                   </span>
-                  {!notification.read && <span className="shrink-0 rounded-full bg-purple-100 px-2 py-1 text-[10px] font-extrabold text-purple-700">NEW</span>}
+                  {!notification.read && <span className="shrink-0 rounded-full bg-gold/15 px-2 py-1 text-[10px] font-extrabold text-gold">NEW</span>}
                 </button>
               ))}
             </div>
@@ -2380,11 +2380,11 @@ export default function OrganizerDashboard() {
           <div className="flex items-center justify-between">
 
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-purple-600">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                 Workspace
               </p>
 
-              <h2 className="mt-1 text-xl font-bold text-gray-950">
+              <h2 className="mt-1 text-xl font-bold text-cream">
                 Quick actions
               </h2>
             </div>
@@ -2430,14 +2430,14 @@ export default function OrganizerDashboard() {
         ================================================= */}
 
         {acceptedBookings.length > 0 && (
-          <section className="eventflow-payments mt-8 rounded-3xl border border-gray-200 bg-white p-5 sm:p-7">
+          <section className="eventflow-payments mt-8 rounded-3xl border border-line bg-raised p-5 sm:p-7">
 
             <div className="mb-4">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-purple-600">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                 Financial overview
               </p>
 
-              <h2 className="mt-1 text-xl font-bold text-gray-950">
+              <h2 className="mt-1 text-xl font-bold text-cream">
                 Booking payments
               </h2>
             </div>
@@ -2506,20 +2506,20 @@ export default function OrganizerDashboard() {
             PROVIDER NEGOTIATIONS
         ================================================= */}
 
-        <section id="organizer-provider-negotiations" className="eventflow-negotiations mt-12 scroll-mt-6 rounded-3xl border border-gray-200 bg-white p-5 sm:p-7">
+        <section id="organizer-provider-negotiations" className="eventflow-negotiations mt-12 scroll-mt-6 rounded-3xl border border-line bg-raised p-5 sm:p-7">
 
           <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
 
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-purple-600">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                 Booking management
               </p>
 
-              <h2 className="mt-1 text-2xl font-bold tracking-tight text-gray-950">
+              <h2 className="mt-1 text-2xl font-bold tracking-tight text-cream">
                 Provider negotiations
               </h2>
 
-              <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-500">
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-mist">
                 Review quotations, negotiate prices and
                 confirm provider agreements before making
                 payments.
@@ -2572,7 +2572,7 @@ export default function OrganizerDashboard() {
               action={
                 <Link
                   to="/discover"
-                  className="inline-flex rounded-xl bg-gray-950 px-5 py-3 text-sm font-bold text-white hover:bg-gray-800"
+                  className="inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-bold text-cream hover:bg-raised"
                 >
                   Explore providers
                 </Link>
@@ -2635,7 +2635,7 @@ export default function OrganizerDashboard() {
             action={
               <Link
                 to="/dashboard/organizer/events/create"
-                className="text-sm font-bold text-purple-600 hover:text-purple-700"
+                className="text-sm font-bold text-gold hover:text-gold"
               >
                 Create event →
               </Link>
@@ -2650,7 +2650,7 @@ export default function OrganizerDashboard() {
               action={
                 <Link
                   to="/dashboard/organizer/events/create"
-                  className="inline-flex rounded-xl bg-gray-950 px-5 py-3 text-sm font-bold text-white hover:bg-gray-800"
+                  className="inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-bold text-cream hover:bg-raised"
                 >
                   Create event
                 </Link>
@@ -2691,7 +2691,7 @@ export default function OrganizerDashboard() {
           />
 
           {upcomingEvents.length === 0 ? (
-            <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-7 text-sm text-gray-500">
+            <div className="mt-6 rounded-2xl border border-line bg-raised p-7 text-sm text-mist">
               No upcoming events.
             </div>
           ) : (
@@ -2791,11 +2791,11 @@ export default function OrganizerDashboard() {
           FOOTER
       ================================================= */}
 
-      <footer className="mt-16 border-t border-gray-200 bg-white">
+      <footer className="mt-16 border-t border-line bg-raised">
 
-        <div className="mx-auto flex max-w-[1500px] flex-col justify-between gap-3 px-5 py-7 text-sm text-gray-500 sm:flex-row sm:items-center sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-[1500px] flex-col justify-between gap-3 px-5 py-7 text-sm text-mist sm:flex-row sm:items-center sm:px-6 lg:px-8">
 
-          <p className="font-semibold text-gray-700">
+          <p className="font-semibold text-mist">
             EventFlow
           </p>
 
@@ -2953,13 +2953,13 @@ function BookingNegotiationCard({
     );
 
   return (
-    <article className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:shadow-md">
+    <article className="overflow-hidden rounded-3xl border border-line bg-raised shadow-sm transition hover:shadow-md">
 
       {/* =================================================
           CARD HEADER
       ================================================= */}
 
-      <div className="border-b border-gray-100 px-5 py-5 sm:px-7">
+      <div className="border-b border-line px-5 py-5 sm:px-7">
 
         <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-start">
 
@@ -2975,7 +2975,7 @@ function BookingNegotiationCard({
 
               <div className="flex flex-wrap items-center gap-2">
 
-                <span className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
+                <span className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-fog">
                   {providerLabel}
                 </span>
 
@@ -3005,11 +3005,11 @@ function BookingNegotiationCard({
 
               </div>
 
-              <h3 className="mt-2 truncate text-lg font-bold text-gray-950">
+              <h3 className="mt-2 truncate text-lg font-bold text-cream">
                 {providerName}
               </h3>
 
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-sm text-mist">
                 {booking?.serviceName ||
                   booking?.service ||
                   (providerType ===
@@ -3022,13 +3022,13 @@ function BookingNegotiationCard({
 
           </div>
 
-          <div className="rounded-xl bg-gray-50 px-4 py-3 lg:text-right">
+          <div className="rounded-xl bg-surface px-4 py-3 lg:text-right">
 
-            <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-gray-400">
+            <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-fog">
               Booking reference
             </p>
 
-            <p className="mt-1 font-mono text-xs font-bold text-gray-600">
+            <p className="mt-1 font-mono text-xs font-bold text-mist">
               {itemId(
                 booking
               )}
@@ -3046,7 +3046,7 @@ function BookingNegotiationCard({
 
       <div className="px-5 py-6 sm:px-7">
 
-        <div className="grid gap-4 rounded-2xl border border-gray-100 bg-gray-50/70 p-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 rounded-2xl border border-line bg-surface/70 p-4 sm:grid-cols-2 lg:grid-cols-4">
 
           <Detail
             label="Event"
@@ -3144,28 +3144,28 @@ function BookingNegotiationCard({
         ================================================= */}
 
         {hasQuotation && (
-          <div className="mt-6 overflow-hidden rounded-2xl border border-indigo-200 bg-indigo-50">
+          <div className="mt-6 overflow-hidden rounded-2xl border border-gold/30 bg-gold/10">
 
             <div className="flex flex-col gap-5 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
 
               <div className="flex items-start gap-4">
 
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-sm font-extrabold text-indigo-700 shadow-sm">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-raised text-sm font-extrabold text-gold shadow-sm">
                   GH
                 </div>
 
                 <div>
 
-                  <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-indigo-600">
+                  <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-gold">
                     Quotation received
                   </p>
 
-                  <p className="mt-1 text-sm font-semibold text-indigo-950">
+                  <p className="mt-1 text-sm font-semibold text-charcoal">
                     {providerName} has submitted a quotation
                     for your booking.
                   </p>
 
-                  <p className="mt-1 text-xs leading-5 text-indigo-700">
+                  <p className="mt-1 text-xs leading-5 text-gold">
                     Review the provider's price below.
                     You can accept it or make a counter offer.
                   </p>
@@ -3174,13 +3174,13 @@ function BookingNegotiationCard({
 
               </div>
 
-              <div className="shrink-0 rounded-2xl border border-indigo-100 bg-white px-6 py-4 text-left shadow-sm sm:text-right">
+              <div className="shrink-0 rounded-2xl border border-gold/20 bg-raised px-6 py-4 text-left shadow-sm sm:text-right">
 
-                <p className="text-[9px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
+                <p className="text-[9px] font-extrabold uppercase tracking-[0.14em] text-fog">
                   Provider quotation
                 </p>
 
-                <p className="mt-1 text-2xl font-extrabold tracking-tight text-gray-950">
+                <p className="mt-1 text-2xl font-extrabold tracking-tight text-cream">
                   GH₵
                   {money(
                     quotationPrice
@@ -3192,13 +3192,13 @@ function BookingNegotiationCard({
             </div>
 
             {canRespond && (
-              <div className="flex flex-col gap-2 border-t border-indigo-200 bg-white/70 p-4 sm:flex-row sm:justify-end">
+              <div className="flex flex-col gap-2 border-t border-gold/30 bg-raised/70 p-4 sm:flex-row sm:justify-end">
 
                 <button
                   onClick={
                     onReject
                   }
-                  className="rounded-xl border border-gray-200 bg-white px-5 py-2.5 text-xs font-bold text-red-600 transition hover:bg-red-50"
+                  className="rounded-xl border border-line bg-raised px-5 py-2.5 text-xs font-bold text-rose transition hover:bg-rose/10"
                 >
                   Reject
                 </button>
@@ -3207,7 +3207,7 @@ function BookingNegotiationCard({
                   onClick={
                     onCounter
                   }
-                  className="rounded-xl border border-purple-200 bg-white px-5 py-2.5 text-xs font-bold text-purple-700 transition hover:bg-purple-50"
+                  className="rounded-xl border border-gold/30 bg-raised px-5 py-2.5 text-xs font-bold text-gold transition hover:bg-gold/10"
                 >
                   Counter offer
                 </button>
@@ -3216,7 +3216,7 @@ function BookingNegotiationCard({
                   onClick={
                     onAccept
                   }
-                  className="rounded-xl bg-gray-950 px-5 py-2.5 text-xs font-bold text-white transition hover:bg-gray-800"
+                  className="rounded-xl bg-ink px-5 py-2.5 text-xs font-bold text-cream transition hover:bg-raised"
                 >
                   Accept quotation
                 </button>
@@ -3232,24 +3232,24 @@ function BookingNegotiationCard({
         ================================================= */}
 
         {isProviderCounter && (
-          <div className="mt-6 overflow-hidden rounded-2xl border border-blue-200 bg-blue-50">
+          <div className="mt-6 overflow-hidden rounded-2xl border border-blue-200 bg-gold/10">
             <div className="p-5">
               <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-xs font-extrabold text-blue-700">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-raised text-xs font-extrabold text-gold">
                   GH
                 </div>
 
                 <div>
-                  <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-blue-700">
+                  <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-gold">
                     New price received
                   </p>
 
-                  <p className="mt-1 text-sm text-blue-950">
+                  <p className="mt-1 text-sm text-cream">
                     {providerName} has responded with a new price of{" "}
                     <strong>GH₵{money(providerCounterPrice)}</strong>.
                   </p>
 
-                  <p className="mt-1 text-xs text-blue-700">
+                  <p className="mt-1 text-xs text-gold">
                     You can accept this price, reject the booking, or send a counter offer of your own.
                   </p>
                 </div>
@@ -3257,11 +3257,11 @@ function BookingNegotiationCard({
             </div>
 
             {canRespond && (
-              <div className="flex flex-col gap-2 border-t border-blue-200 bg-white/70 p-4 sm:flex-row sm:justify-end">
+              <div className="flex flex-col gap-2 border-t border-blue-200 bg-raised/70 p-4 sm:flex-row sm:justify-end">
                 <button
                   type="button"
                   onClick={onReject}
-                  className="rounded-xl border border-gray-200 bg-white px-5 py-2.5 text-xs font-bold text-red-600 transition hover:bg-red-50"
+                  className="rounded-xl border border-line bg-raised px-5 py-2.5 text-xs font-bold text-rose transition hover:bg-rose/10"
                 >
                   Reject
                 </button>
@@ -3269,7 +3269,7 @@ function BookingNegotiationCard({
                 <button
                   type="button"
                   onClick={onCounter}
-                  className="rounded-xl border border-purple-200 bg-white px-5 py-2.5 text-xs font-bold text-purple-700 transition hover:bg-purple-50"
+                  className="rounded-xl border border-gold/30 bg-raised px-5 py-2.5 text-xs font-bold text-gold transition hover:bg-gold/10"
                 >
                   Counter offer
                 </button>
@@ -3277,7 +3277,7 @@ function BookingNegotiationCard({
                 <button
                   type="button"
                   onClick={onAccept}
-                  className="rounded-xl bg-gray-950 px-5 py-2.5 text-xs font-bold text-white transition hover:bg-gray-800"
+                  className="rounded-xl bg-ink px-5 py-2.5 text-xs font-bold text-cream transition hover:bg-raised"
                 >
                   Accept price
                 </button>
@@ -3292,38 +3292,38 @@ function BookingNegotiationCard({
         ================================================= */}
 
         {showFallbackNegotiationActions && (
-          <div className="mt-6 overflow-hidden rounded-2xl border border-purple-200 bg-purple-50">
+          <div className="mt-6 overflow-hidden rounded-2xl border border-gold/30 bg-gold/10">
             <div className="p-5">
-              <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-purple-700">
+              <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-gold">
                 Provider price available
               </p>
-              <p className="mt-2 text-sm text-gray-800">
+              <p className="mt-2 text-sm text-cream">
                 Review the price from {providerName} and choose how you want to proceed.
               </p>
-              <p className="mt-3 text-2xl font-extrabold text-gray-950">
+              <p className="mt-3 text-2xl font-extrabold text-cream">
                 GH₵{money(quotationPrice || providerCounterPrice || vendorCounter || venueCounter)}
               </p>
             </div>
             {canRespond && (
-              <div className="flex flex-col gap-2 border-t border-purple-200 bg-white p-4 sm:flex-row sm:justify-end">
+              <div className="flex flex-col gap-2 border-t border-gold/30 bg-raised p-4 sm:flex-row sm:justify-end">
                 <button
                   type="button"
                   onClick={onReject}
-                  className="rounded-xl border border-red-200 bg-white px-5 py-3 text-sm font-bold text-red-600 hover:bg-red-50"
+                  className="rounded-xl border border-rose/20 bg-raised px-5 py-3 text-sm font-bold text-rose hover:bg-rose/10"
                 >
                   Reject
                 </button>
                 <button
                   type="button"
                   onClick={onCounter}
-                  className="rounded-xl border border-purple-200 bg-white px-5 py-3 text-sm font-bold text-purple-700 hover:bg-purple-50"
+                  className="rounded-xl border border-gold/30 bg-raised px-5 py-3 text-sm font-bold text-gold hover:bg-gold/10"
                 >
                   Counter Offer
                 </button>
                 <button
                   type="button"
                   onClick={onAccept}
-                  className="rounded-xl bg-gray-950 px-5 py-3 text-sm font-bold text-white hover:bg-gray-800"
+                  className="rounded-xl bg-ink px-5 py-3 text-sm font-bold text-cream hover:bg-raised"
                 >
                   Accept Price
                 </button>
@@ -3337,13 +3337,13 @@ function BookingNegotiationCard({
         ================================================= */}
 
         {waitingForProvider && (
-          <div className="mt-6 rounded-2xl border border-purple-200 bg-purple-50 p-5">
+          <div className="mt-6 rounded-2xl border border-gold/30 bg-gold/10 p-5">
 
-            <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-purple-700">
+            <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-gold">
               Counter offer sent
             </p>
 
-            <p className="mt-1 text-sm text-purple-950">
+            <p className="mt-1 text-sm text-cream">
               You offered{" "}
               <strong>
                 GH₵
@@ -3354,7 +3354,7 @@ function BookingNegotiationCard({
               to {providerName}.
             </p>
 
-            <p className="mt-1 text-xs text-purple-700">
+            <p className="mt-1 text-xs text-gold">
               Waiting for the provider to accept or send
               another quotation.
             </p>
@@ -3368,9 +3368,9 @@ function BookingNegotiationCard({
 
         {status ===
           "pending" && (
-          <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+          <div className="mt-6 rounded-2xl border border-amber/20 bg-amber/10 p-5">
 
-            <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-amber-700">
+            <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-amber">
               Request submitted
             </p>
 
@@ -3382,7 +3382,7 @@ function BookingNegotiationCard({
               .
             </p>
 
-            <p className="mt-1 text-xs text-amber-700">
+            <p className="mt-1 text-xs text-amber">
               The provider will review your requirements and
               submit a quotation.
             </p>
@@ -3406,7 +3406,7 @@ function BookingNegotiationCard({
 
                   <div className="flex items-center gap-2">
 
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-600 text-sm font-bold text-white">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-600 text-sm font-bold text-cream">
                       ✓
                     </span>
 
@@ -3416,7 +3416,7 @@ function BookingNegotiationCard({
 
                   </div>
 
-                  <p className="mt-3 text-3xl font-extrabold tracking-tight text-gray-950">
+                  <p className="mt-3 text-3xl font-extrabold tracking-tight text-cream">
                     GH₵
                     {money(
                       agreedPrice
@@ -3429,9 +3429,9 @@ function BookingNegotiationCard({
 
                 </div>
 
-                <div className="rounded-2xl border border-emerald-200 bg-white px-5 py-4">
+                <div className="rounded-2xl border border-emerald-200 bg-raised px-5 py-4">
 
-                  <p className="text-[9px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
+                  <p className="text-[9px] font-extrabold uppercase tracking-[0.14em] text-fog">
                     Payment status
                   </p>
 
@@ -3484,13 +3484,13 @@ function BookingNegotiationCard({
           "declined",
           "quotation_rejected",
         ].includes(status) && (
-          <div className="mt-6 rounded-2xl border border-red-200 bg-red-50 p-5">
+          <div className="mt-6 rounded-2xl border border-rose/20 bg-rose/10 p-5">
 
-            <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-red-600">
+            <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-rose">
               Booking closed
             </p>
 
-            <p className="mt-1 text-sm text-red-900">
+            <p className="mt-1 text-sm text-rose">
               This booking negotiation has been closed.
             </p>
 
@@ -3503,9 +3503,9 @@ function BookingNegotiationCard({
           ACTION FOOTER
       ================================================= */}
 
-      <div className="flex flex-col justify-between gap-4 border-t border-gray-100 bg-gray-50/80 px-5 py-4 sm:flex-row sm:items-center sm:px-7">
+      <div className="flex flex-col justify-between gap-4 border-t border-line bg-surface/80 px-5 py-4 sm:flex-row sm:items-center sm:px-7">
 
-        <div className="text-xs text-gray-400">
+        <div className="text-xs text-fog">
 
           {booking?.updatedAt
             ? `Last updated ${new Date(
@@ -3527,7 +3527,7 @@ function BookingNegotiationCard({
                 onClick={
                   onReject
                 }
-                className="rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-xs font-bold text-red-600 transition hover:bg-red-50"
+                className="rounded-xl border border-line bg-raised px-4 py-2.5 text-xs font-bold text-rose transition hover:bg-rose/10"
               >
                 Reject
               </button>
@@ -3541,7 +3541,7 @@ function BookingNegotiationCard({
                 onClick={
                   onPayment
                 }
-                className="rounded-xl bg-purple-600 px-5 py-2.5 text-xs font-bold text-white transition hover:bg-purple-700"
+                className="rounded-xl bg-gold px-5 py-2.5 text-xs font-bold text-cream transition hover:bg-gold"
               >
                 Make payment
               </button>
@@ -3557,7 +3557,7 @@ function BookingNegotiationCard({
             )}
 
           {waitingForProvider && (
-            <span className="inline-flex items-center rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-xs font-semibold text-gray-500">
+            <span className="inline-flex items-center rounded-xl border border-line bg-raised px-4 py-2.5 text-xs font-semibold text-mist">
               Waiting for provider response
             </span>
           )}
@@ -3586,30 +3586,30 @@ function NotificationDetailModal({ notification, onClose, onViewBooking }) {
   const isMessage = /message|chat|reply|inbox/i.test(`${notification?.type || ""} ${notification?.title || ""}`);
 
   return (
-    <div className="fixed inset-0 z-[110] flex items-center justify-center bg-gray-950/60 p-4 backdrop-blur-sm" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-      <section role="dialog" aria-modal="true" aria-labelledby="notification-detail-title" className="w-full max-w-lg overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-2xl">
-        <div className="bg-gradient-to-r from-purple-700 to-indigo-700 px-6 py-6 text-white sm:px-7">
+    <div className="fixed inset-0 z-[110] flex items-center justify-center bg-ink/60 p-4 backdrop-blur-xl" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
+      <section role="dialog" aria-modal="true" aria-labelledby="notification-detail-title" className="w-full max-w-lg overflow-hidden rounded-3xl border border-line bg-raised shadow-2xl">
+        <div className="bg-gradient-to-r from-purple-700 to-indigo-700 px-6 py-6 text-cream sm:px-7">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-start gap-3">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-xl">{isMessage ? "✉" : "♢"}</span>
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-raised/15 text-xl">{isMessage ? "✉" : "♢"}</span>
               <div>
-                <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-purple-100">{isMessage ? "Message" : "Notification details"}</p>
+                <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-cream">{isMessage ? "Message" : "Notification details"}</p>
                 <h2 id="notification-detail-title" className="mt-1 text-xl font-extrabold">{notification?.title || (isMessage ? "New message" : "EventFlow update")}</h2>
               </div>
             </div>
-            <button type="button" onClick={onClose} aria-label="Close notification" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-xl hover:bg-white/20">×</button>
+            <button type="button" onClick={onClose} aria-label="Close notification" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-raised/10 text-xl hover:bg-raised/20">×</button>
           </div>
         </div>
         <div className="px-6 py-6 sm:px-7">
-          <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5">
-            <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-gray-400">{type}</p>
-            <p className="mt-3 whitespace-pre-wrap break-words text-sm leading-7 text-gray-800">{message}</p>
-            {notification?.createdAt && <p className="mt-4 border-t border-gray-200 pt-3 text-xs text-gray-400">{new Date(notification.createdAt).toLocaleString("en-GH")}</p>}
+          <div className="rounded-2xl border border-line bg-surface p-5">
+            <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-fog">{type}</p>
+            <p className="mt-3 whitespace-pre-wrap break-words text-sm leading-7 text-cream">{message}</p>
+            {notification?.createdAt && <p className="mt-4 border-t border-line pt-3 text-xs text-fog">{new Date(notification.createdAt).toLocaleString("en-GH")}</p>}
           </div>
-          {bookingId && <div className="mt-4 rounded-xl border border-purple-100 bg-purple-50 px-4 py-3 text-xs leading-5 text-purple-800">Related booking: <strong>{bookingId}</strong></div>}
+          {bookingId && <div className="mt-4 rounded-xl border border-gold/20 bg-gold/10 px-4 py-3 text-xs leading-5 text-gold">Related booking: <strong>{bookingId}</strong></div>}
           <div className="mt-5 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
-            <button type="button" onClick={onClose} className="rounded-xl border border-gray-200 px-5 py-3 text-sm font-bold text-gray-700 hover:bg-gray-50">Close</button>
-            {bookingId && <button type="button" onClick={onViewBooking} className="rounded-xl bg-purple-600 px-5 py-3 text-sm font-bold text-white hover:bg-purple-700">View related booking</button>}
+            <button type="button" onClick={onClose} className="rounded-xl border border-line px-5 py-3 text-sm font-bold text-mist hover:bg-surface">Close</button>
+            {bookingId && <button type="button" onClick={onViewBooking} className="rounded-xl bg-gold px-5 py-3 text-sm font-bold text-cream hover:bg-gold">View related booking</button>}
           </div>
         </div>
       </section>
@@ -3654,27 +3654,27 @@ function PaymentModal({
     );
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-gray-950/60 p-4 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/60 p-4 backdrop-blur-xl">
 
-      <div className="w-full max-w-lg overflow-hidden rounded-3xl bg-white shadow-2xl">
+      <div className="w-full max-w-lg overflow-hidden rounded-3xl bg-raised shadow-2xl">
 
-        <div className="border-b border-gray-100 px-6 py-6 sm:px-7">
+        <div className="border-b border-line px-6 py-6 sm:px-7">
 
           <div className="flex items-start justify-between gap-5">
 
             <div>
 
-              <div className="inline-flex rounded-full bg-purple-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-purple-700">
+              <div className="inline-flex rounded-full bg-gold/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-gold">
                 EventFlow payments
               </div>
 
-              <h2 className="mt-3 text-2xl font-bold tracking-tight text-gray-950">
+              <h2 className="mt-3 text-2xl font-bold tracking-tight text-cream">
                 Choose payment option
               </h2>
 
-              <p className="mt-2 text-sm leading-6 text-gray-500">
+              <p className="mt-2 text-sm leading-6 text-mist">
                 Your agreement with{" "}
-                <strong className="text-gray-800">
+                <strong className="text-cream">
                   {providerName}
                 </strong>{" "}
                 is confirmed.
@@ -3689,7 +3689,7 @@ function PaymentModal({
               disabled={
                 processing
               }
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 disabled:opacity-50"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-surface text-mist hover:bg-elevated disabled:opacity-50"
             >
               ×
             </button>
@@ -3700,7 +3700,7 @@ function PaymentModal({
 
         <div className="px-6 py-6 sm:px-7">
 
-          <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+          <div className="rounded-2xl border border-line bg-surface p-5">
 
             <div className="grid gap-5 sm:grid-cols-3">
 
@@ -3774,9 +3774,9 @@ function PaymentModal({
 
           </div>
 
-          <div className="mt-5 rounded-xl border border-blue-100 bg-blue-50 px-4 py-3">
+          <div className="mt-5 rounded-xl border border-gold/20 bg-gold/10 px-4 py-3">
 
-            <p className="text-xs leading-5 text-blue-800">
+            <p className="text-xs leading-5 text-gold">
               <strong>Payment record:</strong>{" "}
               This payment is currently recorded within
               EventFlow. A secure payment gateway can be
@@ -3787,7 +3787,7 @@ function PaymentModal({
 
         </div>
 
-        <div className="border-t border-gray-100 bg-gray-50 px-6 py-4 sm:px-7">
+        <div className="border-t border-line bg-surface px-6 py-4 sm:px-7">
 
           <button
             onClick={
@@ -3796,7 +3796,7 @@ function PaymentModal({
             disabled={
               processing
             }
-            className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-bold text-gray-700 hover:bg-gray-100 disabled:opacity-50"
+            className="w-full rounded-xl border border-line bg-raised px-4 py-3 text-sm font-bold text-mist hover:bg-surface disabled:opacity-50"
           >
             {processing
               ? "Processing..."
@@ -3832,20 +3832,20 @@ function PaymentOption({
       disabled={
         disabled
       }
-      className="group flex w-full items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 text-left transition hover:border-purple-300 hover:bg-purple-50/30 disabled:cursor-not-allowed disabled:opacity-50"
+      className="group flex w-full items-center gap-4 rounded-2xl border border-line bg-raised p-4 text-left transition hover:border-purple-300 hover:bg-gold/10/30 disabled:cursor-not-allowed disabled:opacity-50"
     >
 
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-50 text-xs font-extrabold text-purple-700">
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-xs font-extrabold text-gold">
         {icon}
       </div>
 
       <div className="min-w-0 flex-1">
 
-        <p className="font-bold text-gray-950">
+        <p className="font-bold text-cream">
           {title}
         </p>
 
-        <p className="mt-1 text-xs leading-5 text-gray-500">
+        <p className="mt-1 text-xs leading-5 text-mist">
           {description}
         </p>
 
@@ -3853,14 +3853,14 @@ function PaymentOption({
 
       <div className="shrink-0 text-right">
 
-        <p className="text-sm font-extrabold text-gray-950">
+        <p className="text-sm font-extrabold text-cream">
           GH₵
           {money(
             amount
           )}
         </p>
 
-        <p className="mt-1 text-[9px] font-extrabold uppercase tracking-wider text-purple-600">
+        <p className="mt-1 text-[9px] font-extrabold uppercase tracking-wider text-gold">
           Select
         </p>
 
@@ -3917,7 +3917,7 @@ function PaymentActivityCard({
     );
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+    <div className="rounded-2xl border border-line bg-raised p-5 shadow-sm">
 
       <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
 
@@ -3933,7 +3933,7 @@ function PaymentActivityCard({
 
             <div className="flex flex-wrap items-center gap-2">
 
-              <h3 className="font-bold text-gray-950">
+              <h3 className="font-bold text-cream">
                 {providerName}
               </h3>
 
@@ -3949,7 +3949,7 @@ function PaymentActivityCard({
 
             </div>
 
-            <p className="mt-1 text-sm text-gray-500">
+            <p className="mt-1 text-sm text-mist">
               {booking?.eventName ||
                 "Event"}{" "}
               ·{" "}
@@ -3958,7 +3958,7 @@ function PaymentActivityCard({
                 "Event service"}
             </p>
 
-            <p className="mt-1 font-mono text-[10px] text-gray-400">
+            <p className="mt-1 font-mono text-[10px] text-fog">
               {itemId(
                 booking
               )}
@@ -4001,7 +4001,7 @@ function PaymentActivityCard({
               onClick={
                 onPayment
               }
-              className="w-full rounded-xl bg-purple-600 px-5 py-3 text-sm font-bold text-white transition hover:bg-purple-700 lg:w-auto"
+              className="w-full rounded-xl bg-gold px-5 py-3 text-sm font-bold text-cream transition hover:bg-gold lg:w-auto"
             >
               Make payment
             </button>
@@ -4020,9 +4020,9 @@ function PaymentActivityCard({
       ) &&
         booking.paymentHistory.length >
           0 && (
-          <div className="mt-5 border-t border-gray-100 pt-5">
+          <div className="mt-5 border-t border-line pt-5">
 
-            <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
+            <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-fog">
               Recent payment activity
             </p>
 
@@ -4043,19 +4043,19 @@ function PaymentActivityCard({
                       key={
                         payment.id
                       }
-                      className="flex flex-col justify-between gap-2 rounded-xl bg-gray-50 px-4 py-3 text-xs sm:flex-row sm:items-center"
+                      className="flex flex-col justify-between gap-2 rounded-xl bg-surface px-4 py-3 text-xs sm:flex-row sm:items-center"
                     >
 
                       <div>
 
-                        <span className="font-bold text-gray-800">
+                        <span className="font-bold text-cream">
                           {payment.option ===
                           "deposit"
                             ? "50% Deposit"
                             : "Full Payment"}
                         </span>
 
-                        <span className="ml-2 text-gray-400">
+                        <span className="ml-2 text-fog">
                           {payment.createdAt
                             ? new Date(
                                 payment.createdAt
@@ -4067,7 +4067,7 @@ function PaymentActivityCard({
 
                       </div>
 
-                      <span className="font-bold text-gray-950">
+                      <span className="font-bold text-cream">
                         GH₵
                         {money(
                           payment.amount
@@ -4096,13 +4096,13 @@ function HeroMetric({
   value,
 }) {
   return (
-    <div className="border-gray-100 px-6 py-5 sm:border-l sm:first:border-l-0">
+    <div className="border-line px-6 py-5 sm:border-l sm:first:border-l-0">
 
-      <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
+      <p className="text-xs font-bold uppercase tracking-wider text-fog">
         {label}
       </p>
 
-      <p className="mt-1 text-2xl font-extrabold tracking-tight text-gray-950">
+      <p className="mt-1 text-2xl font-extrabold tracking-tight text-cream">
         {value}
       </p>
 
@@ -4119,20 +4119,20 @@ function QuickAction({
   return (
     <Link
       to={to}
-      className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-purple-200 hover:shadow-md"
+      className="group flex items-center gap-4 rounded-2xl border border-line bg-raised p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-gold/30 hover:shadow-md"
     >
 
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-50 text-sm font-extrabold text-purple-700 transition group-hover:bg-purple-600 group-hover:text-white">
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-sm font-extrabold text-gold transition group-hover:bg-gold group-hover:text-cream">
         {icon}
       </div>
 
       <div className="min-w-0">
 
-        <p className="font-bold text-gray-950">
+        <p className="font-bold text-cream">
           {title}
         </p>
 
-        <p className="mt-1 truncate text-xs text-gray-500">
+        <p className="mt-1 truncate text-xs text-mist">
           {description}
         </p>
 
@@ -4148,17 +4148,17 @@ function FinancialCard({
   description,
 }) {
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+    <div className="rounded-2xl border border-line bg-raised p-5 shadow-sm">
 
-      <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
+      <p className="text-xs font-bold uppercase tracking-wider text-fog">
         {label}
       </p>
 
-      <p className="mt-2 text-2xl font-extrabold tracking-tight text-gray-950">
+      <p className="mt-2 text-2xl font-extrabold tracking-tight text-cream">
         {value}
       </p>
 
-      <p className="mt-2 text-xs text-gray-400">
+      <p className="mt-2 text-xs text-fog">
         {description}
       </p>
 
@@ -4173,11 +4173,11 @@ function StatusPill({
 }) {
   const styles = {
     amber:
-      "border-amber-100 bg-amber-50 text-amber-700",
+      "border-amber/20 bg-amber/10 text-amber",
     indigo:
-      "border-indigo-100 bg-indigo-50 text-indigo-700",
+      "border-gold/20 bg-gold/10 text-gold",
     purple:
-      "border-purple-100 bg-purple-50 text-purple-700",
+      "border-gold/20 bg-gold/10 text-gold",
     green:
       "border-emerald-100 bg-emerald-50 text-emerald-700",
   };
@@ -4202,16 +4202,16 @@ function SectionHeading({
 
       <div>
 
-        <p className="text-xs font-bold uppercase tracking-[0.16em] text-purple-600">
+        <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
           {eyebrow}
         </p>
 
-        <h2 className="mt-1 text-2xl font-bold tracking-tight text-gray-950">
+        <h2 className="mt-1 text-2xl font-bold tracking-tight text-cream">
           {title}
         </h2>
 
         {description && (
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-500">
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-mist">
             {description}
           </p>
         )}
@@ -4231,11 +4231,11 @@ function Detail({
   return (
     <div className="min-w-0">
 
-      <p className="text-[9px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
+      <p className="text-[9px] font-extrabold uppercase tracking-[0.14em] text-fog">
         {label}
       </p>
 
-      <p className="mt-1 truncate text-sm font-bold text-gray-900">
+      <p className="mt-1 truncate text-sm font-bold text-cream">
         {value}
       </p>
 
@@ -4251,16 +4251,16 @@ function PriceBox({
   accepted = false,
 }) {
   let classes =
-    "border-gray-200 bg-gray-50";
+    "border-line bg-surface";
 
   if (highlight) {
     classes =
-      "border-indigo-200 bg-indigo-50";
+      "border-gold/30 bg-gold/10";
   }
 
   if (purple) {
     classes =
-      "border-purple-200 bg-purple-50";
+      "border-gold/30 bg-gold/10";
   }
 
   if (accepted) {
@@ -4273,11 +4273,11 @@ function PriceBox({
       className={`rounded-2xl border p-4 ${classes}`}
     >
 
-      <p className="text-[9px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
+      <p className="text-[9px] font-extrabold uppercase tracking-[0.14em] text-fog">
         {label}
       </p>
 
-      <p className="mt-2 text-lg font-extrabold text-gray-950">
+      <p className="mt-2 text-lg font-extrabold text-cream">
         GH₵
         {money(
           value
@@ -4295,8 +4295,8 @@ function ProviderIcon({
     <div
       className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-xs font-extrabold ${
         type === "venue"
-          ? "bg-amber-50 text-amber-700"
-          : "bg-purple-50 text-purple-700"
+          ? "bg-amber/10 text-amber"
+          : "bg-gold/10 text-gold"
       }`}
     >
       {type === "venue"
@@ -4311,13 +4311,13 @@ function PaymentMiniStat({
   value,
 }) {
   return (
-    <div className="rounded-xl border border-emerald-100 bg-white px-4 py-3">
+    <div className="rounded-xl border border-emerald-100 bg-raised px-4 py-3">
 
-      <p className="text-[9px] font-extrabold uppercase tracking-wider text-gray-400">
+      <p className="text-[9px] font-extrabold uppercase tracking-wider text-fog">
         {label}
       </p>
 
-      <p className="mt-1 text-sm font-extrabold text-gray-950">
+      <p className="mt-1 text-sm font-extrabold text-cream">
         GH₵
         {money(
           value
@@ -4335,11 +4335,11 @@ function PaymentActivityAmount({
   return (
     <div>
 
-      <p className="text-[9px] font-extrabold uppercase tracking-wider text-gray-400">
+      <p className="text-[9px] font-extrabold uppercase tracking-wider text-fog">
         {label}
       </p>
 
-      <p className="mt-1 text-sm font-extrabold text-gray-950">
+      <p className="mt-1 text-sm font-extrabold text-cream">
         GH₵
         {money(
           value
@@ -4358,15 +4358,15 @@ function PaymentSummary({
   return (
     <div>
 
-      <p className="text-[9px] font-extrabold uppercase tracking-wider text-gray-400">
+      <p className="text-[9px] font-extrabold uppercase tracking-wider text-fog">
         {label}
       </p>
 
       <p
         className={`mt-1 text-lg font-extrabold ${
           emphasis
-            ? "text-purple-700"
-            : "text-gray-950"
+            ? "text-gold"
+            : "text-cream"
         }`}
       >
         GH₵
@@ -4388,11 +4388,11 @@ function EventCard({
   onDelete,
 }) {
   return (
-    <article className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+    <article className="rounded-2xl border border-line bg-raised p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
 
       <div className="flex items-start justify-between gap-4">
 
-        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-purple-50 text-sm font-extrabold text-purple-700">
+        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold/10 text-sm font-extrabold text-gold">
           {event?.icon ||
             "E"}
         </div>
@@ -4401,25 +4401,25 @@ function EventCard({
           onClick={
             onDelete
           }
-          className="text-xs font-bold text-gray-400 transition hover:text-red-600"
+          className="text-xs font-bold text-fog transition hover:text-rose"
         >
           Delete
         </button>
 
       </div>
 
-      <h3 className="mt-5 truncate text-lg font-bold text-gray-950">
+      <h3 className="mt-5 truncate text-lg font-bold text-cream">
         {event?.name ||
           event?.eventName ||
           "Untitled Event"}
       </h3>
 
-      <p className="mt-1 text-sm font-semibold text-purple-600">
+      <p className="mt-1 text-sm font-semibold text-gold">
         {event?.eventType ||
           "Event"}
       </p>
 
-      <div className="mt-5 grid gap-4 border-t border-gray-100 pt-4 sm:grid-cols-2">
+      <div className="mt-5 grid gap-4 border-t border-line pt-4 sm:grid-cols-2">
 
         <Detail
           label="Date"
@@ -4448,24 +4448,24 @@ function UpcomingEvent({
   event,
 }) {
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+    <div className="rounded-2xl border border-line bg-raised p-5 shadow-sm">
 
       <div className="flex items-start gap-4">
 
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-50 text-sm font-extrabold text-purple-700">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-sm font-extrabold text-gold">
           {event?.icon ||
             "E"}
         </div>
 
         <div className="min-w-0">
 
-          <h3 className="truncate font-bold text-gray-950">
+          <h3 className="truncate font-bold text-cream">
             {event?.name ||
               event?.eventName ||
               "Event"}
           </h3>
 
-          <p className="mt-1 text-xs font-semibold text-purple-600">
+          <p className="mt-1 text-xs font-semibold text-gold">
             {event?.eventType ||
               "Event"}
           </p>
@@ -4474,7 +4474,7 @@ function UpcomingEvent({
 
       </div>
 
-      <div className="mt-5 space-y-3 border-t border-gray-100 pt-4">
+      <div className="mt-5 space-y-3 border-t border-line pt-4">
 
         <Detail
           label="Date"
@@ -4510,30 +4510,30 @@ function SavedItemsSection({
   type,
 }) {
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="rounded-2xl border border-line bg-raised p-6 shadow-sm">
 
       <div className="flex items-center justify-between">
 
         <div>
 
-          <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
+          <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-fog">
             Shortlist
           </p>
 
-          <h3 className="mt-1 text-lg font-bold text-gray-950">
+          <h3 className="mt-1 text-lg font-bold text-cream">
             {title}
           </h3>
 
         </div>
 
-        <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-extrabold text-gray-600">
+        <span className="rounded-full bg-surface px-3 py-1 text-xs font-extrabold text-mist">
           {items.length}
         </span>
 
       </div>
 
       {items.length === 0 ? (
-        <p className="mt-5 text-sm leading-6 text-gray-500">
+        <p className="mt-5 text-sm leading-6 text-mist">
           {emptyMessage}
         </p>
       ) : (
@@ -4552,10 +4552,10 @@ function SavedItemsSection({
                     item?._id ||
                     index
                   }
-                  className="flex items-center gap-3 rounded-xl border border-gray-100 bg-gray-50 p-3"
+                  className="flex items-center gap-3 rounded-xl border border-line bg-surface p-3"
                 >
 
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-xs font-extrabold text-purple-700 shadow-sm">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-raised text-xs font-extrabold text-gold shadow-sm">
                     {type ===
                     "venue"
                       ? "V"
@@ -4564,14 +4564,14 @@ function SavedItemsSection({
 
                   <div className="min-w-0">
 
-                    <p className="truncate text-sm font-bold text-gray-950">
+                    <p className="truncate text-sm font-bold text-cream">
                       {item?.name ||
                         item?.vendorName ||
                         item?.venueName ||
                         "Saved provider"}
                     </p>
 
-                    <p className="mt-0.5 truncate text-xs text-gray-500">
+                    <p className="mt-0.5 truncate text-xs text-mist">
                       {item?.category ||
                         item?.type ||
                         "Event service"}
@@ -4601,17 +4601,17 @@ function EmptyState({
   action,
 }) {
   return (
-    <div className="mt-6 rounded-2xl border border-dashed border-gray-300 bg-white p-10 text-center">
+    <div className="mt-6 rounded-2xl border border-dashed border-line-bright bg-raised p-10 text-center">
 
-      <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-gray-100 text-sm font-extrabold text-gray-500">
+      <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-surface text-sm font-extrabold text-mist">
         {icon}
       </div>
 
-      <h3 className="mt-5 text-lg font-bold text-gray-950">
+      <h3 className="mt-5 text-lg font-bold text-cream">
         {title}
       </h3>
 
-      <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-gray-500">
+      <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-mist">
         {text}
       </p>
 

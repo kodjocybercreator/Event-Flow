@@ -135,13 +135,13 @@ export default function AdminApprovals() {
               size="md"
             />
             <div>
-              <h3 className="font-bold text-slate-950 truncate">
+              <h3 className="font-bold text-cream truncate">
                 {getAccountName(vendor)}
               </h3>
-              <p className="text-sm text-slate-500 truncate max-w-xs">
+              <p className="text-sm text-mist truncate max-w-xs">
                 {vendor.businessName || vendor.email}
               </p>
-              <p className="mt-1 text-xs text-slate-400 truncate">
+              <p className="mt-1 text-xs text-fog truncate">
                 {vendor.category || vendor.serviceCategory || 'Event Services'} · {vendor.location}
               </p>
             </div>
@@ -171,7 +171,7 @@ export default function AdminApprovals() {
 
         {images.length > 0 && (
           <div className="mt-4">
-            <p className="text-xs font-bold uppercase tracking-wide text-slate-400 mb-2">
+            <p className="text-xs font-bold uppercase tracking-wide text-fog mb-2">
               Portfolio ({images.length})
             </p>
             <div className="grid grid-cols-3 gap-2">
@@ -180,14 +180,14 @@ export default function AdminApprovals() {
                   key={i}
                   src={img}
                   alt={`Portfolio ${i + 1}`}
-                  className="h-16 w-16 rounded-xl object-cover border border-slate-200"
+                  className="h-16 w-16 rounded-xl object-cover border border-line"
                 />
               ))}
             </div>
           </div>
         )}
 
-        <div className="mt-3 text-xs text-slate-400">
+        <div className="mt-3 text-xs text-fog">
           Registered: {formatDate(vendor.createdAt)}
         </div>
       </Card>
@@ -200,17 +200,17 @@ export default function AdminApprovals() {
       <Card key={venue.id} className="p-5 sm:p-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-xl text-indigo-600">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-xl text-gold">
               🏛️
             </div>
             <div>
-              <h3 className="font-bold text-slate-950 truncate">
+              <h3 className="font-bold text-cream truncate">
                 {venue.name || venue.businessName || 'Unnamed Venue'}
               </h3>
-              <p className="text-sm text-slate-500 truncate max-w-xs">
+              <p className="text-sm text-mist truncate max-w-xs">
                 {venue.email || venue.ownerName || 'Venue owner'}
               </p>
-              <p className="mt-1 text-xs text-slate-400 truncate">
+              <p className="mt-1 text-xs text-fog truncate">
                 {venue.location || venue.city}
               </p>
             </div>
@@ -240,7 +240,7 @@ export default function AdminApprovals() {
 
         {images.length > 0 && (
           <div className="mt-4">
-            <p className="text-xs font-bold uppercase tracking-wide text-slate-400 mb-2">
+            <p className="text-xs font-bold uppercase tracking-wide text-fog mb-2">
               Gallery
             </p>
             <div className="flex gap-2">
@@ -249,14 +249,14 @@ export default function AdminApprovals() {
                   key={i}
                   src={img}
                   alt={venue.name}
-                  className="h-20 w-24 rounded-xl object-cover border border-slate-200"
+                  className="h-20 w-24 rounded-xl object-cover border border-line"
                 />
               ))}
             </div>
           </div>
         )}
 
-        <div className="mt-3 text-xs text-slate-400">
+        <div className="mt-3 text-xs text-fog">
           Submitted: {formatDate(venue.createdAt)}
         </div>
       </Card>
@@ -270,8 +270,8 @@ export default function AdminApprovals() {
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-50 text-3xl mb-4">
             ✓
           </div>
-          <h3 className="font-bold text-slate-950">No pending vendors</h3>
-          <p className="mt-2 text-sm text-slate-500">
+          <h3 className="font-bold text-cream">No pending vendors</h3>
+          <p className="mt-2 text-sm text-mist">
             All vendor registrations have been reviewed.
           </p>
         </Card>
@@ -288,8 +288,8 @@ export default function AdminApprovals() {
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-50 text-3xl mb-4">
             ✓
           </div>
-          <h3 className="font-bold text-slate-950">No pending venues</h3>
-          <p className="mt-2 text-sm text-slate-500">
+          <h3 className="font-bold text-cream">No pending venues</h3>
+          <p className="mt-2 text-sm text-mist">
             All venue registrations have been reviewed.
           </p>
         </Card>
@@ -300,17 +300,17 @@ export default function AdminApprovals() {
   );
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-surface text-cream">
       <Navbar />
       <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
         <div className="mb-8">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-amber-600">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-amber">
             Provider verification
           </p>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
             Approvals
           </h1>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500 sm:text-base">
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-mist sm:text-base">
             Review and approve vendor and venue registrations before they
             become public on EventFlow.
           </p>
@@ -335,40 +335,40 @@ export default function AdminApprovals() {
 
         {activeTab === 'vendors' ? vendorsList : venuesList}
 
-        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">
+        <div className="mt-8 rounded-2xl border border-line bg-raised p-6 shadow-sm">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-fog mb-4">
             How approval works
           </h3>
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="flex items-start gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-lg text-indigo-600">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-lg text-gold">
                 1
               </div>
               <div>
-                <p className="font-bold text-slate-950">Vendor applies</p>
-                <p className="mt-1 text-sm text-slate-500 leading-5">
+                <p className="font-bold text-cream">Vendor applies</p>
+                <p className="mt-1 text-sm text-mist leading-5">
                   Vendor submits profile, portfolio images, and business details.
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-lg text-indigo-600">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-lg text-gold">
                 2
               </div>
               <div>
-                <p className="font-bold text-slate-950">Admin reviews</p>
-                <p className="mt-1 text-sm text-slate-500 leading-5">
+                <p className="font-bold text-cream">Admin reviews</p>
+                <p className="mt-1 text-sm text-mist leading-5">
                   Admin reviews the application and portfolio media on this page.
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-lg text-indigo-600">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-lg text-gold">
                 3
               </div>
               <div>
-                <p className="font-bold text-slate-950">Profile goes live</p>
-                <p className="mt-1 text-sm text-slate-500 leading-5">
+                <p className="font-bold text-cream">Profile goes live</p>
+                <p className="mt-1 text-sm text-mist leading-5">
                   Approved vendors appear publicly; media is unlocked.
                 </p>
               </div>

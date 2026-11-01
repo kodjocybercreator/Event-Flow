@@ -973,36 +973,36 @@ export default function VendorRegistration() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f8fc] text-slate-900">
+    <div className="min-h-screen bg-ink text-cream">
       <Navbar />
 
       <main className="relative overflow-hidden px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -left-40 top-20 h-80 w-80 rounded-full bg-indigo-100/50 blur-3xl" />
+          <div className="absolute -left-40 top-20 h-80 w-80 rounded-full bg-gold/15/50 blur-3xl" />
 
-          <div className="absolute -right-40 top-40 h-96 w-96 rounded-full bg-purple-100/50 blur-3xl" />
+          <div className="absolute -right-40 top-40 h-96 w-96 rounded-full bg-gold/15/50 blur-3xl" />
         </div>
 
         <div className="relative mx-auto max-w-5xl">
           <div className="mb-8">
             <Link
               to="/register"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-slate-500 transition hover:text-indigo-600"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-mist transition hover:text-gold"
             >
               <span>←</span>
               Back to registration
             </Link>
 
             <div className="mt-6">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
                 Vendor registration
               </p>
 
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+              <h1 className="mt-2 text-3xl font-bold tracking-tight text-cream sm:text-4xl">
                 Build your EventFlow vendor profile
               </h1>
 
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500 sm:text-base">
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-mist sm:text-base">
                 Tell organizers about your business,
                 showcase your previous work, and submit
                 your profile for EventFlow approval.
@@ -1010,17 +1010,17 @@ export default function VendorRegistration() {
             </div>
           </div>
 
-          <div className="mb-7 flex gap-4 rounded-2xl border border-indigo-100 bg-indigo-50 p-5">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-sm font-bold text-white">
+          <div className="mb-7 flex gap-4 rounded-2xl border border-gold/20 bg-gold/10 p-5">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold text-sm font-bold text-cream">
               ✓
             </div>
 
             <div>
-              <p className="text-sm font-bold text-indigo-950">
+              <p className="text-sm font-bold text-charcoal">
                 Your profile will be reviewed before going live
               </p>
 
-              <p className="mt-1 text-sm leading-6 text-indigo-800/80">
+              <p className="mt-1 text-sm leading-6 text-raised/80">
                 EventFlow reviews vendor applications
                 and portfolio images before a vendor
                 profile is made available to organizers.
@@ -1031,9 +1031,9 @@ export default function VendorRegistration() {
           {error && (
             <div
               role="alert"
-              className="mb-7 flex gap-3 rounded-2xl border border-red-100 bg-red-50 p-4 text-sm text-red-700"
+              className="mb-7 flex gap-3 rounded-2xl border border-rose/20 bg-rose/10 p-4 text-sm text-rose"
             >
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 font-bold">
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose/15 font-bold">
                 !
               </span>
 
@@ -1047,17 +1047,17 @@ export default function VendorRegistration() {
             onSubmit={handleSubmit}
             className="space-y-7"
           >
-            <section className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <section className="rounded-[1.75rem] border border-line bg-raised p-6 shadow-sm sm:p-8">
               <div className="mb-6">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                   Step 01
                 </p>
 
-                <h2 className="mt-2 text-xl font-bold text-slate-950">
+                <h2 className="mt-2 text-xl font-bold text-cream">
                   Your account details
                 </h2>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-mist">
                   These details are connected to your
                   vendor account.
                 </p>
@@ -1094,17 +1094,17 @@ export default function VendorRegistration() {
               </div>
             </section>
 
-            <section className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <section className="rounded-[1.75rem] border border-line bg-raised p-6 shadow-sm sm:p-8">
               <div className="mb-6">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                   Step 02
                 </p>
 
-                <h2 className="mt-2 text-xl font-bold text-slate-950">
+                <h2 className="mt-2 text-xl font-bold text-cream">
                   Business information
                 </h2>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-mist">
                   Give organizers enough information to
                   understand what you offer.
                 </p>
@@ -1114,7 +1114,7 @@ export default function VendorRegistration() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="businessName"
-                    className="block text-sm font-semibold text-slate-700"
+                    className="block text-sm font-semibold text-mist"
                   >
                     Business or professional name
                   </label>
@@ -1127,14 +1127,14 @@ export default function VendorRegistration() {
                     }
                     onChange={handleChange}
                     placeholder="e.g. Christopher Photography"
-                    className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition placeholder:text-slate-400 hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                    className="mt-2 w-full rounded-xl border border-line bg-raised px-4 py-3.5 text-sm outline-none transition placeholder:text-fog hover:border-line-bright focus:border-gold focus:ring-4 focus:ring-gold/20"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="category"
-                    className="block text-sm font-semibold text-slate-700"
+                    className="block text-sm font-semibold text-mist"
                   >
                     Main service category
                   </label>
@@ -1146,7 +1146,7 @@ export default function VendorRegistration() {
                       formData.category
                     }
                     onChange={handleChange}
-                    className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                    className="mt-2 w-full rounded-xl border border-line bg-raised px-4 py-3.5 text-sm outline-none transition hover:border-line-bright focus:border-gold focus:ring-4 focus:ring-gold/20"
                   >
                     {CATEGORIES.map(
                       (category) => (
@@ -1164,7 +1164,7 @@ export default function VendorRegistration() {
                 <div>
                   <label
                     htmlFor="location"
-                    className="block text-sm font-semibold text-slate-700"
+                    className="block text-sm font-semibold text-mist"
                   >
                     Primary operating location
                   </label>
@@ -1176,7 +1176,7 @@ export default function VendorRegistration() {
                       formData.location
                     }
                     onChange={handleChange}
-                    className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                    className="mt-2 w-full rounded-xl border border-line bg-raised px-4 py-3.5 text-sm outline-none transition hover:border-line-bright focus:border-gold focus:ring-4 focus:ring-gold/20"
                   >
                     {LOCATIONS.map(
                       (
@@ -1202,7 +1202,7 @@ export default function VendorRegistration() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="description"
-                    className="block text-sm font-semibold text-slate-700"
+                    className="block text-sm font-semibold text-mist"
                   >
                     About your business
                   </label>
@@ -1216,15 +1216,15 @@ export default function VendorRegistration() {
                     onChange={handleChange}
                     rows={5}
                     placeholder="Tell organizers about your experience, the services you provide, and what makes your work suitable for events."
-                    className="mt-2 w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm leading-6 outline-none transition placeholder:text-slate-400 hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50"
+                    className="mt-2 w-full resize-none rounded-xl border border-line bg-raised px-4 py-3.5 text-sm leading-6 outline-none transition placeholder:text-fog hover:border-line-bright focus:border-gold focus:ring-4 focus:ring-gold/20"
                   />
 
                   <div className="mt-2 flex justify-between gap-3">
-                    <p className="text-xs text-slate-400">
+                    <p className="text-xs text-fog">
                       Minimum 20 characters.
                     </p>
 
-                    <p className="text-xs text-slate-400">
+                    <p className="text-xs text-fog">
                       {
                         formData
                           .description
@@ -1238,13 +1238,13 @@ export default function VendorRegistration() {
                 <div>
                   <label
                     htmlFor="startingPrice"
-                    className="block text-sm font-semibold text-slate-700"
+                    className="block text-sm font-semibold text-mist"
                   >
                     Starting price
                   </label>
 
-                  <div className="mt-2 flex overflow-hidden rounded-xl border border-slate-200 bg-white focus-within:border-indigo-500 focus-within:ring-4 focus-within:ring-indigo-50">
-                    <span className="flex items-center border-r border-slate-200 bg-slate-50 px-4 text-sm font-semibold text-slate-500">
+                  <div className="mt-2 flex overflow-hidden rounded-xl border border-line bg-raised focus-within:border-gold focus-within:ring-4 focus-within:ring-indigo-50">
+                    <span className="flex items-center border-r border-line bg-surface px-4 text-sm font-semibold text-mist">
                       GH₵
                     </span>
 
@@ -1265,7 +1265,7 @@ export default function VendorRegistration() {
                     />
                   </div>
 
-                  <p className="mt-2 text-xs leading-5 text-slate-400">
+                  <p className="mt-2 text-xs leading-5 text-fog">
                     This is a starting price. The final
                     price is agreed with the organizer
                     through the quotation process.
@@ -1274,24 +1274,24 @@ export default function VendorRegistration() {
               </div>
             </section>
 
-            <section className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <section className="rounded-[1.75rem] border border-line bg-raised p-6 shadow-sm sm:p-8">
               <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-600">
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                     Step 03
                   </p>
 
-                  <h2 className="mt-2 text-xl font-bold text-slate-950">
+                  <h2 className="mt-2 text-xl font-bold text-cream">
                     Portfolio & previous work
                   </h2>
 
-                  <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-500">
+                  <p className="mt-1 max-w-2xl text-sm leading-6 text-mist">
                     Upload photos that show the quality
                     of your previous work.
                   </p>
                 </div>
 
-                <div className="shrink-0 rounded-xl bg-slate-50 px-4 py-2 text-xs font-semibold text-slate-500">
+                <div className="shrink-0 rounded-xl bg-surface px-4 py-2 text-xs font-semibold text-mist">
                   {imageCountText}
                 </div>
               </div>
@@ -1307,8 +1307,8 @@ export default function VendorRegistration() {
                   images.length >=
                     MAX_IMAGES ||
                   loading
-                    ? "cursor-not-allowed border-slate-200 bg-slate-50"
-                    : "border-slate-200 bg-slate-50/70 hover:border-indigo-400 hover:bg-indigo-50/40"
+                    ? "cursor-not-allowed border-line bg-surface"
+                    : "border-line bg-surface/70 hover:border-gold/50 hover:bg-gold/10/40"
                 }`}
               >
                 <input
@@ -1327,11 +1327,11 @@ export default function VendorRegistration() {
                   }
                 />
 
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-2xl">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/15 text-2xl">
                   📸
                 </div>
 
-                <p className="mt-4 text-sm font-bold text-slate-900">
+                <p className="mt-4 text-sm font-bold text-cream">
                   {loading
                     ? "Optimising photos..."
                     : images.length >=
@@ -1340,12 +1340,12 @@ export default function VendorRegistration() {
                     : "Upload photos of your work"}
                 </p>
 
-                <p className="mt-1 text-xs leading-5 text-slate-500">
+                <p className="mt-1 text-xs leading-5 text-mist">
                   JPG, PNG, WEBP or GIF · Up to{" "}
                   {MAX_IMAGES} photos
                 </p>
 
-                <p className="mt-1 text-xs text-slate-400">
+                <p className="mt-1 text-xs text-fog">
                   Images are automatically compressed
                   for faster loading.
                 </p>
@@ -1353,14 +1353,14 @@ export default function VendorRegistration() {
                 {images.length <
                   MAX_IMAGES &&
                   !loading && (
-                    <span className="mt-4 inline-flex rounded-xl bg-indigo-600 px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition group-hover:bg-indigo-700">
+                    <span className="mt-4 inline-flex rounded-xl bg-gold px-4 py-2.5 text-xs font-semibold text-cream shadow-sm transition group-hover:bg-gold-dim">
                       Choose photos
                     </span>
                   )}
               </div>
 
               {imageError && (
-                <div className="mt-4 rounded-xl border border-amber-100 bg-amber-50 p-3 text-xs leading-5 text-amber-800">
+                <div className="mt-4 rounded-xl border border-amber/20 bg-amber/10 p-3 text-xs leading-5 text-amber-800">
                   {imageError}
                 </div>
               )}
@@ -1368,11 +1368,11 @@ export default function VendorRegistration() {
               {images.length > 0 && (
                 <div className="mt-6">
                   <div className="mb-3 flex items-center justify-between gap-3">
-                    <p className="text-sm font-semibold text-slate-800">
+                    <p className="text-sm font-semibold text-cream">
                       Uploaded work
                     </p>
 
-                    <p className="text-xs text-slate-400">
+                    <p className="text-xs text-fog">
                       First photo = cover
                     </p>
                   </div>
@@ -1387,7 +1387,7 @@ export default function VendorRegistration() {
                           key={
                             image.id
                           }
-                          className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100"
+                          className="group relative overflow-hidden rounded-2xl border border-line bg-surface"
                         >
                           <img
                             src={
@@ -1402,7 +1402,7 @@ export default function VendorRegistration() {
 
                           {index ===
                             0 && (
-                            <div className="absolute left-2 top-2 rounded-lg bg-slate-950/80 px-2.5 py-1 text-[10px] font-bold text-white">
+                            <div className="absolute left-2 top-2 rounded-lg bg-charcoal/80 px-2.5 py-1 text-[10px] font-bold text-cream">
                               Cover photo
                             </div>
                           )}
@@ -1414,7 +1414,7 @@ export default function VendorRegistration() {
                                 image.id
                               )
                             }
-                            className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/95 text-sm font-bold text-slate-700 shadow-md hover:bg-red-50 hover:text-red-600"
+                            className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-raised/95 text-sm font-bold text-mist shadow-md hover:bg-rose/10 hover:text-rose"
                             aria-label="Remove photo"
                           >
                             ×
@@ -1429,7 +1429,7 @@ export default function VendorRegistration() {
                                   image.id
                                 )
                               }
-                              className="absolute bottom-2 left-2 rounded-lg bg-white/95 px-2.5 py-1.5 text-[10px] font-semibold text-slate-700 opacity-0 shadow-md transition group-hover:opacity-100 hover:text-indigo-600"
+                              className="absolute bottom-2 left-2 rounded-lg bg-raised/95 px-2.5 py-1.5 text-[10px] font-semibold text-mist opacity-0 shadow-md transition group-hover:opacity-100 hover:text-gold"
                             >
                               Make cover
                             </button>
@@ -1441,11 +1441,11 @@ export default function VendorRegistration() {
                 </div>
               )}
 
-              <div className="mt-6 rounded-xl border border-slate-100 bg-slate-50 p-4">
+              <div className="mt-6 rounded-xl border border-line bg-surface p-4">
                 <div className="flex gap-3">
                   <span>ℹ️</span>
 
-                  <p className="text-xs leading-5 text-slate-500">
+                  <p className="text-xs leading-5 text-mist">
                     Upload genuine examples of your previous
                     work. EventFlow may review submitted images
                     before approving your vendor profile.
@@ -1454,14 +1454,14 @@ export default function VendorRegistration() {
               </div>
             </section>
 
-            <section className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <section className="rounded-[1.75rem] border border-line bg-raised p-6 shadow-sm sm:p-8">
               <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-sm font-bold text-slate-900">
+                  <p className="text-sm font-bold text-cream">
                     Ready to submit your vendor profile?
                   </p>
 
-                  <p className="mt-1 max-w-xl text-xs leading-5 text-slate-500">
+                  <p className="mt-1 max-w-xl text-xs leading-5 text-mist">
                     Your account will be submitted for EventFlow
                     review. Your profile and portfolio will become
                     publicly available after approval.
@@ -1471,7 +1471,7 @@ export default function VendorRegistration() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-60"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-6 py-3.5 text-sm font-semibold text-cream shadow-sm transition hover:bg-gold-dim hover:shadow-md disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {loading
                     ? "Submitting..."
@@ -1500,11 +1500,11 @@ function ReadOnlyField({
 }) {
   return (
     <div>
-      <label className="block text-sm font-semibold text-slate-700">
+      <label className="block text-sm font-semibold text-mist">
         {label}
       </label>
 
-      <div className="mt-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-600">
+      <div className="mt-2 rounded-xl border border-line bg-surface px-4 py-3.5 text-sm text-mist">
         {value || "Not provided"}
       </div>
     </div>

@@ -1,65 +1,102 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #000000;
-  --color-paper: #ffffff;
-  --color-gold: #b45309;
-  --color-gold-soft: #f5f5f0;
-  --color-charcoal: #1a1a1a;
-  --color-slate: #666666;
-  --color-border: #e5e5e5;
-  --radius: 0.25rem;
+  --color-ink: #0a0a0c;
+  --color-paper: #131316;
+  --color-raised: #1a1a1f;
+  --color-surface: #1e1e24;
+  --color-elevated: #24242c;
+  --color-line: #2a2a32;
+  --color-line-bright: #3a3a44;
+  --color-cream: #f0ede6;
+  --color-mist: #9a958c;
+  --color-fog: #656059;
+  --color-gold: #c8a44d;
+  --color-gold-dim: #a08535;
+  --color-gold-glow: rgba(200, 164, 77, 0.12);
+  --color-charcoal: #0f0f12;
+  --color-slate: #8a8578;
+  --color-border: #2a2a32;
+  --color-emerald: #4ade80;
+  --color-rose: #fb7185;
+  --color-amber: #fbbf24;
+  --radius: 0.5rem;
 }
 
-:root {
-  font-family: "Georgia", "Times New Roman", serif;
-  color: var(--color-ink);
-  background: var(--color-paper);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@layer base {
+  :root {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--color-cream);
+    background: var(--color-ink);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background: var(--color-paper);
-  color: var(--color-ink);
-}
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: var(--color-ink);
+    color: var(--color-cream);
+    overflow-x: hidden;
+  }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
 
-button {
-  cursor: pointer;
-}
+  button {
+    cursor: pointer;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-img {
-  display: block;
-  max-width: 100%;
-}
+  img {
+    display: block;
+    max-width: 100%;
+  }
 
-#root {
-  min-height: 100vh;
+  #root {
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-ink);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-line-bright);
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
 }
 
 .section-pad {
@@ -71,46 +108,72 @@ img {
 }
 
 .heading-xl {
-  @apply text-5xl font-bold tracking-tight text-ink sm:text-7xl lg:text-8xl leading-[1];
+  @apply text-5xl font-bold tracking-tight text-cream sm:text-7xl lg:text-8xl leading-[1];
 }
 
 .heading-lg {
-  @apply text-3xl font-bold tracking-tight text-ink sm:text-4xl lg:text-5xl leading-[1.1];
+  @apply text-3xl font-bold tracking-tight text-cream sm:text-4xl lg:text-5xl leading-[1.1];
 }
 
 .text-lead {
-  @apply text-lg leading-8 text-slate sm:text-xl;
+  @apply text-lg leading-8 text-mist sm:text-xl;
 }
 
 .label-sm {
-  @apply text-[10px] font-bold uppercase tracking-[0.2em] text-gold;
+  @apply text-[10px] font-semibold uppercase tracking-[0.2em] text-gold;
 }
 
 .btn-primary {
-  @apply inline-flex items-center gap-2 rounded-none bg-ink px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors duration-200 hover:bg-gold hover:text-paper focus:outline-none disabled:opacity-50 disabled:pointer-events-none;
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-8 py-4 text-xs font-bold uppercase tracking-[0.12em] text-ink transition-all duration-200 hover:bg-gold-dim hover:shadow-lg hover:shadow-gold/20 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:ring-offset-2 focus:ring-offset-ink disabled:opacity-50 disabled:pointer-events-none;
 }
 
 .btn-gold {
-  @apply inline-flex items-center gap-2 rounded-none bg-gold px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors duration-200 hover:bg-ink hover:text-paper focus:outline-none disabled:opacity-50 disabled:pointer-events-none;
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-8 py-4 text-xs font-bold uppercase tracking-[0.12em] text-ink transition-all duration-200 hover:bg-gold-dim hover:shadow-lg hover:shadow-gold/20 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:ring-offset-2 focus:ring-offset-ink disabled:opacity-50 disabled:pointer-events-none;
 }
 
 .btn-outline {
-  @apply inline-flex items-center gap-2 rounded-none border border-ink bg-transparent px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-ink transition-colors duration-200 hover:bg-ink hover:text-paper focus:outline-none disabled:opacity-50 disabled:pointer-events-none;
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-line-bright bg-transparent px-8 py-4 text-xs font-bold uppercase tracking-[0.12em] text-cream transition-all duration-200 hover:border-gold hover:bg-gold/10 hover:text-gold focus:outline-none focus:ring-2 focus:ring-gold/50 focus:ring-offset-2 focus:ring-offset-ink disabled:opacity-50 disabled:pointer-events-none;
 }
 
 .card {
-  @apply overflow-hidden border border-slate-200 bg-paper shadow-sm transition-colors duration-200 hover:border-ink hover:shadow-lg;
+  @apply overflow-hidden rounded-2xl border border-line bg-raised shadow-sm transition-all duration-300 hover:border-line-bright hover:shadow-lg;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:border-gold/30 hover:shadow-xl hover:shadow-gold/5 hover:-translate-y-1;
 }
 
 .image-wrapper {
-  @apply relative overflow-hidden bg-slate-100;
+  @apply relative overflow-hidden bg-elevated;
 }
 
 .image-wrapper img {
-  transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
 }
 
+.image-wrapper:hover img {
+  transform: scale(1.03);
+}
 
+.text-gradient {
+  @apply bg-gradient-to-r from-gold via-gold-dim to-gold bg-clip-text text-transparent;
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(200, 164, 77, 0.15), 0 0 40px rgba(200, 164, 77, 0.05);
+}
+
+.glass {
+  @apply bg-raised/80 backdrop-blur-xl border border-line;
+}
+
+.input-dark {
+  @apply w-full rounded-xl border border-line bg-elevated px-4 py-3.5 text-sm text-cream outline-none transition-all duration-200 placeholder:text-fog focus:border-gold focus:ring-2 focus:ring-gold/20;
+}
+
+.select-dark {
+  @apply w-full rounded-xl border border-line bg-elevated px-4 py-3.5 text-sm text-cream outline-none transition-all duration-200 focus:border-gold focus:ring-2 focus:ring-gold/20;
+}
 
 .serif {
   font-family: "Georgia", "Times New Roman", serif;
