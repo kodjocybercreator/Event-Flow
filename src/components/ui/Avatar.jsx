@@ -24,7 +24,7 @@ export function Avatar({ src, label = 'User', className = '', size = 'md' }) {
 
   return (
     <div
-      className={`flex shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-bold shadow-lg ${sizes[size]} ${className}`}
+      className={`flex shrink-0 items-center justify-center rounded-full bg-ink text-white font-bold shadow-lg ${sizes[size]} ${className}`}
     >
       {initials}
     </div>

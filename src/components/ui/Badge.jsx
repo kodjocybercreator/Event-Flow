@@ -1,12 +1,12 @@
 export function Badge({
   children,
-  variant = 'indigo',
+  variant = 'ink',
   className = '',
   size = 'sm',
 }) {
   const variants = {
-    indigo: 'bg-indigo-50 text-indigo-700 border border-indigo-100',
-    gold: 'bg-amber-50 text-amber-700 border border-amber-100',
+    ink: 'bg-ink-50 text-ink border border-ink-100',
+    gold: 'bg-gold-50 text-gold border border-gold-100',
     emerald: 'bg-emerald-50 text-emerald-700 border border-emerald-100',
     red: 'bg-red-50 text-red-700 border border-red-100',
     slate: 'bg-slate-50 text-slate-700 border border-slate-100',

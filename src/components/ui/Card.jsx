@@ -6,14 +6,12 @@ export function Card({
   className = '',
   padding = 'p-6 sm:p-8',
   hover = true,
-  border = 'border-slate-200',
-  bg = 'bg-white',
 }) {
   return (
     <motion.div
-      whileHover={hover ? hoverScale : undefined}
+      whileHover={hover ? hoverLift : undefined}
       whileTap={tap}
-      className={`overflow-hidden rounded-3xl ${border} ${bg} shadow-sm ${padding} ${className}`}
+      className={`overflow-hidden rounded-[2rem] border border-slate-200 bg-surface shadow-sm ${padding} ${className}`}
     >
       {children}
     </motion.div>

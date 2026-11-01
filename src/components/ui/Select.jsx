@@ -15,7 +15,7 @@ export function Select({
       {label && (
         <label
           htmlFor={id}
-          className="block text-sm font-semibold text-slate-700 mb-1"
+          className="block text-sm font-semibold text-ink mb-1"
         >
           {label}
         </label>
@@ -25,7 +25,7 @@ export function Select({
         value={value}
         onChange={onChange}
         required={required}
-        className={`w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50 ${className}`}
+        className={`w-full rounded-xl border border-slate-200 bg-surface px-4 py-3.5 text-sm outline-none transition hover:border-slate-300 focus:border-gold focus:ring-4 focus:ring-gold/20 ${className}`}
         {...props}
       >
         {options.map((opt) => (
