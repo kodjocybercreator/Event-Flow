@@ -763,7 +763,7 @@ function VendorDashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-ink">
+      <div className="min-h-screen bg-paper">
         <Navbar />
 
         <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -787,13 +787,13 @@ function VendorDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-ink text-cream">
+    <div className="min-h-screen bg-paper text-cream">
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
 
         {/* HERO / BUSINESS HEADER */}
-        <section className="relative mb-6 overflow-hidden rounded-3xl bg-ink shadow-xl">
+        <section className="relative mb-6 overflow-hidden rounded-3xl bg-paper shadow-xl">
           <div className="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-gold/30 blur-3xl" />
           <div className="absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-violet-600/20 blur-3xl" />
 
@@ -1075,7 +1075,7 @@ function VendorDashboard() {
                     onClick={() => setActiveTab(value)}
                     className={`rounded-xl px-5 py-2.5 text-sm font-bold transition ${
                       activeTab === value
-                        ? "bg-ink text-cream shadow-sm"
+                        ? "bg-paper text-cream shadow-sm"
                         : "text-mist hover:bg-surface hover:text-cream"
                     }`}
                   >
@@ -1933,7 +1933,7 @@ function VendorDashboard() {
             </div>
 
             {/* BUSINESS STATUS */}
-            <div className="overflow-hidden rounded-3xl bg-ink p-6 text-cream shadow-sm">
+            <div className="overflow-hidden rounded-3xl bg-paper p-6 text-cream shadow-sm">
               <span className="inline-flex rounded-full bg-raised/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-gold">
                 EventFlow
               </span>

@@ -241,7 +241,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-ink text-cream">
+    <div className="min-h-screen bg-paper text-cream">
       <Navbar />
 
       <main className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden px-4 py-10 sm:px-6 lg:px-8">
@@ -253,7 +253,7 @@ export default function Login() {
 
         <div className="relative mx-auto grid w-full max-w-6xl overflow-hidden rounded-[2rem] border border-line bg-raised shadow-2xl shadow-black/30 lg:grid-cols-2">
           {/* Left panel */}
-          <div className="hidden bg-charcoal p-10 text-cream lg:flex lg:flex-col lg:justify-between xl:p-14">
+          <div className="hidden bg-paper p-10 text-cream lg:flex lg:flex-col lg:justify-between xl:p-14">
             <div>
               <Link
                 to="/"

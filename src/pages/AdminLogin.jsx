@@ -243,7 +243,7 @@ function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-charcoal">
+    <div className="min-h-screen bg-paper">
       <div className="grid min-h-screen lg:grid-cols-2">
         {/* Brand panel */}
         <div className="relative hidden overflow-hidden bg-[#4f39f6] lg:flex">

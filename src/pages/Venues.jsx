@@ -360,7 +360,7 @@ export default function Venues() {
         {/* =====================================================
             HERO
         ====================================================== */}
-        <section className="relative overflow-hidden bg-ink">
+        <section className="relative overflow-hidden bg-paper">
           <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-gold/20 blur-3xl" />
           <div className="absolute -bottom-40 left-1/4 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
 
@@ -673,7 +673,7 @@ export default function Venues() {
                   <button
                     type="button"
                     onClick={clearFilters}
-                    className="mt-6 rounded-xl bg-ink px-5 py-3 text-sm font-bold text-cream transition hover:bg-gold"
+                    className="mt-6 rounded-xl bg-paper px-5 py-3 text-sm font-bold text-cream transition hover:bg-gold"
                   >
                     Clear filters
                   </button>
@@ -687,7 +687,7 @@ export default function Venues() {
             VENUE OWNER CTA
         ====================================================== */}
         <section className="mx-auto max-w-7xl px-5 pb-14 sm:px-6 lg:px-8 lg:pb-20">
-          <div className="relative overflow-hidden rounded-3xl bg-ink px-6 py-10 sm:px-10 sm:py-12">
+          <div className="relative overflow-hidden rounded-3xl bg-paper px-6 py-10 sm:px-10 sm:py-12">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gold/20 blur-3xl" />
 
             <div className="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
@@ -902,7 +902,7 @@ function VenueCard({ venue, saved, onToggleSave }) {
 
           <Link
             to={`/venues/${venue.id}`}
-            className="inline-flex shrink-0 items-center rounded-xl bg-ink px-4 py-2.5 text-xs font-bold text-cream transition hover:bg-gold"
+            className="inline-flex shrink-0 items-center rounded-xl bg-paper px-4 py-2.5 text-xs font-bold text-cream transition hover:bg-gold"
           >
             View Venue
             <svg

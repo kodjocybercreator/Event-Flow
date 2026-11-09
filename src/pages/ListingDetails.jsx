@@ -279,7 +279,7 @@ function ListingDetails() {
 
             <Link
               to="/discover"
-              className="mt-7 inline-flex items-center rounded-xl bg-ink px-6 py-3 text-sm font-bold text-cream transition hover:bg-gold"
+              className="mt-7 inline-flex items-center rounded-xl bg-paper px-6 py-3 text-sm font-bold text-cream transition hover:bg-gold"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -447,7 +447,7 @@ function ListingDetails() {
                   </div>
                 )}
 
-                <div className="absolute bottom-5 right-5 rounded-full bg-ink/85 px-3.5 py-2 text-xs font-semibold text-cream backdrop-blur">
+                <div className="absolute bottom-5 right-5 rounded-full bg-paper/85 px-3.5 py-2 text-xs font-semibold text-cream backdrop-blur">
                   {listing.type}
                 </div>
               </div>
@@ -811,7 +811,7 @@ function ListingDetails() {
 
               {/* VENDOR PROFILE */}
               {isVendor && listing.vendorId && (
-                <section className="overflow-hidden rounded-3xl bg-ink p-6 text-cream">
+                <section className="overflow-hidden rounded-3xl bg-paper p-6 text-cream">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-raised/10">
                     <svg
                       viewBox="0 0 24 24"
@@ -863,7 +863,7 @@ function ListingDetails() {
           {/* ===================================================
               BOTTOM CTA
           ==================================================== */}
-          <section className="relative mt-10 overflow-hidden rounded-3xl bg-ink p-7 text-cream sm:p-10">
+          <section className="relative mt-10 overflow-hidden rounded-3xl bg-paper p-7 text-cream sm:p-10">
             <div className="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
 
             <div className="relative flex flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">

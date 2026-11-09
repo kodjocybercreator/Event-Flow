@@ -1675,7 +1675,7 @@ export default function VendorBookings() {
 
   if (!user) {
     return (
-      <div className="min-h-screen bg-ink">
+      <div className="min-h-screen bg-paper">
         <Navbar />
 
         <main className="mx-auto max-w-3xl px-5 py-20 text-center">
@@ -1704,14 +1704,14 @@ export default function VendorBookings() {
   }
 
   return (
-    <div className="min-h-screen bg-ink text-cream">
+    <div className="min-h-screen bg-paper text-cream">
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
 
         {/* PAGE HEADER */}
 
-        <section className="relative overflow-hidden rounded-3xl bg-ink px-5 py-7 text-cream shadow-sm sm:px-7 sm:py-8">
+        <section className="relative overflow-hidden rounded-3xl bg-paper px-5 py-7 text-cream shadow-sm sm:px-7 sm:py-8">
           <div className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-gold/20 blur-3xl" />
 
           <div className="absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-violet-600/10 blur-3xl" />
@@ -1886,7 +1886,7 @@ export default function VendorBookings() {
                     }
                     className={`inline-flex shrink-0 items-center gap-2 rounded-xl px-3.5 py-2 text-sm font-semibold transition ${
                       activeTab === value
-                        ? "bg-ink text-cream shadow-sm"
+                        ? "bg-paper text-cream shadow-sm"
                         : "bg-surface text-mist hover:bg-elevated"
                     }`}
                   >
@@ -2244,7 +2244,7 @@ export default function VendorBookings() {
                                         booking
                                       )
                                     }
-                                    className="rounded-xl bg-ink px-4 py-2.5 text-sm font-semibold text-cream transition hover:bg-raised disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="rounded-xl bg-paper px-4 py-2.5 text-sm font-semibold text-cream transition hover:bg-raised disabled:cursor-not-allowed disabled:opacity-50"
                                   >
                                     Accept
                                   </button>
@@ -2957,7 +2957,7 @@ export default function VendorBookings() {
       {/* QUOTATION MODAL */}
 
       {quoteModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 px-4 py-6 backdrop-blur-xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-paper/60 px-4 py-6 backdrop-blur-xl">
           <div className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-3xl bg-raised p-6 shadow-2xl sm:p-7">
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -3079,7 +3079,7 @@ export default function VendorBookings() {
       {/* COUNTER MODAL */}
 
       {counterModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 px-4 py-6 backdrop-blur-xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-paper/60 px-4 py-6 backdrop-blur-xl">
           <div className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-3xl bg-raised p-6 shadow-2xl sm:p-7">
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -3196,7 +3196,7 @@ export default function VendorBookings() {
                     counterModal
                   )
                 }
-                className="flex-1 rounded-xl bg-ink px-4 py-3 text-sm font-semibold text-cream shadow-sm transition hover:bg-raised disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex-1 rounded-xl bg-paper px-4 py-3 text-sm font-semibold text-cream shadow-sm transition hover:bg-raised disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Send counter
               </button>

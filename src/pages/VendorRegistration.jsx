@@ -973,7 +973,7 @@ export default function VendorRegistration() {
   };
 
   return (
-    <div className="min-h-screen bg-ink text-cream">
+    <div className="min-h-screen bg-paper text-cream">
       <Navbar />
 
       <main className="relative overflow-hidden px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
@@ -1402,7 +1402,7 @@ export default function VendorRegistration() {
 
                           {index ===
                             0 && (
-                            <div className="absolute left-2 top-2 rounded-lg bg-charcoal/80 px-2.5 py-1 text-[10px] font-bold text-cream">
+                            <div className="absolute left-2 top-2 rounded-lg bg-surface/80 px-2.5 py-1 text-[10px] font-bold text-cream">
                               Cover photo
                             </div>
                           )}

@@ -114,7 +114,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-ink/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur-xl">
       <div className="mx-auto flex min-h-[72px] max-w-7xl items-center justify-between gap-4 px-6 sm:px-8 lg:px-12">
 
         {/* LOGO */}
@@ -227,7 +227,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="overflow-hidden border-t border-line bg-ink/95 backdrop-blur-xl md:flex lg:hidden"
+            className="overflow-hidden border-t border-line bg-paper/95 backdrop-blur-xl md:flex lg:hidden"
           >
             <div className="px-6 pb-8 pt-4">
               {user && (

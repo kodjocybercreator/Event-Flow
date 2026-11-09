@@ -834,7 +834,7 @@ export default function VenueDetails() {
         <section className="mt-5 overflow-hidden rounded-[2rem] border border-line bg-raised shadow-sm">
           {/* GALLERY HERO */}
 
-          <div className="relative h-72 overflow-hidden bg-charcoal sm:h-96 lg:h-[500px]">
+          <div className="relative h-72 overflow-hidden bg-surface sm:h-96 lg:h-[500px]">
             {venueImages.length > 0 ? (
               <>
                 <button
@@ -853,7 +853,7 @@ export default function VenueDetails() {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/10" />
 
-                  <div className="absolute right-5 top-20 hidden rounded-xl bg-ink/30 px-4 py-2 text-xs font-bold text-cream backdrop-blur-xl transition group-hover:bg-ink/50 sm:block">
+                  <div className="absolute right-5 top-20 hidden rounded-xl bg-paper/30 px-4 py-2 text-xs font-bold text-cream backdrop-blur-xl transition group-hover:bg-paper/50 sm:block">
                     Click to view gallery
                   </div>
                 </button>
@@ -861,7 +861,7 @@ export default function VenueDetails() {
                 {/* Gallery count */}
 
                 {venueImages.length > 1 && (
-                  <div className="pointer-events-none absolute bottom-5 right-5 z-20 rounded-xl border border-white/15 bg-ink/40 px-3 py-2 text-xs font-bold text-cream backdrop-blur-xl">
+                  <div className="pointer-events-none absolute bottom-5 right-5 z-20 rounded-xl border border-white/15 bg-paper/40 px-3 py-2 text-xs font-bold text-cream backdrop-blur-xl">
                     📷 {activeImageIndex + 1} /{" "}
                     {venueImages.length}
                   </div>
@@ -888,7 +888,7 @@ export default function VenueDetails() {
             <div className="absolute left-5 top-5 z-30 sm:left-7 sm:top-7">
               <Link
                 to="/venues"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-ink/25 px-4 py-2.5 text-sm font-semibold text-cream backdrop-blur-xl transition hover:bg-ink/40"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-paper/25 px-4 py-2.5 text-sm font-semibold text-cream backdrop-blur-xl transition hover:bg-paper/40"
               >
                 ← Venues
               </Link>
@@ -954,7 +954,7 @@ export default function VenueDetails() {
                     />
 
                     {index === 0 && (
-                      <span className="absolute bottom-1 left-1 rounded-md bg-ink/60 px-1.5 py-0.5 text-[9px] font-bold text-cream">
+                      <span className="absolute bottom-1 left-1 rounded-md bg-paper/60 px-1.5 py-0.5 text-[9px] font-bold text-cream">
                         Cover
                       </span>
                     )}
@@ -1099,7 +1099,7 @@ export default function VenueDetails() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />
 
                       <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between opacity-0 transition group-hover:opacity-100">
-                        <span className="rounded-lg bg-ink/50 px-2.5 py-1.5 text-xs font-bold text-cream backdrop-blur-xl">
+                        <span className="rounded-lg bg-paper/50 px-2.5 py-1.5 text-xs font-bold text-cream backdrop-blur-xl">
                           View photo
                         </span>
 
@@ -1460,7 +1460,7 @@ export default function VenueDetails() {
             {/* BOOKING CARD */}
 
             <section className="sticky top-24 overflow-hidden rounded-3xl border border-line bg-raised shadow-sm">
-              <div className="bg-charcoal p-6 text-cream">
+              <div className="bg-surface p-6 text-cream">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                   Reserve your date
                 </p>
@@ -1622,7 +1622,7 @@ export default function VenueDetails() {
 
             {/* DISCOVER MORE */}
 
-            <section className="rounded-3xl border border-line bg-charcoal p-6 text-cream">
+            <section className="rounded-3xl border border-line bg-surface p-6 text-cream">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                 Still exploring?
               </p>
@@ -1653,7 +1653,7 @@ export default function VenueDetails() {
 
       {lightboxOpen && venueImages.length > 0 && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/95 p-3 backdrop-blur-xl sm:p-6"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-surface/95 p-3 backdrop-blur-xl sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label={`${venueName} photo gallery`}
@@ -1722,7 +1722,7 @@ export default function VenueDetails() {
             {/* Bottom thumbnails */}
 
             {venueImages.length > 1 && (
-              <div className="absolute bottom-0 left-1/2 flex max-w-full -translate-x-1/2 gap-2 overflow-x-auto rounded-2xl border border-line bg-ink/30 p-2 backdrop-blur-xl">
+              <div className="absolute bottom-0 left-1/2 flex max-w-full -translate-x-1/2 gap-2 overflow-x-auto rounded-2xl border border-line bg-paper/30 p-2 backdrop-blur-xl">
                 {venueImages.map(
                   (image, index) => (
                     <button

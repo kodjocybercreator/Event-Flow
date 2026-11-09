@@ -5,7 +5,7 @@ import { Button } from '../components/ui/Button';
 
 export default function PaymentFailure() {
   return (
-    <div className="min-h-screen bg-ink text-cream">
+    <div className="min-h-screen bg-paper text-cream">
       <Navbar />
       <main className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
         <Card className="p-8 text-center">

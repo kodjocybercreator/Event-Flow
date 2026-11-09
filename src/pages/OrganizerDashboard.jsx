@@ -2111,7 +2111,7 @@ export default function OrganizerDashboard() {
         .eventflow-organizer-theme .text-mist { color: #62677d !important; }
         .eventflow-organizer-theme .text-mist { color: #85899b !important; }
         .eventflow-organizer-theme .text-fog { color: #a0a4b3 !important; }
-        .eventflow-organizer-theme .bg-ink { background-color: #4f46a5 !important; }
+        .eventflow-organizer-theme .bg-paper { background-color: #4f46a5 !important; }
         .eventflow-organizer-theme .hover\:bg-raised:hover { background-color: #40388f !important; }
         .eventflow-organizer-theme .bg-gold/10,
         .eventflow-organizer-theme .bg-gold/15,
@@ -2170,7 +2170,7 @@ export default function OrganizerDashboard() {
         }
         .eventflow-organizer-theme .eventflow-hero h1 { letter-spacing: -.035em; color: #24213c !important; }
         .eventflow-organizer-theme .eventflow-hero a:first-child,
-        .eventflow-organizer-theme .eventflow-hero a.bg-ink {
+        .eventflow-organizer-theme .eventflow-hero a.bg-paper {
           border: 1px solid #5144a5 !important;
           background: #5144a5 !important;
           box-shadow: 0 3px 8px rgba(81,68,165,.14);
@@ -2250,7 +2250,7 @@ export default function OrganizerDashboard() {
 
                 <Link
                   to="/discover"
-                  className="inline-flex items-center justify-center rounded-xl bg-ink px-5 py-3 text-sm font-bold text-cream transition hover:bg-raised"
+                  className="inline-flex items-center justify-center rounded-xl bg-paper px-5 py-3 text-sm font-bold text-cream transition hover:bg-raised"
                 >
                   Discover providers
                 </Link>
@@ -2572,7 +2572,7 @@ export default function OrganizerDashboard() {
               action={
                 <Link
                   to="/discover"
-                  className="inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-bold text-cream hover:bg-raised"
+                  className="inline-flex rounded-xl bg-paper px-5 py-3 text-sm font-bold text-cream hover:bg-raised"
                 >
                   Explore providers
                 </Link>
@@ -2650,7 +2650,7 @@ export default function OrganizerDashboard() {
               action={
                 <Link
                   to="/dashboard/organizer/events/create"
-                  className="inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-bold text-cream hover:bg-raised"
+                  className="inline-flex rounded-xl bg-paper px-5 py-3 text-sm font-bold text-cream hover:bg-raised"
                 >
                   Create event
                 </Link>
@@ -3216,7 +3216,7 @@ function BookingNegotiationCard({
                   onClick={
                     onAccept
                   }
-                  className="rounded-xl bg-ink px-5 py-2.5 text-xs font-bold text-cream transition hover:bg-raised"
+                  className="rounded-xl bg-paper px-5 py-2.5 text-xs font-bold text-cream transition hover:bg-raised"
                 >
                   Accept quotation
                 </button>
@@ -3277,7 +3277,7 @@ function BookingNegotiationCard({
                 <button
                   type="button"
                   onClick={onAccept}
-                  className="rounded-xl bg-ink px-5 py-2.5 text-xs font-bold text-cream transition hover:bg-raised"
+                  className="rounded-xl bg-paper px-5 py-2.5 text-xs font-bold text-cream transition hover:bg-raised"
                 >
                   Accept price
                 </button>
@@ -3323,7 +3323,7 @@ function BookingNegotiationCard({
                 <button
                   type="button"
                   onClick={onAccept}
-                  className="rounded-xl bg-ink px-5 py-3 text-sm font-bold text-cream hover:bg-raised"
+                  className="rounded-xl bg-paper px-5 py-3 text-sm font-bold text-cream hover:bg-raised"
                 >
                   Accept Price
                 </button>
@@ -3586,7 +3586,7 @@ function NotificationDetailModal({ notification, onClose, onViewBooking }) {
   const isMessage = /message|chat|reply|inbox/i.test(`${notification?.type || ""} ${notification?.title || ""}`);
 
   return (
-    <div className="fixed inset-0 z-[110] flex items-center justify-center bg-ink/60 p-4 backdrop-blur-xl" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
+    <div className="fixed inset-0 z-[110] flex items-center justify-center bg-paper/60 p-4 backdrop-blur-xl" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
       <section role="dialog" aria-modal="true" aria-labelledby="notification-detail-title" className="w-full max-w-lg overflow-hidden rounded-3xl border border-line bg-raised shadow-2xl">
         <div className="bg-gradient-to-r from-purple-700 to-indigo-700 px-6 py-6 text-cream sm:px-7">
           <div className="flex items-start justify-between gap-4">
@@ -3654,7 +3654,7 @@ function PaymentModal({
     );
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/60 p-4 backdrop-blur-xl">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-paper/60 p-4 backdrop-blur-xl">
 
       <div className="w-full max-w-lg overflow-hidden rounded-3xl bg-raised shadow-2xl">
 

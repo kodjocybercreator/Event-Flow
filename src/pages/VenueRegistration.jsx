@@ -653,7 +653,7 @@ export default function VenueRegistration() {
                         />
 
                         {index === 0 && (
-                          <span className="absolute bottom-2 left-2 rounded-full bg-charcoal/80 px-2 py-1 text-[10px] font-semibold text-cream">
+                          <span className="absolute bottom-2 left-2 rounded-full bg-surface/80 px-2 py-1 text-[10px] font-semibold text-cream">
                             Cover
                           </span>
                         )}

@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@neon/config": "^1.13.2",
+    "@neon/env": "^2.1.2",
     "@tailwindcss/vite": "^4.3.3",
     "framer-motion": "^14.9.0",
     "react": "^19.2.8",

@@ -247,7 +247,7 @@ export default function BookingSuccess() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-ink">
+      <div className="min-h-screen bg-paper">
         <Navbar />
 
         <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
@@ -272,7 +272,7 @@ export default function BookingSuccess() {
 
   if (!booking) {
     return (
-      <div className="min-h-screen bg-ink text-cream">
+      <div className="min-h-screen bg-paper text-cream">
         <Navbar />
 
         <main className="mx-auto flex min-h-[72vh] max-w-2xl items-center justify-center px-4 py-16 sm:px-6">
@@ -332,7 +332,7 @@ export default function BookingSuccess() {
     formatPrice(quotedPrice);
 
   return (
-    <div className="min-h-screen bg-ink text-cream">
+    <div className="min-h-screen bg-paper text-cream">
       <Navbar />
 
       <main className="mx-auto max-w-4xl px-4 py-8 pb-16 sm:px-6 lg:px-8 lg:py-12">

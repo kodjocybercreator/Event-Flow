@@ -482,7 +482,7 @@ export default function Discover() {
                         .getElementById("discover-results")
                         ?.scrollIntoView({ behavior: "smooth", block: "start" });
                     }}
-                    className="flex min-h-[68px] items-center justify-center rounded-xl bg-ink px-8 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors duration-200 hover:bg-gold hover:text-cream"
+                    className="flex min-h-[68px] items-center justify-center rounded-xl bg-paper px-8 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors duration-200 hover:bg-gold hover:text-cream"
                   >
                     Search
                   </button>
@@ -754,7 +754,7 @@ export default function Discover() {
               <button
                 type="button"
                 onClick={clearFilters}
-                className="mt-6 rounded-xl bg-ink px-6 py-3 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors hover:bg-gold hover:text-cream"
+                className="mt-6 rounded-xl bg-paper px-6 py-3 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors hover:bg-gold hover:text-cream"
               >
                 Clear all filters
               </button>
@@ -837,7 +837,7 @@ export default function Discover() {
 
                       {/* APPROVED BADGE */}
                       {listing.verified && (
-                        <div className="absolute bottom-4 left-4 flex items-center gap-1.5 rounded-xl bg-ink text-cream px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em]">
+                        <div className="absolute bottom-4 left-4 flex items-center gap-1.5 rounded-xl bg-paper text-cream px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em]">
                           <span className="flex h-4 w-4 items-center justify-center rounded-lg bg-gold text-[9px]">
                             ✓
                           </span>
@@ -911,7 +911,7 @@ export default function Discover() {
                           </div>
                           <Link
                             to={profileLink}
-                            className="inline-flex items-center gap-2 rounded-xl bg-ink px-6 py-3 text-xs font-bold uppercase tracking-[0.1em] text-cream transition-colors hover:bg-gold hover:text-cream"
+                            className="inline-flex items-center gap-2 rounded-xl bg-paper px-6 py-3 text-xs font-bold uppercase tracking-[0.1em] text-cream transition-colors hover:bg-gold hover:text-cream"
                           >
                             View
                             <svg
@@ -1004,7 +1004,7 @@ export default function Discover() {
                   <div className="absolute right-[18%] top-[40%] h-32 w-32 rounded-xl border border-gold/30" />
                   <div className="absolute bottom-[10%] left-[40%] h-20 w-20 rounded-xl border border-line-200" />
                 </div>
-                <div className="absolute left-[25%] top-[30%] flex h-12 w-12 items-center justify-center rounded-lg bg-ink text-cream shadow-lg shadow-black/20">
+                <div className="absolute left-[25%] top-[30%] flex h-12 w-12 items-center justify-center rounded-lg bg-paper text-cream shadow-lg shadow-black/20">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -1016,7 +1016,7 @@ export default function Discover() {
                     <circle cx="12" cy="10" r="2.5" />
                   </svg>
                 </div>
-                <div className="absolute right-[24%] top-[48%] flex h-11 w-11 items-center justify-center rounded-lg bg-ink text-cream shadow-lg">
+                <div className="absolute right-[24%] top-[48%] flex h-11 w-11 items-center justify-center rounded-lg bg-paper text-cream shadow-lg">
                   <span className="text-lg">🏛️</span>
                 </div>
                 <div className="absolute bottom-[23%] left-[45%] flex h-11 w-11 items-center justify-center rounded-lg bg-paper text-xl shadow-lg">
@@ -1035,7 +1035,7 @@ export default function Discover() {
           </div>
 
           {/* BUSINESS CTA */}
-          <div className="relative mt-16 overflow-hidden rounded-xl bg-ink px-8 py-10 text-cream sm:px-10 sm:py-12 lg:px-12 lg:py-16">
+          <div className="relative mt-16 overflow-hidden rounded-xl bg-paper px-8 py-10 text-cream sm:px-10 sm:py-12 lg:px-12 lg:py-16">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-xl bg-gold/20 blur-[120px]" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div className="max-w-2xl">

@@ -2115,7 +2115,7 @@ export default function VenueDashboard() {
 
       {showQuoteModal && selectedBooking && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-charcoal/60 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-paper/60 p-4"
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) {
               setShowQuoteModal(false);
@@ -2278,7 +2278,7 @@ export default function VenueDashboard() {
 
       {showDetailsModal && selectedBooking && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-charcoal/60 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-paper/60 p-4"
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) {
               setShowDetailsModal(false);

@@ -28,7 +28,7 @@ export default function PaymentSuccess() {
   const formatted = formatMoney(paidAmount);
 
   return (
-    <div className="min-h-screen bg-ink text-cream">
+    <div className="min-h-screen bg-paper text-cream">
       <Navbar />
       <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-8">

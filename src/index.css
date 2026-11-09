@@ -1,33 +1,85 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0a0a0c;
-  --color-paper: #131316;
-  --color-raised: #1a1a1f;
-  --color-surface: #1e1e24;
-  --color-elevated: #24242c;
-  --color-line: #2a2a32;
-  --color-line-bright: #3a3a44;
-  --color-cream: #f0ede6;
-  --color-mist: #9a958c;
-  --color-fog: #656059;
-  --color-gold: #c8a44d;
-  --color-gold-dim: #a08535;
-  --color-gold-glow: rgba(200, 164, 77, 0.12);
-  --color-charcoal: #0f0f12;
-  --color-slate: #8a8578;
-  --color-border: #2a2a32;
-  --color-emerald: #4ade80;
+  --color-ink: #142b4a;
+  --color-paper: #f3f5f8;
+  --color-raised: #ffffff;
+  --color-surface: #f3f5f8;
+  --color-elevated: #f8f9fa;
+  --color-line: #e5e7eb;
+  --color-line-bright: #ffffff;
+  --color-cream: #142b4a;
+  --color-mist: #64748b;
+  --color-fog: #8892b9;
+  --color-gold: #ff7a30;
+  --color-gold-dim: #e9651f;
+  --color-gold-200: #ffb8a5;
+  --color-gold-300: #ffa36b;
+  --color-gold-glow: rgba(255, 122, 48, 0.15);
+  --color-gold-200: #ffb8a5;
+  /* --color-charcoal removed - using bg-surface for light backgrounds instead */
+  --color-slate: #8892b9;
+  --color-border: #e5e7eb;
+  --color-emerald: #10b981;
   --color-rose: #fb7185;
-  --color-amber: #fbbf24;
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #e4e8f7;
+  --color-violet-200: #d0d5e6;
+  --color-violet-300: #a7b1d0;
+  --color-violet-400: #8892b9;
+  --color-violet-500: #6b7da8;
+  --color-violet-600: #4c5b92;
+  --color-violet-700: #3a4a7c;
+  --color-violet-800: #2d3a68;
+  --color-violet-900: #25305e;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-indigo-50: #eef2ff;
+  --color-indigo-100: #e2e8f0;
+  --color-indigo-200: #c7d2fe;
+  --color-indigo-300: #a5f3fc;
+  --color-indigo-400: #63b3e8;
+  --color-indigo-500: #818cf8;
+  --color-indigo-600: #6366f1;
+  --color-indigo-700: #4f46e5;
+  --color-indigo-800: #4338ca;
+  --color-indigo-900: #3730a3;
+  --color-purple-50: #faf5ff;
+  --color-purple-100: #e9d8fd;
+  --color-purple-200: #d8b4fe;
+  --color-purple-300: #c084fc;
+  --color-purple-400: #a78bfa;
+  --color-purple-500: #8b5cf6;
+  --color-purple-600: #a855f7;
+  --color-purple-700: #9f7ae7;
+  --color-purple-800: #8b5cf6;
+  --color-purple-900: #7e22ce;
+  --color-rose-50: #fff0f4;
+  --color-rose-100: #ffe4ec;
+  --color-rose-200: #fecdd3;
+  --color-rose-300: #fda4af;
+  --color-rose-400: #fb7185;
+  --color-rose-500: #f43f5e;
+  --color-rose-600: #e11d48;
+  --color-rose-700: #be123c;
+  --color-rose-800: #9f1239;
+  --color-rose-900: #88133f;
   --radius: 0.5rem;
 }
 
 @layer base {
   :root {
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: var(--color-cream);
-    background: var(--color-ink);
+    color: var(--color-ink);
+    background: var(--color-paper);
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -128,7 +180,7 @@
 }
 
 .btn-gold {
-  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-8 py-4 text-xs font-bold uppercase tracking-[0.12em] text-ink transition-all duration-200 hover:bg-gold-dim hover:shadow-lg hover:shadow-gold/20 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:ring-offset-2 focus:ring-offset-ink disabled:opacity-50 disabled:pointer-events-none;
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gold-200 px-8 py-4 text-xs font-bold uppercase tracking-[0.12em] text-ink transition-all duration-200 hover:bg-gold-300 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:ring-offset-2 focus:ring-offset-ink disabled:opacity-50 disabled:pointer-events-none;
 }
 
 .btn-outline {
@@ -160,7 +212,7 @@
 }
 
 .glow-gold {
-  box-shadow: 0 0 20px rgba(200, 164, 77, 0.15), 0 0 40px rgba(200, 164, 77, 0.05);
+  box-shadow: 0 0 20px var(--color-gold-glow), 0 0 40px rgba(255, 122, 48, 0.05);
 }
 
 .glass {

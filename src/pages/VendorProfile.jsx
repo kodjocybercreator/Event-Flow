@@ -432,7 +432,7 @@ export default function VendorProfile() {
         </div>
 
         <section className="mt-5 overflow-hidden rounded-[2rem] border border-line bg-raised shadow-sm">
-          <div className="relative h-48 overflow-hidden bg-charcoal sm:h-64">
+          <div className="relative h-48 overflow-hidden bg-surface sm:h-64">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(99,102,241,0.5),_transparent_45%),linear-gradient(115deg,_#020617,_#1e1b4b,_#4338ca)]" />
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-line" />
             <div className="absolute -bottom-32 -left-16 h-72 w-72 rounded-full border border-line" />
@@ -699,7 +699,7 @@ export default function VendorProfile() {
 
           <aside className="space-y-6">
             <section className="overflow-hidden rounded-3xl border border-line bg-raised shadow-sm lg:sticky lg:top-24">
-              <div className="bg-charcoal p-6 text-cream">
+              <div className="bg-surface p-6 text-cream">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                   Work with this vendor
                 </p>
@@ -753,7 +753,7 @@ export default function VendorProfile() {
               </div>
             </section>
 
-            <section className="rounded-3xl border border-line bg-charcoal p-6 text-cream">
+            <section className="rounded-3xl border border-line bg-surface p-6 text-cream">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
                 For event professionals
               </p>

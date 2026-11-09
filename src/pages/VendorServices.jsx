@@ -537,7 +537,7 @@ export default function VendorServices() {
             HEADER
         ====================================================== */}
 
-        <section className="overflow-hidden rounded-[30px] bg-ink shadow-sm">
+        <section className="overflow-hidden rounded-[30px] bg-paper shadow-sm">
           <div className="relative px-5 py-7 sm:px-8 sm:py-9 lg:px-10 lg:py-10">
             <div className="pointer-events-none absolute -right-24 -top-28 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
 
@@ -1077,7 +1077,7 @@ export default function VendorServices() {
                     }
                     className={`mt-2 w-full rounded-xl py-2.5 text-xs font-bold transition ${
                       isAvailable
-                        ? "bg-ink text-cream hover:bg-raised"
+                        ? "bg-paper text-cream hover:bg-raised"
                         : "bg-emerald-600 text-cream hover:bg-emerald-700"
                     }`}
                   >

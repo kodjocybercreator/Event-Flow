@@ -1108,7 +1108,7 @@ export default function AdminDashboard() {
 
   if (!admin) {
     return (
-      <div className="min-h-screen bg-charcoal flex items-center justify-center text-cream">
+      <div className="min-h-screen bg-paper flex items-center justify-center text-cream">
         <div className="text-center">
           <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-2 border-white/20 border-t-white" />
 
@@ -1127,7 +1127,7 @@ export default function AdminDashboard() {
           type="button"
           aria-label="Close menu"
           onClick={() => setMobileMenuOpen(false)}
-          className="fixed inset-0 z-30 bg-charcoal/50 lg:hidden"
+          className="fixed inset-0 z-30 bg-paper/50 lg:hidden"
         />
       )}
 
@@ -1164,7 +1164,7 @@ export default function AdminDashboard() {
       )}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-40 flex w-[280px] flex-col bg-charcoal text-cream shadow-2xl transition-transform duration-300 ${
+        className={`fixed inset-y-0 left-0 z-40 flex w-[280px] flex-col bg-paper text-cream shadow-2xl transition-transform duration-300 ${
           mobileMenuOpen
             ? "translate-x-0"
             : "-translate-x-full lg:translate-x-0"
@@ -1211,7 +1211,7 @@ export default function AdminDashboard() {
                     : "text-fog hover:bg-raised/10 hover:text-cream"
                 }`}
               >
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-ink/10 text-base">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-paper/10 text-base">
                   {item.icon}
                 </span>
 
@@ -1753,7 +1753,7 @@ export default function AdminDashboard() {
 
                                     {images.length >
                                       0 && (
-                                      <span className="absolute inset-x-2 bottom-2 rounded-lg bg-charcoal/70 px-2 py-1 text-center text-[10px] font-bold text-cream backdrop-blur">
+                                      <span className="absolute inset-x-2 bottom-2 rounded-lg bg-paper/70 px-2 py-1 text-center text-[10px] font-bold text-cream backdrop-blur">
                                         View gallery ·{" "}
                                         {images.length}
                                       </span>
@@ -2125,7 +2125,7 @@ export default function AdminDashboard() {
                                               3 &&
                                               vendorImages.length >
                                                 4 && (
-                                                <div className="absolute inset-0 flex items-center justify-center bg-charcoal/60">
+                                                <div className="absolute inset-0 flex items-center justify-center bg-paper/60">
                                                   <span className="text-sm font-bold text-cream">
                                                     +
                                                     {vendorImages.length -
@@ -2134,7 +2134,7 @@ export default function AdminDashboard() {
                                                 </div>
                                               )}
 
-                                            <div className="absolute inset-0 bg-charcoal/0 transition group-hover:bg-charcoal/20" />
+                                            <div className="absolute inset-0 bg-paper/0 transition group-hover:bg-paper/20" />
                                           </button>
                                         );
                                       }
@@ -2895,8 +2895,8 @@ function VendorGalleryModal({
   const vendorName = getAccountName(vendor);
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/90 p-4 backdrop-blur-xl">
-      <div className="flex max-h-[95vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-charcoal shadow-2xl">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-paper/90 p-4 backdrop-blur-xl">
+      <div className="flex max-h-[95vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-paper shadow-2xl">
         <div className="flex items-center justify-between border-b border-line px-5 py-4 sm:px-6">
           <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
@@ -2921,7 +2921,7 @@ function VendorGalleryModal({
           </button>
         </div>
 
-        <div className="relative flex min-h-0 flex-1 items-center justify-center bg-charcoal p-4 sm:p-8">
+        <div className="relative flex min-h-0 flex-1 items-center justify-center bg-paper p-4 sm:p-8">
           {currentImage ? (
             <img
               src={currentImage}
@@ -2940,7 +2940,7 @@ function VendorGalleryModal({
                 type="button"
                 onClick={onPrevious}
                 aria-label="Previous photo"
-                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-charcoal/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
+                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-paper/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
               >
                 ‹
               </button>
@@ -2949,7 +2949,7 @@ function VendorGalleryModal({
                 type="button"
                 onClick={onNext}
                 aria-label="Next photo"
-                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-charcoal/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
+                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-paper/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
               >
                 ›
               </button>
@@ -2957,7 +2957,7 @@ function VendorGalleryModal({
           )}
         </div>
 
-        <div className="border-t border-line bg-charcoal px-4 py-4 sm:px-6">
+        <div className="border-t border-line bg-paper px-4 py-4 sm:px-6">
           <div className="flex gap-2 overflow-x-auto pb-1">
             {images.map((image, index) => {
               const src = getImageSource(image);
@@ -3010,8 +3010,8 @@ function VenueGalleryModal({
   const venueName = getVenueName(venue);
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/90 p-4 backdrop-blur-xl">
-      <div className="flex max-h-[95vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-charcoal shadow-2xl">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-paper/90 p-4 backdrop-blur-xl">
+      <div className="flex max-h-[95vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-paper shadow-2xl">
         <div className="flex items-center justify-between border-b border-line px-5 py-4 sm:px-6">
           <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
@@ -3036,7 +3036,7 @@ function VenueGalleryModal({
           </button>
         </div>
 
-        <div className="relative flex min-h-0 flex-1 items-center justify-center bg-charcoal p-4 sm:p-8">
+        <div className="relative flex min-h-0 flex-1 items-center justify-center bg-paper p-4 sm:p-8">
           {currentImage ? (
             <img
               src={currentImage}
@@ -3055,7 +3055,7 @@ function VenueGalleryModal({
                 type="button"
                 onClick={onPrevious}
                 aria-label="Previous photo"
-                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-charcoal/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
+                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-paper/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
               >
                 ‹
               </button>
@@ -3064,7 +3064,7 @@ function VenueGalleryModal({
                 type="button"
                 onClick={onNext}
                 aria-label="Next photo"
-                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-charcoal/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
+                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-paper/70 text-xl text-cream shadow-lg backdrop-blur transition hover:bg-raised"
               >
                 ›
               </button>
@@ -3072,7 +3072,7 @@ function VenueGalleryModal({
           )}
         </div>
 
-        <div className="border-t border-line bg-charcoal px-4 py-4 sm:px-6">
+        <div className="border-t border-line bg-paper px-4 py-4 sm:px-6">
           <div className="flex gap-2 overflow-x-auto pb-1">
             {images.map((image, index) => {
               const src = getImageSource(image);

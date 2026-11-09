@@ -186,11 +186,11 @@ export default function Register() {
         accountType,
         status: "active",
         approvalStatus:
-          accountType === "venue"
+          accountType === "venue" || accountType === "vendor"
             ? "pending"
             : "approved",
         approved:
-          accountType === "venue"
+          accountType === "venue" || accountType === "vendor"
             ? false
             : true,
         createdAt: now,
@@ -257,7 +257,7 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen bg-ink text-cream">
+    <div className="min-h-screen bg-paper text-cream">
       <Navbar />
 
       <main className="relative overflow-hidden px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
@@ -272,7 +272,7 @@ export default function Register() {
               LEFT INFORMATION PANEL
           ====================================================== */}
 
-          <div className="hidden bg-charcoal p-10 text-cream lg:flex lg:flex-col lg:justify-between xl:p-14">
+          <div className="hidden bg-paper p-10 text-cream lg:flex lg:flex-col lg:justify-between xl:p-14">
             <div>
               <Link
                 to="/"

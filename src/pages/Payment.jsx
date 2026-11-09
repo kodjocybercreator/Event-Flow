@@ -6,6 +6,10 @@ import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
 
+// Paystack test key (provided by user - mock mode, real integration pending)
+const PAYSTACK_PUBLIC_KEY = 'pk_test_05a37710f0fb5d83974ca2e5ce10b4ec43d3b121';
+const PAYSTACK_SECRET_KEY = 'sk_test_05a37710f0fb5d83974ca2e5ce10b4ec43d3b121';
+
 function formatMoney(value) {
   const amount = Number(value);
   if (!Number.isFinite(amount) || amount <= 0) return 'Price on request';
@@ -84,7 +88,7 @@ export default function Payment() {
               paymentStatus: 'paid',
               paymentOption: 'paystack',
               amountPaid: Number(amount),
-              transactionId: `PAY-${Date.now().toString().slice(-8)}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`,
+              transactionId: `PAY-${PAYSTACK_SECRET_KEY.slice(-8)}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`,
               paymentCompletedAt: new Date().toISOString(),
               updatedAt: new Date().toISOString(),
             };
@@ -110,7 +114,7 @@ export default function Payment() {
 
   if (step === 'details') {
     return (
-      <div className="min-h-screen bg-ink text-cream">
+      <div className="min-h-screen bg-paper text-cream">
         <Navbar />
         <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="mb-8">
@@ -260,7 +264,7 @@ export default function Payment() {
 
   if (step === 'processing') {
     return (
-      <div className="min-h-screen bg-ink text-cream">
+      <div className="min-h-screen bg-paper text-cream">
         <Navbar />
         <main className="mx-auto flex min-h-[70vh] max-w-md items-center justify-center px-4 py-16 sm:px-6">
           <Card className="p-8 text-center">
@@ -280,7 +284,7 @@ export default function Payment() {
               <div className="w-full bg-elevated rounded-full h-2">
                 <div className="h-2 w-[70%] rounded-full bg-gradient-to-r from-gold to-amber animate-pulse" />
               </div>
-              <p className="text-xs text-fog">Connecting to Paystack...</p>
+              <p className="text-xs text-fog">Connecting to Paystack with test key...</p>
             </div>
           </Card>
         </main>
@@ -290,7 +294,7 @@ export default function Payment() {
 
   if (step === 'success') {
     return (
-      <div className="min-h-screen bg-ink text-cream">
+      <div className="min-h-screen bg-paper text-cream">
         <Navbar />
         <main className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
           <Card className="p-8 text-center">
@@ -309,7 +313,8 @@ export default function Payment() {
                 <span className="font-bold">Amount:</span> {formatMoney(finalAmount)}<br />
                 <span className="font-bold">Method:</span> Paystack<br />
                 <span className="font-bold">Status:</span>
-                <Badge variant="emerald">Paid</Badge>
+                <Badge variant="emerald">Paid</Badge><br />
+                <span className="font-sm text-fog">Ref: {bookingId || 'EF-' + Date.now().toString().slice(-8)}</span>
               </p>
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
@@ -334,7 +339,7 @@ export default function Payment() {
 
   // failure
   return (
-    <div className="min-h-screen bg-ink text-cream">
+    <div className="min-h-screen bg-paper text-cream">
       <Navbar />
       <main className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
         <Card className="p-8 text-center">

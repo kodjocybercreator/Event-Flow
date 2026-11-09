@@ -211,7 +211,7 @@ export default function Home() {
                   className="relative mx-auto w-full max-w-[560px] lg:mx-0"
                 >
                   <div className="overflow-hidden border border-line bg-surface p-2 shadow-lg">
-                    <div className="relative h-[500px] overflow-hidden rounded-lg bg-charcoal sm:h-[600px]">
+                    <div className="relative h-[500px] overflow-hidden rounded-lg bg-paper sm:h-[600px]">
                       <img
                         src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=75"
                         alt="Beautiful event setup"
@@ -338,7 +338,7 @@ export default function Home() {
                     </div>
                     <Link
                       to="/discover"
-                      className="flex min-h-[56px] items-center justify-center rounded-xl bg-ink px-10 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors duration-200 hover:bg-gold hover:text-cream"
+                      className="flex min-h-[56px] items-center justify-center rounded-xl bg-paper px-10 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors duration-200 hover:bg-gold hover:text-cream"
                     >
                       Search
                       <span className="ml-2">→</span>
@@ -430,7 +430,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="grid items-start gap-16 lg:grid-cols-2">
               <div className="relative">
-                <div className="overflow-hidden border border-line bg-charcoal shadow-2xl">
+                <div className="overflow-hidden border border-line bg-paper shadow-2xl">
                   <img
                     src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&w=800&q=75"
                     alt="Event venue setup"
@@ -489,7 +489,7 @@ export default function Home() {
                         transition={{ duration: 0.6 }}
                         className="flex gap-4"
                       >
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ink text-xs font-bold text-cream shadow-lg">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-paper text-xs font-bold text-cream shadow-lg">
                           {number}
                         </div>
                         <div>
@@ -504,7 +504,7 @@ export default function Home() {
 
                   <Link
                     to="/discover"
-                    className="inline-flex items-center rounded-xl bg-ink px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors duration-200 hover:bg-gold hover:text-cream"
+                    className="inline-flex items-center rounded-xl bg-paper px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors duration-200 hover:bg-gold hover:text-cream"
                   >
                     Explore the marketplace
                     <span className="ml-2">→</span>
@@ -573,7 +573,7 @@ export default function Home() {
         </section>
 
         {/* VENUE SECTION */}
-        <section className="bg-charcoal py-24 sm:py-32">
+        <section className="bg-paper py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="grid items-start gap-16 lg:grid-cols-[0.9fr_1.1fr]">
               <div className="text-cream">
@@ -598,7 +598,7 @@ export default function Home() {
                     <Link
                       key={item}
                       to="/venues"
-                      className="rounded-xl border border-line-bright bg-charcoal px-4 py-4 text-sm font-bold text-fog transition hover:border-gold/40 hover:bg-gold/10"
+                      className="rounded-xl border border-line-bright bg-paper px-4 py-4 text-sm font-bold text-fog transition hover:border-gold/40 hover:bg-gold/10"
                     >
                       {item}
                       <span className="ml-2 text-gold">→</span>
@@ -737,7 +737,7 @@ export default function Home() {
         {/* BUSINESS SECTION */}
         <section id="businesses" className="bg-paper py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-            <div className="overflow-hidden border border-line bg-charcoal">
+            <div className="overflow-hidden border border-line bg-paper">
               <div className="grid lg:grid-cols-[1fr_0.85fr]">
                 <div className="px-8 py-16 sm:px-10 sm:py-20 lg:px-14 lg:py-24">
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
@@ -771,7 +771,7 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-                <div className="bg-ink p-6 sm:p-8 lg:p-10">
+                <div className="bg-paper p-6 sm:p-8 lg:p-10">
                   <div className="grid gap-4">
                     <div className="rounded-xl bg-paper p-6">
                       <div className="flex items-start gap-4">
@@ -790,13 +790,13 @@ export default function Home() {
                       </div>
                       <Link
                         to="/register/venue"
-                        className="mt-6 inline-flex items-center justify-center rounded-xl bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors hover:bg-ink hover:text-cream"
+                        className="mt-6 inline-flex items-center justify-center rounded-xl bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[0.15em] text-cream transition-colors hover:bg-paper hover:text-cream"
                       >
                         Register your venue
                         <span className="ml-2">→</span>
                       </Link>
                     </div>
-                    <div className="rounded-xl border border-line-bright bg-ink p-6">
+                    <div className="rounded-xl border border-line-bright bg-paper p-6">
                       <div className="flex items-start gap-4">
                         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-paper text-xl text-cream">
                           ✦
