@@ -7,7 +7,7 @@ import { Avatar } from './ui/Avatar';
 const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Discover', to: '/discover' },
-  { label: 'Venues', to: '/venues' },
+  { label: 'Messages', to: '/messages' },
 ];
 
 export default function Navbar() {
