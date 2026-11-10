@@ -72,9 +72,9 @@ export default function Navbar() {
     ? navLinks
     : isOrganizer
       ? [
-          ...navLinks,
-          { label: 'Dashboard', to: '/dashboard/organizer' },
+          ...navLinks.slice(0, 2), // Home, Discover
           { label: 'My Bookings', to: '/dashboard/organizer' },
+          { label: 'Messages', to: '/messages' },
           { label: 'Me', to: '/organizer/me' },
         ]
       : isVendor
